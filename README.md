@@ -1,8 +1,8 @@
+# I don't take any responsibility for blocked Discord accounts that used this module.
+# Using this on a user account is prohibited by the Discord TOS and can lead to the account block.
+
 # Kord
 
-[![Discord](https://img.shields.io/discord/556525343595298817.svg?color=&label=Kord&logo=discord&style=for-the-badge)](https://discord.gg/6jcx5ev)
-[![Download](https://img.shields.io/maven-central/v/dev.kord/kord-core.svg?label=Maven%20Central&style=for-the-badge)](https://search.maven.org/search?q=g:%22dev.kord%22%20AND%20a:%22kord-core%22)
-[![Github CI status (branch)](https://img.shields.io/github/workflow/status/kordlib/kord/CI/master?label=CI&style=for-the-badge)]()
 
 __Kord is still in an experimental stage, as such we can't guarantee API stability between releases. While we'd love for
 you to try out our library, we don't recommend you use this in production just yet.__
@@ -24,97 +24,14 @@ reactive code.
 Aside from coroutines, we also wanted to give the user full access to lower level APIs. Sometimes you have to do some
 unconventional things, and we want to allow you to do those in a safe and supported way.
 
-## Status of Kord
-
-* [X] [Discord Gateway](https://github.com/kordlib/kord/tree/master/gateway)
-* [x] [Discord Rest API](https://github.com/kordlib/kord/tree/master/rest)
-* [X] [High level abstraction + caching](https://github.com/kordlib/kord/tree/master/core)
-* [X] [Discord Voice](https://github.com/kordlib/kord/tree/master/voice)
-* [ ] Support for multiple processes [#7](https://github.com/kordlib/kord/issues/7)
-
-Right now Kord *should* provide a full mapping of the non-voice API. We're currently working on a testing library for
-easy bot testing against a semi mocked client as well as our own command system to facilitate more complex bot
-development.
-
 ## Documentation
 
 * [Dokka docs](https://kordlib.github.io/kord/)
-* [Wiki](https://github.com/kordlib/kord/wiki)
+* [Wiki](https://github.com/kordlib/kord/wiki) // original docs
 
 ## Installation
 
-Replace `{version}` with the latest version number on maven central.
-
-For Snapshots replace `{version}` with `{branch}-SNAPSHOT` 
-
-e.g: `0.7.x-SNAPSHOT`
-
-[![Download](https://img.shields.io/maven-central/v/dev.kord/kord-core.svg?label=Maven%20Central&style=for-the-badge)](https://search.maven.org/search?q=g:%22dev.kord%22%20AND%20a:%22kord-core%22)
-
-### Gradle (groovy)
-
-```groovy
-repositories {
-    mavenCentral()
-    // Kord Snapshots Repository (Optional):
-    maven {
-        url "https://oss.sonatype.org/content/repositories/snapshots"
-    }
-}
-```
-
-```groovy
-dependencies {
-    implementation("dev.kord:kord-core:{version}")
-}
-```
-
-### Gradle (kotlin)
-
-```kotlin
-repositories {
-    mavenCentral()
-    // Kord Snapshots Repository (Optional):
-    maven("https://oss.sonatype.org/content/repositories/snapshots")
-}
-```
-
----
-
-```kotlin
-dependencies {
-    implementation("dev.kord:kord-core:{version}")
-}
-```
-
-### Maven
-
-##### Kord Snapshots Repository (Optional):
-
-```xml
-
-<repository>
-    <id>snapshots-repo</id>
-    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    <releases>
-        <enabled>false</enabled>
-    </releases>
-    <snapshots>
-        <enabled>true</enabled>
-    </snapshots>
-</repository>
-```
-
----
-
-```xml
-
-<dependency>
-    <groupId>dev.kord</groupId>
-    <artifactId>kord-core</artifactId>
-    <version>{version}</version>
-</dependency>
-```
+will added soon :)
 
 ## Modules
 
@@ -174,49 +91,23 @@ connection and rate limits commands.
 
 ```kotlin
 suspend fun main() {
-    val gateway = DefaultGateway()
+    val kord = Kord("your account token")
 
-    gateway.on<MessageCreate> {
-        println("${message.author.username}: ${message.content}")
-        val words = message.content.split(' ')
-        when (words.firstOrNull()) {
-            "!close" -> gateway.stop()
-            "!detach" -> gateway.detach()
+    kord.on<MessageCreateEvent> {
+        val content = message.content
+        val channel = message.channel
+        if (!prefixCommand.startsWith(prefix)) return@on
+
+        val rawArguments = content.split(" ")
+        val prefixCommand = rawArguments[0]
+        message.delete()
+        when (prefixCommand.substring(prefix.length).lowercase()) {
+            "ping" -> {
+                val calc = System.currentTimeMillis()
+                val message = channel.createMessage("Calculating ping...")
+                message.edit { this.content = ":ping_pong: Pong!\nCalculated ping : ${System.currentTimeMillis() - calc}ms, Gateway Ping : ${kord.gateway.averagePing}" }
+            }
         }
-    }
-
-    gateway.start("your bot token") {
-        @OptIn(PrivilegedIntent::class)
-        intents += Intent.MessageContent
-    }
-}
-```
-
-
-### Voice
-
-A mapping of [Discord's Voice Connection](https://discord.com/developers/docs/topics/voice-connections), which maintains the connection and handles audio transmission.
-
-If you want to use voice, you need to enable the voice capability,
-which is only available for Gradle
-
-```kotlin
-dependencies {
-    implementation("dev.kord", "core", "<version>") {
-        capabilities {
-            requireCapability("dev.kord:core-voice:<version>")
-        }
-    }
-}
-```
-
-```kotlin
-suspend fun main() {
-    val kord = Kord("your token")
-    val voiceChannel = kord.getChannelOf<VoiceChannel>(id = Snowflake(1))!!
-
-    voiceChannel.connect {
-        audioProvider { AudioFrame.fromData(/* your opus encoded audio */) }
     }
 
     kord.login()
