@@ -42,55 +42,6 @@ abstractions, we'd recommend using this.
 
 ```kotlin
 suspend fun main() {
-    val kord = Kord("your bot token")
-    val pingPong = ReactionEmoji.Unicode("\uD83C\uDFD3")
-
-    kord.on<MessageCreateEvent> {
-        if (message.content != "!ping") return@on
-
-        val response = message.channel.createMessage("Pong!")
-        response.addReaction(pingPong)
-
-        delay(5000)
-        message.delete()
-        response.delete()
-    }
-
-    kord.login {
-        @OptIn(PrivilegedIntent::class)
-        intents += Intent.MessageContent
-    }
-}
-```
-
-### Rest
-
-A low level mapping of Discord's REST API. Requests follow
-Discord's [rate limits](https://discord.com/developers/docs/topics/rate-limits).
-
-```kotlin
-suspend fun main() {
-    val rest = RestClient("your bot token")
-    val channelId = Snowflake(605212557522763787)
-
-    rest.channel.createMessage(channelId) {
-        content = "Hello Kord!"
-
-        embed {
-            color = Color(red = 0, green = 0, blue = 255)
-            description = "Hello embed!"
-        }
-    }
-}
-```
-
-### Gateway
-
-A low level mapping of [Discord's Gateway](https://discord.com/developers/docs/topics/gateway), which maintains the
-connection and rate limits commands.
-
-```kotlin
-suspend fun main() {
     val kord = Kord("your account token")
 
     kord.on<MessageCreateEvent> {
@@ -113,6 +64,8 @@ suspend fun main() {
     kord.login()
 }
 ```
+
+> will added more ~~maybe~~
 
 ## FAQ
 
