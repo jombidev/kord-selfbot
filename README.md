@@ -1,6 +1,11 @@
 ### <strong>I don't take any responsibility for blocked Discord accounts that used this module.</strong>
 ### <strong>Using this on a user account is prohibited by the [Discord TOS](https://discord.com/terms) and can lead to the account block.</strong>
 
+# Note
+
+This repository always can be removed by the author of [kord](https://github.com/kordlib).
+I didn't test many times, so I can't doubt everything working.
+
 # Kord
 
 
