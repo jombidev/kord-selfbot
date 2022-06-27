@@ -4,8 +4,8 @@
 val isJitPack get() = "true" == System.getenv("JITPACK")
 
 object Library {
-    const val name = "kord"
-    const val group = "dev.kord"
+    const val name = "kord-selfbot"
+    const val group = "dev.jombi.kordsb"
     val version: String
         get() = if (isJitPack) System.getenv("RELEASE_TAG")
         else {
