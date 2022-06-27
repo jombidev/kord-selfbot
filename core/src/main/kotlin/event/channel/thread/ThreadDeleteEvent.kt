@@ -1,12 +1,12 @@
-package dev.kord.core.event.channel.thread
+package dev.jombi.kordsb.core.event.channel.thread
 
-import dev.kord.core.Kord
-import dev.kord.core.entity.channel.thread.DeletedThreadChannel
-import dev.kord.core.entity.channel.thread.NewsChannelThread
-import dev.kord.core.entity.channel.thread.TextChannelThread
-import dev.kord.core.entity.channel.thread.ThreadChannel
-import dev.kord.core.event.Event
-import dev.kord.core.event.kordCoroutineScope
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.entity.channel.thread.DeletedThreadChannel
+import dev.jombi.kordsb.core.entity.channel.thread.NewsChannelThread
+import dev.jombi.kordsb.core.entity.channel.thread.TextChannelThread
+import dev.jombi.kordsb.core.entity.channel.thread.ThreadChannel
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.kordCoroutineScope
 import kotlinx.coroutines.CoroutineScope
 import kotlin.coroutines.CoroutineContext
 

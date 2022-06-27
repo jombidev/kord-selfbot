@@ -1,7 +1,7 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.rest.json.response.BanResponse
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.rest.json.response.BanResponse
 import kotlinx.serialization.Serializable
 
 @Serializable

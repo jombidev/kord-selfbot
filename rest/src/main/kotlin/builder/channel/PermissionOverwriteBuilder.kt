@@ -1,10 +1,10 @@
-package dev.kord.rest.builder.channel
+package dev.jombi.kordsb.rest.builder.channel
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.Overwrite
-import dev.kord.common.entity.OverwriteType
-import dev.kord.common.entity.Permissions
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.Overwrite
+import dev.jombi.kordsb.common.entity.OverwriteType
+import dev.jombi.kordsb.common.entity.Permissions
+import dev.jombi.kordsb.common.entity.Snowflake
 
 @KordDsl
 public class PermissionOverwriteBuilder(private val type: OverwriteType, private val id: Snowflake) {

@@ -1,13 +1,13 @@
-package dev.kord.rest.builder.template
+package dev.jombi.kordsb.rest.builder.template
 
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.common.entity.optional.map
-import dev.kord.rest.Image
-import dev.kord.rest.builder.RequestBuilder
-import dev.kord.rest.json.request.GuildFromTemplateCreateRequest
-import dev.kord.rest.json.request.GuildTemplateCreateRequest
-import dev.kord.rest.json.request.GuildTemplateModifyRequest
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.common.entity.optional.map
+import dev.jombi.kordsb.rest.Image
+import dev.jombi.kordsb.rest.builder.RequestBuilder
+import dev.jombi.kordsb.rest.json.request.GuildFromTemplateCreateRequest
+import dev.jombi.kordsb.rest.json.request.GuildTemplateCreateRequest
+import dev.jombi.kordsb.rest.json.request.GuildTemplateModifyRequest
 
 public class GuildFromTemplateCreateBuilder(public var name: String) : RequestBuilder<GuildFromTemplateCreateRequest> {
 

@@ -1,16 +1,16 @@
-package dev.kord.rest.service
+package dev.jombi.kordsb.rest.service
 
-import dev.kord.common.entity.DiscordGuild
-import dev.kord.common.entity.DiscordTemplate
-import dev.kord.common.entity.Snowflake
-import dev.kord.rest.builder.template.GuildFromTemplateCreateBuilder
-import dev.kord.rest.builder.template.GuildTemplateCreateBuilder
-import dev.kord.rest.builder.template.GuildTemplateModifyBuilder
-import dev.kord.rest.json.request.GuildFromTemplateCreateRequest
-import dev.kord.rest.json.request.GuildTemplateCreateRequest
-import dev.kord.rest.json.request.GuildTemplateModifyRequest
-import dev.kord.rest.request.RequestHandler
-import dev.kord.rest.route.Route
+import dev.jombi.kordsb.common.entity.DiscordGuild
+import dev.jombi.kordsb.common.entity.DiscordTemplate
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.rest.builder.template.GuildFromTemplateCreateBuilder
+import dev.jombi.kordsb.rest.builder.template.GuildTemplateCreateBuilder
+import dev.jombi.kordsb.rest.builder.template.GuildTemplateModifyBuilder
+import dev.jombi.kordsb.rest.json.request.GuildFromTemplateCreateRequest
+import dev.jombi.kordsb.rest.json.request.GuildTemplateCreateRequest
+import dev.jombi.kordsb.rest.json.request.GuildTemplateModifyRequest
+import dev.jombi.kordsb.rest.request.RequestHandler
+import dev.jombi.kordsb.rest.route.Route
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

@@ -1,10 +1,10 @@
-package dev.kord.rest.builder.message.create
+package dev.jombi.kordsb.rest.builder.message.create
 
-import dev.kord.rest.NamedFile
-import dev.kord.rest.builder.component.ActionRowBuilder
-import dev.kord.rest.builder.component.MessageComponentBuilder
-import dev.kord.rest.builder.message.AllowedMentionsBuilder
-import dev.kord.rest.builder.message.EmbedBuilder
+import dev.jombi.kordsb.rest.NamedFile
+import dev.jombi.kordsb.rest.builder.component.ActionRowBuilder
+import dev.jombi.kordsb.rest.builder.component.MessageComponentBuilder
+import dev.jombi.kordsb.rest.builder.message.AllowedMentionsBuilder
+import dev.jombi.kordsb.rest.builder.message.EmbedBuilder
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.InputStream

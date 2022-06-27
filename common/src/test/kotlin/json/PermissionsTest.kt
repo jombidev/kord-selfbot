@@ -1,8 +1,8 @@
 package json
 
-import dev.kord.common.DiscordBitSet
-import dev.kord.common.EmptyBitSet
-import dev.kord.common.entity.*
+import dev.jombi.kordsb.common.DiscordBitSet
+import dev.jombi.kordsb.common.EmptyBitSet
+import dev.jombi.kordsb.common.entity.*
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put

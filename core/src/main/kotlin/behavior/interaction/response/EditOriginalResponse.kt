@@ -1,11 +1,11 @@
-package dev.kord.core.behavior.interaction.response
+package dev.jombi.kordsb.core.behavior.interaction.response
 
-import dev.kord.core.cache.data.toData
-import dev.kord.core.entity.Message
-import dev.kord.core.entity.interaction.response.EphemeralMessageInteractionResponse
-import dev.kord.core.entity.interaction.response.MessageInteractionResponse
-import dev.kord.core.entity.interaction.response.PublicMessageInteractionResponse
-import dev.kord.rest.builder.message.modify.InteractionResponseModifyBuilder
+import dev.jombi.kordsb.core.cache.data.toData
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.entity.interaction.response.EphemeralMessageInteractionResponse
+import dev.jombi.kordsb.core.entity.interaction.response.MessageInteractionResponse
+import dev.jombi.kordsb.core.entity.interaction.response.PublicMessageInteractionResponse
+import dev.jombi.kordsb.rest.builder.message.modify.InteractionResponseModifyBuilder
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

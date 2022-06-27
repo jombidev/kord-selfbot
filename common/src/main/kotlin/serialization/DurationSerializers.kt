@@ -1,4 +1,4 @@
-package dev.kord.common.serialization
+package dev.jombi.kordsb.common.serialization
 
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
@@ -21,7 +21,7 @@ public sealed class DurationAsLongSerializer(
 ) : KSerializer<Duration> {
 
     final override val descriptor: SerialDescriptor =
-        PrimitiveSerialDescriptor("dev.kord.common.serialization.$name", PrimitiveKind.LONG)
+        PrimitiveSerialDescriptor("dev.jombi.kordsb.common.serialization.$name", PrimitiveKind.LONG)
 
     final override fun serialize(encoder: Encoder, value: Duration) {
         when (val valueAsLong = value.toLong(unit)) {

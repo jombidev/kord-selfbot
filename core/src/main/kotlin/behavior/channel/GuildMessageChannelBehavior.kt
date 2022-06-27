@@ -1,14 +1,14 @@
-package dev.kord.core.behavior.channel
+package dev.jombi.kordsb.core.behavior.channel
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.entity.channel.GuildMessageChannel
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.json.request.BulkDeleteRequest
-import dev.kord.rest.request.RestRequestException
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.entity.channel.GuildMessageChannel
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.json.request.BulkDeleteRequest
+import dev.jombi.kordsb.rest.request.RestRequestException
 import kotlinx.datetime.Clock
 import kotlin.time.Duration.Companion.days
 

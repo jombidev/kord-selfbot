@@ -1,10 +1,10 @@
-package dev.kord.rest.builder
+package dev.jombi.kordsb.rest.builder
 
-import dev.kord.common.entity.Overwrite
-import dev.kord.common.entity.optional.Optional
-import dev.kord.rest.builder.channel.NewsChannelModifyBuilder
-import dev.kord.rest.builder.channel.TextChannelModifyBuilder
-import dev.kord.rest.builder.channel.VoiceChannelModifyBuilder
+import dev.jombi.kordsb.common.entity.Overwrite
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.rest.builder.channel.NewsChannelModifyBuilder
+import dev.jombi.kordsb.rest.builder.channel.TextChannelModifyBuilder
+import dev.jombi.kordsb.rest.builder.channel.VoiceChannelModifyBuilder
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 

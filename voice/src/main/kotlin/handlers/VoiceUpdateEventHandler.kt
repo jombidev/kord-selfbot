@@ -1,9 +1,9 @@
-package dev.kord.voice.handlers
+package dev.jombi.kordsb.voice.handlers
 
-import dev.kord.common.annotation.KordVoice
-import dev.kord.gateway.VoiceServerUpdate
-import dev.kord.gateway.VoiceStateUpdate
-import dev.kord.voice.VoiceConnection
+import dev.jombi.kordsb.common.annotation.KordVoice
+import dev.jombi.kordsb.gateway.VoiceServerUpdate
+import dev.jombi.kordsb.gateway.VoiceStateUpdate
+import dev.jombi.kordsb.voice.VoiceConnection
 import kotlinx.atomicfu.atomic
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.coroutineScope
@@ -11,7 +11,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import mu.KotlinLogging
-import dev.kord.gateway.Event as GatewayEvent
+import dev.jombi.kordsb.gateway.Event as GatewayEvent
 
 private val voiceUpdateLogger = KotlinLogging.logger { }
 

@@ -126,19 +126,19 @@ processIncomingAudio(connection.streams.incomingAudioFrames)
 
 Replace `{version}` with the latest version number on maven central.
 
-[![Download](https://img.shields.io/maven-central/v/dev.kord/kord-voice.svg?color=fb5502&label=Kord&logoColor=05c1fd&style=for-the-badge)](https://search.maven.org/search?q=g:%22dev.kord%22%20AND%20a:%22kord-voice%22)
+[![Download](https://img.shields.io/maven-central/v/dev.jombi.kordsb/kord-voice.svg?color=fb5502&label=Kord&logoColor=05c1fd&style=for-the-badge)](https://search.maven.org/search?q=g:%22dev.jombi.kordsb%22%20AND%20a:%22kord-voice%22)
 
 ### Gradle (groovy)
 ```groovy
 dependencies {
-    implementation("dev.kord:kord-voice:{version}")
+    implementation("dev.jombi.kordsb:kord-voice:{version}")
 }
 ```
 
 ### Gradle (kotlin)
 ```kotlin
 dependencies {
-    implementation("dev.kord:kord-voice:{version}")
+    implementation("dev.jombi.kordsb:kord-voice:{version}")
 }
 ```
 
@@ -147,7 +147,7 @@ dependencies {
 ##### Kord Snapshots Repository (Optional):
 ```xml
 <dependency>
-    <groupId>dev.kord</groupId>
+    <groupId>dev.jombi.kordsb</groupId>
     <artifactId>kord-voice</artifactId>
     <version>{version}</version>
 </dependency>

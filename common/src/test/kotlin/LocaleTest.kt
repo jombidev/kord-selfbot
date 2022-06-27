@@ -1,4 +1,4 @@
-import dev.kord.common.Locale
+import dev.jombi.kordsb.common.Locale
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json

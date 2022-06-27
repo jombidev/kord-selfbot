@@ -1,8 +1,8 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.gateway.ThreadListSync
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.gateway.ThreadListSync
 
 public class ThreadListSyncData(
     public val guildId: Snowflake,

@@ -1,10 +1,10 @@
 package json
 
-import dev.kord.common.annotation.KordPreview
-import dev.kord.common.entity.*
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.filterList
-import dev.kord.common.entity.optional.orEmpty
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.common.entity.*
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.filterList
+import dev.jombi.kordsb.common.entity.optional.orEmpty
 import kotlinx.coroutines.coroutineScope
 import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.Test

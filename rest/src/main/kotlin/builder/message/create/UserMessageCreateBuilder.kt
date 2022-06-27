@@ -1,16 +1,16 @@
-package dev.kord.rest.builder.message.create
+package dev.jombi.kordsb.rest.builder.message.create
 
-import dev.kord.common.annotation.KordPreview
-import dev.kord.common.entity.DiscordMessageReference
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.*
-import dev.kord.rest.NamedFile
-import dev.kord.rest.builder.RequestBuilder
-import dev.kord.rest.builder.component.MessageComponentBuilder
-import dev.kord.rest.builder.message.AllowedMentionsBuilder
-import dev.kord.rest.builder.message.EmbedBuilder
-import dev.kord.rest.json.request.MessageCreateRequest
-import dev.kord.rest.json.request.MultipartMessageCreateRequest
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.common.entity.DiscordMessageReference
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.*
+import dev.jombi.kordsb.rest.NamedFile
+import dev.jombi.kordsb.rest.builder.RequestBuilder
+import dev.jombi.kordsb.rest.builder.component.MessageComponentBuilder
+import dev.jombi.kordsb.rest.builder.message.AllowedMentionsBuilder
+import dev.jombi.kordsb.rest.builder.message.EmbedBuilder
+import dev.jombi.kordsb.rest.json.request.MessageCreateRequest
+import dev.jombi.kordsb.rest.json.request.MultipartMessageCreateRequest
 
 /**
  * Message builder for creating messages as a bot user.
@@ -37,7 +37,7 @@ public class UserMessageCreateBuilder
 
     /**
      * The id of the message being replied to.
-     * Requires the [ReadMessageHistory][dev.kord.common.entity.Permission.ReadMessageHistory] permission.
+     * Requires the [ReadMessageHistory][dev.jombi.kordsb.common.entity.Permission.ReadMessageHistory] permission.
      *
      * Replying will not mention the author by default,
      * set [AllowedMentionsBuilder.repliedUser] to `true` via [allowedMentions]  to mention the author.

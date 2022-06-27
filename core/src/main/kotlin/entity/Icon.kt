@@ -1,11 +1,11 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.KordObject
-import dev.kord.rest.Image
-import dev.kord.rest.route.CdnUrl
-import dev.kord.rest.route.DiscordCdn
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.rest.Image
+import dev.jombi.kordsb.rest.route.CdnUrl
+import dev.jombi.kordsb.rest.route.DiscordCdn
 
 public sealed class Icon(public val animated: Boolean, public val cdnUrl: CdnUrl, override val kord: Kord) :
     KordObject {

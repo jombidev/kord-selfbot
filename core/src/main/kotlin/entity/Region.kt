@@ -1,8 +1,8 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.core.Kord
-import dev.kord.core.KordObject
-import dev.kord.core.cache.data.RegionData
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.core.cache.data.RegionData
 import java.util.*
 
 public class Region(public val data: RegionData, override val kord: Kord) : KordObject {

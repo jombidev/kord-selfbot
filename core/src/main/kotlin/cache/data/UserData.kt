@@ -1,13 +1,13 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
 import dev.kord.cache.api.data.DataDescription
 import dev.kord.cache.api.data.description
-import dev.kord.common.entity.DiscordOptionallyMemberUser
-import dev.kord.common.entity.DiscordUser
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.UserFlags
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.DiscordOptionallyMemberUser
+import dev.jombi.kordsb.common.entity.DiscordUser
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.UserFlags
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
 import kotlinx.serialization.Serializable
 
 private val WebhookData.nullableUserId get() = userId.value
@@ -39,7 +39,7 @@ public data class UserData(
 
         @Suppress("DeprecatedCallableAddReplaceWith", "DEPRECATION")
         @Deprecated("'DiscordInviteUser' is deprecated. Use 'DiscordUser' instead.")
-        public fun from(entity: dev.kord.gateway.DiscordInviteUser): UserData = with(entity) {
+        public fun from(entity: dev.jombi.kordsb.gateway.DiscordInviteUser): UserData = with(entity) {
             UserData(id, username, discriminator, avatar, bot, publicFlags)
         }
 

@@ -1,12 +1,12 @@
-package dev.kord.voice.handlers
+package dev.jombi.kordsb.voice.handlers
 
-import dev.kord.common.annotation.KordVoice
-import dev.kord.voice.gateway.Close
-import dev.kord.voice.gateway.Ready
-import dev.kord.voice.gateway.SessionDescription
-import dev.kord.voice.gateway.VoiceEvent
-import dev.kord.voice.gateway.handler.GatewayEventHandler
-import dev.kord.voice.streams.Streams
+import dev.jombi.kordsb.common.annotation.KordVoice
+import dev.jombi.kordsb.voice.gateway.Close
+import dev.jombi.kordsb.voice.gateway.Ready
+import dev.jombi.kordsb.voice.gateway.SessionDescription
+import dev.jombi.kordsb.voice.gateway.VoiceEvent
+import dev.jombi.kordsb.voice.gateway.handler.GatewayEventHandler
+import dev.jombi.kordsb.voice.streams.Streams
 import io.ktor.util.network.*
 import kotlinx.atomicfu.AtomicRef
 import kotlinx.atomicfu.atomic

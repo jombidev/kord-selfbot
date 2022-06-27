@@ -146,9 +146,9 @@ public final class com/iwebpp/crypto/TweetNaclFast$poly1305 {
 	public fun update ([BII)Lcom/iwebpp/crypto/TweetNaclFast$poly1305;
 }
 
-public final class dev/kord/voice/AudioFrame {
-	public static final field Companion Ldev/kord/voice/AudioFrame$Companion;
-	public static final synthetic fun box-impl ([B)Ldev/kord/voice/AudioFrame;
+public final class dev/jombi/kordsb/voice/AudioFrame {
+	public static final field Companion Ldev/jombi/kordsb/voice/AudioFrame$Companion;
+	public static final synthetic fun box-impl ([B)Ldev/jombi/kordsb/voice/AudioFrame;
 	public static fun constructor-impl ([B)[B
 	public fun equals (Ljava/lang/Object;)Z
 	public static fun equals-impl ([BLjava/lang/Object;)Z
@@ -161,507 +161,507 @@ public final class dev/kord/voice/AudioFrame {
 	public final synthetic fun unbox-impl ()[B
 }
 
-public final class dev/kord/voice/AudioFrame$Companion {
-	public final fun fromData-aSqDgro ([B)[B
-	public final fun getSILENCE-kgrP3dY ()[B
+public final class dev/jombi/kordsb/voice/AudioFrame$Companion {
+	public final fun fromData-caTMcVc ([B)[B
+	public final fun getSILENCE-361e8YY ()[B
 }
 
-public abstract interface class dev/kord/voice/AudioProvider {
-	public abstract fun provide-aSqDgro (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+public abstract interface class dev/jombi/kordsb/voice/AudioProvider {
+	public abstract fun provide-caTMcVc (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun provideFrames (Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/channels/SendChannel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
-public final class dev/kord/voice/AudioProvider$DefaultImpls {
-	public static fun provideFrames (Ldev/kord/voice/AudioProvider;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/channels/SendChannel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+public final class dev/jombi/kordsb/voice/AudioProvider$DefaultImpls {
+	public static fun provideFrames (Ldev/jombi/kordsb/voice/AudioProvider;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/channels/SendChannel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
-public final class dev/kord/voice/DefaultFrameInterceptor : dev/kord/voice/FrameInterceptor {
+public final class dev/jombi/kordsb/voice/DefaultFrameInterceptor : dev/jombi/kordsb/voice/FrameInterceptor {
 	public fun <init> ()V
-	public fun <init> (Ldev/kord/voice/DefaultFrameInterceptorData;)V
-	public synthetic fun <init> (Ldev/kord/voice/DefaultFrameInterceptorData;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public fun intercept (Lkotlinx/coroutines/flow/Flow;Ldev/kord/voice/FrameInterceptorConfiguration;)Lkotlinx/coroutines/flow/Flow;
+	public fun <init> (Ldev/jombi/kordsb/voice/DefaultFrameInterceptorData;)V
+	public synthetic fun <init> (Ldev/jombi/kordsb/voice/DefaultFrameInterceptorData;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun intercept (Lkotlinx/coroutines/flow/Flow;Ldev/jombi/kordsb/voice/FrameInterceptorConfiguration;)Lkotlinx/coroutines/flow/Flow;
 }
 
-public final class dev/kord/voice/DefaultFrameInterceptorData {
+public final class dev/jombi/kordsb/voice/DefaultFrameInterceptorData {
 	public fun <init> ()V
-	public fun <init> (Ldev/kord/voice/SpeakingFlags;)V
-	public synthetic fun <init> (Ldev/kord/voice/SpeakingFlags;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun component1 ()Ldev/kord/voice/SpeakingFlags;
-	public final fun copy (Ldev/kord/voice/SpeakingFlags;)Ldev/kord/voice/DefaultFrameInterceptorData;
-	public static synthetic fun copy$default (Ldev/kord/voice/DefaultFrameInterceptorData;Ldev/kord/voice/SpeakingFlags;ILjava/lang/Object;)Ldev/kord/voice/DefaultFrameInterceptorData;
+	public fun <init> (Ldev/jombi/kordsb/voice/SpeakingFlags;)V
+	public synthetic fun <init> (Ldev/jombi/kordsb/voice/SpeakingFlags;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ldev/jombi/kordsb/voice/SpeakingFlags;
+	public final fun copy (Ldev/jombi/kordsb/voice/SpeakingFlags;)Ldev/jombi/kordsb/voice/DefaultFrameInterceptorData;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/voice/DefaultFrameInterceptorData;Ldev/jombi/kordsb/voice/SpeakingFlags;ILjava/lang/Object;)Ldev/jombi/kordsb/voice/DefaultFrameInterceptorData;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getSpeakingState ()Ldev/kord/voice/SpeakingFlags;
+	public final fun getSpeakingState ()Ldev/jombi/kordsb/voice/SpeakingFlags;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/kord/voice/EncryptionMode : java/lang/Enum {
-	public static final field AeadAes256Gcm Ldev/kord/voice/EncryptionMode;
-	public static final field AeadAes256GcmRtpsize Ldev/kord/voice/EncryptionMode;
-	public static final field Companion Ldev/kord/voice/EncryptionMode$Companion;
-	public static final field XSalsa20Poly1305 Ldev/kord/voice/EncryptionMode;
-	public static final field XSalsa20Poly1305Lite Ldev/kord/voice/EncryptionMode;
-	public static final field XSalsa20Poly1305LiteRtpsize Ldev/kord/voice/EncryptionMode;
-	public static final field XSalsa20Poly1305Suffix Ldev/kord/voice/EncryptionMode;
-	public static fun valueOf (Ljava/lang/String;)Ldev/kord/voice/EncryptionMode;
-	public static fun values ()[Ldev/kord/voice/EncryptionMode;
+public final class dev/jombi/kordsb/voice/EncryptionMode : java/lang/Enum {
+	public static final field AeadAes256Gcm Ldev/jombi/kordsb/voice/EncryptionMode;
+	public static final field AeadAes256GcmRtpsize Ldev/jombi/kordsb/voice/EncryptionMode;
+	public static final field Companion Ldev/jombi/kordsb/voice/EncryptionMode$Companion;
+	public static final field XSalsa20Poly1305 Ldev/jombi/kordsb/voice/EncryptionMode;
+	public static final field XSalsa20Poly1305Lite Ldev/jombi/kordsb/voice/EncryptionMode;
+	public static final field XSalsa20Poly1305LiteRtpsize Ldev/jombi/kordsb/voice/EncryptionMode;
+	public static final field XSalsa20Poly1305Suffix Ldev/jombi/kordsb/voice/EncryptionMode;
+	public static fun valueOf (Ljava/lang/String;)Ldev/jombi/kordsb/voice/EncryptionMode;
+	public static fun values ()[Ldev/jombi/kordsb/voice/EncryptionMode;
 }
 
-public final class dev/kord/voice/EncryptionMode$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/kord/voice/EncryptionMode$$serializer;
+public final class dev/jombi/kordsb/voice/EncryptionMode$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/EncryptionMode$$serializer;
 	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/kord/voice/EncryptionMode;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/jombi/kordsb/voice/EncryptionMode;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/kord/voice/EncryptionMode;)V
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/jombi/kordsb/voice/EncryptionMode;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/EncryptionMode$Companion {
+public final class dev/jombi/kordsb/voice/EncryptionMode$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public abstract interface class dev/kord/voice/FrameInterceptor {
-	public abstract fun intercept (Lkotlinx/coroutines/flow/Flow;Ldev/kord/voice/FrameInterceptorConfiguration;)Lkotlinx/coroutines/flow/Flow;
+public abstract interface class dev/jombi/kordsb/voice/FrameInterceptor {
+	public abstract fun intercept (Lkotlinx/coroutines/flow/Flow;Ldev/jombi/kordsb/voice/FrameInterceptorConfiguration;)Lkotlinx/coroutines/flow/Flow;
 }
 
-public final class dev/kord/voice/FrameInterceptorConfiguration {
-	public synthetic fun <init> (Ldev/kord/gateway/Gateway;Ldev/kord/voice/gateway/VoiceGateway;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun component1 ()Ldev/kord/gateway/Gateway;
-	public final fun component2 ()Ldev/kord/voice/gateway/VoiceGateway;
+public final class dev/jombi/kordsb/voice/FrameInterceptorConfiguration {
+	public synthetic fun <init> (Ldev/jombi/kordsb/gateway/Gateway;Ldev/jombi/kordsb/voice/gateway/VoiceGateway;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ldev/jombi/kordsb/gateway/Gateway;
+	public final fun component2 ()Ldev/jombi/kordsb/voice/gateway/VoiceGateway;
 	public final fun component3-pVg5ArA ()I
-	public final fun copy-jXDDuk8 (Ldev/kord/gateway/Gateway;Ldev/kord/voice/gateway/VoiceGateway;I)Ldev/kord/voice/FrameInterceptorConfiguration;
-	public static synthetic fun copy-jXDDuk8$default (Ldev/kord/voice/FrameInterceptorConfiguration;Ldev/kord/gateway/Gateway;Ldev/kord/voice/gateway/VoiceGateway;IILjava/lang/Object;)Ldev/kord/voice/FrameInterceptorConfiguration;
+	public final fun copy-jXDDuk8 (Ldev/jombi/kordsb/gateway/Gateway;Ldev/jombi/kordsb/voice/gateway/VoiceGateway;I)Ldev/jombi/kordsb/voice/FrameInterceptorConfiguration;
+	public static synthetic fun copy-jXDDuk8$default (Ldev/jombi/kordsb/voice/FrameInterceptorConfiguration;Ldev/jombi/kordsb/gateway/Gateway;Ldev/jombi/kordsb/voice/gateway/VoiceGateway;IILjava/lang/Object;)Ldev/jombi/kordsb/voice/FrameInterceptorConfiguration;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getGateway ()Ldev/kord/gateway/Gateway;
+	public final fun getGateway ()Ldev/jombi/kordsb/gateway/Gateway;
 	public final fun getSsrc-pVg5ArA ()I
-	public final fun getVoiceGateway ()Ldev/kord/voice/gateway/VoiceGateway;
+	public final fun getVoiceGateway ()Ldev/jombi/kordsb/voice/gateway/VoiceGateway;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/kord/voice/SpeakingFlag : java/lang/Enum {
-	public static final field Microphone Ldev/kord/voice/SpeakingFlag;
-	public static final field Priority Ldev/kord/voice/SpeakingFlag;
-	public static final field Soundshare Ldev/kord/voice/SpeakingFlag;
+public final class dev/jombi/kordsb/voice/SpeakingFlag : java/lang/Enum {
+	public static final field Microphone Ldev/jombi/kordsb/voice/SpeakingFlag;
+	public static final field Priority Ldev/jombi/kordsb/voice/SpeakingFlag;
+	public static final field Soundshare Ldev/jombi/kordsb/voice/SpeakingFlag;
 	public final fun getCode ()I
-	public static fun valueOf (Ljava/lang/String;)Ldev/kord/voice/SpeakingFlag;
-	public static fun values ()[Ldev/kord/voice/SpeakingFlag;
+	public static fun valueOf (Ljava/lang/String;)Ldev/jombi/kordsb/voice/SpeakingFlag;
+	public static fun values ()[Ldev/jombi/kordsb/voice/SpeakingFlag;
 }
 
-public final class dev/kord/voice/SpeakingFlagKt {
-	public static final fun SpeakingFlags (Ljava/lang/Iterable;)Ldev/kord/voice/SpeakingFlags;
-	public static final fun SpeakingFlags (Lkotlin/jvm/functions/Function1;)Ldev/kord/voice/SpeakingFlags;
-	public static final fun SpeakingFlags ([Ldev/kord/voice/SpeakingFlag;)Ldev/kord/voice/SpeakingFlags;
-	public static final fun SpeakingFlags ([Ldev/kord/voice/SpeakingFlags;)Ldev/kord/voice/SpeakingFlags;
-	public static final fun SpeakingFlagsWithIterable (Ljava/lang/Iterable;)Ldev/kord/voice/SpeakingFlags;
+public final class dev/jombi/kordsb/voice/SpeakingFlagKt {
+	public static final fun SpeakingFlags (Ljava/lang/Iterable;)Ldev/jombi/kordsb/voice/SpeakingFlags;
+	public static final fun SpeakingFlags (Lkotlin/jvm/functions/Function1;)Ldev/jombi/kordsb/voice/SpeakingFlags;
+	public static final fun SpeakingFlags ([Ldev/jombi/kordsb/voice/SpeakingFlag;)Ldev/jombi/kordsb/voice/SpeakingFlags;
+	public static final fun SpeakingFlags ([Ldev/jombi/kordsb/voice/SpeakingFlags;)Ldev/jombi/kordsb/voice/SpeakingFlags;
+	public static final fun SpeakingFlagsWithIterable (Ljava/lang/Iterable;)Ldev/jombi/kordsb/voice/SpeakingFlags;
 }
 
-public final class dev/kord/voice/SpeakingFlags {
-	public static final field Companion Ldev/kord/voice/SpeakingFlags$Companion;
-	public final fun contains (Ldev/kord/voice/SpeakingFlag;)Z
-	public final fun contains (Ldev/kord/voice/SpeakingFlags;)Z
-	public final fun copy (Lkotlin/jvm/functions/Function1;)Ldev/kord/voice/SpeakingFlags;
+public final class dev/jombi/kordsb/voice/SpeakingFlags {
+	public static final field Companion Ldev/jombi/kordsb/voice/SpeakingFlags$Companion;
+	public final fun contains (Ldev/jombi/kordsb/voice/SpeakingFlag;)Z
+	public final fun contains (Ldev/jombi/kordsb/voice/SpeakingFlags;)Z
+	public final fun copy (Lkotlin/jvm/functions/Function1;)Ldev/jombi/kordsb/voice/SpeakingFlags;
 	public final fun getCode ()I
 	public final fun getFlags ()Ljava/util/List;
-	public final fun minus (Ldev/kord/voice/SpeakingFlag;)Ldev/kord/voice/SpeakingFlags;
-	public final fun minus (Ldev/kord/voice/SpeakingFlags;)Ldev/kord/voice/SpeakingFlags;
-	public final fun plus (Ldev/kord/voice/SpeakingFlag;)Ldev/kord/voice/SpeakingFlags;
-	public final fun plus (Ldev/kord/voice/SpeakingFlags;)Ldev/kord/voice/SpeakingFlags;
+	public final fun minus (Ldev/jombi/kordsb/voice/SpeakingFlag;)Ldev/jombi/kordsb/voice/SpeakingFlags;
+	public final fun minus (Ldev/jombi/kordsb/voice/SpeakingFlags;)Ldev/jombi/kordsb/voice/SpeakingFlags;
+	public final fun plus (Ldev/jombi/kordsb/voice/SpeakingFlag;)Ldev/jombi/kordsb/voice/SpeakingFlags;
+	public final fun plus (Ldev/jombi/kordsb/voice/SpeakingFlags;)Ldev/jombi/kordsb/voice/SpeakingFlags;
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/kord/voice/SpeakingFlags$Builder {
+public final class dev/jombi/kordsb/voice/SpeakingFlags$Builder {
 	public fun <init> ()V
 	public fun <init> (I)V
 	public synthetic fun <init> (IILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun flags ()Ldev/kord/voice/SpeakingFlags;
-	public final fun unaryMinus (Ldev/kord/voice/SpeakingFlag;)V
-	public final fun unaryMinus (Ldev/kord/voice/SpeakingFlags;)V
-	public final fun unaryPlus (Ldev/kord/voice/SpeakingFlag;)V
-	public final fun unaryPlus (Ldev/kord/voice/SpeakingFlags;)V
+	public final fun flags ()Ldev/jombi/kordsb/voice/SpeakingFlags;
+	public final fun unaryMinus (Ldev/jombi/kordsb/voice/SpeakingFlag;)V
+	public final fun unaryMinus (Ldev/jombi/kordsb/voice/SpeakingFlags;)V
+	public final fun unaryPlus (Ldev/jombi/kordsb/voice/SpeakingFlag;)V
+	public final fun unaryPlus (Ldev/jombi/kordsb/voice/SpeakingFlags;)V
 }
 
-public final class dev/kord/voice/SpeakingFlags$Companion {
+public final class dev/jombi/kordsb/voice/SpeakingFlags$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/VoiceConnection {
-	public fun <init> (Ldev/kord/voice/VoiceConnectionData;Ldev/kord/gateway/Gateway;Ldev/kord/voice/gateway/VoiceGateway;Ldev/kord/voice/udp/VoiceUdpSocket;Ldev/kord/voice/gateway/VoiceGatewayConfiguration;Ldev/kord/voice/streams/Streams;Ldev/kord/voice/AudioProvider;Ldev/kord/voice/FrameInterceptor;Ldev/kord/voice/udp/AudioFrameSender;Ldev/kord/voice/encryption/strategies/NonceStrategy;)V
+public final class dev/jombi/kordsb/voice/VoiceConnection {
+	public fun <init> (Ldev/jombi/kordsb/voice/VoiceConnectionData;Ldev/jombi/kordsb/gateway/Gateway;Ldev/jombi/kordsb/voice/gateway/VoiceGateway;Ldev/jombi/kordsb/voice/udp/VoiceUdpSocket;Ldev/jombi/kordsb/voice/gateway/VoiceGatewayConfiguration;Ldev/jombi/kordsb/voice/streams/Streams;Ldev/jombi/kordsb/voice/AudioProvider;Ldev/jombi/kordsb/voice/FrameInterceptor;Ldev/jombi/kordsb/voice/udp/AudioFrameSender;Ldev/jombi/kordsb/voice/encryption/strategies/NonceStrategy;)V
 	public final fun connect (Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static synthetic fun connect$default (Ldev/kord/voice/VoiceConnection;Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun connect$default (Ldev/jombi/kordsb/voice/VoiceConnection;Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun disconnect (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getAudioProvider ()Ldev/kord/voice/AudioProvider;
-	public final fun getData ()Ldev/kord/voice/VoiceConnectionData;
-	public final fun getFrameInterceptor ()Ldev/kord/voice/FrameInterceptor;
-	public final fun getFrameSender ()Ldev/kord/voice/udp/AudioFrameSender;
-	public final fun getGateway ()Ldev/kord/gateway/Gateway;
-	public final fun getNonceStrategy ()Ldev/kord/voice/encryption/strategies/NonceStrategy;
+	public final fun getAudioProvider ()Ldev/jombi/kordsb/voice/AudioProvider;
+	public final fun getData ()Ldev/jombi/kordsb/voice/VoiceConnectionData;
+	public final fun getFrameInterceptor ()Ldev/jombi/kordsb/voice/FrameInterceptor;
+	public final fun getFrameSender ()Ldev/jombi/kordsb/voice/udp/AudioFrameSender;
+	public final fun getGateway ()Ldev/jombi/kordsb/gateway/Gateway;
+	public final fun getNonceStrategy ()Ldev/jombi/kordsb/voice/encryption/strategies/NonceStrategy;
 	public final fun getScope ()Lkotlinx/coroutines/CoroutineScope;
-	public final fun getSocket ()Ldev/kord/voice/udp/VoiceUdpSocket;
-	public final fun getStreams ()Ldev/kord/voice/streams/Streams;
-	public final fun getVoiceGateway ()Ldev/kord/voice/gateway/VoiceGateway;
-	public final fun getVoiceGatewayConfiguration ()Ldev/kord/voice/gateway/VoiceGatewayConfiguration;
+	public final fun getSocket ()Ldev/jombi/kordsb/voice/udp/VoiceUdpSocket;
+	public final fun getStreams ()Ldev/jombi/kordsb/voice/streams/Streams;
+	public final fun getVoiceGateway ()Ldev/jombi/kordsb/voice/gateway/VoiceGateway;
+	public final fun getVoiceGatewayConfiguration ()Ldev/jombi/kordsb/voice/gateway/VoiceGatewayConfiguration;
 	public final fun leave (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun setVoiceGatewayConfiguration (Ldev/kord/voice/gateway/VoiceGatewayConfiguration;)V
+	public final fun setVoiceGatewayConfiguration (Ldev/jombi/kordsb/voice/gateway/VoiceGatewayConfiguration;)V
 	public final fun shutdown (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
-public final class dev/kord/voice/VoiceConnectionBuilder {
-	public fun <init> (Ldev/kord/gateway/Gateway;Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;)V
-	public final fun audioProvider (Ldev/kord/voice/AudioProvider;)V
+public final class dev/jombi/kordsb/voice/VoiceConnectionBuilder {
+	public fun <init> (Ldev/jombi/kordsb/gateway/Gateway;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;)V
+	public final fun audioProvider (Ldev/jombi/kordsb/voice/AudioProvider;)V
 	public final fun build (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun frameInterceptor (Ldev/kord/voice/FrameInterceptor;)V
-	public final fun getAudioProvider ()Ldev/kord/voice/AudioProvider;
-	public final fun getAudioSender ()Ldev/kord/voice/udp/AudioFrameSender;
-	public final fun getChannelId ()Ldev/kord/common/entity/Snowflake;
-	public final fun getFrameInterceptor ()Ldev/kord/voice/FrameInterceptor;
-	public final fun getGateway ()Ldev/kord/gateway/Gateway;
-	public final fun getGuildId ()Ldev/kord/common/entity/Snowflake;
-	public final fun getNonceStrategy ()Ldev/kord/voice/encryption/strategies/NonceStrategy;
+	public final fun frameInterceptor (Ldev/jombi/kordsb/voice/FrameInterceptor;)V
+	public final fun getAudioProvider ()Ldev/jombi/kordsb/voice/AudioProvider;
+	public final fun getAudioSender ()Ldev/jombi/kordsb/voice/udp/AudioFrameSender;
+	public final fun getChannelId ()Ldev/jombi/kordsb/common/entity/Snowflake;
+	public final fun getFrameInterceptor ()Ldev/jombi/kordsb/voice/FrameInterceptor;
+	public final fun getGateway ()Ldev/jombi/kordsb/gateway/Gateway;
+	public final fun getGuildId ()Ldev/jombi/kordsb/common/entity/Snowflake;
+	public final fun getNonceStrategy ()Ldev/jombi/kordsb/voice/encryption/strategies/NonceStrategy;
 	public final fun getReceiveVoice ()Z
 	public final fun getSelfDeaf ()Z
-	public final fun getSelfId ()Ldev/kord/common/entity/Snowflake;
+	public final fun getSelfId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun getSelfMute ()Z
-	public final fun getStreams ()Ldev/kord/voice/streams/Streams;
+	public final fun getStreams ()Ldev/jombi/kordsb/voice/streams/Streams;
 	public final fun getTimeout ()J
-	public final fun getUdpSocket ()Ldev/kord/voice/udp/VoiceUdpSocket;
-	public final fun setAudioProvider (Ldev/kord/voice/AudioProvider;)V
-	public final fun setAudioSender (Ldev/kord/voice/udp/AudioFrameSender;)V
-	public final fun setChannelId (Ldev/kord/common/entity/Snowflake;)V
-	public final fun setFrameInterceptor (Ldev/kord/voice/FrameInterceptor;)V
-	public final fun setGateway (Ldev/kord/gateway/Gateway;)V
-	public final fun setGuildId (Ldev/kord/common/entity/Snowflake;)V
-	public final fun setNonceStrategy (Ldev/kord/voice/encryption/strategies/NonceStrategy;)V
+	public final fun getUdpSocket ()Ldev/jombi/kordsb/voice/udp/VoiceUdpSocket;
+	public final fun setAudioProvider (Ldev/jombi/kordsb/voice/AudioProvider;)V
+	public final fun setAudioSender (Ldev/jombi/kordsb/voice/udp/AudioFrameSender;)V
+	public final fun setChannelId (Ldev/jombi/kordsb/common/entity/Snowflake;)V
+	public final fun setFrameInterceptor (Ldev/jombi/kordsb/voice/FrameInterceptor;)V
+	public final fun setGateway (Ldev/jombi/kordsb/gateway/Gateway;)V
+	public final fun setGuildId (Ldev/jombi/kordsb/common/entity/Snowflake;)V
+	public final fun setNonceStrategy (Ldev/jombi/kordsb/voice/encryption/strategies/NonceStrategy;)V
 	public final fun setReceiveVoice (Z)V
 	public final fun setSelfDeaf (Z)V
-	public final fun setSelfId (Ldev/kord/common/entity/Snowflake;)V
+	public final fun setSelfId (Ldev/jombi/kordsb/common/entity/Snowflake;)V
 	public final fun setSelfMute (Z)V
-	public final fun setStreams (Ldev/kord/voice/streams/Streams;)V
+	public final fun setStreams (Ldev/jombi/kordsb/voice/streams/Streams;)V
 	public final fun setTimeout (J)V
-	public final fun setUdpSocket (Ldev/kord/voice/udp/VoiceUdpSocket;)V
+	public final fun setUdpSocket (Ldev/jombi/kordsb/voice/udp/VoiceUdpSocket;)V
 	public final fun voiceGateway (Lkotlin/jvm/functions/Function1;)V
 }
 
-public final class dev/kord/voice/VoiceConnectionData {
-	public fun <init> (Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Ljava/lang/String;)V
-	public final fun component1 ()Ldev/kord/common/entity/Snowflake;
-	public final fun component2 ()Ldev/kord/common/entity/Snowflake;
+public final class dev/jombi/kordsb/voice/VoiceConnectionData {
+	public fun <init> (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;)V
+	public final fun component1 ()Ldev/jombi/kordsb/common/entity/Snowflake;
+	public final fun component2 ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun component3 ()Ljava/lang/String;
-	public final fun copy (Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Ljava/lang/String;)Ldev/kord/voice/VoiceConnectionData;
-	public static synthetic fun copy$default (Ldev/kord/voice/VoiceConnectionData;Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Ljava/lang/String;ILjava/lang/Object;)Ldev/kord/voice/VoiceConnectionData;
+	public final fun copy (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;)Ldev/jombi/kordsb/voice/VoiceConnectionData;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/voice/VoiceConnectionData;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;ILjava/lang/Object;)Ldev/jombi/kordsb/voice/VoiceConnectionData;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getGuildId ()Ldev/kord/common/entity/Snowflake;
-	public final fun getSelfId ()Ldev/kord/common/entity/Snowflake;
+	public final fun getGuildId ()Ldev/jombi/kordsb/common/entity/Snowflake;
+	public final fun getSelfId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun getSessionId ()Ljava/lang/String;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/kord/voice/VoiceConnectionKt {
-	public static final fun VoiceConnection (Ldev/kord/gateway/Gateway;Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static synthetic fun VoiceConnection$default (Ldev/kord/gateway/Gateway;Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+public final class dev/jombi/kordsb/voice/VoiceConnectionKt {
+	public static final fun VoiceConnection (Ldev/jombi/kordsb/gateway/Gateway;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun VoiceConnection$default (Ldev/jombi/kordsb/gateway/Gateway;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 }
 
-public final class dev/kord/voice/encryption/XSalsa20Poly1305Codec {
+public final class dev/jombi/kordsb/voice/encryption/XSalsa20Poly1305Codec {
 	public fun <init> ([B)V
-	public final fun decrypt ([BII[BLdev/kord/voice/io/MutableByteArrayCursor;)Z
-	public static synthetic fun decrypt$default (Ldev/kord/voice/encryption/XSalsa20Poly1305Codec;[BII[BLdev/kord/voice/io/MutableByteArrayCursor;ILjava/lang/Object;)Z
-	public final fun encrypt ([BII[BLdev/kord/voice/io/MutableByteArrayCursor;)Z
-	public static synthetic fun encrypt$default (Ldev/kord/voice/encryption/XSalsa20Poly1305Codec;[BII[BLdev/kord/voice/io/MutableByteArrayCursor;ILjava/lang/Object;)Z
+	public final fun decrypt ([BII[BLdev/jombi/kordsb/voice/io/MutableByteArrayCursor;)Z
+	public static synthetic fun decrypt$default (Ldev/jombi/kordsb/voice/encryption/XSalsa20Poly1305Codec;[BII[BLdev/jombi/kordsb/voice/io/MutableByteArrayCursor;ILjava/lang/Object;)Z
+	public final fun encrypt ([BII[BLdev/jombi/kordsb/voice/io/MutableByteArrayCursor;)Z
+	public static synthetic fun encrypt$default (Ldev/jombi/kordsb/voice/encryption/XSalsa20Poly1305Codec;[BII[BLdev/jombi/kordsb/voice/io/MutableByteArrayCursor;ILjava/lang/Object;)Z
 	public final fun getKey ()[B
 }
 
-public final class dev/kord/voice/encryption/XSalsa20Poly1305CodecKt {
-	public static final fun decrypt (Ldev/kord/voice/encryption/XSalsa20Poly1305Codec;[BII[B)[B
-	public static synthetic fun decrypt$default (Ldev/kord/voice/encryption/XSalsa20Poly1305Codec;[BII[BILjava/lang/Object;)[B
-	public static final fun encrypt (Ldev/kord/voice/encryption/XSalsa20Poly1305Codec;[BII[B)[B
-	public static synthetic fun encrypt$default (Ldev/kord/voice/encryption/XSalsa20Poly1305Codec;[BII[BILjava/lang/Object;)[B
+public final class dev/jombi/kordsb/voice/encryption/XSalsa20Poly1305CodecKt {
+	public static final fun decrypt (Ldev/jombi/kordsb/voice/encryption/XSalsa20Poly1305Codec;[BII[B)[B
+	public static synthetic fun decrypt$default (Ldev/jombi/kordsb/voice/encryption/XSalsa20Poly1305Codec;[BII[BILjava/lang/Object;)[B
+	public static final fun encrypt (Ldev/jombi/kordsb/voice/encryption/XSalsa20Poly1305Codec;[BII[B)[B
+	public static synthetic fun encrypt$default (Ldev/jombi/kordsb/voice/encryption/XSalsa20Poly1305Codec;[BII[BILjava/lang/Object;)[B
 }
 
-public final class dev/kord/voice/encryption/strategies/LiteNonceStrategy : dev/kord/voice/encryption/strategies/NonceStrategy {
+public final class dev/jombi/kordsb/voice/encryption/strategies/LiteNonceStrategy : dev/jombi/kordsb/voice/encryption/strategies/NonceStrategy {
 	public fun <init> ()V
-	public fun append (Ldev/kord/voice/io/ByteArrayView;Ldev/kord/voice/io/MutableByteArrayCursor;)V
-	public fun generate (Lkotlin/jvm/functions/Function0;)Ldev/kord/voice/io/ByteArrayView;
+	public fun append (Ldev/jombi/kordsb/voice/io/ByteArrayView;Ldev/jombi/kordsb/voice/io/MutableByteArrayCursor;)V
+	public fun generate (Lkotlin/jvm/functions/Function0;)Ldev/jombi/kordsb/voice/io/ByteArrayView;
 	public fun getNonceLength ()I
-	public fun strip (Ldev/kord/voice/udp/RTPPacket;)Ldev/kord/voice/io/ByteArrayView;
+	public fun strip (Ldev/jombi/kordsb/voice/udp/RTPPacket;)Ldev/jombi/kordsb/voice/io/ByteArrayView;
 }
 
-public abstract interface class dev/kord/voice/encryption/strategies/NonceStrategy {
-	public abstract fun append (Ldev/kord/voice/io/ByteArrayView;Ldev/kord/voice/io/MutableByteArrayCursor;)V
-	public abstract fun generate (Lkotlin/jvm/functions/Function0;)Ldev/kord/voice/io/ByteArrayView;
+public abstract interface class dev/jombi/kordsb/voice/encryption/strategies/NonceStrategy {
+	public abstract fun append (Ldev/jombi/kordsb/voice/io/ByteArrayView;Ldev/jombi/kordsb/voice/io/MutableByteArrayCursor;)V
+	public abstract fun generate (Lkotlin/jvm/functions/Function0;)Ldev/jombi/kordsb/voice/io/ByteArrayView;
 	public abstract fun getNonceLength ()I
-	public abstract fun strip (Ldev/kord/voice/udp/RTPPacket;)Ldev/kord/voice/io/ByteArrayView;
+	public abstract fun strip (Ldev/jombi/kordsb/voice/udp/RTPPacket;)Ldev/jombi/kordsb/voice/io/ByteArrayView;
 }
 
-public final class dev/kord/voice/encryption/strategies/NormalNonceStrategy : dev/kord/voice/encryption/strategies/NonceStrategy {
+public final class dev/jombi/kordsb/voice/encryption/strategies/NormalNonceStrategy : dev/jombi/kordsb/voice/encryption/strategies/NonceStrategy {
 	public fun <init> ()V
-	public fun append (Ldev/kord/voice/io/ByteArrayView;Ldev/kord/voice/io/MutableByteArrayCursor;)V
-	public fun generate (Lkotlin/jvm/functions/Function0;)Ldev/kord/voice/io/ByteArrayView;
+	public fun append (Ldev/jombi/kordsb/voice/io/ByteArrayView;Ldev/jombi/kordsb/voice/io/MutableByteArrayCursor;)V
+	public fun generate (Lkotlin/jvm/functions/Function0;)Ldev/jombi/kordsb/voice/io/ByteArrayView;
 	public fun getNonceLength ()I
-	public fun strip (Ldev/kord/voice/udp/RTPPacket;)Ldev/kord/voice/io/ByteArrayView;
+	public fun strip (Ldev/jombi/kordsb/voice/udp/RTPPacket;)Ldev/jombi/kordsb/voice/io/ByteArrayView;
 }
 
-public final class dev/kord/voice/encryption/strategies/SuffixNonceStrategy : dev/kord/voice/encryption/strategies/NonceStrategy {
+public final class dev/jombi/kordsb/voice/encryption/strategies/SuffixNonceStrategy : dev/jombi/kordsb/voice/encryption/strategies/NonceStrategy {
 	public fun <init> ()V
-	public fun append (Ldev/kord/voice/io/ByteArrayView;Ldev/kord/voice/io/MutableByteArrayCursor;)V
-	public fun generate (Lkotlin/jvm/functions/Function0;)Ldev/kord/voice/io/ByteArrayView;
+	public fun append (Ldev/jombi/kordsb/voice/io/ByteArrayView;Ldev/jombi/kordsb/voice/io/MutableByteArrayCursor;)V
+	public fun generate (Lkotlin/jvm/functions/Function0;)Ldev/jombi/kordsb/voice/io/ByteArrayView;
 	public fun getNonceLength ()I
-	public fun strip (Ldev/kord/voice/udp/RTPPacket;)Ldev/kord/voice/io/ByteArrayView;
+	public fun strip (Ldev/jombi/kordsb/voice/udp/RTPPacket;)Ldev/jombi/kordsb/voice/io/ByteArrayView;
 }
 
-public final class dev/kord/voice/exception/VoiceConnectionInitializationException : java/lang/Exception {
+public final class dev/jombi/kordsb/voice/exception/VoiceConnectionInitializationException : java/lang/Exception {
 	public fun <init> (Ljava/lang/String;)V
 	public fun <init> (Ljava/lang/String;Ljava/lang/Throwable;)V
 	public fun <init> (Ljava/lang/Throwable;)V
 }
 
-public abstract class dev/kord/voice/gateway/Close : dev/kord/voice/gateway/VoiceEvent {
+public abstract class dev/jombi/kordsb/voice/gateway/Close : dev/jombi/kordsb/voice/gateway/VoiceEvent {
 }
 
-public final class dev/kord/voice/gateway/Close$DiscordClose : dev/kord/voice/gateway/Close {
-	public fun <init> (Ldev/kord/voice/gateway/VoiceGatewayCloseCode;Z)V
-	public final fun component1 ()Ldev/kord/voice/gateway/VoiceGatewayCloseCode;
+public final class dev/jombi/kordsb/voice/gateway/Close$DiscordClose : dev/jombi/kordsb/voice/gateway/Close {
+	public fun <init> (Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode;Z)V
+	public final fun component1 ()Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode;
 	public final fun component2 ()Z
-	public final fun copy (Ldev/kord/voice/gateway/VoiceGatewayCloseCode;Z)Ldev/kord/voice/gateway/Close$DiscordClose;
-	public static synthetic fun copy$default (Ldev/kord/voice/gateway/Close$DiscordClose;Ldev/kord/voice/gateway/VoiceGatewayCloseCode;ZILjava/lang/Object;)Ldev/kord/voice/gateway/Close$DiscordClose;
+	public final fun copy (Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode;Z)Ldev/jombi/kordsb/voice/gateway/Close$DiscordClose;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/voice/gateway/Close$DiscordClose;Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode;ZILjava/lang/Object;)Ldev/jombi/kordsb/voice/gateway/Close$DiscordClose;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getCloseCode ()Ldev/kord/voice/gateway/VoiceGatewayCloseCode;
+	public final fun getCloseCode ()Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode;
 	public final fun getRecoverable ()Z
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/kord/voice/gateway/Close$Reconnecting : dev/kord/voice/gateway/Close {
-	public static final field INSTANCE Ldev/kord/voice/gateway/Close$Reconnecting;
+public final class dev/jombi/kordsb/voice/gateway/Close$Reconnecting : dev/jombi/kordsb/voice/gateway/Close {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/Close$Reconnecting;
 }
 
-public final class dev/kord/voice/gateway/Close$RetryLimitReached : dev/kord/voice/gateway/Close {
-	public static final field INSTANCE Ldev/kord/voice/gateway/Close$RetryLimitReached;
+public final class dev/jombi/kordsb/voice/gateway/Close$RetryLimitReached : dev/jombi/kordsb/voice/gateway/Close {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/Close$RetryLimitReached;
 }
 
-public final class dev/kord/voice/gateway/Close$Timeout : dev/kord/voice/gateway/Close {
-	public static final field INSTANCE Ldev/kord/voice/gateway/Close$Timeout;
+public final class dev/jombi/kordsb/voice/gateway/Close$Timeout : dev/jombi/kordsb/voice/gateway/Close {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/Close$Timeout;
 }
 
-public final class dev/kord/voice/gateway/Close$UserClose : dev/kord/voice/gateway/Close {
-	public static final field INSTANCE Ldev/kord/voice/gateway/Close$UserClose;
+public final class dev/jombi/kordsb/voice/gateway/Close$UserClose : dev/jombi/kordsb/voice/gateway/Close {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/Close$UserClose;
 }
 
-public abstract class dev/kord/voice/gateway/Command {
+public abstract class dev/jombi/kordsb/voice/gateway/Command {
 }
 
-public final class dev/kord/voice/gateway/Command$SerializationStrategy : kotlinx/serialization/SerializationStrategy {
-	public static final field INSTANCE Ldev/kord/voice/gateway/Command$SerializationStrategy;
+public final class dev/jombi/kordsb/voice/gateway/Command$SerializationStrategy : kotlinx/serialization/SerializationStrategy {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/Command$SerializationStrategy;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/kord/voice/gateway/Command;)V
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/jombi/kordsb/voice/gateway/Command;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 }
 
-public final class dev/kord/voice/gateway/DefaultVoiceGateway : dev/kord/voice/gateway/VoiceGateway {
-	public fun <init> (Ldev/kord/voice/gateway/DefaultVoiceGatewayData;)V
+public final class dev/jombi/kordsb/voice/gateway/DefaultVoiceGateway : dev/jombi/kordsb/voice/gateway/VoiceGateway {
+	public fun <init> (Ldev/jombi/kordsb/voice/gateway/DefaultVoiceGatewayData;)V
 	public fun detach (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun getEvents ()Lkotlinx/coroutines/flow/SharedFlow;
 	public fun getPing ()Lkotlinx/coroutines/flow/StateFlow;
 	public fun getScope ()Lkotlinx/coroutines/CoroutineScope;
-	public fun send (Ldev/kord/voice/gateway/Command;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public fun start (Ldev/kord/voice/gateway/VoiceGatewayConfiguration;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun send (Ldev/jombi/kordsb/voice/gateway/Command;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun start (Ldev/jombi/kordsb/voice/gateway/VoiceGatewayConfiguration;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun stop (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
-public final class dev/kord/voice/gateway/DefaultVoiceGatewayBuilder {
-	public fun <init> (Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Ljava/lang/String;)V
-	public final fun build ()Ldev/kord/voice/gateway/DefaultVoiceGateway;
+public final class dev/jombi/kordsb/voice/gateway/DefaultVoiceGatewayBuilder {
+	public fun <init> (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;)V
+	public final fun build ()Ldev/jombi/kordsb/voice/gateway/DefaultVoiceGateway;
 	public final fun getClient ()Lio/ktor/client/HttpClient;
 	public final fun getEventFlow ()Lkotlinx/coroutines/flow/MutableSharedFlow;
-	public final fun getGuildId ()Ldev/kord/common/entity/Snowflake;
-	public final fun getReconnectRetry ()Ldev/kord/gateway/retry/Retry;
-	public final fun getSelfId ()Ldev/kord/common/entity/Snowflake;
+	public final fun getGuildId ()Ldev/jombi/kordsb/common/entity/Snowflake;
+	public final fun getReconnectRetry ()Ldev/jombi/kordsb/gateway/retry/Retry;
+	public final fun getSelfId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun getSessionId ()Ljava/lang/String;
 	public final fun setClient (Lio/ktor/client/HttpClient;)V
 	public final fun setEventFlow (Lkotlinx/coroutines/flow/MutableSharedFlow;)V
-	public final fun setReconnectRetry (Ldev/kord/gateway/retry/Retry;)V
+	public final fun setReconnectRetry (Ldev/jombi/kordsb/gateway/retry/Retry;)V
 }
 
-public final class dev/kord/voice/gateway/DefaultVoiceGatewayData {
-	public fun <init> (Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Ljava/lang/String;Lio/ktor/client/HttpClient;Ldev/kord/gateway/retry/Retry;Lkotlinx/coroutines/flow/MutableSharedFlow;)V
-	public final fun component1 ()Ldev/kord/common/entity/Snowflake;
-	public final fun component2 ()Ldev/kord/common/entity/Snowflake;
+public final class dev/jombi/kordsb/voice/gateway/DefaultVoiceGatewayData {
+	public fun <init> (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Lio/ktor/client/HttpClient;Ldev/jombi/kordsb/gateway/retry/Retry;Lkotlinx/coroutines/flow/MutableSharedFlow;)V
+	public final fun component1 ()Ldev/jombi/kordsb/common/entity/Snowflake;
+	public final fun component2 ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun component3 ()Ljava/lang/String;
 	public final fun component4 ()Lio/ktor/client/HttpClient;
-	public final fun component5 ()Ldev/kord/gateway/retry/Retry;
+	public final fun component5 ()Ldev/jombi/kordsb/gateway/retry/Retry;
 	public final fun component6 ()Lkotlinx/coroutines/flow/MutableSharedFlow;
-	public final fun copy (Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Ljava/lang/String;Lio/ktor/client/HttpClient;Ldev/kord/gateway/retry/Retry;Lkotlinx/coroutines/flow/MutableSharedFlow;)Ldev/kord/voice/gateway/DefaultVoiceGatewayData;
-	public static synthetic fun copy$default (Ldev/kord/voice/gateway/DefaultVoiceGatewayData;Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Ljava/lang/String;Lio/ktor/client/HttpClient;Ldev/kord/gateway/retry/Retry;Lkotlinx/coroutines/flow/MutableSharedFlow;ILjava/lang/Object;)Ldev/kord/voice/gateway/DefaultVoiceGatewayData;
+	public final fun copy (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Lio/ktor/client/HttpClient;Ldev/jombi/kordsb/gateway/retry/Retry;Lkotlinx/coroutines/flow/MutableSharedFlow;)Ldev/jombi/kordsb/voice/gateway/DefaultVoiceGatewayData;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/voice/gateway/DefaultVoiceGatewayData;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Lio/ktor/client/HttpClient;Ldev/jombi/kordsb/gateway/retry/Retry;Lkotlinx/coroutines/flow/MutableSharedFlow;ILjava/lang/Object;)Ldev/jombi/kordsb/voice/gateway/DefaultVoiceGatewayData;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getClient ()Lio/ktor/client/HttpClient;
 	public final fun getEventFlow ()Lkotlinx/coroutines/flow/MutableSharedFlow;
-	public final fun getGuildId ()Ldev/kord/common/entity/Snowflake;
-	public final fun getReconnectRetry ()Ldev/kord/gateway/retry/Retry;
-	public final fun getSelfId ()Ldev/kord/common/entity/Snowflake;
+	public final fun getGuildId ()Ldev/jombi/kordsb/common/entity/Snowflake;
+	public final fun getReconnectRetry ()Ldev/jombi/kordsb/gateway/retry/Retry;
+	public final fun getSelfId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun getSessionId ()Ljava/lang/String;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/kord/voice/gateway/Heartbeat : dev/kord/voice/gateway/Command {
-	public static final field Companion Ldev/kord/voice/gateway/Heartbeat$Companion;
+public final class dev/jombi/kordsb/voice/gateway/Heartbeat : dev/jombi/kordsb/voice/gateway/Command {
+	public static final field Companion Ldev/jombi/kordsb/voice/gateway/Heartbeat$Companion;
 	public synthetic fun <init> (IJLkotlinx/serialization/internal/SerializationConstructorMarker;)V
 	public fun <init> (J)V
 	public final fun component1 ()J
-	public final fun copy (J)Ldev/kord/voice/gateway/Heartbeat;
-	public static synthetic fun copy$default (Ldev/kord/voice/gateway/Heartbeat;JILjava/lang/Object;)Ldev/kord/voice/gateway/Heartbeat;
+	public final fun copy (J)Ldev/jombi/kordsb/voice/gateway/Heartbeat;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/voice/gateway/Heartbeat;JILjava/lang/Object;)Ldev/jombi/kordsb/voice/gateway/Heartbeat;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getNonce ()J
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
-	public static final fun write$Self (Ldev/kord/voice/gateway/Heartbeat;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+	public static final fun write$Self (Ldev/jombi/kordsb/voice/gateway/Heartbeat;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 }
 
-public final class dev/kord/voice/gateway/Heartbeat$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/kord/voice/gateway/Heartbeat$$serializer;
+public final class dev/jombi/kordsb/voice/gateway/Heartbeat$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/Heartbeat$$serializer;
 	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/kord/voice/gateway/Heartbeat;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/jombi/kordsb/voice/gateway/Heartbeat;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/kord/voice/gateway/Heartbeat;)V
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/jombi/kordsb/voice/gateway/Heartbeat;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/Heartbeat$Companion {
+public final class dev/jombi/kordsb/voice/gateway/Heartbeat$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/HeartbeatAck : dev/kord/voice/gateway/VoiceEvent {
-	public static final field Companion Ldev/kord/voice/gateway/HeartbeatAck$Companion;
+public final class dev/jombi/kordsb/voice/gateway/HeartbeatAck : dev/jombi/kordsb/voice/gateway/VoiceEvent {
+	public static final field Companion Ldev/jombi/kordsb/voice/gateway/HeartbeatAck$Companion;
 	public synthetic fun <init> (IJLkotlinx/serialization/internal/SerializationConstructorMarker;)V
 	public fun <init> (J)V
 	public final fun component1 ()J
-	public final fun copy (J)Ldev/kord/voice/gateway/HeartbeatAck;
-	public static synthetic fun copy$default (Ldev/kord/voice/gateway/HeartbeatAck;JILjava/lang/Object;)Ldev/kord/voice/gateway/HeartbeatAck;
+	public final fun copy (J)Ldev/jombi/kordsb/voice/gateway/HeartbeatAck;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/voice/gateway/HeartbeatAck;JILjava/lang/Object;)Ldev/jombi/kordsb/voice/gateway/HeartbeatAck;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getNonce ()J
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
-	public static final fun write$Self (Ldev/kord/voice/gateway/HeartbeatAck;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+	public static final fun write$Self (Ldev/jombi/kordsb/voice/gateway/HeartbeatAck;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 }
 
-public final class dev/kord/voice/gateway/HeartbeatAck$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/kord/voice/gateway/HeartbeatAck$$serializer;
+public final class dev/jombi/kordsb/voice/gateway/HeartbeatAck$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/HeartbeatAck$$serializer;
 	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/kord/voice/gateway/HeartbeatAck;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/jombi/kordsb/voice/gateway/HeartbeatAck;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/kord/voice/gateway/HeartbeatAck;)V
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/jombi/kordsb/voice/gateway/HeartbeatAck;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/HeartbeatAck$Companion {
+public final class dev/jombi/kordsb/voice/gateway/HeartbeatAck$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/Hello : dev/kord/voice/gateway/VoiceEvent {
-	public static final field Companion Ldev/kord/voice/gateway/Hello$Companion;
+public final class dev/jombi/kordsb/voice/gateway/Hello : dev/jombi/kordsb/voice/gateway/VoiceEvent {
+	public static final field Companion Ldev/jombi/kordsb/voice/gateway/Hello$Companion;
 	public synthetic fun <init> (ISDLkotlinx/serialization/internal/SerializationConstructorMarker;)V
 	public fun <init> (SD)V
 	public final fun component1 ()S
 	public final fun component2 ()D
-	public final fun copy (SD)Ldev/kord/voice/gateway/Hello;
-	public static synthetic fun copy$default (Ldev/kord/voice/gateway/Hello;SDILjava/lang/Object;)Ldev/kord/voice/gateway/Hello;
+	public final fun copy (SD)Ldev/jombi/kordsb/voice/gateway/Hello;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/voice/gateway/Hello;SDILjava/lang/Object;)Ldev/jombi/kordsb/voice/gateway/Hello;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getHeartbeatInterval ()D
 	public final fun getVersion ()S
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
-	public static final fun write$Self (Ldev/kord/voice/gateway/Hello;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+	public static final fun write$Self (Ldev/jombi/kordsb/voice/gateway/Hello;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 }
 
-public final class dev/kord/voice/gateway/Hello$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/kord/voice/gateway/Hello$$serializer;
+public final class dev/jombi/kordsb/voice/gateway/Hello$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/Hello$$serializer;
 	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/kord/voice/gateway/Hello;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/jombi/kordsb/voice/gateway/Hello;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/kord/voice/gateway/Hello;)V
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/jombi/kordsb/voice/gateway/Hello;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/Hello$Companion {
+public final class dev/jombi/kordsb/voice/gateway/Hello$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/Identify : dev/kord/voice/gateway/Command {
-	public static final field Companion Ldev/kord/voice/gateway/Identify$Companion;
-	public synthetic fun <init> (ILdev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
-	public fun <init> (Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;)V
-	public final fun component1 ()Ldev/kord/common/entity/Snowflake;
-	public final fun component2 ()Ldev/kord/common/entity/Snowflake;
+public final class dev/jombi/kordsb/voice/gateway/Identify : dev/jombi/kordsb/voice/gateway/Command {
+	public static final field Companion Ldev/jombi/kordsb/voice/gateway/Identify$Companion;
+	public synthetic fun <init> (ILdev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ldev/jombi/kordsb/common/entity/Snowflake;
+	public final fun component2 ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun component3 ()Ljava/lang/String;
 	public final fun component4 ()Ljava/lang/String;
-	public final fun copy (Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;)Ldev/kord/voice/gateway/Identify;
-	public static synthetic fun copy$default (Ldev/kord/voice/gateway/Identify;Ldev/kord/common/entity/Snowflake;Ldev/kord/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/kord/voice/gateway/Identify;
+	public final fun copy (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;)Ldev/jombi/kordsb/voice/gateway/Identify;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/voice/gateway/Identify;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/jombi/kordsb/voice/gateway/Identify;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getServerId ()Ldev/kord/common/entity/Snowflake;
+	public final fun getServerId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun getSessionId ()Ljava/lang/String;
 	public final fun getToken ()Ljava/lang/String;
-	public final fun getUserId ()Ldev/kord/common/entity/Snowflake;
+	public final fun getUserId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
-	public static final fun write$Self (Ldev/kord/voice/gateway/Identify;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+	public static final fun write$Self (Ldev/jombi/kordsb/voice/gateway/Identify;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 }
 
-public final class dev/kord/voice/gateway/Identify$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/kord/voice/gateway/Identify$$serializer;
+public final class dev/jombi/kordsb/voice/gateway/Identify$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/Identify$$serializer;
 	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/kord/voice/gateway/Identify;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/jombi/kordsb/voice/gateway/Identify;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/kord/voice/gateway/Identify;)V
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/jombi/kordsb/voice/gateway/Identify;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/Identify$Companion {
+public final class dev/jombi/kordsb/voice/gateway/Identify$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/OpCode : java/lang/Enum {
-	public static final field ClientDisconnect Ldev/kord/voice/gateway/OpCode;
-	public static final field Heartbeat Ldev/kord/voice/gateway/OpCode;
-	public static final field HeartbeatAck Ldev/kord/voice/gateway/OpCode;
-	public static final field Hello Ldev/kord/voice/gateway/OpCode;
-	public static final field Identify Ldev/kord/voice/gateway/OpCode;
-	public static final field Ready Ldev/kord/voice/gateway/OpCode;
-	public static final field Resume Ldev/kord/voice/gateway/OpCode;
-	public static final field Resumed Ldev/kord/voice/gateway/OpCode;
-	public static final field SelectProtocol Ldev/kord/voice/gateway/OpCode;
-	public static final field SessionDescription Ldev/kord/voice/gateway/OpCode;
-	public static final field Speaking Ldev/kord/voice/gateway/OpCode;
-	public static final field Unknown Ldev/kord/voice/gateway/OpCode;
+public final class dev/jombi/kordsb/voice/gateway/OpCode : java/lang/Enum {
+	public static final field ClientDisconnect Ldev/jombi/kordsb/voice/gateway/OpCode;
+	public static final field Heartbeat Ldev/jombi/kordsb/voice/gateway/OpCode;
+	public static final field HeartbeatAck Ldev/jombi/kordsb/voice/gateway/OpCode;
+	public static final field Hello Ldev/jombi/kordsb/voice/gateway/OpCode;
+	public static final field Identify Ldev/jombi/kordsb/voice/gateway/OpCode;
+	public static final field Ready Ldev/jombi/kordsb/voice/gateway/OpCode;
+	public static final field Resume Ldev/jombi/kordsb/voice/gateway/OpCode;
+	public static final field Resumed Ldev/jombi/kordsb/voice/gateway/OpCode;
+	public static final field SelectProtocol Ldev/jombi/kordsb/voice/gateway/OpCode;
+	public static final field SessionDescription Ldev/jombi/kordsb/voice/gateway/OpCode;
+	public static final field Speaking Ldev/jombi/kordsb/voice/gateway/OpCode;
+	public static final field Unknown Ldev/jombi/kordsb/voice/gateway/OpCode;
 	public final fun getCode ()I
-	public static fun valueOf (Ljava/lang/String;)Ldev/kord/voice/gateway/OpCode;
-	public static fun values ()[Ldev/kord/voice/gateway/OpCode;
+	public static fun valueOf (Ljava/lang/String;)Ldev/jombi/kordsb/voice/gateway/OpCode;
+	public static fun values ()[Ldev/jombi/kordsb/voice/gateway/OpCode;
 }
 
-public final class dev/kord/voice/gateway/Ready : dev/kord/voice/gateway/VoiceEvent {
-	public static final field Companion Ldev/kord/voice/gateway/Ready$Companion;
+public final class dev/jombi/kordsb/voice/gateway/Ready : dev/jombi/kordsb/voice/gateway/VoiceEvent {
+	public static final field Companion Ldev/jombi/kordsb/voice/gateway/Ready$Companion;
 	public synthetic fun <init> (ILjava/lang/String;ILjava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public synthetic fun <init> (ILkotlin/UInt;Ljava/lang/String;ILjava/util/List;Lkotlinx/serialization/internal/SerializationConstructorMarker;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1-pVg5ArA ()I
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()I
 	public final fun component4 ()Ljava/util/List;
-	public final fun copy-SGjrQA4 (ILjava/lang/String;ILjava/util/List;)Ldev/kord/voice/gateway/Ready;
-	public static synthetic fun copy-SGjrQA4$default (Ldev/kord/voice/gateway/Ready;ILjava/lang/String;ILjava/util/List;ILjava/lang/Object;)Ldev/kord/voice/gateway/Ready;
+	public final fun copy-SGjrQA4 (ILjava/lang/String;ILjava/util/List;)Ldev/jombi/kordsb/voice/gateway/Ready;
+	public static synthetic fun copy-SGjrQA4$default (Ldev/jombi/kordsb/voice/gateway/Ready;ILjava/lang/String;ILjava/util/List;ILjava/lang/Object;)Ldev/jombi/kordsb/voice/gateway/Ready;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getIp ()Ljava/lang/String;
 	public final fun getModes ()Ljava/util/List;
@@ -669,323 +669,323 @@ public final class dev/kord/voice/gateway/Ready : dev/kord/voice/gateway/VoiceEv
 	public final fun getSsrc-pVg5ArA ()I
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
-	public static final fun write$Self (Ldev/kord/voice/gateway/Ready;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+	public static final fun write$Self (Ldev/jombi/kordsb/voice/gateway/Ready;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 }
 
-public final class dev/kord/voice/gateway/Ready$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/kord/voice/gateway/Ready$$serializer;
+public final class dev/jombi/kordsb/voice/gateway/Ready$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/Ready$$serializer;
 	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/kord/voice/gateway/Ready;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/jombi/kordsb/voice/gateway/Ready;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/kord/voice/gateway/Ready;)V
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/jombi/kordsb/voice/gateway/Ready;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/Ready$Companion {
+public final class dev/jombi/kordsb/voice/gateway/Ready$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/Resume : dev/kord/voice/gateway/Command {
-	public static final field Companion Ldev/kord/voice/gateway/Resume$Companion;
-	public synthetic fun <init> (ILdev/kord/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
-	public fun <init> (Ldev/kord/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;)V
-	public final fun component1 ()Ldev/kord/common/entity/Snowflake;
+public final class dev/jombi/kordsb/voice/gateway/Resume : dev/jombi/kordsb/voice/gateway/Command {
+	public static final field Companion Ldev/jombi/kordsb/voice/gateway/Resume$Companion;
+	public synthetic fun <init> (ILdev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
-	public final fun copy (Ldev/kord/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;)Ldev/kord/voice/gateway/Resume;
-	public static synthetic fun copy$default (Ldev/kord/voice/gateway/Resume;Ldev/kord/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/kord/voice/gateway/Resume;
+	public final fun copy (Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;)Ldev/jombi/kordsb/voice/gateway/Resume;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/voice/gateway/Resume;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/jombi/kordsb/voice/gateway/Resume;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getServerId ()Ldev/kord/common/entity/Snowflake;
+	public final fun getServerId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun getSessionId ()Ljava/lang/String;
 	public final fun getToken ()Ljava/lang/String;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
-	public static final fun write$Self (Ldev/kord/voice/gateway/Resume;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+	public static final fun write$Self (Ldev/jombi/kordsb/voice/gateway/Resume;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 }
 
-public final class dev/kord/voice/gateway/Resume$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/kord/voice/gateway/Resume$$serializer;
+public final class dev/jombi/kordsb/voice/gateway/Resume$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/Resume$$serializer;
 	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/kord/voice/gateway/Resume;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/jombi/kordsb/voice/gateway/Resume;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/kord/voice/gateway/Resume;)V
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/jombi/kordsb/voice/gateway/Resume;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/Resume$Companion {
+public final class dev/jombi/kordsb/voice/gateway/Resume$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/Resumed : dev/kord/voice/gateway/VoiceEvent {
-	public static final field INSTANCE Ldev/kord/voice/gateway/Resumed;
+public final class dev/jombi/kordsb/voice/gateway/Resumed : dev/jombi/kordsb/voice/gateway/VoiceEvent {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/Resumed;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/SelectProtocol : dev/kord/voice/gateway/Command {
-	public static final field Companion Ldev/kord/voice/gateway/SelectProtocol$Companion;
-	public synthetic fun <init> (ILjava/lang/String;Ldev/kord/voice/gateway/SelectProtocol$Data;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
-	public fun <init> (Ljava/lang/String;Ldev/kord/voice/gateway/SelectProtocol$Data;)V
+public final class dev/jombi/kordsb/voice/gateway/SelectProtocol : dev/jombi/kordsb/voice/gateway/Command {
+	public static final field Companion Ldev/jombi/kordsb/voice/gateway/SelectProtocol$Companion;
+	public synthetic fun <init> (ILjava/lang/String;Ldev/jombi/kordsb/voice/gateway/SelectProtocol$Data;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ljava/lang/String;Ldev/jombi/kordsb/voice/gateway/SelectProtocol$Data;)V
 	public final fun component1 ()Ljava/lang/String;
-	public final fun component2 ()Ldev/kord/voice/gateway/SelectProtocol$Data;
-	public final fun copy (Ljava/lang/String;Ldev/kord/voice/gateway/SelectProtocol$Data;)Ldev/kord/voice/gateway/SelectProtocol;
-	public static synthetic fun copy$default (Ldev/kord/voice/gateway/SelectProtocol;Ljava/lang/String;Ldev/kord/voice/gateway/SelectProtocol$Data;ILjava/lang/Object;)Ldev/kord/voice/gateway/SelectProtocol;
+	public final fun component2 ()Ldev/jombi/kordsb/voice/gateway/SelectProtocol$Data;
+	public final fun copy (Ljava/lang/String;Ldev/jombi/kordsb/voice/gateway/SelectProtocol$Data;)Ldev/jombi/kordsb/voice/gateway/SelectProtocol;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/voice/gateway/SelectProtocol;Ljava/lang/String;Ldev/jombi/kordsb/voice/gateway/SelectProtocol$Data;ILjava/lang/Object;)Ldev/jombi/kordsb/voice/gateway/SelectProtocol;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getData ()Ldev/kord/voice/gateway/SelectProtocol$Data;
+	public final fun getData ()Ldev/jombi/kordsb/voice/gateway/SelectProtocol$Data;
 	public final fun getProtocol ()Ljava/lang/String;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
-	public static final fun write$Self (Ldev/kord/voice/gateway/SelectProtocol;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+	public static final fun write$Self (Ldev/jombi/kordsb/voice/gateway/SelectProtocol;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 }
 
-public final class dev/kord/voice/gateway/SelectProtocol$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/kord/voice/gateway/SelectProtocol$$serializer;
+public final class dev/jombi/kordsb/voice/gateway/SelectProtocol$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/SelectProtocol$$serializer;
 	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/kord/voice/gateway/SelectProtocol;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/jombi/kordsb/voice/gateway/SelectProtocol;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/kord/voice/gateway/SelectProtocol;)V
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/jombi/kordsb/voice/gateway/SelectProtocol;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/SelectProtocol$Companion {
+public final class dev/jombi/kordsb/voice/gateway/SelectProtocol$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/SelectProtocol$Data {
-	public static final field Companion Ldev/kord/voice/gateway/SelectProtocol$Data$Companion;
-	public synthetic fun <init> (ILjava/lang/String;ILdev/kord/voice/EncryptionMode;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
-	public fun <init> (Ljava/lang/String;ILdev/kord/voice/EncryptionMode;)V
+public final class dev/jombi/kordsb/voice/gateway/SelectProtocol$Data {
+	public static final field Companion Ldev/jombi/kordsb/voice/gateway/SelectProtocol$Data$Companion;
+	public synthetic fun <init> (ILjava/lang/String;ILdev/jombi/kordsb/voice/EncryptionMode;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ljava/lang/String;ILdev/jombi/kordsb/voice/EncryptionMode;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()I
-	public final fun component3 ()Ldev/kord/voice/EncryptionMode;
-	public final fun copy (Ljava/lang/String;ILdev/kord/voice/EncryptionMode;)Ldev/kord/voice/gateway/SelectProtocol$Data;
-	public static synthetic fun copy$default (Ldev/kord/voice/gateway/SelectProtocol$Data;Ljava/lang/String;ILdev/kord/voice/EncryptionMode;ILjava/lang/Object;)Ldev/kord/voice/gateway/SelectProtocol$Data;
+	public final fun component3 ()Ldev/jombi/kordsb/voice/EncryptionMode;
+	public final fun copy (Ljava/lang/String;ILdev/jombi/kordsb/voice/EncryptionMode;)Ldev/jombi/kordsb/voice/gateway/SelectProtocol$Data;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/voice/gateway/SelectProtocol$Data;Ljava/lang/String;ILdev/jombi/kordsb/voice/EncryptionMode;ILjava/lang/Object;)Ldev/jombi/kordsb/voice/gateway/SelectProtocol$Data;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAddress ()Ljava/lang/String;
-	public final fun getMode ()Ldev/kord/voice/EncryptionMode;
+	public final fun getMode ()Ldev/jombi/kordsb/voice/EncryptionMode;
 	public final fun getPort ()I
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
-	public static final fun write$Self (Ldev/kord/voice/gateway/SelectProtocol$Data;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+	public static final fun write$Self (Ldev/jombi/kordsb/voice/gateway/SelectProtocol$Data;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 }
 
-public final class dev/kord/voice/gateway/SelectProtocol$Data$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/kord/voice/gateway/SelectProtocol$Data$$serializer;
+public final class dev/jombi/kordsb/voice/gateway/SelectProtocol$Data$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/SelectProtocol$Data$$serializer;
 	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/kord/voice/gateway/SelectProtocol$Data;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/jombi/kordsb/voice/gateway/SelectProtocol$Data;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/kord/voice/gateway/SelectProtocol$Data;)V
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/jombi/kordsb/voice/gateway/SelectProtocol$Data;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/SelectProtocol$Data$Companion {
+public final class dev/jombi/kordsb/voice/gateway/SelectProtocol$Data$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/SendSpeaking : dev/kord/voice/gateway/Command {
-	public static final field Companion Ldev/kord/voice/gateway/SendSpeaking$Companion;
-	public synthetic fun <init> (ILdev/kord/voice/SpeakingFlags;ILkotlin/UInt;Lkotlinx/serialization/internal/SerializationConstructorMarker;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public synthetic fun <init> (Ldev/kord/voice/SpeakingFlags;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun component1 ()Ldev/kord/voice/SpeakingFlags;
+public final class dev/jombi/kordsb/voice/gateway/SendSpeaking : dev/jombi/kordsb/voice/gateway/Command {
+	public static final field Companion Ldev/jombi/kordsb/voice/gateway/SendSpeaking$Companion;
+	public synthetic fun <init> (ILdev/jombi/kordsb/voice/SpeakingFlags;ILkotlin/UInt;Lkotlinx/serialization/internal/SerializationConstructorMarker;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ldev/jombi/kordsb/voice/SpeakingFlags;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ldev/jombi/kordsb/voice/SpeakingFlags;
 	public final fun component2 ()I
 	public final fun component3-pVg5ArA ()I
-	public final fun copy-jXDDuk8 (Ldev/kord/voice/SpeakingFlags;II)Ldev/kord/voice/gateway/SendSpeaking;
-	public static synthetic fun copy-jXDDuk8$default (Ldev/kord/voice/gateway/SendSpeaking;Ldev/kord/voice/SpeakingFlags;IIILjava/lang/Object;)Ldev/kord/voice/gateway/SendSpeaking;
+	public final fun copy-jXDDuk8 (Ldev/jombi/kordsb/voice/SpeakingFlags;II)Ldev/jombi/kordsb/voice/gateway/SendSpeaking;
+	public static synthetic fun copy-jXDDuk8$default (Ldev/jombi/kordsb/voice/gateway/SendSpeaking;Ldev/jombi/kordsb/voice/SpeakingFlags;IIILjava/lang/Object;)Ldev/jombi/kordsb/voice/gateway/SendSpeaking;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getDelay ()I
-	public final fun getSpeaking ()Ldev/kord/voice/SpeakingFlags;
+	public final fun getSpeaking ()Ldev/jombi/kordsb/voice/SpeakingFlags;
 	public final fun getSsrc-pVg5ArA ()I
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
-	public static final fun write$Self (Ldev/kord/voice/gateway/SendSpeaking;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+	public static final fun write$Self (Ldev/jombi/kordsb/voice/gateway/SendSpeaking;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 }
 
-public final class dev/kord/voice/gateway/SendSpeaking$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/kord/voice/gateway/SendSpeaking$$serializer;
+public final class dev/jombi/kordsb/voice/gateway/SendSpeaking$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/SendSpeaking$$serializer;
 	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/kord/voice/gateway/SendSpeaking;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/jombi/kordsb/voice/gateway/SendSpeaking;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/kord/voice/gateway/SendSpeaking;)V
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/jombi/kordsb/voice/gateway/SendSpeaking;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/SendSpeaking$Companion {
+public final class dev/jombi/kordsb/voice/gateway/SendSpeaking$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/SessionDescription : dev/kord/voice/gateway/VoiceEvent {
-	public static final field Companion Ldev/kord/voice/gateway/SessionDescription$Companion;
-	public synthetic fun <init> (ILdev/kord/voice/EncryptionMode;Ljava/util/List;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
-	public fun <init> (Ldev/kord/voice/EncryptionMode;Ljava/util/List;)V
-	public final fun component1 ()Ldev/kord/voice/EncryptionMode;
+public final class dev/jombi/kordsb/voice/gateway/SessionDescription : dev/jombi/kordsb/voice/gateway/VoiceEvent {
+	public static final field Companion Ldev/jombi/kordsb/voice/gateway/SessionDescription$Companion;
+	public synthetic fun <init> (ILdev/jombi/kordsb/voice/EncryptionMode;Ljava/util/List;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ldev/jombi/kordsb/voice/EncryptionMode;Ljava/util/List;)V
+	public final fun component1 ()Ldev/jombi/kordsb/voice/EncryptionMode;
 	public final fun component2 ()Ljava/util/List;
-	public final fun copy (Ldev/kord/voice/EncryptionMode;Ljava/util/List;)Ldev/kord/voice/gateway/SessionDescription;
-	public static synthetic fun copy$default (Ldev/kord/voice/gateway/SessionDescription;Ldev/kord/voice/EncryptionMode;Ljava/util/List;ILjava/lang/Object;)Ldev/kord/voice/gateway/SessionDescription;
+	public final fun copy (Ldev/jombi/kordsb/voice/EncryptionMode;Ljava/util/List;)Ldev/jombi/kordsb/voice/gateway/SessionDescription;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/voice/gateway/SessionDescription;Ldev/jombi/kordsb/voice/EncryptionMode;Ljava/util/List;ILjava/lang/Object;)Ldev/jombi/kordsb/voice/gateway/SessionDescription;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getMode ()Ldev/kord/voice/EncryptionMode;
+	public final fun getMode ()Ldev/jombi/kordsb/voice/EncryptionMode;
 	public final fun getSecretKey ()Ljava/util/List;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
-	public static final fun write$Self (Ldev/kord/voice/gateway/SessionDescription;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+	public static final fun write$Self (Ldev/jombi/kordsb/voice/gateway/SessionDescription;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 }
 
-public final class dev/kord/voice/gateway/SessionDescription$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/kord/voice/gateway/SessionDescription$$serializer;
+public final class dev/jombi/kordsb/voice/gateway/SessionDescription$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/SessionDescription$$serializer;
 	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/kord/voice/gateway/SessionDescription;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/jombi/kordsb/voice/gateway/SessionDescription;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/kord/voice/gateway/SessionDescription;)V
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/jombi/kordsb/voice/gateway/SessionDescription;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/SessionDescription$Companion {
+public final class dev/jombi/kordsb/voice/gateway/SessionDescription$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/Speaking : dev/kord/voice/gateway/VoiceEvent {
-	public static final field Companion Ldev/kord/voice/gateway/Speaking$Companion;
-	public synthetic fun <init> (ILdev/kord/common/entity/Snowflake;Lkotlin/UInt;Ldev/kord/voice/SpeakingFlags;Lkotlinx/serialization/internal/SerializationConstructorMarker;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public synthetic fun <init> (Ldev/kord/common/entity/Snowflake;ILdev/kord/voice/SpeakingFlags;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun component1 ()Ldev/kord/common/entity/Snowflake;
+public final class dev/jombi/kordsb/voice/gateway/Speaking : dev/jombi/kordsb/voice/gateway/VoiceEvent {
+	public static final field Companion Ldev/jombi/kordsb/voice/gateway/Speaking$Companion;
+	public synthetic fun <init> (ILdev/jombi/kordsb/common/entity/Snowflake;Lkotlin/UInt;Ldev/jombi/kordsb/voice/SpeakingFlags;Lkotlinx/serialization/internal/SerializationConstructorMarker;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ldev/jombi/kordsb/common/entity/Snowflake;ILdev/jombi/kordsb/voice/SpeakingFlags;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun component2-pVg5ArA ()I
-	public final fun component3 ()Ldev/kord/voice/SpeakingFlags;
-	public final fun copy-OsBMiQA (Ldev/kord/common/entity/Snowflake;ILdev/kord/voice/SpeakingFlags;)Ldev/kord/voice/gateway/Speaking;
-	public static synthetic fun copy-OsBMiQA$default (Ldev/kord/voice/gateway/Speaking;Ldev/kord/common/entity/Snowflake;ILdev/kord/voice/SpeakingFlags;ILjava/lang/Object;)Ldev/kord/voice/gateway/Speaking;
+	public final fun component3 ()Ldev/jombi/kordsb/voice/SpeakingFlags;
+	public final fun copy-OsBMiQA (Ldev/jombi/kordsb/common/entity/Snowflake;ILdev/jombi/kordsb/voice/SpeakingFlags;)Ldev/jombi/kordsb/voice/gateway/Speaking;
+	public static synthetic fun copy-OsBMiQA$default (Ldev/jombi/kordsb/voice/gateway/Speaking;Ldev/jombi/kordsb/common/entity/Snowflake;ILdev/jombi/kordsb/voice/SpeakingFlags;ILjava/lang/Object;)Ldev/jombi/kordsb/voice/gateway/Speaking;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getSpeaking ()Ldev/kord/voice/SpeakingFlags;
+	public final fun getSpeaking ()Ldev/jombi/kordsb/voice/SpeakingFlags;
 	public final fun getSsrc-pVg5ArA ()I
-	public final fun getUserId ()Ldev/kord/common/entity/Snowflake;
+	public final fun getUserId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
-	public static final fun write$Self (Ldev/kord/voice/gateway/Speaking;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+	public static final fun write$Self (Ldev/jombi/kordsb/voice/gateway/Speaking;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 }
 
-public final class dev/kord/voice/gateway/Speaking$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/kord/voice/gateway/Speaking$$serializer;
+public final class dev/jombi/kordsb/voice/gateway/Speaking$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/Speaking$$serializer;
 	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/kord/voice/gateway/Speaking;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/jombi/kordsb/voice/gateway/Speaking;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/kord/voice/gateway/Speaking;)V
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/jombi/kordsb/voice/gateway/Speaking;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/kord/voice/gateway/Speaking$Companion {
+public final class dev/jombi/kordsb/voice/gateway/Speaking$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public abstract class dev/kord/voice/gateway/VoiceEvent {
+public abstract class dev/jombi/kordsb/voice/gateway/VoiceEvent {
 }
 
-public final class dev/kord/voice/gateway/VoiceEvent$DeserializationStrategy : kotlinx/serialization/DeserializationStrategy {
-	public static final field INSTANCE Ldev/kord/voice/gateway/VoiceEvent$DeserializationStrategy;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/kord/voice/gateway/VoiceEvent;
+public final class dev/jombi/kordsb/voice/gateway/VoiceEvent$DeserializationStrategy : kotlinx/serialization/DeserializationStrategy {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/VoiceEvent$DeserializationStrategy;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/jombi/kordsb/voice/gateway/VoiceEvent;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 }
 
-public abstract interface class dev/kord/voice/gateway/VoiceGateway {
-	public static final field Companion Ldev/kord/voice/gateway/VoiceGateway$Companion;
+public abstract interface class dev/jombi/kordsb/voice/gateway/VoiceGateway {
+	public static final field Companion Ldev/jombi/kordsb/voice/gateway/VoiceGateway$Companion;
 	public abstract fun detach (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getEvents ()Lkotlinx/coroutines/flow/SharedFlow;
 	public abstract fun getPing ()Lkotlinx/coroutines/flow/StateFlow;
 	public abstract fun getScope ()Lkotlinx/coroutines/CoroutineScope;
-	public abstract fun send (Ldev/kord/voice/gateway/Command;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun start (Ldev/kord/voice/gateway/VoiceGatewayConfiguration;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun send (Ldev/jombi/kordsb/voice/gateway/Command;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun start (Ldev/jombi/kordsb/voice/gateway/VoiceGatewayConfiguration;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun stop (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
-public final class dev/kord/voice/gateway/VoiceGateway$Companion {
-	public final fun none ()Ldev/kord/voice/gateway/VoiceGateway;
+public final class dev/jombi/kordsb/voice/gateway/VoiceGateway$Companion {
+	public final fun none ()Ldev/jombi/kordsb/voice/gateway/VoiceGateway;
 }
 
-public abstract class dev/kord/voice/gateway/VoiceGatewayCloseCode {
-	public static final field Companion Ldev/kord/voice/gateway/VoiceGatewayCloseCode$Companion;
+public abstract class dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode {
+	public static final field Companion Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$Companion;
 	public synthetic fun <init> (ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun getCode ()I
 }
 
-public final class dev/kord/voice/gateway/VoiceGatewayCloseCode$AlreadyAuthenticated : dev/kord/voice/gateway/VoiceGatewayCloseCode {
-	public static final field INSTANCE Ldev/kord/voice/gateway/VoiceGatewayCloseCode$AlreadyAuthenticated;
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$AlreadyAuthenticated : dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$AlreadyAuthenticated;
 }
 
-public final class dev/kord/voice/gateway/VoiceGatewayCloseCode$AuthenticationFailed : dev/kord/voice/gateway/VoiceGatewayCloseCode {
-	public static final field INSTANCE Ldev/kord/voice/gateway/VoiceGatewayCloseCode$AuthenticationFailed;
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$AuthenticationFailed : dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$AuthenticationFailed;
 }
 
-public final class dev/kord/voice/gateway/VoiceGatewayCloseCode$Companion {
-	public final fun of (I)Ldev/kord/voice/gateway/VoiceGatewayCloseCode;
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$Companion {
+	public final fun of (I)Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode;
 }
 
-public final class dev/kord/voice/gateway/VoiceGatewayCloseCode$Disconnect : dev/kord/voice/gateway/VoiceGatewayCloseCode {
-	public static final field INSTANCE Ldev/kord/voice/gateway/VoiceGatewayCloseCode$Disconnect;
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$Disconnect : dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$Disconnect;
 }
 
-public final class dev/kord/voice/gateway/VoiceGatewayCloseCode$FailedToDecodePayload : dev/kord/voice/gateway/VoiceGatewayCloseCode {
-	public static final field INSTANCE Ldev/kord/voice/gateway/VoiceGatewayCloseCode$FailedToDecodePayload;
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$FailedToDecodePayload : dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$FailedToDecodePayload;
 }
 
-public final class dev/kord/voice/gateway/VoiceGatewayCloseCode$NotAuthenticated : dev/kord/voice/gateway/VoiceGatewayCloseCode {
-	public static final field INSTANCE Ldev/kord/voice/gateway/VoiceGatewayCloseCode$NotAuthenticated;
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$NotAuthenticated : dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$NotAuthenticated;
 }
 
-public final class dev/kord/voice/gateway/VoiceGatewayCloseCode$ServerNotFound : dev/kord/voice/gateway/VoiceGatewayCloseCode {
-	public static final field INSTANCE Ldev/kord/voice/gateway/VoiceGatewayCloseCode$ServerNotFound;
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$ServerNotFound : dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$ServerNotFound;
 }
 
-public final class dev/kord/voice/gateway/VoiceGatewayCloseCode$SessionNoLongerValid : dev/kord/voice/gateway/VoiceGatewayCloseCode {
-	public static final field INSTANCE Ldev/kord/voice/gateway/VoiceGatewayCloseCode$SessionNoLongerValid;
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$SessionNoLongerValid : dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$SessionNoLongerValid;
 }
 
-public final class dev/kord/voice/gateway/VoiceGatewayCloseCode$SessionTimeout : dev/kord/voice/gateway/VoiceGatewayCloseCode {
-	public static final field INSTANCE Ldev/kord/voice/gateway/VoiceGatewayCloseCode$SessionTimeout;
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$SessionTimeout : dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$SessionTimeout;
 }
 
-public final class dev/kord/voice/gateway/VoiceGatewayCloseCode$Unknown : dev/kord/voice/gateway/VoiceGatewayCloseCode {
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$Unknown : dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode {
 	public fun <init> (I)V
 }
 
-public final class dev/kord/voice/gateway/VoiceGatewayCloseCode$UnknownEncryptionMode : dev/kord/voice/gateway/VoiceGatewayCloseCode {
-	public static final field INSTANCE Ldev/kord/voice/gateway/VoiceGatewayCloseCode$UnknownEncryptionMode;
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$UnknownEncryptionMode : dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$UnknownEncryptionMode;
 }
 
-public final class dev/kord/voice/gateway/VoiceGatewayCloseCode$UnknownOpcode : dev/kord/voice/gateway/VoiceGatewayCloseCode {
-	public static final field INSTANCE Ldev/kord/voice/gateway/VoiceGatewayCloseCode$UnknownOpcode;
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$UnknownOpcode : dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$UnknownOpcode;
 }
 
-public final class dev/kord/voice/gateway/VoiceGatewayCloseCode$UnknownProtocol : dev/kord/voice/gateway/VoiceGatewayCloseCode {
-	public static final field INSTANCE Ldev/kord/voice/gateway/VoiceGatewayCloseCode$UnknownProtocol;
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$UnknownProtocol : dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$UnknownProtocol;
 }
 
-public final class dev/kord/voice/gateway/VoiceGatewayCloseCode$VoiceServerCrashed : dev/kord/voice/gateway/VoiceGatewayCloseCode {
-	public static final field INSTANCE Ldev/kord/voice/gateway/VoiceGatewayCloseCode$VoiceServerCrashed;
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$VoiceServerCrashed : dev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/gateway/VoiceGatewayCloseCode$VoiceServerCrashed;
 }
 
-public final class dev/kord/voice/gateway/VoiceGatewayConfiguration {
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayConfiguration {
 	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
-	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Ldev/kord/voice/gateway/VoiceGatewayConfiguration;
-	public static synthetic fun copy$default (Ldev/kord/voice/gateway/VoiceGatewayConfiguration;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/kord/voice/gateway/VoiceGatewayConfiguration;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Ldev/jombi/kordsb/voice/gateway/VoiceGatewayConfiguration;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/voice/gateway/VoiceGatewayConfiguration;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/jombi/kordsb/voice/gateway/VoiceGatewayConfiguration;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getEndpoint ()Ljava/lang/String;
 	public final fun getToken ()Ljava/lang/String;
@@ -993,21 +993,21 @@ public final class dev/kord/voice/gateway/VoiceGatewayConfiguration {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/kord/voice/io/ByteArrayCursorsKt {
-	public static final fun mutableCursor (Ldev/kord/voice/io/ByteArrayView;)Ldev/kord/voice/io/MutableByteArrayCursor;
-	public static final fun mutableCursor ([B)Ldev/kord/voice/io/MutableByteArrayCursor;
-	public static final fun readableCursor (Ldev/kord/voice/io/ByteArrayView;)Ldev/kord/voice/io/ReadableByteArrayCursor;
-	public static final fun readableCursor ([B)Ldev/kord/voice/io/ReadableByteArrayCursor;
-	public static final fun writeByteArrayOrResize (Ldev/kord/voice/io/MutableByteArrayCursor;[B)V
-	public static final fun writeByteViewOrResize (Ldev/kord/voice/io/MutableByteArrayCursor;Ldev/kord/voice/io/ByteArrayView;)V
+public final class dev/jombi/kordsb/voice/io/ByteArrayCursorsKt {
+	public static final fun mutableCursor (Ldev/jombi/kordsb/voice/io/ByteArrayView;)Ldev/jombi/kordsb/voice/io/MutableByteArrayCursor;
+	public static final fun mutableCursor ([B)Ldev/jombi/kordsb/voice/io/MutableByteArrayCursor;
+	public static final fun readableCursor (Ldev/jombi/kordsb/voice/io/ByteArrayView;)Ldev/jombi/kordsb/voice/io/ReadableByteArrayCursor;
+	public static final fun readableCursor ([B)Ldev/jombi/kordsb/voice/io/ReadableByteArrayCursor;
+	public static final fun writeByteArrayOrResize (Ldev/jombi/kordsb/voice/io/MutableByteArrayCursor;[B)V
+	public static final fun writeByteViewOrResize (Ldev/jombi/kordsb/voice/io/MutableByteArrayCursor;Ldev/jombi/kordsb/voice/io/ByteArrayView;)V
 }
 
-public final class dev/kord/voice/io/ByteArrayView : java/lang/Iterable, kotlin/jvm/internal/markers/KMappedMarker {
-	public static final field Companion Ldev/kord/voice/io/ByteArrayView$Companion;
+public final class dev/jombi/kordsb/voice/io/ByteArrayView : java/lang/Iterable, kotlin/jvm/internal/markers/KMappedMarker {
+	public static final field Companion Ldev/jombi/kordsb/voice/io/ByteArrayView$Companion;
 	public synthetic fun <init> ([BIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun asInt ()I
 	public final fun asShort ()S
-	public final fun clone ()Ldev/kord/voice/io/ByteArrayView;
+	public final fun clone ()Ldev/jombi/kordsb/voice/io/ByteArrayView;
 	public final fun get (I)B
 	public final fun getData ()[B
 	public final fun getDataEnd ()I
@@ -1015,22 +1015,22 @@ public final class dev/kord/voice/io/ByteArrayView : java/lang/Iterable, kotlin/
 	public final fun getViewSize ()I
 	public fun iterator ()Ljava/util/Iterator;
 	public final fun resize (II)Z
-	public static synthetic fun resize$default (Ldev/kord/voice/io/ByteArrayView;IIILjava/lang/Object;)Z
+	public static synthetic fun resize$default (Ldev/jombi/kordsb/voice/io/ByteArrayView;IIILjava/lang/Object;)Z
 	public final fun toByteArray ()[B
-	public final fun view (II)Ldev/kord/voice/io/ByteArrayView;
-	public static synthetic fun view$default (Ldev/kord/voice/io/ByteArrayView;IIILjava/lang/Object;)Ldev/kord/voice/io/ByteArrayView;
+	public final fun view (II)Ldev/jombi/kordsb/voice/io/ByteArrayView;
+	public static synthetic fun view$default (Ldev/jombi/kordsb/voice/io/ByteArrayView;IIILjava/lang/Object;)Ldev/jombi/kordsb/voice/io/ByteArrayView;
 }
 
-public final class dev/kord/voice/io/ByteArrayView$Companion {
-	public final fun from ([BII)Ldev/kord/voice/io/ByteArrayView;
+public final class dev/jombi/kordsb/voice/io/ByteArrayView$Companion {
+	public final fun from ([BII)Ldev/jombi/kordsb/voice/io/ByteArrayView;
 }
 
-public final class dev/kord/voice/io/ByteArrayViewKt {
-	public static final fun view ([B)Ldev/kord/voice/io/ByteArrayView;
-	public static final fun view ([BII)Ldev/kord/voice/io/ByteArrayView;
+public final class dev/jombi/kordsb/voice/io/ByteArrayViewKt {
+	public static final fun view ([B)Ldev/jombi/kordsb/voice/io/ByteArrayView;
+	public static final fun view ([BII)Ldev/jombi/kordsb/voice/io/ByteArrayView;
 }
 
-public final class dev/kord/voice/io/MutableByteArrayCursor {
+public final class dev/jombi/kordsb/voice/io/MutableByteArrayCursor {
 	public fun <init> ([B)V
 	public final fun getCursor ()I
 	public final fun getData ()[B
@@ -1038,32 +1038,32 @@ public final class dev/kord/voice/io/MutableByteArrayCursor {
 	public final fun isExhausted ()Z
 	public final fun reset ()V
 	public final fun resize (IZ)Z
-	public static synthetic fun resize$default (Ldev/kord/voice/io/MutableByteArrayCursor;IZILjava/lang/Object;)Z
+	public static synthetic fun resize$default (Ldev/jombi/kordsb/voice/io/MutableByteArrayCursor;IZILjava/lang/Object;)Z
 	public final fun setCursor (I)V
 	public final fun writeByte (B)V
 	public final fun writeByteArray ([BII)V
-	public static synthetic fun writeByteArray$default (Ldev/kord/voice/io/MutableByteArrayCursor;[BIIILjava/lang/Object;)V
-	public final fun writeByteView (Ldev/kord/voice/io/ByteArrayView;)V
+	public static synthetic fun writeByteArray$default (Ldev/jombi/kordsb/voice/io/MutableByteArrayCursor;[BIIILjava/lang/Object;)V
+	public final fun writeByteView (Ldev/jombi/kordsb/voice/io/ByteArrayView;)V
 	public final fun writeInt (I)V
 	public final fun writeShort (S)V
 }
 
-public final class dev/kord/voice/io/ReadableByteArrayCursor {
-	public fun <init> (Ldev/kord/voice/io/ByteArrayView;)V
+public final class dev/jombi/kordsb/voice/io/ReadableByteArrayCursor {
+	public fun <init> (Ldev/jombi/kordsb/voice/io/ByteArrayView;)V
 	public final fun consume (I)V
 	public final fun getCursor ()I
 	public final fun getRemaining ()I
-	public final fun getView ()Ldev/kord/voice/io/ByteArrayView;
+	public final fun getView ()Ldev/jombi/kordsb/voice/io/ByteArrayView;
 	public final fun readByte ()B
-	public final fun readBytes (I)Ldev/kord/voice/io/ByteArrayView;
+	public final fun readBytes (I)Ldev/jombi/kordsb/voice/io/ByteArrayView;
 	public final fun readInt ()I
-	public final fun readRemaining ()Ldev/kord/voice/io/ByteArrayView;
+	public final fun readRemaining ()Ldev/jombi/kordsb/voice/io/ByteArrayView;
 	public final fun readShort ()S
 	public final fun setCursor (I)V
 }
 
-public final class dev/kord/voice/streams/DefaultStreams : dev/kord/voice/streams/Streams {
-	public fun <init> (Ldev/kord/voice/gateway/VoiceGateway;Ldev/kord/voice/udp/VoiceUdpSocket;Ldev/kord/voice/encryption/strategies/NonceStrategy;)V
+public final class dev/jombi/kordsb/voice/streams/DefaultStreams : dev/jombi/kordsb/voice/streams/Streams {
+	public fun <init> (Ldev/jombi/kordsb/voice/gateway/VoiceGateway;Ldev/jombi/kordsb/voice/udp/VoiceUdpSocket;Ldev/jombi/kordsb/voice/encryption/strategies/NonceStrategy;)V
 	public fun getIncomingAudioFrames ()Lkotlinx/coroutines/flow/Flow;
 	public synthetic fun getIncomingAudioPackets ()Lkotlinx/coroutines/flow/Flow;
 	public fun getIncomingAudioPackets ()Lkotlinx/coroutines/flow/SharedFlow;
@@ -1073,8 +1073,8 @@ public final class dev/kord/voice/streams/DefaultStreams : dev/kord/voice/stream
 	public fun listen ([BLjava/net/SocketAddress;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
-public final class dev/kord/voice/streams/NOPStreams : dev/kord/voice/streams/Streams {
-	public static final field INSTANCE Ldev/kord/voice/streams/NOPStreams;
+public final class dev/jombi/kordsb/voice/streams/NOPStreams : dev/jombi/kordsb/voice/streams/Streams {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/streams/NOPStreams;
 	public fun getIncomingAudioFrames ()Lkotlinx/coroutines/flow/Flow;
 	public fun getIncomingAudioPackets ()Lkotlinx/coroutines/flow/Flow;
 	public fun getIncomingUserStreams ()Lkotlinx/coroutines/flow/Flow;
@@ -1082,7 +1082,7 @@ public final class dev/kord/voice/streams/NOPStreams : dev/kord/voice/streams/St
 	public fun listen ([BLjava/net/SocketAddress;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
-public abstract interface class dev/kord/voice/streams/Streams {
+public abstract interface class dev/jombi/kordsb/voice/streams/Streams {
 	public abstract fun getIncomingAudioFrames ()Lkotlinx/coroutines/flow/Flow;
 	public abstract fun getIncomingAudioPackets ()Lkotlinx/coroutines/flow/Flow;
 	public abstract fun getIncomingUserStreams ()Lkotlinx/coroutines/flow/Flow;
@@ -1090,20 +1090,20 @@ public abstract interface class dev/kord/voice/streams/Streams {
 	public abstract fun listen ([BLjava/net/SocketAddress;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
-public abstract interface class dev/kord/voice/udp/AudioFrameSender {
-	public abstract fun start (Ldev/kord/voice/udp/AudioFrameSenderConfiguration;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+public abstract interface class dev/jombi/kordsb/voice/udp/AudioFrameSender {
+	public abstract fun start (Ldev/jombi/kordsb/voice/udp/AudioFrameSenderConfiguration;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
-public final class dev/kord/voice/udp/AudioFrameSenderConfiguration {
-	public synthetic fun <init> (Lio/ktor/network/sockets/SocketAddress;I[BLdev/kord/voice/FrameInterceptorConfiguration;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+public final class dev/jombi/kordsb/voice/udp/AudioFrameSenderConfiguration {
+	public synthetic fun <init> (Lio/ktor/network/sockets/SocketAddress;I[BLdev/jombi/kordsb/voice/FrameInterceptorConfiguration;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Lio/ktor/network/sockets/SocketAddress;
 	public final fun component2-pVg5ArA ()I
 	public final fun component3 ()[B
-	public final fun component4 ()Ldev/kord/voice/FrameInterceptorConfiguration;
-	public final fun copy-Yuhug_o (Lio/ktor/network/sockets/SocketAddress;I[BLdev/kord/voice/FrameInterceptorConfiguration;)Ldev/kord/voice/udp/AudioFrameSenderConfiguration;
-	public static synthetic fun copy-Yuhug_o$default (Ldev/kord/voice/udp/AudioFrameSenderConfiguration;Lio/ktor/network/sockets/SocketAddress;I[BLdev/kord/voice/FrameInterceptorConfiguration;ILjava/lang/Object;)Ldev/kord/voice/udp/AudioFrameSenderConfiguration;
+	public final fun component4 ()Ldev/jombi/kordsb/voice/FrameInterceptorConfiguration;
+	public final fun copy-Yuhug_o (Lio/ktor/network/sockets/SocketAddress;I[BLdev/jombi/kordsb/voice/FrameInterceptorConfiguration;)Ldev/jombi/kordsb/voice/udp/AudioFrameSenderConfiguration;
+	public static synthetic fun copy-Yuhug_o$default (Ldev/jombi/kordsb/voice/udp/AudioFrameSenderConfiguration;Lio/ktor/network/sockets/SocketAddress;I[BLdev/jombi/kordsb/voice/FrameInterceptorConfiguration;ILjava/lang/Object;)Ldev/jombi/kordsb/voice/udp/AudioFrameSenderConfiguration;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getInterceptorConfiguration ()Ldev/kord/voice/FrameInterceptorConfiguration;
+	public final fun getInterceptorConfiguration ()Ldev/jombi/kordsb/voice/FrameInterceptorConfiguration;
 	public final fun getKey ()[B
 	public final fun getServer ()Lio/ktor/network/sockets/SocketAddress;
 	public final fun getSsrc-pVg5ArA ()I
@@ -1111,77 +1111,77 @@ public final class dev/kord/voice/udp/AudioFrameSenderConfiguration {
 	public fun toString ()Ljava/lang/String;
 }
 
-public abstract class dev/kord/voice/udp/AudioPacketProvider {
-	public fun <init> ([BLdev/kord/voice/encryption/strategies/NonceStrategy;)V
+public abstract class dev/jombi/kordsb/voice/udp/AudioPacketProvider {
+	public fun <init> ([BLdev/jombi/kordsb/voice/encryption/strategies/NonceStrategy;)V
 	public final fun getKey ()[B
-	public final fun getNonceStrategy ()Ldev/kord/voice/encryption/strategies/NonceStrategy;
-	public abstract fun provide-jfaDVJw (SII[B)Ldev/kord/voice/io/ByteArrayView;
+	public final fun getNonceStrategy ()Ldev/jombi/kordsb/voice/encryption/strategies/NonceStrategy;
+	public abstract fun provide-jfaDVJw (SII[B)Ldev/jombi/kordsb/voice/io/ByteArrayView;
 }
 
-public final class dev/kord/voice/udp/DefaultAudioFrameSender : dev/kord/voice/udp/AudioFrameSender {
-	public fun <init> (Ldev/kord/voice/udp/DefaultAudioFrameSenderData;)V
-	public final fun getData ()Ldev/kord/voice/udp/DefaultAudioFrameSenderData;
-	public fun start (Ldev/kord/voice/udp/AudioFrameSenderConfiguration;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+public final class dev/jombi/kordsb/voice/udp/DefaultAudioFrameSender : dev/jombi/kordsb/voice/udp/AudioFrameSender {
+	public fun <init> (Ldev/jombi/kordsb/voice/udp/DefaultAudioFrameSenderData;)V
+	public final fun getData ()Ldev/jombi/kordsb/voice/udp/DefaultAudioFrameSenderData;
+	public fun start (Ldev/jombi/kordsb/voice/udp/AudioFrameSenderConfiguration;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
-public final class dev/kord/voice/udp/DefaultAudioFrameSenderData {
-	public fun <init> (Ldev/kord/voice/udp/VoiceUdpSocket;Ldev/kord/voice/FrameInterceptor;Ldev/kord/voice/AudioProvider;Ldev/kord/voice/encryption/strategies/NonceStrategy;)V
-	public final fun component1 ()Ldev/kord/voice/udp/VoiceUdpSocket;
-	public final fun component2 ()Ldev/kord/voice/FrameInterceptor;
-	public final fun component3 ()Ldev/kord/voice/AudioProvider;
-	public final fun component4 ()Ldev/kord/voice/encryption/strategies/NonceStrategy;
-	public final fun copy (Ldev/kord/voice/udp/VoiceUdpSocket;Ldev/kord/voice/FrameInterceptor;Ldev/kord/voice/AudioProvider;Ldev/kord/voice/encryption/strategies/NonceStrategy;)Ldev/kord/voice/udp/DefaultAudioFrameSenderData;
-	public static synthetic fun copy$default (Ldev/kord/voice/udp/DefaultAudioFrameSenderData;Ldev/kord/voice/udp/VoiceUdpSocket;Ldev/kord/voice/FrameInterceptor;Ldev/kord/voice/AudioProvider;Ldev/kord/voice/encryption/strategies/NonceStrategy;ILjava/lang/Object;)Ldev/kord/voice/udp/DefaultAudioFrameSenderData;
+public final class dev/jombi/kordsb/voice/udp/DefaultAudioFrameSenderData {
+	public fun <init> (Ldev/jombi/kordsb/voice/udp/VoiceUdpSocket;Ldev/jombi/kordsb/voice/FrameInterceptor;Ldev/jombi/kordsb/voice/AudioProvider;Ldev/jombi/kordsb/voice/encryption/strategies/NonceStrategy;)V
+	public final fun component1 ()Ldev/jombi/kordsb/voice/udp/VoiceUdpSocket;
+	public final fun component2 ()Ldev/jombi/kordsb/voice/FrameInterceptor;
+	public final fun component3 ()Ldev/jombi/kordsb/voice/AudioProvider;
+	public final fun component4 ()Ldev/jombi/kordsb/voice/encryption/strategies/NonceStrategy;
+	public final fun copy (Ldev/jombi/kordsb/voice/udp/VoiceUdpSocket;Ldev/jombi/kordsb/voice/FrameInterceptor;Ldev/jombi/kordsb/voice/AudioProvider;Ldev/jombi/kordsb/voice/encryption/strategies/NonceStrategy;)Ldev/jombi/kordsb/voice/udp/DefaultAudioFrameSenderData;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/voice/udp/DefaultAudioFrameSenderData;Ldev/jombi/kordsb/voice/udp/VoiceUdpSocket;Ldev/jombi/kordsb/voice/FrameInterceptor;Ldev/jombi/kordsb/voice/AudioProvider;Ldev/jombi/kordsb/voice/encryption/strategies/NonceStrategy;ILjava/lang/Object;)Ldev/jombi/kordsb/voice/udp/DefaultAudioFrameSenderData;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getInterceptor ()Ldev/kord/voice/FrameInterceptor;
-	public final fun getNonceStrategy ()Ldev/kord/voice/encryption/strategies/NonceStrategy;
-	public final fun getProvider ()Ldev/kord/voice/AudioProvider;
-	public final fun getUdp ()Ldev/kord/voice/udp/VoiceUdpSocket;
+	public final fun getInterceptor ()Ldev/jombi/kordsb/voice/FrameInterceptor;
+	public final fun getNonceStrategy ()Ldev/jombi/kordsb/voice/encryption/strategies/NonceStrategy;
+	public final fun getProvider ()Ldev/jombi/kordsb/voice/AudioProvider;
+	public final fun getUdp ()Ldev/jombi/kordsb/voice/udp/VoiceUdpSocket;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/kord/voice/udp/DefaultAudioPacketProvider : dev/kord/voice/udp/AudioPacketProvider {
-	public fun <init> ([BLdev/kord/voice/encryption/strategies/NonceStrategy;)V
-	public fun provide-jfaDVJw (SII[B)Ldev/kord/voice/io/ByteArrayView;
+public final class dev/jombi/kordsb/voice/udp/DefaultAudioPacketProvider : dev/jombi/kordsb/voice/udp/AudioPacketProvider {
+	public fun <init> ([BLdev/jombi/kordsb/voice/encryption/strategies/NonceStrategy;)V
+	public fun provide-jfaDVJw (SII[B)Ldev/jombi/kordsb/voice/io/ByteArrayView;
 }
 
-public final class dev/kord/voice/udp/GlobalVoiceUdpSocket : dev/kord/voice/udp/VoiceUdpSocket {
-	public static final field INSTANCE Ldev/kord/voice/udp/GlobalVoiceUdpSocket;
+public final class dev/jombi/kordsb/voice/udp/GlobalVoiceUdpSocket : dev/jombi/kordsb/voice/udp/VoiceUdpSocket {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/udp/GlobalVoiceUdpSocket;
 	public fun discoverIp (Lio/ktor/network/sockets/InetSocketAddress;ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun getIncoming ()Lkotlinx/coroutines/flow/SharedFlow;
 	public fun send (Lio/ktor/network/sockets/Datagram;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun stop (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
-public abstract class dev/kord/voice/udp/PayloadType {
-	public static final field Companion Ldev/kord/voice/udp/PayloadType$Companion;
+public abstract class dev/jombi/kordsb/voice/udp/PayloadType {
+	public static final field Companion Ldev/jombi/kordsb/voice/udp/PayloadType$Companion;
 	public synthetic fun <init> (BLkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun getRaw ()B
 }
 
-public final class dev/kord/voice/udp/PayloadType$Alive : dev/kord/voice/udp/PayloadType {
-	public static final field INSTANCE Ldev/kord/voice/udp/PayloadType$Alive;
+public final class dev/jombi/kordsb/voice/udp/PayloadType$Alive : dev/jombi/kordsb/voice/udp/PayloadType {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/udp/PayloadType$Alive;
 }
 
-public final class dev/kord/voice/udp/PayloadType$Audio : dev/kord/voice/udp/PayloadType {
-	public static final field INSTANCE Ldev/kord/voice/udp/PayloadType$Audio;
+public final class dev/jombi/kordsb/voice/udp/PayloadType$Audio : dev/jombi/kordsb/voice/udp/PayloadType {
+	public static final field INSTANCE Ldev/jombi/kordsb/voice/udp/PayloadType$Audio;
 }
 
-public final class dev/kord/voice/udp/PayloadType$Companion {
-	public final fun from (B)Ldev/kord/voice/udp/PayloadType;
+public final class dev/jombi/kordsb/voice/udp/PayloadType$Companion {
+	public final fun from (B)Ldev/jombi/kordsb/voice/udp/PayloadType;
 }
 
-public final class dev/kord/voice/udp/PayloadType$Unknown : dev/kord/voice/udp/PayloadType {
+public final class dev/jombi/kordsb/voice/udp/PayloadType$Unknown : dev/jombi/kordsb/voice/udp/PayloadType {
 	public fun <init> (B)V
 }
 
-public final class dev/kord/voice/udp/RTPPacket {
-	public static final field Companion Ldev/kord/voice/udp/RTPPacket$Companion;
-	public synthetic fun <init> (BBSII[IZZLdev/kord/voice/io/ByteArrayView;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+public final class dev/jombi/kordsb/voice/udp/RTPPacket {
+	public static final field Companion Ldev/jombi/kordsb/voice/udp/RTPPacket$Companion;
+	public synthetic fun <init> (BBSII[IZZLdev/jombi/kordsb/voice/io/ByteArrayView;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun asByteArray ()[B
-	public final fun asByteArrayView (Ldev/kord/voice/io/MutableByteArrayCursor;)Ldev/kord/voice/io/ByteArrayView;
-	public final fun clone ()Ldev/kord/voice/udp/RTPPacket;
+	public final fun asByteArrayView (Ldev/jombi/kordsb/voice/io/MutableByteArrayCursor;)Ldev/jombi/kordsb/voice/io/ByteArrayView;
+	public final fun clone ()Ldev/jombi/kordsb/voice/udp/RTPPacket;
 	public final fun component1-w2LRezQ ()B
 	public final fun component2 ()B
 	public final fun component3-Mh2AYeg ()S
@@ -1190,15 +1190,15 @@ public final class dev/kord/voice/udp/RTPPacket {
 	public final fun component6--hP7Qyg ()[I
 	public final fun component7 ()Z
 	public final fun component8 ()Z
-	public final fun component9 ()Ldev/kord/voice/io/ByteArrayView;
-	public final fun copy-NLpkr08 (BBSII[IZZLdev/kord/voice/io/ByteArrayView;)Ldev/kord/voice/udp/RTPPacket;
-	public static synthetic fun copy-NLpkr08$default (Ldev/kord/voice/udp/RTPPacket;BBSII[IZZLdev/kord/voice/io/ByteArrayView;ILjava/lang/Object;)Ldev/kord/voice/udp/RTPPacket;
+	public final fun component9 ()Ldev/jombi/kordsb/voice/io/ByteArrayView;
+	public final fun copy-NLpkr08 (BBSII[IZZLdev/jombi/kordsb/voice/io/ByteArrayView;)Ldev/jombi/kordsb/voice/udp/RTPPacket;
+	public static synthetic fun copy-NLpkr08$default (Ldev/jombi/kordsb/voice/udp/RTPPacket;BBSII[IZZLdev/jombi/kordsb/voice/io/ByteArrayView;ILjava/lang/Object;)Ldev/jombi/kordsb/voice/udp/RTPPacket;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCsrcIdentifiers--hP7Qyg ()[I
 	public final fun getHasExtension ()Z
 	public final fun getHasMarker ()Z
 	public final fun getPaddingBytes-w2LRezQ ()B
-	public final fun getPayload ()Ldev/kord/voice/io/ByteArrayView;
+	public final fun getPayload ()Ldev/jombi/kordsb/voice/io/ByteArrayView;
 	public final fun getPayloadType ()B
 	public final fun getSequence-Mh2AYeg ()S
 	public final fun getSsrc-pVg5ArA ()I
@@ -1206,12 +1206,12 @@ public final class dev/kord/voice/udp/RTPPacket {
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 	public final fun writeHeader ()[B
-	public final fun writeHeader (Ldev/kord/voice/io/MutableByteArrayCursor;)V
+	public final fun writeHeader (Ldev/jombi/kordsb/voice/io/MutableByteArrayCursor;)V
 }
 
-public final class dev/kord/voice/udp/RTPPacket$Builder {
+public final class dev/jombi/kordsb/voice/udp/RTPPacket$Builder {
 	public synthetic fun <init> (IISB[BLkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun build ()Ldev/kord/voice/udp/RTPPacket;
+	public final fun build ()Ldev/jombi/kordsb/voice/udp/RTPPacket;
 	public final fun getCsrcIdentifiers--hP7Qyg ()[I
 	public final fun getHasExtension ()Z
 	public final fun getMarker ()Z
@@ -1232,28 +1232,28 @@ public final class dev/kord/voice/udp/RTPPacket$Builder {
 	public final fun setTimestamp-WZ4Q5Ns (I)V
 }
 
-public final class dev/kord/voice/udp/RTPPacket$Companion {
-	public final fun fromPacket (Lio/ktor/utils/io/core/ByteReadPacket;)Ldev/kord/voice/udp/RTPPacket;
+public final class dev/jombi/kordsb/voice/udp/RTPPacket$Companion {
+	public final fun fromPacket (Lio/ktor/utils/io/core/ByteReadPacket;)Ldev/jombi/kordsb/voice/udp/RTPPacket;
 }
 
-public final class dev/kord/voice/udp/RTPPacketKt {
-	public static final fun RTPPacket-8HA8-nw (IISB[BLkotlin/jvm/functions/Function1;)Ldev/kord/voice/udp/RTPPacket;
-	public static synthetic fun RTPPacket-8HA8-nw$default (IISB[BLkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ldev/kord/voice/udp/RTPPacket;
+public final class dev/jombi/kordsb/voice/udp/RTPPacketKt {
+	public static final fun RTPPacket-8HA8-nw (IISB[BLkotlin/jvm/functions/Function1;)Ldev/jombi/kordsb/voice/udp/RTPPacket;
+	public static synthetic fun RTPPacket-8HA8-nw$default (IISB[BLkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ldev/jombi/kordsb/voice/udp/RTPPacket;
 }
 
-public abstract interface class dev/kord/voice/udp/VoiceUdpSocket {
-	public static final field Companion Ldev/kord/voice/udp/VoiceUdpSocket$Companion;
+public abstract interface class dev/jombi/kordsb/voice/udp/VoiceUdpSocket {
+	public static final field Companion Ldev/jombi/kordsb/voice/udp/VoiceUdpSocket$Companion;
 	public abstract fun discoverIp (Lio/ktor/network/sockets/InetSocketAddress;ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getIncoming ()Lkotlinx/coroutines/flow/SharedFlow;
 	public abstract fun send (Lio/ktor/network/sockets/Datagram;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun stop (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
-public final class dev/kord/voice/udp/VoiceUdpSocket$Companion {
-	public final fun none ()Ldev/kord/voice/udp/VoiceUdpSocket;
+public final class dev/jombi/kordsb/voice/udp/VoiceUdpSocket$Companion {
+	public final fun none ()Ldev/jombi/kordsb/voice/udp/VoiceUdpSocket;
 }
 
-public final class dev/kord/voice/udp/VoiceUdpSocketKt {
-	public static final fun receiveFrom (Ldev/kord/voice/udp/VoiceUdpSocket;Lio/ktor/network/sockets/InetSocketAddress;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+public final class dev/jombi/kordsb/voice/udp/VoiceUdpSocketKt {
+	public static final fun receiveFrom (Ldev/jombi/kordsb/voice/udp/VoiceUdpSocket;Lio/ktor/network/sockets/InetSocketAddress;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 

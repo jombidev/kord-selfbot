@@ -1,11 +1,11 @@
-package dev.kord.common.entity
+package dev.jombi.kordsb.common.entity
 
-import dev.kord.common.Locale
-import dev.kord.common.annotation.KordExperimental
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalBoolean
-import dev.kord.common.entity.optional.OptionalSnowflake
-import dev.kord.common.entity.optional.value
+import dev.jombi.kordsb.common.Locale
+import dev.jombi.kordsb.common.annotation.KordExperimental
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.entity.optional.value
 import kotlinx.serialization.*
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.builtins.MapSerializer

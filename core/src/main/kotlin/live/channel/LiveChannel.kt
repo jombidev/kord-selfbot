@@ -1,20 +1,20 @@
-package dev.kord.core.live.channel
+package dev.jombi.kordsb.core.live.channel
 
-import dev.kord.common.annotation.KordPreview
-import dev.kord.core.Kord
-import dev.kord.core.entity.ReactionEmoji
-import dev.kord.core.entity.channel.*
-import dev.kord.core.event.Event
-import dev.kord.core.event.channel.ChannelCreateEvent
-import dev.kord.core.event.channel.ChannelDeleteEvent
-import dev.kord.core.event.channel.ChannelUpdateEvent
-import dev.kord.core.event.guild.GuildCreateEvent
-import dev.kord.core.event.guild.GuildDeleteEvent
-import dev.kord.core.event.guild.GuildUpdateEvent
-import dev.kord.core.event.message.*
-import dev.kord.core.event.user.VoiceStateUpdateEvent
-import dev.kord.core.live.AbstractLiveKordEntity
-import dev.kord.core.live.on
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.entity.ReactionEmoji
+import dev.jombi.kordsb.core.entity.channel.*
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.channel.ChannelCreateEvent
+import dev.jombi.kordsb.core.event.channel.ChannelDeleteEvent
+import dev.jombi.kordsb.core.event.channel.ChannelUpdateEvent
+import dev.jombi.kordsb.core.event.guild.GuildCreateEvent
+import dev.jombi.kordsb.core.event.guild.GuildDeleteEvent
+import dev.jombi.kordsb.core.event.guild.GuildUpdateEvent
+import dev.jombi.kordsb.core.event.message.*
+import dev.jombi.kordsb.core.event.user.VoiceStateUpdateEvent
+import dev.jombi.kordsb.core.live.AbstractLiveKordEntity
+import dev.jombi.kordsb.core.live.on
 import kotlinx.coroutines.*
 
 @KordPreview

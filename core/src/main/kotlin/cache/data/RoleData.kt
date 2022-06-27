@@ -1,13 +1,13 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
 import dev.kord.cache.api.data.DataDescription
 import dev.kord.cache.api.data.description
-import dev.kord.common.entity.DiscordGuildRole
-import dev.kord.common.entity.DiscordRole
-import dev.kord.common.entity.Permissions
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.map
+import dev.jombi.kordsb.common.entity.DiscordGuildRole
+import dev.jombi.kordsb.common.entity.DiscordRole
+import dev.jombi.kordsb.common.entity.Permissions
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.map
 import kotlinx.serialization.Serializable
 
 @Serializable

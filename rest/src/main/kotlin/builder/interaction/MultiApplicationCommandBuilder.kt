@@ -1,7 +1,7 @@
-package dev.kord.rest.builder.interaction
+package dev.jombi.kordsb.rest.builder.interaction
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.rest.json.request.ApplicationCommandCreateRequest
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.rest.json.request.ApplicationCommandCreateRequest
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

@@ -1,17 +1,17 @@
-package dev.kord.core.event.user
+package dev.jombi.kordsb.core.event.user
 
-import dev.kord.common.entity.DiscordPresenceUser
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.behavior.GuildBehavior
-import dev.kord.core.behavior.MemberBehavior
-import dev.kord.core.entity.*
-import dev.kord.core.event.Event
-import dev.kord.core.event.kordCoroutineScope
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.DiscordPresenceUser
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.GuildBehavior
+import dev.jombi.kordsb.core.behavior.MemberBehavior
+import dev.jombi.kordsb.core.entity.*
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.kordCoroutineScope
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import kotlinx.coroutines.CoroutineScope
 import kotlin.coroutines.CoroutineContext
 

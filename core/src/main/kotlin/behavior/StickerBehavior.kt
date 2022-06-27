@@ -1,14 +1,14 @@
-package dev.kord.core.behavior
+package dev.jombi.kordsb.core.behavior
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.StickerData
-import dev.kord.core.entity.KordEntity
-import dev.kord.core.entity.Sticker
-import dev.kord.core.entity.Strategizable
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.builder.guild.StickerModifyBuilder
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.StickerData
+import dev.jombi.kordsb.core.entity.KordEntity
+import dev.jombi.kordsb.core.entity.Sticker
+import dev.jombi.kordsb.core.entity.Strategizable
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.builder.guild.StickerModifyBuilder
 import kotlin.contracts.ExperimentalContracts
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract

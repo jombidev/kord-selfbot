@@ -1,30 +1,30 @@
-package dev.kord.core.supplier
+package dev.jombi.kordsb.core.supplier
 
 import dev.kord.cache.api.DataCache
 import dev.kord.cache.api.query
-import dev.kord.common.entity.ChannelType
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.*
-import dev.kord.core.cache.idEq
-import dev.kord.core.cache.idGt
-import dev.kord.core.cache.idLt
-import dev.kord.core.entity.*
-import dev.kord.core.entity.application.ApplicationCommandPermissions
-import dev.kord.core.entity.application.GlobalApplicationCommand
-import dev.kord.core.entity.application.GuildApplicationCommand
-import dev.kord.core.entity.channel.Channel
-import dev.kord.core.entity.channel.TopGuildChannel
-import dev.kord.core.entity.channel.thread.ThreadChannel
-import dev.kord.core.entity.channel.thread.ThreadMember
-import dev.kord.core.entity.interaction.followup.FollowupMessage
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.gateway.Gateway
+import dev.jombi.kordsb.common.entity.ChannelType
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.*
+import dev.jombi.kordsb.core.cache.idEq
+import dev.jombi.kordsb.core.cache.idGt
+import dev.jombi.kordsb.core.cache.idLt
+import dev.jombi.kordsb.core.entity.*
+import dev.jombi.kordsb.core.entity.application.ApplicationCommandPermissions
+import dev.jombi.kordsb.core.entity.application.GlobalApplicationCommand
+import dev.jombi.kordsb.core.entity.application.GuildApplicationCommand
+import dev.jombi.kordsb.core.entity.channel.Channel
+import dev.jombi.kordsb.core.entity.channel.TopGuildChannel
+import dev.jombi.kordsb.core.entity.channel.thread.ThreadChannel
+import dev.jombi.kordsb.core.entity.channel.thread.ThreadMember
+import dev.jombi.kordsb.core.entity.interaction.followup.FollowupMessage
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.gateway.Gateway
 import kotlinx.coroutines.flow.*
 import kotlinx.datetime.Instant
-import dev.kord.core.internalAny as any
+import dev.jombi.kordsb.core.internalAny as any
 
 /**
  * [EntitySupplier] that uses a [DataCache] to resolve entities.

@@ -1,8 +1,8 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
-import dev.kord.common.entity.DiscordGuildPreview
-import dev.kord.common.entity.GuildFeature
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.DiscordGuildPreview
+import dev.jombi.kordsb.common.entity.GuildFeature
+import dev.jombi.kordsb.common.entity.Snowflake
 import kotlinx.serialization.Serializable
 
 @Serializable

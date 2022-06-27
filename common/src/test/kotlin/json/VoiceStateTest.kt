@@ -1,6 +1,6 @@
 package json
 
-import dev.kord.common.entity.DiscordVoiceState
+import dev.jombi.kordsb.common.entity.DiscordVoiceState
 import kotlinx.datetime.Instant
 import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.Test

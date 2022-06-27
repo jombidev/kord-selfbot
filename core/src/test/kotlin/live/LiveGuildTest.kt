@@ -1,16 +1,16 @@
 package live
 
-import dev.kord.common.annotation.KordPreview
-import dev.kord.common.entity.*
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.optionalSnowflake
-import dev.kord.core.cache.data.GuildData
-import dev.kord.core.entity.Guild
-import dev.kord.core.entity.ReactionEmoji
-import dev.kord.core.event.guild.GuildDeleteEvent
-import dev.kord.core.live.*
-import dev.kord.core.live.exception.LiveCancellationException
-import dev.kord.gateway.*
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.common.entity.*
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.optionalSnowflake
+import dev.jombi.kordsb.core.cache.data.GuildData
+import dev.jombi.kordsb.core.entity.Guild
+import dev.jombi.kordsb.core.entity.ReactionEmoji
+import dev.jombi.kordsb.core.event.guild.GuildDeleteEvent
+import dev.jombi.kordsb.core.live.*
+import dev.jombi.kordsb.core.live.exception.LiveCancellationException
+import dev.jombi.kordsb.gateway.*
 import equality.randomId
 import kotlinx.coroutines.job
 import kotlinx.coroutines.runBlocking

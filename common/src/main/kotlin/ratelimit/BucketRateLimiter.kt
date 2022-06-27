@@ -1,4 +1,4 @@
-package dev.kord.common.ratelimit
+package dev.jombi.kordsb.common.ratelimit
 
 import kotlinx.datetime.Clock
 import kotlin.time.Duration
@@ -15,7 +15,7 @@ import kotlin.time.Duration
     "Replaced by 'IntervalRateLimiter' that uses 'TimeSource' instead of 'Clock' by default.",
     ReplaceWith(
         "IntervalRateLimiter(limit = capacity, interval = refillInterval)",
-        "dev.kord.common.ratelimit.IntervalRateLimiter",
+        "dev.jombi.kordsb.common.ratelimit.IntervalRateLimiter",
     ),
 )
 public class BucketRateLimiter(

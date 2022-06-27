@@ -1,6 +1,6 @@
 package equality
 
-import dev.kord.core.entity.KordEntity
+import dev.jombi.kordsb.core.entity.KordEntity
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

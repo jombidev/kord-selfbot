@@ -1,9 +1,9 @@
-package dev.kord.common.entity.optional.delegate
+package dev.jombi.kordsb.common.entity.optional.delegate
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.OptionalSnowflake
-import dev.kord.common.entity.optional.optionalSnowflake
-import dev.kord.common.entity.optional.value
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.entity.optional.optionalSnowflake
+import dev.jombi.kordsb.common.entity.optional.value
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KMutableProperty0
 import kotlin.reflect.KProperty

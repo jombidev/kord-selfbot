@@ -1,27 +1,27 @@
-package dev.kord.core.gateway.handler
+package dev.jombi.kordsb.core.gateway.handler
 
 import dev.kord.cache.api.DataCache
 import dev.kord.cache.api.put
 import dev.kord.cache.api.putAll
 import dev.kord.cache.api.query
-import dev.kord.common.entity.optional.optionalSnowflake
-import dev.kord.common.entity.optional.orEmpty
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.*
-import dev.kord.core.cache.idEq
-import dev.kord.core.entity.*
-import dev.kord.core.event.guild.*
-import dev.kord.core.event.role.RoleCreateEvent
-import dev.kord.core.event.role.RoleDeleteEvent
-import dev.kord.core.event.role.RoleUpdateEvent
-import dev.kord.core.event.user.PresenceUpdateEvent
-import dev.kord.gateway.*
+import dev.jombi.kordsb.common.entity.optional.optionalSnowflake
+import dev.jombi.kordsb.common.entity.optional.orEmpty
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.*
+import dev.jombi.kordsb.core.cache.idEq
+import dev.jombi.kordsb.core.entity.*
+import dev.jombi.kordsb.core.event.guild.*
+import dev.jombi.kordsb.core.event.role.RoleCreateEvent
+import dev.jombi.kordsb.core.event.role.RoleDeleteEvent
+import dev.jombi.kordsb.core.event.role.RoleUpdateEvent
+import dev.jombi.kordsb.core.event.user.PresenceUpdateEvent
+import dev.jombi.kordsb.gateway.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.singleOrNull
 import kotlinx.coroutines.flow.toSet
-import dev.kord.common.entity.DiscordGuild as GatewayGuild
-import dev.kord.core.event.Event as CoreEvent
+import dev.jombi.kordsb.common.entity.DiscordGuild as GatewayGuild
+import dev.jombi.kordsb.core.event.Event as CoreEvent
 
 internal class GuildEventHandler(
     cache: DataCache

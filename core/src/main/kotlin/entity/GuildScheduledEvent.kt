@@ -1,17 +1,17 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.*
-import dev.kord.common.entity.optional.unwrap
-import dev.kord.common.entity.optional.value
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.behavior.GuildScheduledEventBehavior
-import dev.kord.core.cache.data.GuildScheduledEventData
-import dev.kord.core.entity.channel.TopGuildChannel
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.core.supplier.getChannelOfOrNull
+import dev.jombi.kordsb.common.entity.*
+import dev.jombi.kordsb.common.entity.optional.unwrap
+import dev.jombi.kordsb.common.entity.optional.value
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.GuildScheduledEventBehavior
+import dev.jombi.kordsb.core.cache.data.GuildScheduledEventData
+import dev.jombi.kordsb.core.entity.channel.TopGuildChannel
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
 import kotlinx.datetime.Instant
 
 /**

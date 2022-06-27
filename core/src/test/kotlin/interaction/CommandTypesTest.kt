@@ -1,10 +1,10 @@
 package interaction
 
-import dev.kord.common.annotation.KordPreview
-import dev.kord.common.entity.ApplicationCommandOptionType
-import dev.kord.common.entity.InteractionCallbackData
-import dev.kord.core.cache.data.ApplicationInteractionData
-import dev.kord.core.entity.interaction.*
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.common.entity.ApplicationCommandOptionType
+import dev.jombi.kordsb.common.entity.InteractionCallbackData
+import dev.jombi.kordsb.core.cache.data.ApplicationInteractionData
+import dev.jombi.kordsb.core.entity.interaction.*
 import kotlinx.serialization.json.*
 import mockKord
 import org.junit.jupiter.api.Test

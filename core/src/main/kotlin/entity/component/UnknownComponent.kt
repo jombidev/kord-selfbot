@@ -1,6 +1,6 @@
-package dev.kord.core.entity.component
+package dev.jombi.kordsb.core.entity.component
 
-import dev.kord.core.cache.data.ComponentData
+import dev.jombi.kordsb.core.cache.data.ComponentData
 
 /**
  * A component type unknown to Kord.

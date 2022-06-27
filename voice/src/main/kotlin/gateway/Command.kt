@@ -1,9 +1,9 @@
-package dev.kord.voice.gateway
+package dev.jombi.kordsb.voice.gateway
 
-import dev.kord.common.annotation.KordVoice
-import dev.kord.common.entity.Snowflake
-import dev.kord.voice.EncryptionMode
-import dev.kord.voice.SpeakingFlags
+import dev.jombi.kordsb.common.annotation.KordVoice
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.voice.EncryptionMode
+import dev.jombi.kordsb.voice.SpeakingFlags
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.descriptors.SerialDescriptor

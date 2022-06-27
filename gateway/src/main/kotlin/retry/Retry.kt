@@ -1,4 +1,4 @@
-package dev.kord.gateway.retry
+package dev.jombi.kordsb.gateway.retry
 
 /**
  * A strategy for retrying after after a failed action.

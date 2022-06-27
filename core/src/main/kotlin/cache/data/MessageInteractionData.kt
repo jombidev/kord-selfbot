@@ -1,8 +1,8 @@
 package cache.data;
 
-import dev.kord.common.entity.DiscordMessageInteraction
-import dev.kord.common.entity.InteractionType
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.DiscordMessageInteraction
+import dev.jombi.kordsb.common.entity.InteractionType
+import dev.jombi.kordsb.common.entity.Snowflake
 import kotlinx.serialization.Serializable
 
 @Serializable

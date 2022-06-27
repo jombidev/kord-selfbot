@@ -1,8 +1,8 @@
-package dev.kord.core
+package dev.jombi.kordsb.core
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.gateway.Intents
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.gateway.Intents
 import io.ktor.client.*
 
 public class ClientResources( // removed shard, applicationId because it's useless on self-bot

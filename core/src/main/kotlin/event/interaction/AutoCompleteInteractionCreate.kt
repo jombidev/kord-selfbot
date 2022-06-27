@@ -1,11 +1,11 @@
-package dev.kord.core.event.interaction
+package dev.jombi.kordsb.core.event.interaction
 
-import dev.kord.core.Kord
-import dev.kord.core.entity.interaction.AutoCompleteInteraction
-import dev.kord.core.entity.interaction.GlobalAutoCompleteInteraction
-import dev.kord.core.entity.interaction.GuildAutoCompleteInteraction
-import dev.kord.core.event.Event
-import dev.kord.core.event.kordCoroutineScope
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.entity.interaction.AutoCompleteInteraction
+import dev.jombi.kordsb.core.entity.interaction.GlobalAutoCompleteInteraction
+import dev.jombi.kordsb.core.entity.interaction.GuildAutoCompleteInteraction
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.kordCoroutineScope
 import kotlinx.coroutines.CoroutineScope
 
 /** An [Event] that fires when an [AutoCompleteInteraction] is created. */

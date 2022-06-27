@@ -1,6 +1,6 @@
-package dev.kord.rest.json.response
+package dev.jombi.kordsb.rest.json.response
 
-import dev.kord.common.entity.DiscordGuildIntegrations
+import dev.jombi.kordsb.common.entity.DiscordGuildIntegrations
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

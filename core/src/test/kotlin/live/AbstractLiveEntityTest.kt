@@ -1,16 +1,16 @@
 package live
 
 import dev.kord.cache.api.DataCache
-import dev.kord.common.annotation.KordPreview
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.ClientResources
-import dev.kord.core.Kord
-import dev.kord.core.gateway.DefaultMasterGateway
-import dev.kord.core.live.AbstractLiveKordEntity
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.gateway.*
-import dev.kord.rest.request.KtorRequestHandler
-import dev.kord.rest.service.RestClient
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.ClientResources
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.gateway.DefaultMasterGateway
+import dev.jombi.kordsb.core.live.AbstractLiveKordEntity
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.gateway.*
+import dev.jombi.kordsb.rest.request.KtorRequestHandler
+import dev.jombi.kordsb.rest.service.RestClient
 import equality.randomId
 import io.ktor.client.*
 import kotlinx.coroutines.*

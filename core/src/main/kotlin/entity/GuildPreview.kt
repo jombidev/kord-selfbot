@@ -1,9 +1,9 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.GuildFeature
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.GuildPreviewData
+import dev.jombi.kordsb.common.entity.GuildFeature
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.GuildPreviewData
 
 public class GuildPreview(
     public val data: GuildPreviewData,

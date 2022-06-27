@@ -1,14 +1,14 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.Color
-import dev.kord.common.entity.Permissions
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.unwrap
-import dev.kord.core.Kord
-import dev.kord.core.behavior.RoleBehavior
-import dev.kord.core.cache.data.RoleData
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.Color
+import dev.jombi.kordsb.common.entity.Permissions
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.unwrap
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.RoleBehavior
+import dev.jombi.kordsb.core.cache.data.RoleData
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import java.util.*
 
 public data class Role(

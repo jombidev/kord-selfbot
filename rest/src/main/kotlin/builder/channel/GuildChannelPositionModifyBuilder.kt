@@ -1,13 +1,13 @@
-package dev.kord.rest.builder.channel
+package dev.jombi.kordsb.rest.builder.channel
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.annotation.KordExperimental
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.OptionalInt
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.rest.builder.AuditRequestBuilder
-import dev.kord.rest.json.request.ChannelPositionSwapRequest
-import dev.kord.rest.json.request.GuildChannelPositionModifyRequest
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.annotation.KordExperimental
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.OptionalInt
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.rest.builder.AuditRequestBuilder
+import dev.jombi.kordsb.rest.json.request.ChannelPositionSwapRequest
+import dev.jombi.kordsb.rest.json.request.GuildChannelPositionModifyRequest
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

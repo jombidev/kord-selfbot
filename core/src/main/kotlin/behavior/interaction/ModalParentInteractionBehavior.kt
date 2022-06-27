@@ -1,9 +1,9 @@
-package dev.kord.core.behavior.interaction
+package dev.jombi.kordsb.core.behavior.interaction
 
-import dev.kord.core.behavior.interaction.response.PopupInteractionResponseBehavior
-import dev.kord.core.entity.interaction.ActionInteraction
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.builder.interaction.ModalBuilder
+import dev.jombi.kordsb.core.behavior.interaction.response.PopupInteractionResponseBehavior
+import dev.jombi.kordsb.core.entity.interaction.ActionInteraction
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.builder.interaction.ModalBuilder
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

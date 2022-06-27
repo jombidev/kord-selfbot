@@ -1,6 +1,6 @@
-package dev.kord.rest.ratelimit
+package dev.jombi.kordsb.rest.ratelimit
 
-import dev.kord.rest.request.Request
+import dev.jombi.kordsb.rest.request.Request
 import kotlinx.datetime.Instant
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract

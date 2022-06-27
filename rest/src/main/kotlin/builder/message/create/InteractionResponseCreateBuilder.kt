@@ -1,17 +1,17 @@
-package dev.kord.rest.builder.message.create
+package dev.jombi.kordsb.rest.builder.message.create
 
-import dev.kord.common.entity.InteractionResponseType
-import dev.kord.common.entity.MessageFlag
-import dev.kord.common.entity.MessageFlags
-import dev.kord.common.entity.optional.*
-import dev.kord.rest.NamedFile
-import dev.kord.rest.builder.RequestBuilder
-import dev.kord.rest.builder.component.MessageComponentBuilder
-import dev.kord.rest.builder.message.AllowedMentionsBuilder
-import dev.kord.rest.builder.message.EmbedBuilder
-import dev.kord.rest.json.request.InteractionApplicationCommandCallbackData
-import dev.kord.rest.json.request.InteractionResponseCreateRequest
-import dev.kord.rest.json.request.MultipartInteractionResponseCreateRequest
+import dev.jombi.kordsb.common.entity.InteractionResponseType
+import dev.jombi.kordsb.common.entity.MessageFlag
+import dev.jombi.kordsb.common.entity.MessageFlags
+import dev.jombi.kordsb.common.entity.optional.*
+import dev.jombi.kordsb.rest.NamedFile
+import dev.jombi.kordsb.rest.builder.RequestBuilder
+import dev.jombi.kordsb.rest.builder.component.MessageComponentBuilder
+import dev.jombi.kordsb.rest.builder.message.AllowedMentionsBuilder
+import dev.jombi.kordsb.rest.builder.message.EmbedBuilder
+import dev.jombi.kordsb.rest.json.request.InteractionApplicationCommandCallbackData
+import dev.jombi.kordsb.rest.json.request.InteractionResponseCreateRequest
+import dev.jombi.kordsb.rest.json.request.MultipartInteractionResponseCreateRequest
 
 /**
  * Message builder for publicly responding to an interaction.

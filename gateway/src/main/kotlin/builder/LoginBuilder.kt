@@ -1,9 +1,9 @@
-package dev.kord.gateway.builder
+package dev.jombi.kordsb.gateway.builder
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.PresenceStatus
-import dev.kord.gateway.DiscordPresence
-import dev.kord.gateway.Intents
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.PresenceStatus
+import dev.jombi.kordsb.gateway.DiscordPresence
+import dev.jombi.kordsb.gateway.Intents
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

@@ -1,6 +1,6 @@
-package dev.kord.voice.gateway.handler
+package dev.jombi.kordsb.voice.gateway.handler
 
-import dev.kord.voice.gateway.*
+import dev.jombi.kordsb.voice.gateway.*
 import kotlinx.atomicfu.atomic
 import kotlinx.coroutines.ObsoleteCoroutinesApi
 import kotlinx.coroutines.coroutineScope

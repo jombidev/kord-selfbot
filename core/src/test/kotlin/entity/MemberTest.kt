@@ -1,9 +1,9 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.behavior.MemberBehavior
-import dev.kord.core.cache.data.MemberData
-import dev.kord.core.cache.data.UserData
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.behavior.MemberBehavior
+import dev.jombi.kordsb.core.cache.data.MemberData
+import dev.jombi.kordsb.core.cache.data.UserData
 import equality.BehaviorEqualityTest
 import equality.GuildEntityEqualityTest
 import io.mockk.every

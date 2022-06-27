@@ -1,21 +1,21 @@
 /*
 @file:JvmName("VoiceBaseVoiceChannelBehavior")
 
-package dev.kord.core.behavior.channel
+package dev.jombi.kordsb.core.behavior.channel
 
-import dev.kord.common.annotation.KordVoice
-import dev.kord.core.entity.channel.VoiceChannel
-import dev.kord.core.exception.GatewayNotFoundException
-import dev.kord.voice.VoiceConnection
-import dev.kord.voice.VoiceConnectionBuilder
+import dev.jombi.kordsb.common.annotation.KordVoice
+import dev.jombi.kordsb.core.entity.channel.VoiceChannel
+import dev.jombi.kordsb.core.exception.GatewayNotFoundException
+import dev.jombi.kordsb.voice.VoiceConnection
+import dev.jombi.kordsb.voice.VoiceConnectionBuilder
 
 */
 /**
  * Connect to this [VoiceChannel] and create a [VoiceConnection] for this voice session.
  *
  * @param builder a builder for the [VoiceConnection].
- * @throws GatewayNotFoundException when there is no associated [dev.kord.gateway.Gateway] for the [dev.kord.core.entity.Guild] this channel is in.
- * @throws dev.kord.voice.exception.VoiceConnectionInitializationException when there was a problem retrieving voice information from Discord.
+ * @throws GatewayNotFoundException when there is no associated [dev.jombi.kordsb.gateway.Gateway] for the [dev.jombi.kordsb.core.entity.Guild] this channel is in.
+ * @throws dev.jombi.kordsb.voice.exception.VoiceConnectionInitializationException when there was a problem retrieving voice information from Discord.
  * @return a [VoiceConnection] representing the connection to this [VoiceConnection].
  *//*
 

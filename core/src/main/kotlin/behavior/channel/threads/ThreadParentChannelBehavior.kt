@@ -1,22 +1,22 @@
-package dev.kord.core.behavior.channel.threads
+package dev.jombi.kordsb.core.behavior.channel.threads
 
-import dev.kord.common.entity.ArchiveDuration
-import dev.kord.common.entity.ChannelType
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.behavior.channel.ChannelBehavior
-import dev.kord.core.behavior.channel.GuildChannelBehavior
-import dev.kord.core.behavior.channel.TopGuildMessageChannelBehavior
-import dev.kord.core.cache.data.ChannelData
-import dev.kord.core.entity.channel.Channel
-import dev.kord.core.entity.channel.ThreadParentChannel
-import dev.kord.core.entity.channel.thread.ThreadChannel
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.builder.channel.thread.StartThreadBuilder
-import dev.kord.rest.json.request.StartThreadRequest
+import dev.jombi.kordsb.common.entity.ArchiveDuration
+import dev.jombi.kordsb.common.entity.ChannelType
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.channel.ChannelBehavior
+import dev.jombi.kordsb.core.behavior.channel.GuildChannelBehavior
+import dev.jombi.kordsb.core.behavior.channel.TopGuildMessageChannelBehavior
+import dev.jombi.kordsb.core.cache.data.ChannelData
+import dev.jombi.kordsb.core.entity.channel.Channel
+import dev.jombi.kordsb.core.entity.channel.ThreadParentChannel
+import dev.jombi.kordsb.core.entity.channel.thread.ThreadChannel
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.builder.channel.thread.StartThreadBuilder
+import dev.jombi.kordsb.rest.json.request.StartThreadRequest
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.filter
 import kotlinx.datetime.Instant
@@ -39,7 +39,7 @@ public interface ThreadParentChannelBehavior : TopGuildMessageChannelBehavior {
     /**
      * Returns archived threads in the channel that are public.
      * Threads are ordered by [ThreadChannel.archiveTimestamp] in descending order.
-     * Requires the [Read Message History Permission][dev.kord.common.entity.Permission.ReadMessageHistory]
+     * Requires the [Read Message History Permission][dev.jombi.kordsb.common.entity.Permission.ReadMessageHistory]
      *
      * The returned flow is lazily executed, any [RequestException] will be thrown on
      * [terminal operators](https://kotlinlang.org/docs/reference/coroutines/flow.html#terminal-flow-operators) instead.
@@ -91,8 +91,8 @@ public interface PrivateThreadParentChannelBehavior : ThreadParentChannelBehavio
     /**
      * Returns archived threads in the channel that are private.
      * Threads are ordered by [archive timestamp][ThreadChannel.archiveTimestamp] in descending order.
-     * Requires the [Read Message History Permission][dev.kord.common.entity.Permission.ReadMessageHistory] and
-     * [Manage Threads Permission][dev.kord.common.entity.Permission.ManageThreads]
+     * Requires the [Read Message History Permission][dev.jombi.kordsb.common.entity.Permission.ReadMessageHistory] and
+     * [Manage Threads Permission][dev.jombi.kordsb.common.entity.Permission.ManageThreads]
      *
      *
      * The returned flow is lazily executed, any [RequestException] will be thrown on
@@ -108,7 +108,7 @@ public interface PrivateThreadParentChannelBehavior : ThreadParentChannelBehavio
     /**
      * Returns archived threads in the channel that are private, and the user has joined.
      * Threads are ordered by their [id][ThreadChannel.id] in descending order.
-     * Requires the [Read Message History Permission][dev.kord.common.entity.Permission.ReadMessageHistory].
+     * Requires the [Read Message History Permission][dev.jombi.kordsb.common.entity.Permission.ReadMessageHistory].
      *
      * The returned flow is lazily executed, any [RequestException] will be thrown on
      * [terminal operators](https://kotlinlang.org/docs/reference/coroutines/flow.html#terminal-flow-operators) instead.

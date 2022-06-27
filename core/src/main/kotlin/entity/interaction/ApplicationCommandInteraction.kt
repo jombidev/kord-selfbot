@@ -1,15 +1,15 @@
-package dev.kord.core.entity.interaction
+package dev.jombi.kordsb.core.entity.interaction
 
-import dev.kord.common.entity.ApplicationCommandType
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.unwrap
-import dev.kord.core.Kord
-import dev.kord.core.behavior.interaction.ApplicationCommandInteractionBehavior
-import dev.kord.core.cache.data.InteractionData
-import dev.kord.core.entity.Guild
-import dev.kord.core.entity.application.ApplicationCommand
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.ApplicationCommandType
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.unwrap
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.interaction.ApplicationCommandInteractionBehavior
+import dev.jombi.kordsb.core.cache.data.InteractionData
+import dev.jombi.kordsb.core.entity.Guild
+import dev.jombi.kordsb.core.entity.application.ApplicationCommand
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /** An [ActionInteraction] created when a user uses an [ApplicationCommand]. */
 public sealed interface ApplicationCommandInteraction : ActionInteraction, ApplicationCommandInteractionBehavior {

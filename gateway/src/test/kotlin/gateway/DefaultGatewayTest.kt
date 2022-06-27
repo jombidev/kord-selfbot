@@ -1,11 +1,11 @@
 package gateway
 
-import dev.kord.common.entity.ActivityType
-import dev.kord.common.entity.DiscordBotActivity
-import dev.kord.common.entity.PresenceStatus
-import dev.kord.common.ratelimit.IntervalRateLimiter
-import dev.kord.gateway.*
-import dev.kord.gateway.retry.LinearRetry
+import dev.jombi.kordsb.common.entity.ActivityType
+import dev.jombi.kordsb.common.entity.DiscordBotActivity
+import dev.jombi.kordsb.common.entity.PresenceStatus
+import dev.jombi.kordsb.common.ratelimit.IntervalRateLimiter
+import dev.jombi.kordsb.gateway.*
+import dev.jombi.kordsb.gateway.retry.LinearRetry
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.plugins.contentnegotiation.*

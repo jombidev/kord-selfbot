@@ -1,10 +1,10 @@
-package dev.kord.rest.builder.channel
+package dev.jombi.kordsb.rest.builder.channel
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.OverwriteType
-import dev.kord.common.entity.Permissions
-import dev.kord.rest.builder.AuditRequestBuilder
-import dev.kord.rest.json.request.ChannelPermissionEditRequest
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.OverwriteType
+import dev.jombi.kordsb.common.entity.Permissions
+import dev.jombi.kordsb.rest.builder.AuditRequestBuilder
+import dev.jombi.kordsb.rest.json.request.ChannelPermissionEditRequest
 
 @KordDsl
 public class ChannelPermissionModifyBuilder(private var type: OverwriteType) :

@@ -1,9 +1,9 @@
-package dev.kord.voice.gateway
+package dev.jombi.kordsb.voice.gateway
 
-import dev.kord.common.annotation.KordVoice
-import dev.kord.common.entity.Snowflake
-import dev.kord.gateway.retry.LinearRetry
-import dev.kord.gateway.retry.Retry
+import dev.jombi.kordsb.common.annotation.KordVoice
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.gateway.retry.LinearRetry
+import dev.jombi.kordsb.gateway.retry.Retry
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.plugins.contentnegotiation.*

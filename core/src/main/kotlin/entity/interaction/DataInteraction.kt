@@ -1,7 +1,7 @@
-package dev.kord.core.entity.interaction
+package dev.jombi.kordsb.core.entity.interaction
 
-import dev.kord.core.behavior.interaction.DataInteractionBehavior
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.behavior.interaction.DataInteractionBehavior
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /**
  * An [Interaction] created when Discord requests some form of data (e.g. for auto-complete).

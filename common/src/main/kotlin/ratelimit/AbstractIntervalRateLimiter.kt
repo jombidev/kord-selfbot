@@ -1,4 +1,4 @@
-package dev.kord.common.ratelimit
+package dev.jombi.kordsb.common.ratelimit
 
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock

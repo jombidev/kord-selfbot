@@ -1,16 +1,16 @@
-package dev.kord.core.entity.interaction.followup
+package dev.jombi.kordsb.core.entity.interaction.followup
 
-import dev.kord.common.entity.MessageFlag
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.behavior.interaction.followup.FollowupMessageBehavior
-import dev.kord.core.entity.Message
-import dev.kord.core.entity.channel.MessageChannel
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.MessageFlag
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.interaction.followup.FollowupMessageBehavior
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.entity.channel.MessageChannel
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 @Deprecated(
     "'InteractionFollowup' was renamed to 'FollowupMessage'.",
-    ReplaceWith("FollowupMessage", "dev.kord.core.entity.interaction.FollowupMessage"),
+    ReplaceWith("FollowupMessage", "dev.jombi.kordsb.core.entity.interaction.FollowupMessage"),
     DeprecationLevel.ERROR,
 )
 public typealias InteractionFollowup = FollowupMessage

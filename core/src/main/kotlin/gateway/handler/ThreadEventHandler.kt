@@ -1,20 +1,20 @@
-package dev.kord.core.gateway.handler
+package dev.jombi.kordsb.core.gateway.handler
 
 import dev.kord.cache.api.DataCache
 import dev.kord.cache.api.put
 import dev.kord.cache.api.query
 import dev.kord.cache.api.remove
-import dev.kord.common.entity.ChannelType
-import dev.kord.common.entity.optional.orEmpty
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.*
-import dev.kord.core.cache.idEq
-import dev.kord.core.entity.channel.Channel
-import dev.kord.core.entity.channel.thread.*
-import dev.kord.core.event.channel.thread.*
-import dev.kord.gateway.*
+import dev.jombi.kordsb.common.entity.ChannelType
+import dev.jombi.kordsb.common.entity.optional.orEmpty
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.*
+import dev.jombi.kordsb.core.cache.idEq
+import dev.jombi.kordsb.core.entity.channel.Channel
+import dev.jombi.kordsb.core.entity.channel.thread.*
+import dev.jombi.kordsb.core.event.channel.thread.*
+import dev.jombi.kordsb.gateway.*
 import kotlinx.coroutines.CoroutineScope
-import dev.kord.core.event.Event as CoreEvent
+import dev.jombi.kordsb.core.event.Event as CoreEvent
 
 public class ThreadEventHandler(
     cache: DataCache
@@ -24,7 +24,7 @@ public class ThreadEventHandler(
         event: Event,
         kord: Kord,
         coroutineScope: CoroutineScope
-    ): dev.kord.core.event.Event? = when (event) {
+    ): dev.jombi.kordsb.core.event.Event? = when (event) {
         is ThreadCreate -> handle(event, kord, coroutineScope)
         is ThreadUpdate -> handle(event, kord, coroutineScope)
         is ThreadDelete -> handle(event, kord, coroutineScope)

@@ -1,7 +1,7 @@
 package ratelimit
 
-import dev.kord.common.ratelimit.IntervalRateLimiter
-import dev.kord.common.ratelimit.TimeSourceIntervalRateLimiter
+import dev.jombi.kordsb.common.ratelimit.IntervalRateLimiter
+import dev.jombi.kordsb.common.ratelimit.TimeSourceIntervalRateLimiter
 import kotlin.time.Duration
 import kotlin.time.TestTimeSource
 

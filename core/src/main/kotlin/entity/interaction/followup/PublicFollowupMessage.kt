@@ -1,11 +1,11 @@
-package dev.kord.core.entity.interaction.followup
+package dev.jombi.kordsb.core.entity.interaction.followup
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.behavior.interaction.followup.PublicFollowupMessageBehavior
-import dev.kord.core.entity.Message
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.interaction.followup.PublicFollowupMessageBehavior
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /**
  * Holds the followup [Message] resulting from a public followup message

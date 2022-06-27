@@ -1,10 +1,10 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
 import dev.kord.cache.api.data.DataDescription
 import dev.kord.cache.api.data.description
-import dev.kord.common.Locale
-import dev.kord.common.entity.*
-import dev.kord.common.entity.optional.*
+import dev.jombi.kordsb.common.Locale
+import dev.jombi.kordsb.common.entity.*
+import dev.jombi.kordsb.common.entity.optional.*
 import kotlinx.serialization.Serializable
 
 @Serializable

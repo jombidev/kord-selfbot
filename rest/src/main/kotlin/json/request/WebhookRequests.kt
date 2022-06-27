@@ -1,12 +1,12 @@
-package dev.kord.rest.json.request
+package dev.jombi.kordsb.rest.json.request
 
-import dev.kord.common.entity.AllowedMentions
-import dev.kord.common.entity.DiscordAttachment
-import dev.kord.common.entity.DiscordComponent
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalBoolean
-import dev.kord.common.entity.optional.OptionalSnowflake
-import dev.kord.rest.NamedFile
+import dev.jombi.kordsb.common.entity.AllowedMentions
+import dev.jombi.kordsb.common.entity.DiscordAttachment
+import dev.jombi.kordsb.common.entity.DiscordComponent
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.rest.NamedFile
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

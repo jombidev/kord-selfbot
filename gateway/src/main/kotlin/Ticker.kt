@@ -1,4 +1,4 @@
-package dev.kord.gateway
+package dev.jombi.kordsb.gateway
 
 import io.ktor.util.logging.*
 import kotlinx.coroutines.*

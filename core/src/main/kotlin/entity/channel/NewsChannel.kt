@@ -1,12 +1,12 @@
-package dev.kord.core.entity.channel
+package dev.jombi.kordsb.core.entity.channel
 
-import dev.kord.core.Kord
-import dev.kord.core.behavior.channel.ChannelBehavior
-import dev.kord.core.behavior.channel.TopGuildChannelBehavior
-import dev.kord.core.behavior.channel.NewsChannelBehavior
-import dev.kord.core.cache.data.ChannelData
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.channel.ChannelBehavior
+import dev.jombi.kordsb.core.behavior.channel.TopGuildChannelBehavior
+import dev.jombi.kordsb.core.behavior.channel.NewsChannelBehavior
+import dev.jombi.kordsb.core.cache.data.ChannelData
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import java.util.*
 
 /**

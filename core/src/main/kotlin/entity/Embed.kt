@@ -1,15 +1,15 @@
 @file:Suppress("DEPRECATION")
 
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.Color
-import dev.kord.common.entity.EmbedType
-import dev.kord.common.entity.optional.orEmpty
-import dev.kord.common.entity.optional.value
-import dev.kord.core.Kord
-import dev.kord.core.KordObject
-import dev.kord.core.cache.data.*
-import dev.kord.rest.builder.message.EmbedBuilder
+import dev.jombi.kordsb.common.Color
+import dev.jombi.kordsb.common.entity.EmbedType
+import dev.jombi.kordsb.common.entity.optional.orEmpty
+import dev.jombi.kordsb.common.entity.optional.value
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.core.cache.data.*
+import dev.jombi.kordsb.rest.builder.message.EmbedBuilder
 import kotlinx.datetime.Instant
 
 internal const val embedDeprecationMessage = """

@@ -1,7 +1,7 @@
-package dev.kord.core.behavior.interaction
+package dev.jombi.kordsb.core.behavior.interaction
 
-import dev.kord.core.entity.interaction.GlobalInteraction
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.entity.interaction.GlobalInteraction
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /** The behavior of a [GlobalInteraction]. */
 public interface GlobalInteractionBehavior : InteractionBehavior {

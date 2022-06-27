@@ -1,4 +1,4 @@
-package dev.kord.common.serialization
+package dev.jombi.kordsb.common.serialization
 
 import kotlinx.datetime.Instant
 import kotlinx.serialization.KSerializer
@@ -20,7 +20,7 @@ public object InstantInEpochMillisecondsSerializer : KSerializer<Instant> {
         Instant.fromEpochMilliseconds(Long.MIN_VALUE)..Instant.fromEpochMilliseconds(Long.MAX_VALUE)
 
     override val descriptor: SerialDescriptor =
-        PrimitiveSerialDescriptor("dev.kord.common.serialization.InstantInEpochMilliseconds", PrimitiveKind.LONG)
+        PrimitiveSerialDescriptor("dev.jombi.kordsb.common.serialization.InstantInEpochMilliseconds", PrimitiveKind.LONG)
 
     override fun serialize(encoder: Encoder, value: Instant) {
 
@@ -50,7 +50,7 @@ public object InstantInEpochMillisecondsSerializer : KSerializer<Instant> {
 public object InstantInEpochSecondsSerializer : KSerializer<Instant> {
 
     override val descriptor: SerialDescriptor =
-        PrimitiveSerialDescriptor("dev.kord.common.serialization.InstantInEpochSeconds", PrimitiveKind.LONG)
+        PrimitiveSerialDescriptor("dev.jombi.kordsb.common.serialization.InstantInEpochSeconds", PrimitiveKind.LONG)
 
     override fun serialize(encoder: Encoder, value: Instant) {
         // epochSeconds always fits in the range of Long type and never coerces -> no need for range check

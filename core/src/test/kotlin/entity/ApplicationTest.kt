@@ -1,7 +1,7 @@
 package entity
 
-import dev.kord.core.cache.data.ApplicationData
-import dev.kord.core.entity.Application
+import dev.jombi.kordsb.core.cache.data.ApplicationData
+import dev.jombi.kordsb.core.entity.Application
 import equality.EntityEqualityTest
 import io.mockk.every
 import io.mockk.mockk

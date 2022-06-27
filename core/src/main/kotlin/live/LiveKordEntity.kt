@@ -1,12 +1,12 @@
-package dev.kord.core.live
+package dev.jombi.kordsb.core.live
 
-import dev.kord.common.annotation.KordPreview
-import dev.kord.core.Kord
-import dev.kord.core.entity.KordEntity
-import dev.kord.core.event.Event
-import dev.kord.core.event.message.MessageUpdateEvent
-import dev.kord.core.event.message.ReactionAddEvent
-import dev.kord.core.kordLogger
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.entity.KordEntity
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.message.MessageUpdateEvent
+import dev.jombi.kordsb.core.event.message.ReactionAddEvent
+import dev.jombi.kordsb.core.kordLogger
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.*

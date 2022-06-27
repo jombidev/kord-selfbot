@@ -1,12 +1,12 @@
-package dev.kord.voice.udp
+package dev.jombi.kordsb.voice.udp
 
 import com.iwebpp.crypto.TweetNaclFast
-import dev.kord.voice.encryption.XSalsa20Poly1305Codec
-import dev.kord.voice.encryption.strategies.NonceStrategy
-import dev.kord.voice.io.ByteArrayView
-import dev.kord.voice.io.MutableByteArrayCursor
-import dev.kord.voice.io.mutableCursor
-import dev.kord.voice.io.view
+import dev.jombi.kordsb.voice.encryption.XSalsa20Poly1305Codec
+import dev.jombi.kordsb.voice.encryption.strategies.NonceStrategy
+import dev.jombi.kordsb.voice.io.ByteArrayView
+import dev.jombi.kordsb.voice.io.MutableByteArrayCursor
+import dev.jombi.kordsb.voice.io.mutableCursor
+import dev.jombi.kordsb.voice.io.view
 
 public abstract class AudioPacketProvider(public val key: ByteArray, public val nonceStrategy: NonceStrategy) {
     public abstract fun provide(sequence: UShort, timestamp: UInt, ssrc: UInt, data: ByteArray): ByteArrayView

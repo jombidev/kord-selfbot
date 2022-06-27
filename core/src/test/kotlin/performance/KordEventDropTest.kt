@@ -1,16 +1,16 @@
-package dev.kord.core.performance
+package dev.jombi.kordsb.core.performance
 
 import dev.kord.cache.api.DataCache
-import dev.kord.common.entity.*
-import dev.kord.core.ClientResources
-import dev.kord.core.Kord
-import dev.kord.core.event.guild.GuildCreateEvent
-import dev.kord.core.gateway.DefaultMasterGateway
-import dev.kord.core.on
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.gateway.*
-import dev.kord.rest.request.KtorRequestHandler
-import dev.kord.rest.service.RestClient
+import dev.jombi.kordsb.common.entity.*
+import dev.jombi.kordsb.core.ClientResources
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.event.guild.GuildCreateEvent
+import dev.jombi.kordsb.core.gateway.DefaultMasterGateway
+import dev.jombi.kordsb.core.on
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.gateway.*
+import dev.jombi.kordsb.rest.request.KtorRequestHandler
+import dev.jombi.kordsb.rest.service.RestClient
 import io.ktor.client.*
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableSharedFlow

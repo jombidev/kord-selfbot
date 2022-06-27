@@ -1,21 +1,21 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.annotation.DeprecatedSinceKord
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.WebhookType
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.behavior.GuildBehavior
-import dev.kord.core.behavior.WebhookBehavior
-import dev.kord.core.behavior.channel.MessageChannelBehavior
-import dev.kord.core.cache.data.WebhookData
-import dev.kord.core.entity.channel.TopGuildMessageChannel
-import dev.kord.core.entity.channel.MessageChannel
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.core.supplier.getChannelOf
-import dev.kord.core.supplier.getChannelOfOrNull
+import dev.jombi.kordsb.common.annotation.DeprecatedSinceKord
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.WebhookType
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.GuildBehavior
+import dev.jombi.kordsb.core.behavior.WebhookBehavior
+import dev.jombi.kordsb.core.behavior.channel.MessageChannelBehavior
+import dev.jombi.kordsb.core.cache.data.WebhookData
+import dev.jombi.kordsb.core.entity.channel.TopGuildMessageChannel
+import dev.jombi.kordsb.core.entity.channel.MessageChannel
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.supplier.getChannelOf
+import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
 import java.util.*
 
 public data class Webhook(

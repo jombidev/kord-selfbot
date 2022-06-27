@@ -1,20 +1,20 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.NsfwLevel
-import dev.kord.common.entity.Permissions
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.VerificationLevel
-import dev.kord.common.entity.optional.unwrap
-import dev.kord.common.entity.optional.value
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.behavior.GuildBehavior
-import dev.kord.core.cache.data.PartialGuildData
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.Image
-import dev.kord.rest.service.RestClient
+import dev.jombi.kordsb.common.entity.NsfwLevel
+import dev.jombi.kordsb.common.entity.Permissions
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.VerificationLevel
+import dev.jombi.kordsb.common.entity.optional.unwrap
+import dev.jombi.kordsb.common.entity.optional.value
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.GuildBehavior
+import dev.jombi.kordsb.core.cache.data.PartialGuildData
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.Image
+import dev.jombi.kordsb.rest.service.RestClient
 import java.util.*
 
 public class PartialGuild(

@@ -1,14 +1,14 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.KordObject
-import dev.kord.core.behavior.UserBehavior
-import dev.kord.core.cache.data.BanData
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.core.behavior.UserBehavior
+import dev.jombi.kordsb.core.cache.data.BanData
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /**
  * An instance of a [Discord Ban](https://discord.com/developers/docs/resources/guild#ban-object).

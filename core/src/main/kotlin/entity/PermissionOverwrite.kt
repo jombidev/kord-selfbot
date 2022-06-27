@@ -1,11 +1,11 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.Overwrite
-import dev.kord.common.entity.OverwriteType
-import dev.kord.common.entity.Permissions
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.cache.data.PermissionOverwriteData
-import dev.kord.rest.json.request.ChannelPermissionEditRequest
+import dev.jombi.kordsb.common.entity.Overwrite
+import dev.jombi.kordsb.common.entity.OverwriteType
+import dev.jombi.kordsb.common.entity.Permissions
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.cache.data.PermissionOverwriteData
+import dev.jombi.kordsb.rest.json.request.ChannelPermissionEditRequest
 
 public open class PermissionOverwrite(
     public val data: PermissionOverwriteData,

@@ -1,6 +1,6 @@
 import dev.kord.cache.api.put
-import dev.kord.core.Kord
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable

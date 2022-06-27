@@ -1,10 +1,10 @@
-package dev.kord.rest.builder.interaction
+package dev.jombi.kordsb.rest.builder.interaction
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.DiscordModal
-import dev.kord.rest.builder.RequestBuilder
-import dev.kord.rest.builder.component.ActionRowBuilder
-import dev.kord.rest.builder.component.MessageComponentBuilder
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.DiscordModal
+import dev.jombi.kordsb.rest.builder.RequestBuilder
+import dev.jombi.kordsb.rest.builder.component.ActionRowBuilder
+import dev.jombi.kordsb.rest.builder.component.MessageComponentBuilder
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

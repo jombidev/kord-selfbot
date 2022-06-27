@@ -1,13 +1,13 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.StageInstancePrivacyLevel
-import dev.kord.core.Kord
-import dev.kord.core.behavior.StageInstanceBehavior
-import dev.kord.core.cache.data.StageInstanceData
-import dev.kord.core.entity.channel.StageChannel
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.StageInstancePrivacyLevel
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.StageInstanceBehavior
+import dev.jombi.kordsb.core.cache.data.StageInstanceData
+import dev.jombi.kordsb.core.entity.channel.StageChannel
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 public class StageInstance(
     public val data: StageInstanceData,

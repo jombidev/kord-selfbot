@@ -1,18 +1,18 @@
-package dev.kord.voice
+package dev.jombi.kordsb.voice
 
-import dev.kord.common.annotation.KordVoice
-import dev.kord.common.entity.Snowflake
-import dev.kord.gateway.Gateway
-import dev.kord.gateway.UpdateVoiceStatus
-import dev.kord.voice.encryption.strategies.NonceStrategy
-import dev.kord.voice.gateway.VoiceGateway
-import dev.kord.voice.gateway.VoiceGatewayConfiguration
-import dev.kord.voice.handlers.StreamsHandler
-import dev.kord.voice.handlers.UdpLifeCycleHandler
-import dev.kord.voice.handlers.VoiceUpdateEventHandler
-import dev.kord.voice.streams.Streams
-import dev.kord.voice.udp.AudioFrameSender
-import dev.kord.voice.udp.VoiceUdpSocket
+import dev.jombi.kordsb.common.annotation.KordVoice
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.gateway.Gateway
+import dev.jombi.kordsb.gateway.UpdateVoiceStatus
+import dev.jombi.kordsb.voice.encryption.strategies.NonceStrategy
+import dev.jombi.kordsb.voice.gateway.VoiceGateway
+import dev.jombi.kordsb.voice.gateway.VoiceGatewayConfiguration
+import dev.jombi.kordsb.voice.handlers.StreamsHandler
+import dev.jombi.kordsb.voice.handlers.UdpLifeCycleHandler
+import dev.jombi.kordsb.voice.handlers.VoiceUpdateEventHandler
+import dev.jombi.kordsb.voice.streams.Streams
+import dev.jombi.kordsb.voice.udp.AudioFrameSender
+import dev.jombi.kordsb.voice.udp.VoiceUdpSocket
 import kotlinx.coroutines.*
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
@@ -122,7 +122,7 @@ public class VoiceConnection(
  *
  * @return a [VoiceConnection] that is ready to be used.
  *
- * @throws dev.kord.voice.exception.VoiceConnectionInitializationException when there was a problem retrieving voice information from Discord.
+ * @throws dev.jombi.kordsb.voice.exception.VoiceConnectionInitializationException when there was a problem retrieving voice information from Discord.
  */
 @KordVoice
 public suspend inline fun VoiceConnection(

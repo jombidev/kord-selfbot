@@ -1,9 +1,9 @@
-package dev.kord.core.behavior
+package dev.jombi.kordsb.core.behavior
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.entity.Entity
-import dev.kord.rest.request.RestRequestException
-import dev.kord.rest.service.InteractionService
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.entity.Entity
+import dev.jombi.kordsb.rest.request.RestRequestException
+import dev.jombi.kordsb.rest.service.InteractionService
 
 /**
  * The behavior of an [Application Command](https://discord.com/developers/docs/interactions/application-commands).
@@ -34,7 +34,7 @@ public interface GlobalApplicationCommandBehavior : ApplicationCommandBehavior {
 
 
 /**
- * The behavior of [Application Command][dev.kord.core.entity.application.GuildApplicationCommand].
+ * The behavior of [Application Command][dev.jombi.kordsb.core.entity.application.GuildApplicationCommand].
  */
 public interface GuildApplicationCommandBehavior : ApplicationCommandBehavior {
     public val guildId: Snowflake

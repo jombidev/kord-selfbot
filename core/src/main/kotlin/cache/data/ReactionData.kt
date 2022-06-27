@@ -1,8 +1,8 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
-import dev.kord.common.entity.DiscordPartialEmoji
-import dev.kord.common.entity.Reaction
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.DiscordPartialEmoji
+import dev.jombi.kordsb.common.entity.Reaction
+import dev.jombi.kordsb.common.entity.Snowflake
 import kotlinx.serialization.Serializable
 
 @Serializable

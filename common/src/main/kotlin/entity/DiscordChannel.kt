@@ -1,12 +1,12 @@
-package dev.kord.common.entity
+package dev.jombi.kordsb.common.entity
 
-import dev.kord.common.entity.Permission.ManageThreads
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalBoolean
-import dev.kord.common.entity.optional.OptionalInt
-import dev.kord.common.entity.optional.OptionalSnowflake
-import dev.kord.common.serialization.DurationInMinutesSerializer
-import dev.kord.common.serialization.DurationInSeconds
+import dev.jombi.kordsb.common.entity.Permission.ManageThreads
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.optional.OptionalInt
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.serialization.DurationInMinutesSerializer
+import dev.jombi.kordsb.common.serialization.DurationInSeconds
 import kotlinx.datetime.Instant
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SerialName
@@ -232,7 +232,7 @@ public sealed class VideoQualityMode(public val value: Int) {
 
     internal object Serializer : KSerializer<VideoQualityMode> {
         override val descriptor =
-            PrimitiveSerialDescriptor("dev.kord.common.entity.VideoQualityMode", PrimitiveKind.INT)
+            PrimitiveSerialDescriptor("dev.jombi.kordsb.common.entity.VideoQualityMode", PrimitiveKind.INT)
 
         override fun serialize(encoder: Encoder, value: VideoQualityMode) = encoder.encodeInt(value.value)
 

@@ -1,8 +1,8 @@
-package dev.kord.rest.service
+package dev.jombi.kordsb.rest.service
 
-import dev.kord.common.entity.DiscordVoiceRegion
-import dev.kord.rest.request.RequestHandler
-import dev.kord.rest.route.Route
+import dev.jombi.kordsb.common.entity.DiscordVoiceRegion
+import dev.jombi.kordsb.rest.request.RequestHandler
+import dev.jombi.kordsb.rest.route.Route
 
 public class VoiceService(requestHandler: RequestHandler) : RestService(requestHandler) {
 

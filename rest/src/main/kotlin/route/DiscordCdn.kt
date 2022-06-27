@@ -1,6 +1,6 @@
-package dev.kord.rest.route
+package dev.jombi.kordsb.rest.route
 
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.Snowflake
 
 public object DiscordCdn {
 

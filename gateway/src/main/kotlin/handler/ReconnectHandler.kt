@@ -1,7 +1,7 @@
-package dev.kord.gateway.handler
+package dev.jombi.kordsb.gateway.handler
 
-import dev.kord.gateway.Event
-import dev.kord.gateway.Reconnect
+import dev.jombi.kordsb.gateway.Event
+import dev.jombi.kordsb.gateway.Reconnect
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 

@@ -1,6 +1,6 @@
-package dev.kord.rest.json
+package dev.jombi.kordsb.rest.json
 
-import dev.kord.rest.json.response.DiscordErrorResponse
+import dev.jombi.kordsb.rest.json.response.DiscordErrorResponse
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.descriptors.PrimitiveKind
@@ -519,7 +519,7 @@ public enum class JsonErrorCode(public val code: Int) {
 
         @Deprecated(
             "Object JsonErrorCode.JsonErrorCodeSerializer is internal now, use JsonErrorCode.serializer() instead.",
-            ReplaceWith("JsonErrorCode.serializer()", "dev.kord.rest.json.JsonErrorCode"),
+            ReplaceWith("JsonErrorCode.serializer()", "dev.jombi.kordsb.rest.json.JsonErrorCode"),
             DeprecationLevel.ERROR,
         )
         @JvmField

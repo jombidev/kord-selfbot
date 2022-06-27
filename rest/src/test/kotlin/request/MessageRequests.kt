@@ -1,8 +1,8 @@
-package dev.kord.rest.request
+package dev.jombi.kordsb.rest.request
 
-import dev.kord.rest.NamedFile
-import dev.kord.rest.json.response.GatewayResponse
-import dev.kord.rest.route.Route
+import dev.jombi.kordsb.rest.NamedFile
+import dev.jombi.kordsb.rest.json.response.GatewayResponse
+import dev.jombi.kordsb.rest.route.Route
 import io.ktor.util.*
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.MethodOrderer

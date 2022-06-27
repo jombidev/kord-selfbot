@@ -1,9 +1,9 @@
-package dev.kord.core.event.channel
+package dev.jombi.kordsb.core.event.channel
 
-import dev.kord.core.Kord
-import dev.kord.core.entity.channel.*
-import dev.kord.core.event.Event
-import dev.kord.core.event.kordCoroutineScope
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.entity.channel.*
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.kordCoroutineScope
 import kotlinx.coroutines.CoroutineScope
 import kotlin.DeprecationLevel.WARNING
 

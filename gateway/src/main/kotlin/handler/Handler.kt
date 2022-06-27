@@ -1,6 +1,6 @@
-package dev.kord.gateway.handler
+package dev.jombi.kordsb.gateway.handler
 
-import dev.kord.gateway.Event
+import dev.jombi.kordsb.gateway.Event
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.filterIsInstance

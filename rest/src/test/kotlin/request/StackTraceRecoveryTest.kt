@@ -1,7 +1,7 @@
-package dev.kord.rest.request
+package dev.jombi.kordsb.rest.request
 
-import dev.kord.rest.json.response.GatewayResponse
-import dev.kord.rest.route.Route
+import dev.jombi.kordsb.rest.json.response.GatewayResponse
+import dev.jombi.kordsb.rest.route.Route
 import io.ktor.client.*
 import io.ktor.client.engine.mock.*
 import io.ktor.http.*
@@ -39,7 +39,7 @@ class StackTraceRecoveryTest {
             handler.handle(request)
         } catch (e: ContextException) {
             e.printStackTrace()
-            //at dev.kord.rest.request.StackTraceRecoveryTest$test stack trace recovery$1.invokeSuspend(StackTraceRecoveryTest.kt:39)
+            //at dev.jombi.kordsb.rest.request.StackTraceRecoveryTest$test stack trace recovery$1.invokeSuspend(StackTraceRecoveryTest.kt:39)
             with(e.stackTrace.first()) {
                 assertEquals(stackTrace.className, className)
                 assertEquals(stackTrace.fileName, fileName)

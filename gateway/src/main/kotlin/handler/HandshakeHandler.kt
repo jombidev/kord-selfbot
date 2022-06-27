@@ -1,9 +1,9 @@
-package dev.kord.gateway.handler
+package dev.jombi.kordsb.gateway.handler
 
-import dev.kord.common.ratelimit.RateLimiter
-import dev.kord.common.ratelimit.consume
-import dev.kord.gateway.*
-import dev.kord.gateway.retry.Retry
+import dev.jombi.kordsb.common.ratelimit.RateLimiter
+import dev.jombi.kordsb.common.ratelimit.consume
+import dev.jombi.kordsb.gateway.*
+import dev.jombi.kordsb.gateway.retry.Retry
 import kotlinx.atomicfu.AtomicRef
 import kotlinx.atomicfu.atomic
 import kotlinx.atomicfu.update

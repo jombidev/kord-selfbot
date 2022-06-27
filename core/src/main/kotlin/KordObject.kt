@@ -1,4 +1,4 @@
-package dev.kord.core
+package dev.jombi.kordsb.core
 
 /**
  * An instance than contains a reference to [Kord].

@@ -1,5 +1,5 @@
-import dev.kord.common.Color
-import dev.kord.common.kColor
+import dev.jombi.kordsb.common.Color
+import dev.jombi.kordsb.common.kColor
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import kotlin.test.assertEquals

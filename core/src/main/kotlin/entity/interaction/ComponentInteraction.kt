@@ -1,17 +1,17 @@
-package dev.kord.core.entity.interaction
+package dev.jombi.kordsb.core.entity.interaction
 
-import dev.kord.common.entity.ComponentType
-import dev.kord.core.Kord
-import dev.kord.core.behavior.interaction.ComponentInteractionBehavior
-import dev.kord.core.behavior.interaction.ModalParentInteractionBehavior
-import dev.kord.core.cache.data.InteractionData
-import dev.kord.core.entity.Guild
-import dev.kord.core.entity.Message
-import dev.kord.core.entity.component.ButtonComponent
-import dev.kord.core.entity.component.Component
-import dev.kord.core.entity.component.SelectMenuComponent
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.ComponentType
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.interaction.ComponentInteractionBehavior
+import dev.jombi.kordsb.core.behavior.interaction.ModalParentInteractionBehavior
+import dev.jombi.kordsb.core.cache.data.InteractionData
+import dev.jombi.kordsb.core.entity.Guild
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.entity.component.ButtonComponent
+import dev.jombi.kordsb.core.entity.component.Component
+import dev.jombi.kordsb.core.entity.component.SelectMenuComponent
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /**
  * An [ActionInteraction] created when a user interacts with a [Component].

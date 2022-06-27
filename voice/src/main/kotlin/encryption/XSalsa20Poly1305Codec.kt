@@ -1,8 +1,8 @@
-package dev.kord.voice.encryption
+package dev.jombi.kordsb.voice.encryption
 
 import com.iwebpp.crypto.TweetNaclFast
-import dev.kord.voice.io.MutableByteArrayCursor
-import dev.kord.voice.io.mutableCursor
+import dev.jombi.kordsb.voice.io.MutableByteArrayCursor
+import dev.jombi.kordsb.voice.io.mutableCursor
 
 public class XSalsa20Poly1305Codec(public val key: ByteArray) {
     private val encryption = XSalsa20Poly1305Encryption(key)

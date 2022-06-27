@@ -1,15 +1,15 @@
-package dev.kord.core.behavior
+package dev.jombi.kordsb.core.behavior
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.GuildScheduledEventData
-import dev.kord.core.entity.*
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.builder.scheduled_events.ScheduledEventModifyBuilder
-import dev.kord.rest.service.modifyScheduledEvent
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.GuildScheduledEventData
+import dev.jombi.kordsb.core.entity.*
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.builder.scheduled_events.ScheduledEventModifyBuilder
+import dev.jombi.kordsb.rest.service.modifyScheduledEvent
 import kotlinx.coroutines.flow.Flow
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract

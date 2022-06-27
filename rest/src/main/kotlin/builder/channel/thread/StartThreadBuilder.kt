@@ -1,12 +1,12 @@
-package dev.kord.rest.builder.channel.thread
+package dev.jombi.kordsb.rest.builder.channel.thread
 
-import dev.kord.common.entity.ArchiveDuration
-import dev.kord.common.entity.ChannelType
-import dev.kord.common.entity.optional.OptionalBoolean
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.common.entity.optional.optional
-import dev.kord.rest.builder.AuditRequestBuilder
-import dev.kord.rest.json.request.StartThreadRequest
+import dev.jombi.kordsb.common.entity.ArchiveDuration
+import dev.jombi.kordsb.common.entity.ChannelType
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.common.entity.optional.optional
+import dev.jombi.kordsb.rest.builder.AuditRequestBuilder
+import dev.jombi.kordsb.rest.json.request.StartThreadRequest
 
 public class StartThreadBuilder(
     public var name: String,

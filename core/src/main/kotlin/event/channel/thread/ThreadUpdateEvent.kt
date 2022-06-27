@@ -1,10 +1,10 @@
-package dev.kord.core.event.channel.thread
+package dev.jombi.kordsb.core.event.channel.thread
 
-import dev.kord.core.entity.channel.thread.NewsChannelThread
-import dev.kord.core.entity.channel.thread.TextChannelThread
-import dev.kord.core.entity.channel.thread.ThreadChannel
-import dev.kord.core.event.channel.ChannelUpdateEvent
-import dev.kord.core.event.kordCoroutineScope
+import dev.jombi.kordsb.core.entity.channel.thread.NewsChannelThread
+import dev.jombi.kordsb.core.entity.channel.thread.TextChannelThread
+import dev.jombi.kordsb.core.entity.channel.thread.ThreadChannel
+import dev.jombi.kordsb.core.event.channel.ChannelUpdateEvent
+import dev.jombi.kordsb.core.event.kordCoroutineScope
 import kotlinx.coroutines.CoroutineScope
 
 public sealed interface ThreadUpdateEvent : ChannelUpdateEvent {

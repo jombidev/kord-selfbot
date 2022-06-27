@@ -1,7 +1,7 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.KordObject
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.KordObject
 import java.util.Comparator
 
 public interface Entity : Comparable<Entity> {

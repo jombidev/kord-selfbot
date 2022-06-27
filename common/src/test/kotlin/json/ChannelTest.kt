@@ -1,7 +1,7 @@
 package json
 
-import dev.kord.common.entity.DiscordChannel
-import dev.kord.common.entity.optional.value
+import dev.jombi.kordsb.common.entity.DiscordChannel
+import dev.jombi.kordsb.common.entity.optional.value
 import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.Test
 import kotlin.time.Duration.Companion.seconds

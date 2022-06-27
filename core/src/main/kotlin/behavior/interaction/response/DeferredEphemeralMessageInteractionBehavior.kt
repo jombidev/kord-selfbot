@@ -1,15 +1,15 @@
-package dev.kord.core.behavior.interaction.response
+package dev.jombi.kordsb.core.behavior.interaction.response
 
-import dev.kord.common.entity.MessageFlag
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.behavior.interaction.ActionInteractionBehavior
-import dev.kord.core.entity.interaction.Interaction
-import dev.kord.core.entity.interaction.response.EphemeralMessageInteractionResponse
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.builder.message.modify.InteractionResponseModifyBuilder
-import dev.kord.rest.request.RestRequestException
+import dev.jombi.kordsb.common.entity.MessageFlag
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.interaction.ActionInteractionBehavior
+import dev.jombi.kordsb.core.entity.interaction.Interaction
+import dev.jombi.kordsb.core.entity.interaction.response.EphemeralMessageInteractionResponse
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.builder.message.modify.InteractionResponseModifyBuilder
+import dev.jombi.kordsb.rest.request.RestRequestException
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

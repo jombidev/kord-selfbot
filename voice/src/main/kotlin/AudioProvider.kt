@@ -1,6 +1,6 @@
-package dev.kord.voice
+package dev.jombi.kordsb.voice
 
-import dev.kord.common.annotation.KordVoice
+import dev.jombi.kordsb.common.annotation.KordVoice
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.channels.SendChannel
 import kotlinx.coroutines.delay

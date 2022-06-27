@@ -1,15 +1,15 @@
-package dev.kord.rest.service
+package dev.jombi.kordsb.rest.service
 
-import dev.kord.common.entity.DiscordEmoji
-import dev.kord.common.entity.Snowflake
-import dev.kord.rest.Image
-import dev.kord.rest.builder.guild.EmojiCreateBuilder
-import dev.kord.rest.builder.guild.EmojiModifyBuilder
-import dev.kord.rest.json.request.EmojiCreateRequest
-import dev.kord.rest.json.request.EmojiModifyRequest
-import dev.kord.rest.request.RequestHandler
-import dev.kord.rest.request.auditLogReason
-import dev.kord.rest.route.Route
+import dev.jombi.kordsb.common.entity.DiscordEmoji
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.rest.Image
+import dev.jombi.kordsb.rest.builder.guild.EmojiCreateBuilder
+import dev.jombi.kordsb.rest.builder.guild.EmojiModifyBuilder
+import dev.jombi.kordsb.rest.json.request.EmojiCreateRequest
+import dev.jombi.kordsb.rest.json.request.EmojiModifyRequest
+import dev.jombi.kordsb.rest.request.RequestHandler
+import dev.jombi.kordsb.rest.request.auditLogReason
+import dev.jombi.kordsb.rest.route.Route
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

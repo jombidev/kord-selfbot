@@ -1,7 +1,7 @@
-package dev.kord.rest
+package dev.jombi.kordsb.rest
 
-import dev.kord.rest.request.KtorRequestHandler
-import dev.kord.rest.service.RestClient
+import dev.jombi.kordsb.rest.request.KtorRequestHandler
+import dev.jombi.kordsb.rest.service.RestClient
 
 suspend fun main(args: Array<String>) {
     val token = args.firstOrNull() ?: error("token required")

@@ -1,10 +1,10 @@
-package dev.kord.voice.udp
+package dev.jombi.kordsb.voice.udp
 
-import dev.kord.common.annotation.KordVoice
-import dev.kord.voice.AudioFrame
-import dev.kord.voice.AudioProvider
-import dev.kord.voice.FrameInterceptor
-import dev.kord.voice.encryption.strategies.NonceStrategy
+import dev.jombi.kordsb.common.annotation.KordVoice
+import dev.jombi.kordsb.voice.AudioFrame
+import dev.jombi.kordsb.voice.AudioProvider
+import dev.jombi.kordsb.voice.FrameInterceptor
+import dev.jombi.kordsb.voice.encryption.strategies.NonceStrategy
 import io.ktor.network.sockets.*
 import io.ktor.utils.io.core.*
 import kotlinx.coroutines.channels.Channel

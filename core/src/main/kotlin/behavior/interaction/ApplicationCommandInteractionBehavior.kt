@@ -1,10 +1,10 @@
-package dev.kord.core.behavior.interaction
+package dev.jombi.kordsb.core.behavior.interaction
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.entity.interaction.ApplicationCommandInteraction
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.entity.interaction.ApplicationCommandInteraction
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /** The behavior of an [ApplicationCommandInteraction]. */
 public interface ApplicationCommandInteractionBehavior : ModalParentInteractionBehavior {

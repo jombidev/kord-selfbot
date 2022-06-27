@@ -1,10 +1,10 @@
-package dev.kord.gateway
+package dev.jombi.kordsb.gateway
 
-import dev.kord.common.entity.DiscordShard
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.coerceToMissing
-import dev.kord.common.entity.optional.optional
-import dev.kord.gateway.builder.PresenceBuilder
+import dev.jombi.kordsb.common.entity.DiscordShard
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.coerceToMissing
+import dev.jombi.kordsb.common.entity.optional.optional
+import dev.jombi.kordsb.gateway.builder.PresenceBuilder
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

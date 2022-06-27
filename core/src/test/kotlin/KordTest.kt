@@ -1,7 +1,7 @@
-package dev.kord.core
+package dev.jombi.kordsb.core
 
-import dev.kord.common.annotation.KordExperimental
-import dev.kord.core.event.gateway.ReadyEvent
+import dev.jombi.kordsb.common.annotation.KordExperimental
+import dev.jombi.kordsb.core.event.gateway.ReadyEvent
 import kotlinx.coroutines.*
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable

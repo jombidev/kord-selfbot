@@ -1,11 +1,11 @@
-package dev.kord.core.entity.channel.thread
+package dev.jombi.kordsb.core.entity.channel.thread
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.behavior.ThreadMemberBehavior
-import dev.kord.core.cache.data.ThreadMemberData
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.ThreadMemberBehavior
+import dev.jombi.kordsb.core.cache.data.ThreadMemberData
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import kotlinx.datetime.Instant
 
 public class ThreadMember(

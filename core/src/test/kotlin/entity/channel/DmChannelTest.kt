@@ -1,7 +1,7 @@
-package dev.kord.core.entity.channel
+package dev.jombi.kordsb.core.entity.channel
 
-import dev.kord.common.entity.ChannelType
-import dev.kord.core.cache.data.ChannelData
+import dev.jombi.kordsb.common.entity.ChannelType
+import dev.jombi.kordsb.core.cache.data.ChannelData
 import equality.ChannelEqualityTest
 import mockKord
 

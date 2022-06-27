@@ -1,7 +1,7 @@
 package regression
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.entity.ReactionEmoji
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.entity.ReactionEmoji
 import kotlin.test.Test
 
 class ReactionEmojiTest {

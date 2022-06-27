@@ -1,12 +1,12 @@
-package dev.kord.core.behavior.interaction
+package dev.jombi.kordsb.core.behavior.interaction
 
-import dev.kord.common.entity.Choice
-import dev.kord.common.entity.DiscordAutoComplete
-import dev.kord.core.entity.interaction.AutoCompleteInteraction
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.builder.interaction.IntegerOptionBuilder
-import dev.kord.rest.builder.interaction.NumberOptionBuilder
-import dev.kord.rest.builder.interaction.StringChoiceBuilder
+import dev.jombi.kordsb.common.entity.Choice
+import dev.jombi.kordsb.common.entity.DiscordAutoComplete
+import dev.jombi.kordsb.core.entity.interaction.AutoCompleteInteraction
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.builder.interaction.IntegerOptionBuilder
+import dev.jombi.kordsb.rest.builder.interaction.NumberOptionBuilder
+import dev.jombi.kordsb.rest.builder.interaction.StringChoiceBuilder
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

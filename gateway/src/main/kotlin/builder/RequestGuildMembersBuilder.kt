@@ -1,14 +1,14 @@
-package dev.kord.gateway.builder
+package dev.jombi.kordsb.gateway.builder
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalBoolean
-import dev.kord.common.entity.optional.OptionalInt
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.gateway.GuildMembersChunkData
-import dev.kord.gateway.Intent
-import dev.kord.gateway.PrivilegedIntent
-import dev.kord.gateway.RequestGuildMembers
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.optional.OptionalInt
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.gateway.GuildMembersChunkData
+import dev.jombi.kordsb.gateway.Intent
+import dev.jombi.kordsb.gateway.PrivilegedIntent
+import dev.jombi.kordsb.gateway.RequestGuildMembers
 
 /**
  * A builder for a [RequestGuildMembers] command.

@@ -1,10 +1,10 @@
-package dev.kord.gateway
+package dev.jombi.kordsb.gateway
 
-import dev.kord.common.entity.*
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalBoolean
-import dev.kord.common.entity.optional.OptionalSnowflake
-import dev.kord.common.serialization.DurationInSeconds
+import dev.jombi.kordsb.common.entity.*
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.serialization.DurationInSeconds
 import kotlinx.datetime.Instant
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.KSerializer
@@ -658,7 +658,7 @@ public data class DiscordCreatedInvite(
 
 @Deprecated(
     "Use 'DiscordUser' instead, All missing fields have defaults.",
-    ReplaceWith("DiscordUser", "dev.kord.common.entity.DiscordUser"),
+    ReplaceWith("DiscordUser", "dev.jombi.kordsb.common.entity.DiscordUser"),
 )
 @Serializable
 public data class DiscordInviteUser(

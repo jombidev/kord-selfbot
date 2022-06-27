@@ -1,7 +1,7 @@
-package dev.kord.core.supplier
+package dev.jombi.kordsb.core.supplier
 
-import dev.kord.core.Kord
-import dev.kord.core.supplier.EntitySupplyStrategy.Companion.cache
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy.Companion.cache
 
 /**
  *  A supplier that accepts a [Kord] instance and returns an [EntitySupplier] of type [T].

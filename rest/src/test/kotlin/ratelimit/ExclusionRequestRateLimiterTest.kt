@@ -1,4 +1,4 @@
-package dev.kord.rest.ratelimit
+package dev.jombi.kordsb.rest.ratelimit
 
 import kotlinx.datetime.Clock
 

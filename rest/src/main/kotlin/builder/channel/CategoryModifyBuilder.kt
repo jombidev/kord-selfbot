@@ -1,12 +1,12 @@
-package dev.kord.rest.builder.channel
+package dev.jombi.kordsb.rest.builder.channel
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.Overwrite
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalInt
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.rest.builder.AuditRequestBuilder
-import dev.kord.rest.json.request.ChannelModifyPatchRequest
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.Overwrite
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalInt
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.rest.builder.AuditRequestBuilder
+import dev.jombi.kordsb.rest.json.request.ChannelModifyPatchRequest
 
 @KordDsl
 public class CategoryModifyBuilder : PermissionOverwritesModifyBuilder, AuditRequestBuilder<ChannelModifyPatchRequest> {

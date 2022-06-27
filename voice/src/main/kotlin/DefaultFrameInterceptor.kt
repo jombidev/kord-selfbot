@@ -1,7 +1,7 @@
-package dev.kord.voice
+package dev.jombi.kordsb.voice
 
-import dev.kord.common.annotation.KordVoice
-import dev.kord.voice.gateway.SendSpeaking
+import dev.jombi.kordsb.common.annotation.KordVoice
+import dev.jombi.kordsb.voice.gateway.SendSpeaking
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach

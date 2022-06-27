@@ -41,6 +41,13 @@ val fatJar = task("fatJar", type = org.gradle.jvm.tasks.Jar::class) {
     with(tasks.jar.get() as CopySpec)
 }
 
+val srcJar = task("srcJarBuilder", type = org.gradle.jvm.tasks.Jar::class) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveBaseName.set("kord-selfbot-${project.name}-source")
+    destinationDirectory.set(file("${projectDir}/../result/").also { if (!it.exists()) it.mkdir() })
+    with(tasks.sourcesJar.get() as CopySpec)
+}
+
 tasks {
     withType<KotlinCompile> {
         kotlinOptions {
@@ -51,6 +58,9 @@ tasks {
     "build" {
         dependsOn(fatJar)
     }
+    "sourcesJar" {
+        dependsOn(srcJar)
+    }
 }
 
 java {
@@ -58,6 +68,6 @@ java {
         usingSourceSet(voice)
         withJavadocJar()
         withSourcesJar()
-        capability("dev.kord", "core-voice", version as String)
+        capability("dev.jombi.kordsb", "core-voice", version as String)
     }
 }

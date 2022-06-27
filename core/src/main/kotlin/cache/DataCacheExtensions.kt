@@ -1,8 +1,8 @@
-package dev.kord.core.cache
+package dev.jombi.kordsb.core.cache
 
 import dev.kord.cache.api.DataCache
 import dev.kord.cache.api.query
-import dev.kord.core.cache.data.*
+import dev.jombi.kordsb.core.cache.data.*
 
 /**
  * Registers all Kord data classes for this cache

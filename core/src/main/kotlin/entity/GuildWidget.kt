@@ -1,17 +1,17 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.KordObject
-import dev.kord.core.behavior.GuildBehavior
-import dev.kord.core.behavior.channel.ChannelBehavior
-import dev.kord.core.cache.data.GuildWidgetData
-import dev.kord.core.entity.channel.Channel
-import dev.kord.core.entity.channel.TopGuildChannel
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.core.supplier.getChannelOfOrNull
-import dev.kord.rest.builder.guild.GuildWidgetModifyBuilder
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.core.behavior.GuildBehavior
+import dev.jombi.kordsb.core.behavior.channel.ChannelBehavior
+import dev.jombi.kordsb.core.cache.data.GuildWidgetData
+import dev.jombi.kordsb.core.entity.channel.Channel
+import dev.jombi.kordsb.core.entity.channel.TopGuildChannel
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
+import dev.jombi.kordsb.rest.builder.guild.GuildWidgetModifyBuilder
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

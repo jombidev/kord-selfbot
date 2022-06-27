@@ -1,4 +1,4 @@
-package dev.kord.rest
+package dev.jombi.kordsb.rest
 
 import java.io.InputStream
 

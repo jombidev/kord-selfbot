@@ -1,10 +1,10 @@
-package dev.kord.core.event.interaction
+package dev.jombi.kordsb.core.event.interaction
 
-import dev.kord.core.behavior.interaction.response.InteractionResponseBehavior
-import dev.kord.core.entity.interaction.ActionInteraction
-import dev.kord.core.entity.interaction.DataInteraction
-import dev.kord.core.entity.interaction.Interaction
-import dev.kord.core.event.Event
+import dev.jombi.kordsb.core.behavior.interaction.response.InteractionResponseBehavior
+import dev.jombi.kordsb.core.entity.interaction.ActionInteraction
+import dev.jombi.kordsb.core.entity.interaction.DataInteraction
+import dev.jombi.kordsb.core.entity.interaction.Interaction
+import dev.jombi.kordsb.core.event.Event
 
 /**
  * An [Event] that fires when an [Interaction] is created.

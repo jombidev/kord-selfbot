@@ -1,8 +1,8 @@
-package dev.kord.rest.json.response
+package dev.jombi.kordsb.rest.json.response
 
-import dev.kord.common.entity.ChannelType
-import dev.kord.common.entity.DiscordChannel
-import dev.kord.common.entity.DiscordThreadMember
+import dev.jombi.kordsb.common.entity.ChannelType
+import dev.jombi.kordsb.common.entity.DiscordChannel
+import dev.jombi.kordsb.common.entity.DiscordThreadMember
 import kotlinx.serialization.Serializable
 
 @Serializable

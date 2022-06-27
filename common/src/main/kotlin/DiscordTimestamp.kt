@@ -1,4 +1,4 @@
-package dev.kord.common
+package dev.jombi.kordsb.common
 
 import kotlinx.datetime.Instant
 

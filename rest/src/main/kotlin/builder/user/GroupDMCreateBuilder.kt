@@ -1,9 +1,9 @@
-package dev.kord.rest.builder.user
+package dev.jombi.kordsb.rest.builder.user
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.Snowflake
-import dev.kord.rest.builder.RequestBuilder
-import dev.kord.rest.json.request.GroupDMCreateRequest
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.rest.builder.RequestBuilder
+import dev.jombi.kordsb.rest.json.request.GroupDMCreateRequest
 
 @KordDsl
 public class GroupDMCreateBuilder : RequestBuilder<GroupDMCreateRequest> {

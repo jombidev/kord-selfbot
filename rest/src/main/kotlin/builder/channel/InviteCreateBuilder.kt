@@ -1,13 +1,13 @@
-package dev.kord.rest.builder.channel
+package dev.jombi.kordsb.rest.builder.channel
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.ApplicationFlag
-import dev.kord.common.entity.InviteTargetType
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.*
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.rest.builder.AuditRequestBuilder
-import dev.kord.rest.json.request.InviteCreateRequest
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.ApplicationFlag
+import dev.jombi.kordsb.common.entity.InviteTargetType
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.*
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.rest.builder.AuditRequestBuilder
+import dev.jombi.kordsb.rest.json.request.InviteCreateRequest
 import kotlin.time.Duration
 import kotlin.time.DurationUnit.SECONDS
 import kotlin.time.toDuration
@@ -111,7 +111,7 @@ public class InviteCreateBuilder : AuditRequestBuilder<InviteCreateRequest> {
             temporary = _temporary,
             unique = _unique,
             targetUser = _targetUser,
-            targetUserType = _targetUser.map { @Suppress("DEPRECATION") dev.kord.common.entity.TargetUserType.Stream },
+            targetUserType = _targetUser.map { @Suppress("DEPRECATION") dev.jombi.kordsb.common.entity.TargetUserType.Stream },
             targetType = target,
             targetUserId = _targetUserId,
             targetApplicationId = _targetApplicationId,

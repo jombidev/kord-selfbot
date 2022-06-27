@@ -1,13 +1,13 @@
-package dev.kord.core.entity.interaction
+package dev.jombi.kordsb.core.entity.interaction
 
-import dev.kord.common.entity.optional.orEmpty
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.InteractionData
-import dev.kord.core.entity.Guild
-import dev.kord.core.entity.component.SelectMenuComponent
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.builder.component.SelectMenuBuilder
+import dev.jombi.kordsb.common.entity.optional.orEmpty
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.InteractionData
+import dev.jombi.kordsb.core.entity.Guild
+import dev.jombi.kordsb.core.entity.component.SelectMenuComponent
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.builder.component.SelectMenuBuilder
 
 /** A [ComponentInteraction] created when a user interacts with a [select menu][SelectMenuComponent]. */
 public sealed interface SelectMenuInteraction : ComponentInteraction {

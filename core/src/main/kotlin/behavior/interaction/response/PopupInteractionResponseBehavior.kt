@@ -1,11 +1,11 @@
-package dev.kord.core.behavior.interaction.response
+package dev.jombi.kordsb.core.behavior.interaction.response
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.behavior.interaction.ModalParentInteractionBehavior
-import dev.kord.core.behavior.interaction.modal
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.interaction.ModalParentInteractionBehavior
+import dev.jombi.kordsb.core.behavior.interaction.modal
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /**
  * An [InteractionResponseBehavior] returned when using [ModalParentInteractionBehavior.modal].

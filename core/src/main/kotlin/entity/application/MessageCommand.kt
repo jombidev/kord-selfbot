@@ -1,11 +1,11 @@
-package dev.kord.core.entity.application
+package dev.jombi.kordsb.core.entity.application
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.behavior.GlobalMessageCommandBehavior
-import dev.kord.core.behavior.GuildMessageCommandBehavior
-import dev.kord.core.behavior.MessageCommandBehavior
-import dev.kord.core.cache.data.ApplicationCommandData
-import dev.kord.rest.service.InteractionService
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.behavior.GlobalMessageCommandBehavior
+import dev.jombi.kordsb.core.behavior.GuildMessageCommandBehavior
+import dev.jombi.kordsb.core.behavior.MessageCommandBehavior
+import dev.jombi.kordsb.core.cache.data.ApplicationCommandData
+import dev.jombi.kordsb.rest.service.InteractionService
 
 public sealed interface MessageCommand : ApplicationCommand, MessageCommandBehavior
 

@@ -1,7 +1,7 @@
-package dev.kord.core.event
+package dev.jombi.kordsb.core.event
 
-import dev.kord.core.Kord
-import dev.kord.gateway.Gateway
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.gateway.Gateway
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.job

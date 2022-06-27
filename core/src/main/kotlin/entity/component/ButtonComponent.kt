@@ -1,11 +1,11 @@
-package dev.kord.core.entity.component
+package dev.jombi.kordsb.core.entity.component
 
-import dev.kord.common.entity.ButtonStyle
-import dev.kord.common.entity.ComponentType
-import dev.kord.common.entity.optional.value
-import dev.kord.core.cache.data.ChatComponentData
-import dev.kord.core.entity.ReactionEmoji
-import dev.kord.core.entity.interaction.ComponentInteraction
+import dev.jombi.kordsb.common.entity.ButtonStyle
+import dev.jombi.kordsb.common.entity.ComponentType
+import dev.jombi.kordsb.common.entity.optional.value
+import dev.jombi.kordsb.core.cache.data.ChatComponentData
+import dev.jombi.kordsb.core.entity.ReactionEmoji
+import dev.jombi.kordsb.core.entity.interaction.ComponentInteraction
 
 /**
  * An interactive component rendered on a Message.

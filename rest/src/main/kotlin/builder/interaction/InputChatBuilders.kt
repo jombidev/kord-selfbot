@@ -1,14 +1,14 @@
-package dev.kord.rest.builder.interaction
+package dev.jombi.kordsb.rest.builder.interaction
 
-import dev.kord.common.Locale
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.ApplicationCommandType
-import dev.kord.common.entity.Permissions
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.common.entity.optional.mapList
-import dev.kord.rest.json.request.ApplicationCommandCreateRequest
-import dev.kord.rest.json.request.ApplicationCommandModifyRequest
+import dev.jombi.kordsb.common.Locale
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.ApplicationCommandType
+import dev.jombi.kordsb.common.entity.Permissions
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.common.entity.optional.mapList
+import dev.jombi.kordsb.rest.json.request.ApplicationCommandCreateRequest
+import dev.jombi.kordsb.rest.json.request.ApplicationCommandModifyRequest
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

@@ -1,16 +1,16 @@
-package dev.kord.core.event.message
+package dev.jombi.kordsb.core.event.message
 
-import dev.kord.common.entity.DiscordPartialMessage
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.behavior.MessageBehavior
-import dev.kord.core.behavior.channel.MessageChannelBehavior
-import dev.kord.core.entity.Message
-import dev.kord.core.entity.Strategizable
-import dev.kord.core.event.Event
-import dev.kord.core.event.kordCoroutineScope
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.DiscordPartialMessage
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.MessageBehavior
+import dev.jombi.kordsb.core.behavior.channel.MessageChannelBehavior
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.entity.Strategizable
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.kordCoroutineScope
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import kotlinx.coroutines.CoroutineScope
 import kotlin.coroutines.CoroutineContext
 

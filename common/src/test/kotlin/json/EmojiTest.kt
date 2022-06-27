@@ -1,7 +1,7 @@
 package json
 
-import dev.kord.common.entity.DiscordEmoji
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.DiscordEmoji
+import dev.jombi.kordsb.common.entity.Snowflake
 import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.Test
 

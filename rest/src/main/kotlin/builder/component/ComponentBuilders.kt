@@ -1,11 +1,11 @@
 @file:Suppress("PropertyName")
 
-package dev.kord.rest.builder.component
+package dev.jombi.kordsb.rest.builder.component
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.DiscordComponent
-import dev.kord.common.entity.optional.OptionalBoolean
-import dev.kord.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.DiscordComponent
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
 
 @KordDsl
 public sealed interface ComponentBuilder {

@@ -1,11 +1,11 @@
-package dev.kord.core.entity.interaction
+package dev.jombi.kordsb.core.entity.interaction
 
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.InteractionData
-import dev.kord.core.entity.Guild
-import dev.kord.core.entity.application.ChatInputCommandCommand
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.InteractionData
+import dev.jombi.kordsb.core.entity.Guild
+import dev.jombi.kordsb.core.entity.application.ChatInputCommandCommand
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /**
  * An [ApplicationCommandInteraction] created when a user uses a [ChatInputCommandCommand].

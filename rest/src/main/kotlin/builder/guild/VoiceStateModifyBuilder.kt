@@ -1,12 +1,12 @@
-package dev.kord.rest.builder.guild
+package dev.jombi.kordsb.rest.builder.guild
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalBoolean
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.rest.builder.RequestBuilder
-import dev.kord.rest.json.request.CurrentVoiceStateModifyRequest
-import dev.kord.rest.json.request.VoiceStateModifyRequest
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.rest.builder.RequestBuilder
+import dev.jombi.kordsb.rest.json.request.CurrentVoiceStateModifyRequest
+import dev.jombi.kordsb.rest.json.request.VoiceStateModifyRequest
 import kotlinx.datetime.Instant
 
 public class CurrentVoiceStateModifyBuilder(public val channelId: Snowflake) :

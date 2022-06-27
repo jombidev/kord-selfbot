@@ -1,17 +1,17 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.annotation.DeprecatedSinceKord
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.KordObject
-import dev.kord.core.behavior.channel.BaseVoiceChannelBehavior
-import dev.kord.core.cache.data.VoiceStateData
-import dev.kord.core.entity.channel.VoiceChannel
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.core.supplier.getChannelOfOrNull
+import dev.jombi.kordsb.common.annotation.DeprecatedSinceKord
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.core.behavior.channel.BaseVoiceChannelBehavior
+import dev.jombi.kordsb.core.cache.data.VoiceStateData
+import dev.jombi.kordsb.core.entity.channel.VoiceChannel
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
 import kotlinx.datetime.Instant
 
 public class VoiceState(

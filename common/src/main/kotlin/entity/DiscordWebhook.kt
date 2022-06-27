@@ -1,7 +1,7 @@
-package dev.kord.common.entity
+package dev.jombi.kordsb.common.entity
 
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
 import kotlinx.serialization.*
 import kotlinx.serialization.descriptors.PrimitiveKind
 import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor

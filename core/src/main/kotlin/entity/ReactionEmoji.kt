@@ -1,7 +1,7 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.cache.data.RemovedReactionData
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.cache.data.RemovedReactionData
 
 public sealed class ReactionEmoji {
     /**

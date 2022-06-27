@@ -1,6 +1,6 @@
-package dev.kord.core
+package dev.jombi.kordsb.core
 
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.Snowflake
 import kotlinx.coroutines.flow.count
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Assertions

@@ -1,10 +1,10 @@
-package dev.kord.core.cache
+package dev.jombi.kordsb.core.cache
 
 import dev.kord.cache.api.QueryBuilder
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalSnowflake
-import dev.kord.common.entity.optional.optionalSnowflake
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.entity.optional.optionalSnowflake
 import kotlin.reflect.KProperty1
 
 public fun <T : Any> QueryBuilder<T>.idEq(property: KProperty1<T, Snowflake?>, value: Snowflake?) {

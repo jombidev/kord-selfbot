@@ -1,13 +1,13 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
-import dev.kord.common.entity.InviteTargetType
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalSnowflake
-import dev.kord.common.entity.optional.map
-import dev.kord.common.entity.optional.mapSnowflake
-import dev.kord.common.serialization.DurationInSeconds
-import dev.kord.gateway.DiscordCreatedInvite
+import dev.jombi.kordsb.common.entity.InviteTargetType
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.entity.optional.map
+import dev.jombi.kordsb.common.entity.optional.mapSnowflake
+import dev.jombi.kordsb.common.serialization.DurationInSeconds
+import dev.jombi.kordsb.gateway.DiscordCreatedInvite
 import kotlinx.datetime.Instant
 import kotlinx.serialization.Serializable
 
@@ -24,7 +24,7 @@ public data class InviteCreateData(
     val targetUserId: OptionalSnowflake = OptionalSnowflake.Missing,
     val targetApplication: Optional<PartialApplicationData> = Optional.Missing(),
     @Deprecated("No longer documented. Use 'targetType' instead.", ReplaceWith("this.targetType"))
-    val targetUserType: Optional<@Suppress("DEPRECATION") dev.kord.common.entity.TargetUserType> = Optional.Missing(),
+    val targetUserType: Optional<@Suppress("DEPRECATION") dev.jombi.kordsb.common.entity.TargetUserType> = Optional.Missing(),
     val temporary: Boolean,
     val uses: Int,
 ) {

@@ -1,7 +1,7 @@
-package dev.kord.core.entity.channel
+package dev.jombi.kordsb.core.entity.channel
 
-import dev.kord.core.behavior.channel.threads.ThreadParentChannelBehavior
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.behavior.channel.threads.ThreadParentChannelBehavior
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 public interface ThreadParentChannel : ThreadParentChannelBehavior, TopGuildMessageChannel {
 

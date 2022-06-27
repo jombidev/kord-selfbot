@@ -1,10 +1,10 @@
-package dev.kord.core.entity.channel
+package dev.jombi.kordsb.core.entity.channel
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.behavior.channel.ChannelBehavior
-import dev.kord.core.cache.data.WelcomeScreenChannelData
-import dev.kord.core.supplier.EntitySupplier
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.channel.ChannelBehavior
+import dev.jombi.kordsb.core.cache.data.WelcomeScreenChannelData
+import dev.jombi.kordsb.core.supplier.EntitySupplier
 
 /**
  * One of the channels shown in the welcome screen

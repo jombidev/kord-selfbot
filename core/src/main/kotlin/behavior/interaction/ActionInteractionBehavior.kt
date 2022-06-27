@@ -1,19 +1,19 @@
-package dev.kord.core.behavior.interaction
+package dev.jombi.kordsb.core.behavior.interaction
 
-import dev.kord.common.annotation.KordUnsafe
-import dev.kord.common.entity.MessageFlag
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.behavior.interaction.response.*
-import dev.kord.core.entity.Message
-import dev.kord.core.entity.interaction.ActionInteraction
-import dev.kord.core.entity.interaction.Interaction
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.core.supplier.EntitySupplyStrategy.Companion.rest
-import dev.kord.rest.builder.message.create.InteractionResponseCreateBuilder
-import dev.kord.rest.request.RestRequestException
+import dev.jombi.kordsb.common.annotation.KordUnsafe
+import dev.jombi.kordsb.common.entity.MessageFlag
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.interaction.response.*
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.entity.interaction.ActionInteraction
+import dev.jombi.kordsb.core.entity.interaction.Interaction
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy.Companion.rest
+import dev.jombi.kordsb.rest.builder.message.create.InteractionResponseCreateBuilder
+import dev.jombi.kordsb.rest.request.RestRequestException
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

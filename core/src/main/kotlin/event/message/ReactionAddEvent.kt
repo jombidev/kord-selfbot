@@ -1,20 +1,20 @@
-package dev.kord.core.event.message
+package dev.jombi.kordsb.core.event.message
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.behavior.GuildBehavior
-import dev.kord.core.behavior.MemberBehavior
-import dev.kord.core.behavior.MessageBehavior
-import dev.kord.core.behavior.UserBehavior
-import dev.kord.core.behavior.channel.MessageChannelBehavior
-import dev.kord.core.entity.*
-import dev.kord.core.entity.channel.MessageChannel
-import dev.kord.core.event.Event
-import dev.kord.core.event.kordCoroutineScope
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.core.supplier.getChannelOf
-import dev.kord.core.supplier.getChannelOfOrNull
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.GuildBehavior
+import dev.jombi.kordsb.core.behavior.MemberBehavior
+import dev.jombi.kordsb.core.behavior.MessageBehavior
+import dev.jombi.kordsb.core.behavior.UserBehavior
+import dev.jombi.kordsb.core.behavior.channel.MessageChannelBehavior
+import dev.jombi.kordsb.core.entity.*
+import dev.jombi.kordsb.core.entity.channel.MessageChannel
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.kordCoroutineScope
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.supplier.getChannelOf
+import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
 import kotlinx.coroutines.CoroutineScope
 import kotlin.coroutines.CoroutineContext
 

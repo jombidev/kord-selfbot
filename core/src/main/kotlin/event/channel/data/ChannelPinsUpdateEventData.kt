@@ -1,9 +1,9 @@
-package dev.kord.core.event.channel.data
+package dev.jombi.kordsb.core.event.channel.data
 
-import dev.kord.common.entity.DiscordPinsUpdateData
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.entity.DiscordPinsUpdateData
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
 import kotlinx.datetime.Instant
 import kotlinx.serialization.Serializable
 

@@ -1,7 +1,7 @@
 package serialization
 
-import dev.kord.common.serialization.InstantInEpochMillisecondsSerializer
-import dev.kord.common.serialization.InstantInEpochSecondsSerializer
+import dev.jombi.kordsb.common.serialization.InstantInEpochMillisecondsSerializer
+import dev.jombi.kordsb.common.serialization.InstantInEpochSecondsSerializer
 import kotlinx.datetime.Instant
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SerializationException

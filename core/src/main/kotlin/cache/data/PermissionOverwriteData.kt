@@ -1,7 +1,7 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
-import dev.kord.common.entity.Overwrite
-import dev.kord.common.entity.*
+import dev.jombi.kordsb.common.entity.Overwrite
+import dev.jombi.kordsb.common.entity.*
 import kotlinx.serialization.Serializable
 
 @Serializable

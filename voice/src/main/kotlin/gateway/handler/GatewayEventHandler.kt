@@ -1,6 +1,6 @@
-package dev.kord.voice.gateway.handler
+package dev.jombi.kordsb.voice.gateway.handler
 
-import dev.kord.voice.gateway.VoiceEvent
+import dev.jombi.kordsb.voice.gateway.VoiceEvent
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.filterIsInstance

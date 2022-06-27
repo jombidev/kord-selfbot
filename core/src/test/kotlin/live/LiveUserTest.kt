@@ -1,13 +1,13 @@
 package live
 
-import dev.kord.common.annotation.KordPreview
-import dev.kord.common.entity.DiscordUser
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.cache.data.UserData
-import dev.kord.core.entity.User
-import dev.kord.core.live.LiveUser
-import dev.kord.core.live.onUpdate
-import dev.kord.gateway.UserUpdate
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.common.entity.DiscordUser
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.cache.data.UserData
+import dev.jombi.kordsb.core.entity.User
+import dev.jombi.kordsb.core.live.LiveUser
+import dev.jombi.kordsb.core.live.onUpdate
+import dev.jombi.kordsb.gateway.UserUpdate
 import equality.randomId
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.BeforeAll

@@ -1,20 +1,20 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.InviteTargetType
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.value
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.KordObject
-import dev.kord.core.behavior.UserBehavior
-import dev.kord.core.behavior.channel.ChannelBehavior
-import dev.kord.core.cache.data.BaseInviteData
-import dev.kord.core.cache.data.InviteData
-import dev.kord.core.cache.data.InviteWithMetadataData
-import dev.kord.core.entity.channel.Channel
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.InviteTargetType
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.value
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.core.behavior.UserBehavior
+import dev.jombi.kordsb.core.behavior.channel.ChannelBehavior
+import dev.jombi.kordsb.core.cache.data.BaseInviteData
+import dev.jombi.kordsb.core.cache.data.InviteData
+import dev.jombi.kordsb.core.cache.data.InviteWithMetadataData
+import dev.jombi.kordsb.core.entity.channel.Channel
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import kotlinx.datetime.Instant
 import kotlin.time.Duration
 
@@ -82,7 +82,7 @@ public open class Invite(
      */
     @Suppress("DEPRECATION")
     @Deprecated("This is no longer documented. Use 'targetType' instead.", ReplaceWith("this.targetType"))
-    public val targetUserType: dev.kord.common.entity.TargetUserType?
+    public val targetUserType: dev.jombi.kordsb.common.entity.TargetUserType?
         get() = (data as? InviteData)?.targetUserType?.value
 
     /**

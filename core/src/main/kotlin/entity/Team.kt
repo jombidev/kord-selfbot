@@ -1,14 +1,14 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.TeamMembershipState
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.TeamData
-import dev.kord.core.cache.data.TeamMemberData
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.TeamMembershipState
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.TeamData
+import dev.jombi.kordsb.core.cache.data.TeamMemberData
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /**
  * A Discord [developer team](https://discord.com/developers/docs/topics/teams) which can own applications.

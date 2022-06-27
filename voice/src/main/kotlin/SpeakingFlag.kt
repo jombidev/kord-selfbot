@@ -1,6 +1,6 @@
-package dev.kord.voice
+package dev.jombi.kordsb.voice
 
-import dev.kord.common.annotation.KordVoice
+import dev.jombi.kordsb.common.annotation.KordVoice
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.descriptors.PrimitiveKind

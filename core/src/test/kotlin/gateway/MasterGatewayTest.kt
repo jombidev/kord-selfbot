@@ -1,10 +1,10 @@
 package gateway
 
-import dev.kord.core.gateway.DefaultMasterGateway
-import dev.kord.gateway.Command
-import dev.kord.gateway.Event
-import dev.kord.gateway.Gateway
-import dev.kord.gateway.GatewayConfiguration
+import dev.jombi.kordsb.core.gateway.DefaultMasterGateway
+import dev.jombi.kordsb.gateway.Command
+import dev.jombi.kordsb.gateway.Event
+import dev.jombi.kordsb.gateway.Gateway
+import dev.jombi.kordsb.gateway.GatewayConfiguration
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow

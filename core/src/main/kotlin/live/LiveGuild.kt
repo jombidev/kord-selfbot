@@ -1,23 +1,23 @@
-package dev.kord.core.live
+package dev.jombi.kordsb.core.live
 
-import dev.kord.common.annotation.KordPreview
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.map
-import dev.kord.core.entity.Guild
-import dev.kord.core.entity.KordEntity
-import dev.kord.core.entity.ReactionEmoji
-import dev.kord.core.event.Event
-import dev.kord.core.event.channel.ChannelCreateEvent
-import dev.kord.core.event.channel.ChannelDeleteEvent
-import dev.kord.core.event.channel.ChannelUpdateEvent
-import dev.kord.core.event.guild.*
-import dev.kord.core.event.message.*
-import dev.kord.core.event.role.RoleCreateEvent
-import dev.kord.core.event.role.RoleDeleteEvent
-import dev.kord.core.event.role.RoleUpdateEvent
-import dev.kord.core.event.user.PresenceUpdateEvent
-import dev.kord.core.event.user.VoiceStateUpdateEvent
-import dev.kord.core.live.exception.LiveCancellationException
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.map
+import dev.jombi.kordsb.core.entity.Guild
+import dev.jombi.kordsb.core.entity.KordEntity
+import dev.jombi.kordsb.core.entity.ReactionEmoji
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.channel.ChannelCreateEvent
+import dev.jombi.kordsb.core.event.channel.ChannelDeleteEvent
+import dev.jombi.kordsb.core.event.channel.ChannelUpdateEvent
+import dev.jombi.kordsb.core.event.guild.*
+import dev.jombi.kordsb.core.event.message.*
+import dev.jombi.kordsb.core.event.role.RoleCreateEvent
+import dev.jombi.kordsb.core.event.role.RoleDeleteEvent
+import dev.jombi.kordsb.core.event.role.RoleUpdateEvent
+import dev.jombi.kordsb.core.event.user.PresenceUpdateEvent
+import dev.jombi.kordsb.core.event.user.VoiceStateUpdateEvent
+import dev.jombi.kordsb.core.live.exception.LiveCancellationException
 import kotlinx.coroutines.*
 
 @KordPreview

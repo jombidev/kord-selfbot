@@ -1,10 +1,10 @@
-package dev.kord.common.entity
+package dev.jombi.kordsb.common.entity
 
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalSnowflake
-import dev.kord.common.entity.optional.orEmpty
-import dev.kord.common.serialization.DurationInDaysSerializer
-import dev.kord.common.serialization.DurationInSecondsSerializer
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.entity.optional.orEmpty
+import dev.jombi.kordsb.common.serialization.DurationInDaysSerializer
+import dev.jombi.kordsb.common.serialization.DurationInSecondsSerializer
 import kotlinx.datetime.Instant
 import kotlinx.serialization.*
 import kotlinx.serialization.builtins.serializer
@@ -15,12 +15,12 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.int
 import kotlin.time.Duration
-import dev.kord.common.Color as CommonColor
-import dev.kord.common.entity.DefaultMessageNotificationLevel as CommonDefaultMessageNotificationLevel
-import dev.kord.common.entity.ExplicitContentFilter as CommonExplicitContentFilter
-import dev.kord.common.entity.MFALevel as CommonMFALevel
-import dev.kord.common.entity.Permissions as CommonPermissions
-import dev.kord.common.entity.VerificationLevel as CommonVerificationLevel
+import dev.jombi.kordsb.common.Color as CommonColor
+import dev.jombi.kordsb.common.entity.DefaultMessageNotificationLevel as CommonDefaultMessageNotificationLevel
+import dev.jombi.kordsb.common.entity.ExplicitContentFilter as CommonExplicitContentFilter
+import dev.jombi.kordsb.common.entity.MFALevel as CommonMFALevel
+import dev.jombi.kordsb.common.entity.Permissions as CommonPermissions
+import dev.jombi.kordsb.common.entity.VerificationLevel as CommonVerificationLevel
 
 @Serializable
 public data class DiscordAuditLog(
@@ -329,7 +329,7 @@ public sealed class AuditLogChangeKey<T>(public val name: String, public val ser
              * -> use `PrimitiveSerialDescriptor("...", PrimitiveKind.STRING)` instead
              */
             override val descriptor = PrimitiveSerialDescriptor(
-                serialName = "dev.kord.common.entity.AuditLogChangeKey.Type.IntOrString",
+                serialName = "dev.jombi.kordsb.common.entity.AuditLogChangeKey.Type.IntOrString",
                 PrimitiveKind.STRING,
             )
 

@@ -1,8 +1,8 @@
 @file:Suppress("unused")
 
-package dev.kord.rest.request
+package dev.jombi.kordsb.rest.request
 
-import dev.kord.rest.ratelimit.BucketKey
+import dev.jombi.kordsb.rest.ratelimit.BucketKey
 import io.ktor.client.statement.*
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant

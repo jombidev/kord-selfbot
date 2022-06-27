@@ -1,7 +1,7 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.core.behavior.MessageBehavior
-import dev.kord.core.cache.data.MessageData
+import dev.jombi.kordsb.core.behavior.MessageBehavior
+import dev.jombi.kordsb.core.cache.data.MessageData
 import equality.BehaviorEqualityTest
 import equality.EntityEqualityTest
 import io.mockk.every

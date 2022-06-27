@@ -1,6 +1,6 @@
-import dev.kord.core.Kord
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import io.mockk.every
 import io.mockk.mockk
 

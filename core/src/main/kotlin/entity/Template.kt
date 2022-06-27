@@ -1,10 +1,10 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.KordObject
-import dev.kord.core.behavior.TemplateBehavior
-import dev.kord.core.cache.data.TemplateData
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.core.behavior.TemplateBehavior
+import dev.jombi.kordsb.core.cache.data.TemplateData
 import kotlinx.datetime.Instant
 
 public class Template(public val data: TemplateData, override val kord: Kord) : KordObject, TemplateBehavior {

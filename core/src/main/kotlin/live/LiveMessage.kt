@@ -1,21 +1,21 @@
-package dev.kord.core.live
+package dev.jombi.kordsb.core.live
 
-import dev.kord.common.annotation.KordPreview
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.orEmpty
-import dev.kord.core.cache.data.ReactionData
-import dev.kord.core.entity.KordEntity
-import dev.kord.core.entity.Message
-import dev.kord.core.entity.ReactionEmoji
-import dev.kord.core.event.Event
-import dev.kord.core.event.channel.ChannelDeleteEvent
-import dev.kord.core.event.guild.GuildDeleteEvent
-import dev.kord.core.event.interaction.InteractionCreateEvent
-import dev.kord.core.event.interaction.MessageCommandInteractionCreateEvent
-import dev.kord.core.event.message.*
-import dev.kord.core.live.exception.LiveCancellationException
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.orEmpty
+import dev.jombi.kordsb.core.cache.data.ReactionData
+import dev.jombi.kordsb.core.entity.KordEntity
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.entity.ReactionEmoji
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.channel.ChannelDeleteEvent
+import dev.jombi.kordsb.core.event.guild.GuildDeleteEvent
+import dev.jombi.kordsb.core.event.interaction.InteractionCreateEvent
+import dev.jombi.kordsb.core.event.interaction.MessageCommandInteractionCreateEvent
+import dev.jombi.kordsb.core.event.message.*
+import dev.jombi.kordsb.core.live.exception.LiveCancellationException
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import kotlinx.coroutines.*
 
 @KordPreview

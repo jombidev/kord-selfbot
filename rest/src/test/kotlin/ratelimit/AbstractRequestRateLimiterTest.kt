@@ -1,8 +1,8 @@
-package dev.kord.rest.ratelimit
+package dev.jombi.kordsb.rest.ratelimit
 
-import dev.kord.common.entity.DiscordGuild
-import dev.kord.rest.request.JsonRequest
-import dev.kord.rest.route.Route
+import dev.jombi.kordsb.common.entity.DiscordGuild
+import dev.jombi.kordsb.rest.request.JsonRequest
+import dev.jombi.kordsb.rest.route.Route
 import io.ktor.util.*
 import kotlinx.coroutines.test.currentTime
 import kotlinx.coroutines.test.runTest

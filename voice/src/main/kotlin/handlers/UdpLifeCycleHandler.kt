@@ -1,16 +1,16 @@
 @file:OptIn(KordVoice::class)
 
-package dev.kord.voice.handlers
+package dev.jombi.kordsb.voice.handlers
 
-import dev.kord.common.annotation.KordVoice
-import dev.kord.voice.EncryptionMode
-import dev.kord.voice.FrameInterceptorConfiguration
-import dev.kord.voice.VoiceConnection
-import dev.kord.voice.encryption.strategies.LiteNonceStrategy
-import dev.kord.voice.encryption.strategies.NormalNonceStrategy
-import dev.kord.voice.encryption.strategies.SuffixNonceStrategy
-import dev.kord.voice.gateway.*
-import dev.kord.voice.udp.AudioFrameSenderConfiguration
+import dev.jombi.kordsb.common.annotation.KordVoice
+import dev.jombi.kordsb.voice.EncryptionMode
+import dev.jombi.kordsb.voice.FrameInterceptorConfiguration
+import dev.jombi.kordsb.voice.VoiceConnection
+import dev.jombi.kordsb.voice.encryption.strategies.LiteNonceStrategy
+import dev.jombi.kordsb.voice.encryption.strategies.NormalNonceStrategy
+import dev.jombi.kordsb.voice.encryption.strategies.SuffixNonceStrategy
+import dev.jombi.kordsb.voice.gateway.*
+import dev.jombi.kordsb.voice.udp.AudioFrameSenderConfiguration
 import io.ktor.network.sockets.*
 import kotlinx.atomicfu.atomic
 import kotlinx.coroutines.Job

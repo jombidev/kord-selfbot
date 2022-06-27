@@ -1,14 +1,14 @@
-package dev.kord.core.behavior.interaction
+package dev.jombi.kordsb.core.behavior.interaction
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.behavior.channel.MessageChannelBehavior
-import dev.kord.core.entity.KordEntity
-import dev.kord.core.entity.Strategizable
-import dev.kord.core.entity.channel.MessageChannel
-import dev.kord.core.entity.interaction.Interaction
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.core.supplier.getChannelOf
-import dev.kord.core.supplier.getChannelOfOrNull
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.behavior.channel.MessageChannelBehavior
+import dev.jombi.kordsb.core.entity.KordEntity
+import dev.jombi.kordsb.core.entity.Strategizable
+import dev.jombi.kordsb.core.entity.channel.MessageChannel
+import dev.jombi.kordsb.core.entity.interaction.Interaction
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.supplier.getChannelOf
+import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
 
 /** The behavior of an [Interaction]. */
 public interface InteractionBehavior : KordEntity, Strategizable {

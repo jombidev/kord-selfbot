@@ -1,6 +1,6 @@
 package json
 
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.Snowflake
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString

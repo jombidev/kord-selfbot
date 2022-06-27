@@ -1,19 +1,19 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.KordObject
-import dev.kord.core.behavior.GuildBehavior
-import dev.kord.core.behavior.channel.TopGuildChannelBehavior
-import dev.kord.core.cache.data.PermissionOverwriteData
-import dev.kord.core.entity.channel.TopGuildChannel
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.core.supplier.getChannelOf
-import dev.kord.core.supplier.getChannelOfOrNull
-import dev.kord.rest.request.RestRequestException
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.core.behavior.GuildBehavior
+import dev.jombi.kordsb.core.behavior.channel.TopGuildChannelBehavior
+import dev.jombi.kordsb.core.cache.data.PermissionOverwriteData
+import dev.jombi.kordsb.core.entity.channel.TopGuildChannel
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.supplier.getChannelOf
+import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
+import dev.jombi.kordsb.rest.request.RestRequestException
 
 public class PermissionOverwriteEntity(
     public val guildId: Snowflake,

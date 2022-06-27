@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.pm20.archivesName
+
 buildscript {
     repositories {
         mavenCentral()
@@ -24,15 +26,39 @@ dependencies {
 /*
 This will generate a file named "BuildConfigGenerated.kt" that looks like:
 
-package dev.kord.common
+package dev.jombi.kordsb.common
 
 internal const val BUILD_CONFIG_GENERATED_LIBRARY_VERSION: String = "<version>"
 internal const val BUILD_CONFIG_GENERATED_COMMIT_HASH: String = "<commit hash>"
 internal const val BUILD_CONFIG_GENERATED_SHORT_COMMIT_HASH: String = "<short commit hash>"
 */
+
+val fatJar = task("fatJar", type = org.gradle.jvm.tasks.Jar::class) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveBaseName.set("kord-selfbot-${project.name}")
+    destinationDirectory.set(file("${projectDir}/../result/").also { if (!it.exists()) it.mkdir() })
+    with(tasks.jar.get() as CopySpec)
+}
+val srcJar = task("srcJarBuilder", type = org.gradle.jvm.tasks.Jar::class) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveBaseName.set("kord-selfbot-${project.name}-source")
+    destinationDirectory.set(file("${projectDir}/../result/").also { if (!it.exists()) it.mkdir() })
+    with(tasks.sourcesJar.get() as CopySpec)
+}
+
+tasks {
+    "build" {
+        dependsOn(fatJar)
+    }
+    "sourcesJar" {
+        dependsOn(srcJar)
+    }
+}
+
 buildConfig {
-    packageName("dev.kord.common")
+    packageName("dev.jombi.kordsb.common")
     className("BuildConfigGenerated")
+    //archiveBaseName.set("kord-selfbot-${project.name}-${project.version}")
 
     useKotlinOutput {
         topLevelConstants = true

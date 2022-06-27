@@ -1,24 +1,24 @@
-package dev.kord.core.behavior
+package dev.jombi.kordsb.core.behavior
 
-import dev.kord.common.entity.Permission
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.behavior.channel.MessageChannelBehavior
-import dev.kord.core.behavior.channel.createMessage
-import dev.kord.core.cache.data.MessageData
-import dev.kord.core.entity.*
-import dev.kord.core.entity.channel.MessageChannel
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.core.supplier.getChannelOf
-import dev.kord.core.supplier.getChannelOfOrNull
-import dev.kord.rest.builder.message.create.UserMessageCreateBuilder
-import dev.kord.rest.builder.message.modify.UserMessageModifyBuilder
-import dev.kord.rest.builder.message.modify.WebhookMessageModifyBuilder
-import dev.kord.rest.request.RestRequestException
-import dev.kord.rest.service.RestClient
+import dev.jombi.kordsb.common.entity.Permission
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.channel.MessageChannelBehavior
+import dev.jombi.kordsb.core.behavior.channel.createMessage
+import dev.jombi.kordsb.core.cache.data.MessageData
+import dev.jombi.kordsb.core.entity.*
+import dev.jombi.kordsb.core.entity.channel.MessageChannel
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.supplier.getChannelOf
+import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
+import dev.jombi.kordsb.rest.builder.message.create.UserMessageCreateBuilder
+import dev.jombi.kordsb.rest.builder.message.modify.UserMessageModifyBuilder
+import dev.jombi.kordsb.rest.builder.message.modify.WebhookMessageModifyBuilder
+import dev.jombi.kordsb.rest.request.RestRequestException
+import dev.jombi.kordsb.rest.service.RestClient
 import kotlinx.coroutines.flow.Flow
 import java.util.*
 import kotlin.contracts.InvocationKind
@@ -262,7 +262,7 @@ public suspend inline fun MessageBehavior.edit(builder: UserMessageModifyBuilder
 
 @Deprecated(
     "'editWebhookMessage' was renamed to 'edit'",
-    ReplaceWith("this.edit(webhookId, token, threadId = null) { builder() }", "dev.kord.core.behavior.edit"),
+    ReplaceWith("this.edit(webhookId, token, threadId = null) { builder() }", "dev.jombi.kordsb.core.behavior.edit"),
     DeprecationLevel.ERROR,
 )
 public suspend inline fun MessageBehavior.editWebhookMessage(

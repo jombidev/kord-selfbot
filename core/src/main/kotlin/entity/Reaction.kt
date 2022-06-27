@@ -1,9 +1,9 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.KordObject
-import dev.kord.core.cache.data.ReactionData
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.core.cache.data.ReactionData
 
 /**
  * An instance of a [Discord Reaction](https://discord.com/developers/docs/resources/channel#reaction-object).

@@ -1,12 +1,12 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
 import dev.kord.cache.api.data.DataDescription
 import dev.kord.cache.api.data.description
-import dev.kord.common.entity.DiscordVoiceState
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.OptionalBoolean
-import dev.kord.common.entity.optional.OptionalSnowflake
-import dev.kord.common.entity.optional.mapSnowflake
+import dev.jombi.kordsb.common.entity.DiscordVoiceState
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.entity.optional.mapSnowflake
 import kotlinx.datetime.Instant
 import kotlinx.serialization.Serializable
 

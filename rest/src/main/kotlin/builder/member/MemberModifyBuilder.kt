@@ -1,13 +1,13 @@
-package dev.kord.rest.builder.member
+package dev.jombi.kordsb.rest.builder.member
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalBoolean
-import dev.kord.common.entity.optional.OptionalSnowflake
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.rest.builder.AuditRequestBuilder
-import dev.kord.rest.json.request.GuildMemberModifyRequest
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.rest.builder.AuditRequestBuilder
+import dev.jombi.kordsb.rest.json.request.GuildMemberModifyRequest
 import kotlinx.datetime.Instant
 
 @KordDsl

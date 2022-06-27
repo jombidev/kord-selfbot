@@ -1,4 +1,4 @@
-package dev.kord.rest.json.response
+package dev.jombi.kordsb.rest.json.response
 
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SerializationException

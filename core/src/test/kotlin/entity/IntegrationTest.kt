@@ -1,6 +1,6 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.core.cache.data.IntegrationData
+import dev.jombi.kordsb.core.cache.data.IntegrationData
 import equality.GuildEntityEqualityTest
 import io.mockk.every
 import io.mockk.mockk

@@ -1,15 +1,15 @@
-package dev.kord.core.behavior
+package dev.jombi.kordsb.core.behavior
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.EmojiData
-import dev.kord.core.entity.KordEntity
-import dev.kord.core.entity.GuildEmoji
-import dev.kord.core.entity.Strategizable
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.builder.guild.EmojiModifyBuilder
-import dev.kord.rest.request.RestRequestException
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.EmojiData
+import dev.jombi.kordsb.core.entity.KordEntity
+import dev.jombi.kordsb.core.entity.GuildEmoji
+import dev.jombi.kordsb.core.entity.Strategizable
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.builder.guild.EmojiModifyBuilder
+import dev.jombi.kordsb.rest.request.RestRequestException
 import java.util.*
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract

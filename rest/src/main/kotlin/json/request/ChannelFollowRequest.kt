@@ -1,6 +1,6 @@
-package dev.kord.rest.json.request
+package dev.jombi.kordsb.rest.json.request
 
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.Snowflake
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

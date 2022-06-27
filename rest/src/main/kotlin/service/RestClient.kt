@@ -1,11 +1,11 @@
-package dev.kord.rest.service
+package dev.jombi.kordsb.rest.service
 
-import dev.kord.common.annotation.KordExperimental
-import dev.kord.common.annotation.KordUnsafe
-import dev.kord.rest.request.KtorRequestHandler
-import dev.kord.rest.request.RequestBuilder
-import dev.kord.rest.request.RequestHandler
-import dev.kord.rest.route.Route
+import dev.jombi.kordsb.common.annotation.KordExperimental
+import dev.jombi.kordsb.common.annotation.KordUnsafe
+import dev.jombi.kordsb.rest.request.KtorRequestHandler
+import dev.jombi.kordsb.rest.request.RequestBuilder
+import dev.jombi.kordsb.rest.request.RequestHandler
+import dev.jombi.kordsb.rest.route.Route
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

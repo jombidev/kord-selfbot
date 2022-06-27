@@ -1,6 +1,6 @@
-package dev.kord.common.entity
+package dev.jombi.kordsb.common.entity
 
-import dev.kord.common.entity.Snowflake.Companion.validValues
+import dev.jombi.kordsb.common.entity.Snowflake.Companion.validValues
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 import kotlinx.serialization.ExperimentalSerializationApi

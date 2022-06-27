@@ -1,8 +1,8 @@
-package dev.kord.rest.builder.channel
+package dev.jombi.kordsb.rest.builder.channel
 
-import dev.kord.common.entity.Overwrite
-import dev.kord.common.entity.OverwriteType
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.Overwrite
+import dev.jombi.kordsb.common.entity.OverwriteType
+import dev.jombi.kordsb.common.entity.Snowflake
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

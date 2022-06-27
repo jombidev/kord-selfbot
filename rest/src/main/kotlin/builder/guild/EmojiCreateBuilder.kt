@@ -1,10 +1,10 @@
-package dev.kord.rest.builder.guild
+package dev.jombi.kordsb.rest.builder.guild
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.Snowflake
-import dev.kord.rest.Image
-import dev.kord.rest.builder.AuditRequestBuilder
-import dev.kord.rest.json.request.EmojiCreateRequest
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.rest.Image
+import dev.jombi.kordsb.rest.builder.AuditRequestBuilder
+import dev.jombi.kordsb.rest.json.request.EmojiCreateRequest
 
 @KordDsl
 public class EmojiCreateBuilder(

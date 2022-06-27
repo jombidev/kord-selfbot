@@ -1,17 +1,17 @@
-package dev.kord.core.entity.channel
+package dev.jombi.kordsb.core.entity.channel
 
-import dev.kord.common.entity.OverwriteType
-import dev.kord.common.entity.Permission
-import dev.kord.common.entity.Permissions
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.orEmpty
-import dev.kord.common.entity.optional.value
-import dev.kord.common.exception.RequestException
-import dev.kord.core.behavior.channel.GuildChannelBehavior
-import dev.kord.core.behavior.channel.TopGuildChannelBehavior
-import dev.kord.core.cache.data.PermissionOverwriteData
-import dev.kord.core.entity.PermissionOverwriteEntity
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.OverwriteType
+import dev.jombi.kordsb.common.entity.Permission
+import dev.jombi.kordsb.common.entity.Permissions
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.orEmpty
+import dev.jombi.kordsb.common.entity.optional.value
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.behavior.channel.GuildChannelBehavior
+import dev.jombi.kordsb.core.behavior.channel.TopGuildChannelBehavior
+import dev.jombi.kordsb.core.cache.data.PermissionOverwriteData
+import dev.jombi.kordsb.core.entity.PermissionOverwriteEntity
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /**
  * An instance of a Discord channel associated to a [guild].

@@ -1,4 +1,4 @@
-package dev.kord.core.behavior.channel
+package dev.jombi.kordsb.core.behavior.channel
 
 import equality.GuildChannelEqualityTest
 import mockKord

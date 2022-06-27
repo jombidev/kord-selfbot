@@ -1,6 +1,6 @@
-package dev.kord.voice.gateway
+package dev.jombi.kordsb.voice.gateway
 
-import dev.kord.common.annotation.KordVoice
+import dev.jombi.kordsb.common.annotation.KordVoice
 
 @KordVoice
 public data class VoiceGatewayConfiguration(

@@ -1,10 +1,10 @@
-package dev.kord.core.behavior
+package dev.jombi.kordsb.core.behavior
 
-import dev.kord.core.cache.data.ApplicationCommandData
-import dev.kord.core.entity.application.ChatInputCommandCommand
-import dev.kord.core.entity.application.GlobalChatInputCommand
-import dev.kord.core.entity.application.GuildChatInputCommand
-import dev.kord.rest.builder.interaction.ChatInputModifyBuilder
+import dev.jombi.kordsb.core.cache.data.ApplicationCommandData
+import dev.jombi.kordsb.core.entity.application.ChatInputCommandCommand
+import dev.jombi.kordsb.core.entity.application.GlobalChatInputCommand
+import dev.jombi.kordsb.core.entity.application.GuildChatInputCommand
+import dev.jombi.kordsb.rest.builder.interaction.ChatInputModifyBuilder
 
 
 public interface ChatInputCommandBehavior : ApplicationCommandBehavior {

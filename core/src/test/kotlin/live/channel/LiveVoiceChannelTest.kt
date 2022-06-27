@@ -1,15 +1,15 @@
 package live.channel
 
-import dev.kord.common.annotation.KordPreview
-import dev.kord.common.entity.ChannelType
-import dev.kord.common.entity.DiscordChannel
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.optionalSnowflake
-import dev.kord.core.cache.data.ChannelData
-import dev.kord.core.entity.channel.VoiceChannel
-import dev.kord.core.live.channel.LiveVoiceChannel
-import dev.kord.core.live.channel.onUpdate
-import dev.kord.gateway.ChannelUpdate
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.common.entity.ChannelType
+import dev.jombi.kordsb.common.entity.DiscordChannel
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.optionalSnowflake
+import dev.jombi.kordsb.core.cache.data.ChannelData
+import dev.jombi.kordsb.core.entity.channel.VoiceChannel
+import dev.jombi.kordsb.core.live.channel.LiveVoiceChannel
+import dev.jombi.kordsb.core.live.channel.onUpdate
+import dev.jombi.kordsb.gateway.ChannelUpdate
 import equality.randomId
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.BeforeAll

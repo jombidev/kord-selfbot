@@ -1,12 +1,12 @@
-package dev.kord.rest.builder.webhook
+package dev.jombi.kordsb.rest.builder.webhook
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.common.entity.optional.map
-import dev.kord.rest.Image
-import dev.kord.rest.builder.AuditRequestBuilder
-import dev.kord.rest.json.request.WebhookCreateRequest
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.common.entity.optional.map
+import dev.jombi.kordsb.rest.Image
+import dev.jombi.kordsb.rest.builder.AuditRequestBuilder
+import dev.jombi.kordsb.rest.json.request.WebhookCreateRequest
 
 @KordDsl
 public class WebhookCreateBuilder(public var name: String) : AuditRequestBuilder<WebhookCreateRequest> {

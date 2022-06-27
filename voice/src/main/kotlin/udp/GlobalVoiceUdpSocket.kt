@@ -1,6 +1,6 @@
-package dev.kord.voice.udp
+package dev.jombi.kordsb.voice.udp
 
-import dev.kord.common.annotation.KordVoice
+import dev.jombi.kordsb.common.annotation.KordVoice
 import io.ktor.network.selector.*
 import io.ktor.network.sockets.*
 import io.ktor.utils.io.core.*
@@ -15,7 +15,7 @@ import kotlin.text.String
 private val globalVoiceSocketLogger = KotlinLogging.logger { }
 
 /**
- * A global [VoiceUdpSocket] for all [dev.kord.voice.VoiceConnection]s, unless specified otherwise.
+ * A global [VoiceUdpSocket] for all [dev.jombi.kordsb.voice.VoiceConnection]s, unless specified otherwise.
  * Initiated once and kept open for the lifetime of this process.
  */
 @KordVoice

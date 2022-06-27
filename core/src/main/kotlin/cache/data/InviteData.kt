@@ -1,8 +1,8 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
-import dev.kord.common.entity.*
-import dev.kord.common.entity.optional.*
-import dev.kord.common.serialization.DurationInSeconds
+import dev.jombi.kordsb.common.entity.*
+import dev.jombi.kordsb.common.entity.optional.*
+import dev.jombi.kordsb.common.serialization.DurationInSeconds
 import kotlinx.datetime.Instant
 import kotlinx.serialization.Serializable
 

@@ -1,17 +1,17 @@
-package dev.kord.core.gateway.handler
+package dev.jombi.kordsb.core.gateway.handler
 
 import dev.kord.cache.api.DataCache
 import dev.kord.cache.api.put
 import dev.kord.cache.api.query
-import dev.kord.common.entity.optional.*
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.*
-import dev.kord.core.cache.idEq
-import dev.kord.core.entity.Member
-import dev.kord.core.entity.Message
-import dev.kord.core.entity.ReactionEmoji
-import dev.kord.core.event.message.*
-import dev.kord.gateway.*
+import dev.jombi.kordsb.common.entity.optional.*
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.*
+import dev.jombi.kordsb.core.cache.idEq
+import dev.jombi.kordsb.core.entity.Member
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.entity.ReactionEmoji
+import dev.jombi.kordsb.core.event.message.*
+import dev.jombi.kordsb.gateway.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.singleOrNull
@@ -25,7 +25,7 @@ internal class MessageEventHandler(
         event: Event,
         kord: Kord,
         coroutineScope: CoroutineScope
-    ): dev.kord.core.event.Event? = when (event) {
+    ): dev.jombi.kordsb.core.event.Event? = when (event) {
         is MessageCreate -> handle(event, kord, coroutineScope)
         is MessageUpdate -> handle(event, kord, coroutineScope)
         is MessageDelete -> handle(event, kord, coroutineScope)

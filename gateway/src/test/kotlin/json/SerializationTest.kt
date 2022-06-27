@@ -1,9 +1,9 @@
 package json
 
-import dev.kord.common.entity.UserFlags
-import dev.kord.common.entity.UserPremium
-import dev.kord.common.entity.optional.value
-import dev.kord.gateway.*
+import dev.jombi.kordsb.common.entity.UserFlags
+import dev.jombi.kordsb.common.entity.UserPremium
+import dev.jombi.kordsb.common.entity.optional.value
+import dev.jombi.kordsb.gateway.*
 import kotlinx.datetime.Instant
 import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.Test

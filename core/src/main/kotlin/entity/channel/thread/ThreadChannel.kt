@@ -1,19 +1,19 @@
-package dev.kord.core.entity.channel.thread
+package dev.jombi.kordsb.core.entity.channel.thread
 
-import dev.kord.common.entity.ArchiveDuration
-import dev.kord.common.entity.Permission.ManageChannels
-import dev.kord.common.entity.Permission.ManageMessages
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.OptionalInt
-import dev.kord.common.entity.optional.unwrap
-import dev.kord.common.entity.optional.value
-import dev.kord.core.Kord
-import dev.kord.core.behavior.UserBehavior
-import dev.kord.core.behavior.channel.threads.ThreadChannelBehavior
-import dev.kord.core.cache.data.ChannelData
-import dev.kord.core.entity.channel.GuildMessageChannel
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.ArchiveDuration
+import dev.jombi.kordsb.common.entity.Permission.ManageChannels
+import dev.jombi.kordsb.common.entity.Permission.ManageMessages
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.OptionalInt
+import dev.jombi.kordsb.common.entity.optional.unwrap
+import dev.jombi.kordsb.common.entity.optional.value
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.UserBehavior
+import dev.jombi.kordsb.core.behavior.channel.threads.ThreadChannelBehavior
+import dev.jombi.kordsb.core.cache.data.ChannelData
+import dev.jombi.kordsb.core.entity.channel.GuildMessageChannel
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import kotlinx.datetime.Instant
 import kotlin.time.Duration
 
@@ -43,7 +43,7 @@ public interface ThreadChannel : GuildMessageChannel, ThreadChannelBehavior {
 
     /**
      * Threads that have [isLocked] set to true can only be unarchived by a user with
-     * the [Manage Threads][dev.kord.common.entity.Permission.ManageThreads] permission.
+     * the [Manage Threads][dev.jombi.kordsb.common.entity.Permission.ManageThreads] permission.
      */
     public val isLocked: Boolean get() = threadData.locked.orElse(false)
 

@@ -1,9 +1,9 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.core.Kord
-import dev.kord.core.KordObject
-import dev.kord.core.cache.data.WelcomeScreenData
-import dev.kord.core.entity.channel.WelcomeScreenChannel
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.core.cache.data.WelcomeScreenData
+import dev.jombi.kordsb.core.entity.channel.WelcomeScreenChannel
 
 /**
  * Shown to new members in community guild, returned when in the invite object.

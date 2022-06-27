@@ -1,18 +1,18 @@
-package dev.kord.rest.service
+package dev.jombi.kordsb.rest.service
 
-import dev.kord.common.entity.DiscordChannel
-import dev.kord.common.entity.DiscordPartialGuild
-import dev.kord.common.entity.DiscordUser
-import dev.kord.common.entity.Snowflake
-import dev.kord.rest.builder.user.CurrentUserModifyBuilder
-import dev.kord.rest.builder.user.GroupDMCreateBuilder
-import dev.kord.rest.json.request.CurrentUserModifyRequest
-import dev.kord.rest.json.request.DMCreateRequest
-import dev.kord.rest.json.request.GroupDMCreateRequest
-import dev.kord.rest.json.response.Connection
-import dev.kord.rest.request.RequestHandler
-import dev.kord.rest.route.Position
-import dev.kord.rest.route.Route
+import dev.jombi.kordsb.common.entity.DiscordChannel
+import dev.jombi.kordsb.common.entity.DiscordPartialGuild
+import dev.jombi.kordsb.common.entity.DiscordUser
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.rest.builder.user.CurrentUserModifyBuilder
+import dev.jombi.kordsb.rest.builder.user.GroupDMCreateBuilder
+import dev.jombi.kordsb.rest.json.request.CurrentUserModifyRequest
+import dev.jombi.kordsb.rest.json.request.DMCreateRequest
+import dev.jombi.kordsb.rest.json.request.GroupDMCreateRequest
+import dev.jombi.kordsb.rest.json.response.Connection
+import dev.jombi.kordsb.rest.request.RequestHandler
+import dev.jombi.kordsb.rest.route.Position
+import dev.jombi.kordsb.rest.route.Route
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

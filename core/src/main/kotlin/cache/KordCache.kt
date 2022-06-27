@@ -1,4 +1,4 @@
-package dev.kord.core.cache
+package dev.jombi.kordsb.core.cache
 
 import dev.kord.cache.api.DataCache
 import dev.kord.cache.api.DataEntryCache
@@ -8,8 +8,8 @@ import dev.kord.cache.api.delegate.EntrySupplier
 import dev.kord.cache.map.MapLikeCollection
 import dev.kord.cache.map.internal.MapEntryCache
 import dev.kord.cache.map.lruLinkedHashMap
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.cache.data.*
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.cache.data.*
 import java.util.concurrent.ConcurrentHashMap
 
 public typealias Generator<I, T> = (cache: DataCache, description: DataDescription<T, I>) -> DataEntryCache<out T>

@@ -1,14 +1,14 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
-import dev.kord.common.entity.*
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalSnowflake
-import dev.kord.common.entity.optional.mapSnowflake
+import dev.jombi.kordsb.common.entity.*
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.entity.optional.mapSnowflake
 import kotlinx.serialization.Serializable
 
 @Deprecated(
     "'ApplicationInfoData' was renamed to 'ApplicationData'.",
-    ReplaceWith("ApplicationData", "dev.kord.core.cache.data.ApplicationData"),
+    ReplaceWith("ApplicationData", "dev.jombi.kordsb.core.cache.data.ApplicationData"),
     DeprecationLevel.ERROR,
 )
 public typealias ApplicationInfoData = ApplicationData

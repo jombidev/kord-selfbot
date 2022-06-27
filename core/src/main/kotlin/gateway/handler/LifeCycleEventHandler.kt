@@ -1,17 +1,17 @@
-package dev.kord.core.gateway.handler
+package dev.jombi.kordsb.core.gateway.handler
 
 import dev.kord.cache.api.DataCache
 import dev.kord.cache.api.put
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.UserData
-import dev.kord.core.entity.User
-import dev.kord.core.event.gateway.ConnectEvent
-import dev.kord.core.event.gateway.DisconnectEvent
-import dev.kord.core.event.gateway.ReadyEvent
-import dev.kord.core.event.gateway.ResumedEvent
-import dev.kord.gateway.*
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.UserData
+import dev.jombi.kordsb.core.entity.User
+import dev.jombi.kordsb.core.event.gateway.ConnectEvent
+import dev.jombi.kordsb.core.event.gateway.DisconnectEvent
+import dev.jombi.kordsb.core.event.gateway.ReadyEvent
+import dev.jombi.kordsb.core.event.gateway.ResumedEvent
+import dev.jombi.kordsb.gateway.*
 import kotlinx.coroutines.CoroutineScope
-import dev.kord.core.event.Event as CoreEvent
+import dev.jombi.kordsb.core.event.Event as CoreEvent
 
 internal class LifeCycleEventHandler(
     cache: DataCache

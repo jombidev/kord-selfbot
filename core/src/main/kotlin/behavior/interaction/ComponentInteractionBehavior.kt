@@ -1,21 +1,21 @@
-package dev.kord.core.behavior.interaction
+package dev.jombi.kordsb.core.behavior.interaction
 
-import dev.kord.common.entity.InteractionResponseType
-import dev.kord.common.entity.MessageFlag
-import dev.kord.common.entity.MessageFlags
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.core.Kord
-import dev.kord.core.behavior.interaction.response.EphemeralMessageInteractionResponseBehavior
-import dev.kord.core.behavior.interaction.response.PublicMessageInteractionResponseBehavior
-import dev.kord.core.behavior.interaction.response.edit
-import dev.kord.core.entity.interaction.ComponentInteraction
-import dev.kord.core.entity.interaction.ModalSubmitInteraction
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.builder.message.create.UpdateMessageInteractionResponseCreateBuilder
-import dev.kord.rest.json.request.InteractionApplicationCommandCallbackData
-import dev.kord.rest.json.request.InteractionResponseCreateRequest
+import dev.jombi.kordsb.common.entity.InteractionResponseType
+import dev.jombi.kordsb.common.entity.MessageFlag
+import dev.jombi.kordsb.common.entity.MessageFlags
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.interaction.response.EphemeralMessageInteractionResponseBehavior
+import dev.jombi.kordsb.core.behavior.interaction.response.PublicMessageInteractionResponseBehavior
+import dev.jombi.kordsb.core.behavior.interaction.response.edit
+import dev.jombi.kordsb.core.entity.interaction.ComponentInteraction
+import dev.jombi.kordsb.core.entity.interaction.ModalSubmitInteraction
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.builder.message.create.UpdateMessageInteractionResponseCreateBuilder
+import dev.jombi.kordsb.rest.json.request.InteractionApplicationCommandCallbackData
+import dev.jombi.kordsb.rest.json.request.InteractionResponseCreateRequest
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 
@@ -149,7 +149,7 @@ public fun ComponentInteractionBehavior(
  */
 @Deprecated(
     "Renamed to 'updatePublicMessage'. Also take a look at the new documentation.",
-    ReplaceWith("this.updatePublicMessage()", "dev.kord.core.behavior.interaction.updatePublicMessage"),
+    ReplaceWith("this.updatePublicMessage()", "dev.jombi.kordsb.core.behavior.interaction.updatePublicMessage"),
 )
 public suspend fun ComponentInteractionBehavior.acknowledgePublicUpdateMessage(
     builder: UpdateMessageInteractionResponseCreateBuilder.() -> Unit
@@ -195,7 +195,7 @@ public suspend inline fun ComponentInteractionBehavior.updatePublicMessage(
  */
 @Deprecated(
     "Renamed to 'updateEphemeralMessage'. Also take a look at the new documentation.",
-    ReplaceWith("this.updateEphemeralMessage()", "dev.kord.core.behavior.interaction.updateEphemeralMessage"),
+    ReplaceWith("this.updateEphemeralMessage()", "dev.jombi.kordsb.core.behavior.interaction.updateEphemeralMessage"),
 )
 public suspend fun ComponentInteractionBehavior.acknowledgeEphemeralUpdateMessage(
     builder: UpdateMessageInteractionResponseCreateBuilder.() -> Unit

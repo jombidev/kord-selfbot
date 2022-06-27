@@ -1,4 +1,4 @@
-package dev.kord.core.behavior
+package dev.jombi.kordsb.core.behavior
 
 import equality.GuildEntityEqualityTest
 import mockKord

@@ -1,9 +1,9 @@
-package dev.kord.rest.builder.guild
+package dev.jombi.kordsb.rest.builder.guild
 
-import dev.kord.common.entity.optional.Optional
-import dev.kord.rest.builder.RequestBuilder
-import dev.kord.rest.json.request.GuildStickerModifyRequest
-import dev.kord.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.rest.builder.RequestBuilder
+import dev.jombi.kordsb.rest.json.request.GuildStickerModifyRequest
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
 
 public class StickerModifyBuilder : RequestBuilder<GuildStickerModifyRequest> {
     private var _name: Optional<String> = Optional.Missing()

@@ -1,12 +1,12 @@
-package dev.kord.rest.builder.member
+package dev.jombi.kordsb.rest.builder.member
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalBoolean
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.rest.builder.RequestBuilder
-import dev.kord.rest.json.request.GuildMemberAddRequest
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.rest.builder.RequestBuilder
+import dev.jombi.kordsb.rest.json.request.GuildMemberAddRequest
 
 @KordDsl
 public class MemberAddBuilder(public var token: String) : RequestBuilder<GuildMemberAddRequest> {

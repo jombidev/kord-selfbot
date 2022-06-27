@@ -1,11 +1,11 @@
-package dev.kord.core.entity.interaction
+package dev.jombi.kordsb.core.entity.interaction
 
-import dev.kord.common.entity.Permissions
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.behavior.interaction.GuildInteractionBehavior
-import dev.kord.core.entity.Guild
-import dev.kord.core.entity.Member
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.Permissions
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.behavior.interaction.GuildInteractionBehavior
+import dev.jombi.kordsb.core.entity.Guild
+import dev.jombi.kordsb.core.entity.Member
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /** An [Interaction] that took place in the context of a [Guild]. */
 public sealed interface GuildInteraction : Interaction, GuildInteractionBehavior {

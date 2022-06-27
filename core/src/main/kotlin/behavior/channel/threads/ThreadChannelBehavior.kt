@@ -1,20 +1,20 @@
-package dev.kord.core.behavior.channel.threads
+package dev.jombi.kordsb.core.behavior.channel.threads
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.behavior.channel.GuildMessageChannelBehavior
-import dev.kord.core.cache.data.toData
-import dev.kord.core.entity.channel.Channel
-import dev.kord.core.entity.channel.ThreadParentChannel
-import dev.kord.core.entity.channel.thread.ThreadChannel
-import dev.kord.core.entity.channel.thread.ThreadMember
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.core.supplier.getChannelOf
-import dev.kord.core.supplier.getChannelOfOrNull
-import dev.kord.rest.builder.channel.thread.ThreadModifyBuilder
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.channel.GuildMessageChannelBehavior
+import dev.jombi.kordsb.core.cache.data.toData
+import dev.jombi.kordsb.core.entity.channel.Channel
+import dev.jombi.kordsb.core.entity.channel.ThreadParentChannel
+import dev.jombi.kordsb.core.entity.channel.thread.ThreadChannel
+import dev.jombi.kordsb.core.entity.channel.thread.ThreadMember
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.supplier.getChannelOf
+import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
+import dev.jombi.kordsb.rest.builder.channel.thread.ThreadModifyBuilder
 import kotlinx.coroutines.flow.Flow
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
@@ -37,7 +37,7 @@ public interface ThreadChannelBehavior : GuildMessageChannelBehavior {
     /**
      * Removes the user identified by [id] from the current thread.
      * Requires the thread is not locked.
-     * or current bot has [Manage Threads][dev.kord.common.entity.Permission.ManageThreads] permission
+     * or current bot has [Manage Threads][dev.jombi.kordsb.common.entity.Permission.ManageThreads] permission
      *
      * @see [ThreadChannel.isArchived]
      * @see [ThreadChannel.isLocked]
@@ -50,7 +50,7 @@ public interface ThreadChannelBehavior : GuildMessageChannelBehavior {
     /**
      * Adds the user identified by [id] from the current thread.
      * Requires the thread is not locked.
-     * or current bot has [Manage Threads][dev.kord.common.entity.Permission.ManageThreads] permission
+     * or current bot has [Manage Threads][dev.jombi.kordsb.common.entity.Permission.ManageThreads] permission
      *
      * @see [ThreadChannel.isArchived]
      * @see [ThreadChannel.isLocked]
@@ -63,7 +63,7 @@ public interface ThreadChannelBehavior : GuildMessageChannelBehavior {
     /**
      * Join the the current thread.
      * Requires the thread is not locked.
-     * or current bot has [Manage Threads][dev.kord.common.entity.Permission.ManageThreads] permission
+     * or current bot has [Manage Threads][dev.jombi.kordsb.common.entity.Permission.ManageThreads] permission
      *
      * @see [ThreadChannel.isArchived]
      * @see [ThreadChannel.isLocked]
@@ -76,7 +76,7 @@ public interface ThreadChannelBehavior : GuildMessageChannelBehavior {
     /**
      * Leaves the current thread if the bot has already joined.
      * Requires the thread is not locked.
-     * or current bot has [Manage Threads][dev.kord.common.entity.Permission.ManageThreads] permission
+     * or current bot has [Manage Threads][dev.jombi.kordsb.common.entity.Permission.ManageThreads] permission
      *
      * @throws [RequestException] if something went wrong during the request.
      */
@@ -85,7 +85,7 @@ public interface ThreadChannelBehavior : GuildMessageChannelBehavior {
     }
 
     /**
-     * Deleting a thread requires the [Manage Threads][dev.kord.common.entity.Permission.ManageThreads] permission.
+     * Deleting a thread requires the [Manage Threads][dev.jombi.kordsb.common.entity.Permission.ManageThreads] permission.
      */
     override suspend fun delete(reason: String?) {
         super.delete(reason)
@@ -128,12 +128,12 @@ public interface ThreadChannelBehavior : GuildMessageChannelBehavior {
 
 /**
  * * Editing a thread to set [archived][ThreadChannel.isArchived] to false only requires the current user to be in the thread.
- * * If [locked][ThreadChannel.isLocked] is true, then the user must have [Manage Threads][dev.kord.common.entity.Permission.ManageThreads]
+ * * If [locked][ThreadChannel.isLocked] is true, then the user must have [Manage Threads][dev.jombi.kordsb.common.entity.Permission.ManageThreads]
  * * Editing a thread to change the
  * [name][ThreadModifyBuilder.name],
  * [archived][ThreadModifyBuilder.archived],
  * [autoArchiveDuration][ThreadModifyBuilder.autoArchiveDuration] fields
- * requires [Manage Threads][dev.kord.common.entity.Permission.ManageThreads] or that the current user is the thread creator.
+ * requires [Manage Threads][dev.jombi.kordsb.common.entity.Permission.ManageThreads] or that the current user is the thread creator.
  */
 public suspend inline fun ThreadChannelBehavior.edit(builder: ThreadModifyBuilder.() -> Unit): ThreadChannel {
     contract { callsInPlace(builder, InvocationKind.EXACTLY_ONCE) }

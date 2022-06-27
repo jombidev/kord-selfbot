@@ -1,11 +1,11 @@
-package dev.kord.core.live
+package dev.jombi.kordsb.core.live
 
-import dev.kord.common.annotation.KordPreview
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.entity.KordEntity
-import dev.kord.core.entity.User
-import dev.kord.core.event.Event
-import dev.kord.core.event.user.UserUpdateEvent
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.entity.KordEntity
+import dev.jombi.kordsb.core.entity.User
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.user.UserUpdateEvent
 import kotlinx.coroutines.*
 
 @KordPreview

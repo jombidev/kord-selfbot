@@ -1,15 +1,15 @@
-package dev.kord.core.event.role
+package dev.jombi.kordsb.core.event.role
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.behavior.GuildBehavior
-import dev.kord.core.entity.Guild
-import dev.kord.core.entity.Role
-import dev.kord.core.entity.Strategizable
-import dev.kord.core.event.Event
-import dev.kord.core.event.kordCoroutineScope
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.GuildBehavior
+import dev.jombi.kordsb.core.entity.Guild
+import dev.jombi.kordsb.core.entity.Role
+import dev.jombi.kordsb.core.entity.Strategizable
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.kordCoroutineScope
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import kotlinx.coroutines.CoroutineScope
 import kotlin.coroutines.CoroutineContext
 

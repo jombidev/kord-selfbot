@@ -1,11 +1,11 @@
-package dev.kord.rest.service
+package dev.jombi.kordsb.rest.service
 
-import dev.kord.common.entity.DiscordAuditLog
-import dev.kord.common.entity.Snowflake
-import dev.kord.rest.builder.auditlog.AuditLogGetRequestBuilder
-import dev.kord.rest.json.request.AuditLogGetRequest
-import dev.kord.rest.request.RequestHandler
-import dev.kord.rest.route.Route
+import dev.jombi.kordsb.common.entity.DiscordAuditLog
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.rest.builder.auditlog.AuditLogGetRequestBuilder
+import dev.jombi.kordsb.rest.json.request.AuditLogGetRequest
+import dev.jombi.kordsb.rest.request.RequestHandler
+import dev.jombi.kordsb.rest.route.Route
 
 public class AuditLogService(requestHandler: RequestHandler) : RestService(requestHandler) {
 

@@ -1,7 +1,7 @@
-package dev.kord.core.entity.channel
+package dev.jombi.kordsb.core.entity.channel
 
-import dev.kord.core.behavior.channel.GuildMessageChannelBehavior
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.behavior.channel.GuildMessageChannelBehavior
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 public interface GuildMessageChannel : GuildChannel, MessageChannel, GuildMessageChannelBehavior {
 

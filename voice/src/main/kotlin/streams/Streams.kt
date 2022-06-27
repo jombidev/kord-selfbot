@@ -1,9 +1,9 @@
-package dev.kord.voice.streams
+package dev.jombi.kordsb.voice.streams
 
-import dev.kord.common.annotation.KordVoice
-import dev.kord.common.entity.Snowflake
-import dev.kord.voice.AudioFrame
-import dev.kord.voice.udp.RTPPacket
+import dev.jombi.kordsb.common.annotation.KordVoice
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.voice.AudioFrame
+import dev.jombi.kordsb.voice.udp.RTPPacket
 import io.ktor.util.network.*
 import kotlinx.coroutines.flow.Flow
 
@@ -18,7 +18,7 @@ public interface Streams {
     public suspend fun listen(key: ByteArray, server: NetworkAddress)
 
     /**
-     * A flow of all incoming [dev.kord.voice.udp.RTPPacket]s through the UDP connection.
+     * A flow of all incoming [dev.jombi.kordsb.voice.udp.RTPPacket]s through the UDP connection.
      */
     public val incomingAudioPackets: Flow<RTPPacket>
 

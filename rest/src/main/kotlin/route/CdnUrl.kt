@@ -1,6 +1,6 @@
-package dev.kord.rest.route
+package dev.jombi.kordsb.rest.route
 
-import dev.kord.rest.Image
+import dev.jombi.kordsb.rest.Image
 
 public class CdnUrl(private val rawAssetUri: String) {
 

@@ -1,21 +1,21 @@
-package dev.kord.core.gateway.handler
+package dev.jombi.kordsb.core.gateway.handler
 
 import dev.kord.cache.api.DataCache
 import dev.kord.cache.api.put
 import dev.kord.cache.api.query
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.*
-import dev.kord.core.cache.idEq
-import dev.kord.core.entity.VoiceState
-import dev.kord.core.event.guild.VoiceServerUpdateEvent
-import dev.kord.core.event.user.VoiceStateUpdateEvent
-import dev.kord.gateway.Event
-import dev.kord.gateway.VoiceServerUpdate
-import dev.kord.gateway.VoiceStateUpdate
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.*
+import dev.jombi.kordsb.core.cache.idEq
+import dev.jombi.kordsb.core.entity.VoiceState
+import dev.jombi.kordsb.core.event.guild.VoiceServerUpdateEvent
+import dev.jombi.kordsb.core.event.user.VoiceStateUpdateEvent
+import dev.jombi.kordsb.gateway.Event
+import dev.jombi.kordsb.gateway.VoiceServerUpdate
+import dev.jombi.kordsb.gateway.VoiceStateUpdate
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.singleOrNull
-import dev.kord.core.event.Event as CoreEvent
+import dev.jombi.kordsb.core.event.Event as CoreEvent
 
 internal class VoiceEventHandler(
     cache: DataCache

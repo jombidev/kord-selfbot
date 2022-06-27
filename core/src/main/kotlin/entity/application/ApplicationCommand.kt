@@ -1,18 +1,18 @@
-package dev.kord.core.entity.application
+package dev.jombi.kordsb.core.entity.application
 
-import dev.kord.common.Locale
-import dev.kord.common.entity.ApplicationCommandType
-import dev.kord.common.entity.ChannelType
-import dev.kord.common.entity.Permissions
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.orEmpty
-import dev.kord.common.entity.optional.value
-import dev.kord.core.behavior.ApplicationCommandBehavior
-import dev.kord.core.behavior.GlobalApplicationCommandBehavior
-import dev.kord.core.behavior.GuildApplicationCommandBehavior
-import dev.kord.core.cache.data.ApplicationCommandData
-import dev.kord.core.cache.data.ApplicationCommandParameterData
-import dev.kord.rest.service.InteractionService
+import dev.jombi.kordsb.common.Locale
+import dev.jombi.kordsb.common.entity.ApplicationCommandType
+import dev.jombi.kordsb.common.entity.ChannelType
+import dev.jombi.kordsb.common.entity.Permissions
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.orEmpty
+import dev.jombi.kordsb.common.entity.optional.value
+import dev.jombi.kordsb.core.behavior.ApplicationCommandBehavior
+import dev.jombi.kordsb.core.behavior.GlobalApplicationCommandBehavior
+import dev.jombi.kordsb.core.behavior.GuildApplicationCommandBehavior
+import dev.jombi.kordsb.core.cache.data.ApplicationCommandData
+import dev.jombi.kordsb.core.cache.data.ApplicationCommandParameterData
+import dev.jombi.kordsb.rest.service.InteractionService
 
 /**
  * A representation of a [Discord Application Command](https://discord.com/developers/docs/interactions/application-commands)

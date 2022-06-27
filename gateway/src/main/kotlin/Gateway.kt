@@ -1,9 +1,9 @@
-package dev.kord.gateway
+package dev.jombi.kordsb.gateway
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.gateway.builder.PresenceBuilder
-import dev.kord.gateway.builder.RequestGuildMembersBuilder
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.gateway.builder.PresenceBuilder
+import dev.jombi.kordsb.gateway.builder.RequestGuildMembersBuilder
 import io.ktor.util.logging.*
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
@@ -177,7 +177,7 @@ public inline fun <reified T : Event> Gateway.on(
  * Collection of this flow on a [Gateway] that is not [running][Gateway.start]
  * will result in an [IllegalStateException] being thrown.
  *
- * Executing the request on a [Gateway] with a [Shard][dev.kord.common.entity.DiscordShard] that
+ * Executing the request on a [Gateway] with a [Shard][dev.jombi.kordsb.common.entity.DiscordShard] that
  * [does not match the guild id](https://discord.com/developers/docs/topics/gateway#sharding)
  * can result in undefined behavior for the returned flow and inconsistencies in the cache.
  *
@@ -201,7 +201,7 @@ public fun Gateway.requestGuildMembers(
  * Collection of this flow on a [Gateway] that is not [running][Gateway.start]
  * will result in an [IllegalStateException] being thrown.
  *
- * Executing the [request] on a [Gateway] with a [Shard][dev.kord.common.entity.DiscordShard] that
+ * Executing the [request] on a [Gateway] with a [Shard][dev.jombi.kordsb.common.entity.DiscordShard] that
  * [does not match the guild id](https://discord.com/developers/docs/topics/gateway#sharding)
  * can result in undefined behavior for the returned flow and inconsistencies in the cache.
  *

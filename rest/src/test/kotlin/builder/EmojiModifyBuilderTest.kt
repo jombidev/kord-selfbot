@@ -1,6 +1,6 @@
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.rest.builder.guild.EmojiModifyBuilder
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.rest.builder.guild.EmojiModifyBuilder
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 

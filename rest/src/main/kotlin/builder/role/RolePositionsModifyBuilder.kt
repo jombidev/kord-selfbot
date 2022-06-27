@@ -1,9 +1,9 @@
-package dev.kord.rest.builder.role
+package dev.jombi.kordsb.rest.builder.role
 
-import dev.kord.rest.builder.AuditRequestBuilder
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.Snowflake
-import dev.kord.rest.json.request.GuildRolePositionModifyRequest
+import dev.jombi.kordsb.rest.builder.AuditRequestBuilder
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.rest.json.request.GuildRolePositionModifyRequest
 
 @KordDsl
 public class RolePositionsModifyBuilder : AuditRequestBuilder<GuildRolePositionModifyRequest> {

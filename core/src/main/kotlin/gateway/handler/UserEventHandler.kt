@@ -1,19 +1,19 @@
-package dev.kord.core.gateway.handler
+package dev.jombi.kordsb.core.gateway.handler
 
 import dev.kord.cache.api.DataCache
 import dev.kord.cache.api.put
 import dev.kord.cache.api.query
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.UserData
-import dev.kord.core.cache.idEq
-import dev.kord.core.entity.User
-import dev.kord.core.event.user.UserUpdateEvent
-import dev.kord.gateway.Event
-import dev.kord.gateway.UserUpdate
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.UserData
+import dev.jombi.kordsb.core.cache.idEq
+import dev.jombi.kordsb.core.entity.User
+import dev.jombi.kordsb.core.event.user.UserUpdateEvent
+import dev.jombi.kordsb.gateway.Event
+import dev.jombi.kordsb.gateway.UserUpdate
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.singleOrNull
-import dev.kord.core.event.Event as CoreEvent
+import dev.jombi.kordsb.core.event.Event as CoreEvent
 
 internal class UserEventHandler(
     cache: DataCache

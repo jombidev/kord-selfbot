@@ -1,4 +1,4 @@
-package dev.kord.voice.io
+package dev.jombi.kordsb.voice.io
 
 import io.ktor.utils.io.bits.*
 import kotlinx.atomicfu.atomic

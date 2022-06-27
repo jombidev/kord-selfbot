@@ -1,4 +1,4 @@
-package dev.kord.rest.request
+package dev.jombi.kordsb.rest.request
 
 /**
  * Handles Discord API requests.

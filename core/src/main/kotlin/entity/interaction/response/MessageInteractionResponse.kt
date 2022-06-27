@@ -1,8 +1,8 @@
-package dev.kord.core.entity.interaction.response
+package dev.jombi.kordsb.core.entity.interaction.response
 
-import dev.kord.core.behavior.interaction.response.MessageInteractionResponseBehavior
-import dev.kord.core.entity.Message
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.behavior.interaction.response.MessageInteractionResponseBehavior
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /**
  * A [MessageInteractionResponseBehavior] that holds the [message] this is a handle to.

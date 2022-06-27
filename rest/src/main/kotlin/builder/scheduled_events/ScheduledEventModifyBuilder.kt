@@ -1,13 +1,13 @@
-package dev.kord.rest.builder.scheduled_events
+package dev.jombi.kordsb.rest.builder.scheduled_events
 
-import dev.kord.common.entity.*
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalSnowflake
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.common.entity.optional.map
-import dev.kord.rest.Image
-import dev.kord.rest.builder.AuditRequestBuilder
-import dev.kord.rest.json.request.ScheduledEventModifyRequest
+import dev.jombi.kordsb.common.entity.*
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.common.entity.optional.map
+import dev.jombi.kordsb.rest.Image
+import dev.jombi.kordsb.rest.builder.AuditRequestBuilder
+import dev.jombi.kordsb.rest.json.request.ScheduledEventModifyRequest
 import kotlinx.datetime.Instant
 
 public class ScheduledEventModifyBuilder : AuditRequestBuilder<ScheduledEventModifyRequest> {

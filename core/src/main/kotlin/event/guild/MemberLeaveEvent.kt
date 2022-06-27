@@ -1,13 +1,13 @@
-package dev.kord.core.event.guild
+package dev.jombi.kordsb.core.event.guild
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.behavior.GuildBehavior
-import dev.kord.core.entity.Guild
-import dev.kord.core.entity.Member
-import dev.kord.core.entity.User
-import dev.kord.core.event.Event
-import dev.kord.core.event.kordCoroutineScope
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.GuildBehavior
+import dev.jombi.kordsb.core.entity.Guild
+import dev.jombi.kordsb.core.entity.Member
+import dev.jombi.kordsb.core.entity.User
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.kordCoroutineScope
 import kotlinx.coroutines.CoroutineScope
 import kotlin.coroutines.CoroutineContext
 

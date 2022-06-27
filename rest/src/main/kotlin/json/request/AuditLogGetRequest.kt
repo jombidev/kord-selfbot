@@ -1,7 +1,7 @@
-package dev.kord.rest.json.request
+package dev.jombi.kordsb.rest.json.request
 
-import dev.kord.common.entity.AuditLogEvent
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.AuditLogEvent
+import dev.jombi.kordsb.common.entity.Snowflake
 
 public data class AuditLogGetRequest(
     val userId: Snowflake? = null,

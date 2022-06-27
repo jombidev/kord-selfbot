@@ -1,7 +1,7 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.core.behavior.UserBehavior
-import dev.kord.core.cache.data.UserData
+import dev.jombi.kordsb.core.behavior.UserBehavior
+import dev.jombi.kordsb.core.cache.data.UserData
 import equality.BehaviorEqualityTest
 import equality.EntityEqualityTest
 import io.mockk.every

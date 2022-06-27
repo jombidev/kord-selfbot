@@ -1,16 +1,16 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.MessageStickerType
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.unwrap
-import dev.kord.common.entity.optional.value
-import dev.kord.core.Kord
-import dev.kord.core.behavior.StickerBehavior
-import dev.kord.core.cache.data.StickerData
-import dev.kord.core.cache.data.StickerItemData
-import dev.kord.core.cache.data.StickerPackData
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.MessageStickerType
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.unwrap
+import dev.jombi.kordsb.common.entity.optional.value
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.StickerBehavior
+import dev.jombi.kordsb.core.cache.data.StickerData
+import dev.jombi.kordsb.core.cache.data.StickerItemData
+import dev.jombi.kordsb.core.cache.data.StickerPackData
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /**
  * A sticker image that can be used in messages.

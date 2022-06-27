@@ -1,11 +1,11 @@
-package dev.kord.core.event.interaction
+package dev.jombi.kordsb.core.event.interaction
 
-import dev.kord.core.Kord
-import dev.kord.core.entity.interaction.GlobalModalSubmitInteraction
-import dev.kord.core.entity.interaction.GuildModalSubmitInteraction
-import dev.kord.core.entity.interaction.ModalSubmitInteraction
-import dev.kord.core.event.Event
-import dev.kord.core.event.kordCoroutineScope
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.entity.interaction.GlobalModalSubmitInteraction
+import dev.jombi.kordsb.core.entity.interaction.GuildModalSubmitInteraction
+import dev.jombi.kordsb.core.entity.interaction.ModalSubmitInteraction
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.kordCoroutineScope
 import kotlinx.coroutines.CoroutineScope
 
 /** An [Event] that fires when a [ModalSubmitInteraction] is created. */

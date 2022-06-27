@@ -1,9 +1,9 @@
-package dev.kord.rest.request
+package dev.jombi.kordsb.rest.request
 
-import dev.kord.common.annotation.DeprecatedSinceKord
-import dev.kord.common.exception.RequestException
-import dev.kord.rest.json.response.DiscordErrorResponse
-import dev.kord.rest.service.RestService
+import dev.jombi.kordsb.common.annotation.DeprecatedSinceKord
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.rest.json.response.DiscordErrorResponse
+import dev.jombi.kordsb.rest.service.RestService
 import io.ktor.client.statement.HttpResponse as KtorResponse
 
 private fun formatRestRequestExceptionMessage(status: HttpStatus, error: DiscordErrorResponse?): String {

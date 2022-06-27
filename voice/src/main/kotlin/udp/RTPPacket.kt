@@ -1,9 +1,9 @@
-package dev.kord.voice.udp
+package dev.jombi.kordsb.voice.udp
 
-import dev.kord.voice.io.ByteArrayView
-import dev.kord.voice.io.MutableByteArrayCursor
-import dev.kord.voice.io.mutableCursor
-import dev.kord.voice.io.view
+import dev.jombi.kordsb.voice.io.ByteArrayView
+import dev.jombi.kordsb.voice.io.MutableByteArrayCursor
+import dev.jombi.kordsb.voice.io.mutableCursor
+import dev.jombi.kordsb.voice.io.view
 import io.ktor.utils.io.core.*
 import kotlin.experimental.and
 

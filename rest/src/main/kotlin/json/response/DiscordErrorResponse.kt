@@ -1,6 +1,6 @@
-package dev.kord.rest.json.response
+package dev.jombi.kordsb.rest.json.response
 
-import dev.kord.rest.json.JsonErrorCode
+import dev.jombi.kordsb.rest.json.JsonErrorCode
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonElement
 

@@ -1,6 +1,6 @@
-package dev.kord.rest.json
+package dev.jombi.kordsb.rest.json
 
-import dev.kord.rest.json.response.DiscordErrorResponse
+import dev.jombi.kordsb.rest.json.response.DiscordErrorResponse
 import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals

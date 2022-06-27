@@ -1,12 +1,12 @@
-package dev.kord.rest.builder.integration
+package dev.jombi.kordsb.rest.builder.integration
 
-import dev.kord.common.entity.IntegrationExpireBehavior
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalBoolean
-import dev.kord.common.entity.optional.OptionalInt
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.rest.builder.AuditRequestBuilder
-import dev.kord.rest.json.request.GuildIntegrationModifyRequest
+import dev.jombi.kordsb.common.entity.IntegrationExpireBehavior
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.optional.OptionalInt
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.rest.builder.AuditRequestBuilder
+import dev.jombi.kordsb.rest.json.request.GuildIntegrationModifyRequest
 
 /**
  * Builder for [modifying an integration](https://discord.com/developers/docs/resources/guild#modify-guild-integration).

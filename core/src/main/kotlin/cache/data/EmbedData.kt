@@ -1,10 +1,10 @@
 @file:Suppress("DEPRECATION")
 
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
-import dev.kord.common.entity.DiscordEmbed
-import dev.kord.common.entity.EmbedType
-import dev.kord.common.entity.optional.*
+import dev.jombi.kordsb.common.entity.DiscordEmbed
+import dev.jombi.kordsb.common.entity.EmbedType
+import dev.jombi.kordsb.common.entity.optional.*
 import kotlinx.datetime.Instant
 import kotlinx.serialization.Serializable
 

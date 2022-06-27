@@ -1,9 +1,9 @@
-package dev.kord.rest.builder.interaction
+package dev.jombi.kordsb.rest.builder.interaction
 
-import dev.kord.common.Locale
-import dev.kord.common.entity.Permissions
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.Locale
+import dev.jombi.kordsb.common.entity.Permissions
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
 import kotlinx.serialization.SerialName
 
 

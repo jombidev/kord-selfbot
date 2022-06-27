@@ -1,11 +1,11 @@
-package dev.kord.gateway
+package dev.jombi.kordsb.gateway
 
-import dev.kord.common.entity.optional.optional
-import dev.kord.common.entity.optional.optionalInt
-import dev.kord.common.ratelimit.RateLimiter
-import dev.kord.gateway.GatewayCloseCode.*
-import dev.kord.gateway.handler.*
-import dev.kord.gateway.retry.Retry
+import dev.jombi.kordsb.common.entity.optional.optional
+import dev.jombi.kordsb.common.entity.optional.optionalInt
+import dev.jombi.kordsb.common.ratelimit.RateLimiter
+import dev.jombi.kordsb.gateway.GatewayCloseCode.*
+import dev.jombi.kordsb.gateway.handler.*
+import dev.jombi.kordsb.gateway.retry.Retry
 import io.ktor.client.*
 import io.ktor.client.plugins.websocket.*
 import io.ktor.client.request.*

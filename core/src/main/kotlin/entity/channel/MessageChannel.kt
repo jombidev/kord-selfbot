@@ -1,12 +1,12 @@
-package dev.kord.core.entity.channel
+package dev.jombi.kordsb.core.entity.channel
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.value
-import dev.kord.common.exception.RequestException
-import dev.kord.core.behavior.MessageBehavior
-import dev.kord.core.behavior.channel.MessageChannelBehavior
-import dev.kord.core.entity.Message
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.value
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.behavior.MessageBehavior
+import dev.jombi.kordsb.core.behavior.channel.MessageChannelBehavior
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import kotlinx.datetime.Instant
 
 /**

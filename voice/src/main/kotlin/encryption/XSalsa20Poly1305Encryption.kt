@@ -1,9 +1,9 @@
-package dev.kord.voice.encryption
+package dev.jombi.kordsb.voice.encryption
 
 import com.iwebpp.crypto.TweetNaclFast
 import com.iwebpp.crypto.TweetNaclFast.SecretBox.boxzerobytesLength
 import com.iwebpp.crypto.TweetNaclFast.SecretBox.zerobytesLength
-import dev.kord.voice.io.MutableByteArrayCursor
+import dev.jombi.kordsb.voice.io.MutableByteArrayCursor
 
 // https://datatracker.ietf.org/doc/html/rfc6716#section-3.2.1
 private const val OPUS_MAX_LENGTH = 1276

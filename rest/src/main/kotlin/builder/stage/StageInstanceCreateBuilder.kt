@@ -1,14 +1,14 @@
-package dev.kord.rest.builder.stage
+package dev.jombi.kordsb.rest.builder.stage
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.StageInstancePrivacyLevel
-import dev.kord.common.entity.StageInstancePrivacyLevel.GuildOnly
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalBoolean
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.rest.builder.AuditRequestBuilder
-import dev.kord.rest.json.request.StageInstanceCreateRequest
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.StageInstancePrivacyLevel
+import dev.jombi.kordsb.common.entity.StageInstancePrivacyLevel.GuildOnly
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.rest.builder.AuditRequestBuilder
+import dev.jombi.kordsb.rest.json.request.StageInstanceCreateRequest
 
 @KordDsl
 public class StageInstanceCreateBuilder(

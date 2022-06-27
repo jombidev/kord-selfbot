@@ -1,6 +1,6 @@
-package dev.kord.core.exception
+package dev.jombi.kordsb.core.exception
 
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.Snowflake
 
 public class GatewayNotFoundException : Exception {
     public constructor(message: String) : super(message)

@@ -1,13 +1,13 @@
-package dev.kord.core.gateway.handler
+package dev.jombi.kordsb.core.gateway.handler
 
 import dev.kord.cache.api.DataCache
-import dev.kord.core.Kord
-import dev.kord.core.event.kordCoroutineScope
-import dev.kord.core.gateway.ShardEvent
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.event.kordCoroutineScope
+import dev.jombi.kordsb.core.gateway.ShardEvent
 import io.ktor.util.logging.*
 import kotlinx.coroutines.CoroutineScope
 import mu.KotlinLogging
-import dev.kord.core.event.Event as CoreEvent
+import dev.jombi.kordsb.core.event.Event as CoreEvent
 
 private val logger = KotlinLogging.logger { }
 

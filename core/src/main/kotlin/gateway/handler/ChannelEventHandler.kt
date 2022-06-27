@@ -1,21 +1,21 @@
-package dev.kord.core.gateway.handler
+package dev.jombi.kordsb.core.gateway.handler
 
 import dev.kord.cache.api.DataCache
 import dev.kord.cache.api.put
 import dev.kord.cache.api.query
 import dev.kord.cache.api.remove
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.ChannelData
-import dev.kord.core.cache.data.MemberData
-import dev.kord.core.cache.idEq
-import dev.kord.core.entity.channel.*
-import dev.kord.core.entity.channel.thread.ThreadChannel
-import dev.kord.core.event.channel.*
-import dev.kord.core.event.channel.data.ChannelPinsUpdateEventData
-import dev.kord.core.event.channel.data.TypingStartEventData
-import dev.kord.gateway.*
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.ChannelData
+import dev.jombi.kordsb.core.cache.data.MemberData
+import dev.jombi.kordsb.core.cache.idEq
+import dev.jombi.kordsb.core.entity.channel.*
+import dev.jombi.kordsb.core.entity.channel.thread.ThreadChannel
+import dev.jombi.kordsb.core.event.channel.*
+import dev.jombi.kordsb.core.event.channel.data.ChannelPinsUpdateEventData
+import dev.jombi.kordsb.core.event.channel.data.TypingStartEventData
+import dev.jombi.kordsb.gateway.*
 import kotlinx.coroutines.CoroutineScope
-import dev.kord.core.event.Event as CoreEvent
+import dev.jombi.kordsb.core.event.Event as CoreEvent
 
 internal class ChannelEventHandler(
     cache: DataCache
@@ -25,7 +25,7 @@ internal class ChannelEventHandler(
         event: Event,
         kord: Kord,
         coroutineScope: CoroutineScope
-    ): dev.kord.core.event.Event? = when (event) {
+    ): dev.jombi.kordsb.core.event.Event? = when (event) {
         is ChannelCreate -> handle(event, kord, coroutineScope)
         is ChannelUpdate -> handle(event, kord, coroutineScope)
         is ChannelDelete -> handle(event, kord, coroutineScope)

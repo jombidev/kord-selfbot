@@ -1,8 +1,8 @@
-package dev.kord.rest.json.request
+package dev.jombi.kordsb.rest.json.request
 
-import dev.kord.common.entity.InviteTargetType
-import dev.kord.common.entity.optional.*
-import dev.kord.common.serialization.DurationInSeconds
+import dev.jombi.kordsb.common.entity.InviteTargetType
+import dev.jombi.kordsb.common.entity.optional.*
+import dev.jombi.kordsb.common.serialization.DurationInSeconds
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -19,7 +19,7 @@ public data class InviteCreateRequest(
     val targetUser: OptionalSnowflake = OptionalSnowflake.Missing,
     @Deprecated("This is no longer documented. Use 'targetType' instead.", ReplaceWith("this.targetType"))
     @SerialName("target_user_type")
-    val targetUserType: Optional<@Suppress("DEPRECATION") dev.kord.common.entity.TargetUserType> = Optional.Missing(),
+    val targetUserType: Optional<@Suppress("DEPRECATION") dev.jombi.kordsb.common.entity.TargetUserType> = Optional.Missing(),
     @SerialName("target_type")
     val targetType: Optional<InviteTargetType> = Optional.Missing(),
     @SerialName("target_user_id")

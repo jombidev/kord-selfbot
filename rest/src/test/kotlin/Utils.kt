@@ -1,8 +1,8 @@
-package dev.kord.rest
+package dev.jombi.kordsb.rest
 
-import dev.kord.rest.request.Request
-import dev.kord.rest.request.RequestBuilder
-import dev.kord.rest.route.Route
+import dev.jombi.kordsb.rest.request.Request
+import dev.jombi.kordsb.rest.request.RequestBuilder
+import dev.jombi.kordsb.rest.route.Route
 
 
 internal fun <T> RequestBuilder(route: Route<T>, keySize: Int = 2, request: RequestBuilder<T>.() -> Unit): Request<*,T> {

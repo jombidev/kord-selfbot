@@ -1,14 +1,14 @@
-package dev.kord.core.behavior.interaction.followup
+package dev.jombi.kordsb.core.behavior.interaction.followup
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.toData
-import dev.kord.core.entity.Message
-import dev.kord.core.entity.interaction.followup.EphemeralFollowupMessage
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.builder.message.modify.FollowupMessageModifyBuilder
-import dev.kord.rest.request.RestRequestException
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.toData
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.entity.interaction.followup.EphemeralFollowupMessage
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.builder.message.modify.FollowupMessageModifyBuilder
+import dev.jombi.kordsb.rest.request.RestRequestException
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

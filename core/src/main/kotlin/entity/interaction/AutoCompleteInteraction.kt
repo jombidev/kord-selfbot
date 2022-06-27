@@ -1,13 +1,13 @@
-package dev.kord.core.entity.interaction
+package dev.jombi.kordsb.core.entity.interaction
 
-import dev.kord.common.entity.CommandArgument
-import dev.kord.common.entity.optional.OptionalSnowflake
-import dev.kord.core.Kord
-import dev.kord.core.behavior.interaction.AutoCompleteInteractionBehavior
-import dev.kord.core.cache.data.InteractionData
-import dev.kord.core.entity.Guild
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.CommandArgument
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.interaction.AutoCompleteInteractionBehavior
+import dev.jombi.kordsb.core.cache.data.InteractionData
+import dev.jombi.kordsb.core.entity.Guild
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /**
  * A [DataInteraction] indicating an auto-complete request from Discord.

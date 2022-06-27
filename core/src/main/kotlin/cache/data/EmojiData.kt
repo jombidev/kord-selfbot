@@ -1,10 +1,10 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
 import dev.kord.cache.api.data.DataDescription
 import dev.kord.cache.api.data.description
-import dev.kord.common.entity.DiscordEmoji
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.*
+import dev.jombi.kordsb.common.entity.DiscordEmoji
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.*
 import kotlinx.serialization.Serializable
 
 @Serializable

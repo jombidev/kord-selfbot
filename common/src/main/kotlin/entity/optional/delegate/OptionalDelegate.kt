@@ -1,6 +1,6 @@
-package dev.kord.common.entity.optional.delegate
+package dev.jombi.kordsb.common.entity.optional.delegate
 
-import dev.kord.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.Optional
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KMutableProperty0
 import kotlin.reflect.KProperty

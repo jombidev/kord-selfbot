@@ -1,4 +1,4 @@
-package dev.kord.common
+package dev.jombi.kordsb.common
 
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable

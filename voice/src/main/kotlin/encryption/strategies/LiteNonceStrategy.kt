@@ -1,10 +1,10 @@
-package dev.kord.voice.encryption.strategies
+package dev.jombi.kordsb.voice.encryption.strategies
 
-import dev.kord.voice.io.ByteArrayView
-import dev.kord.voice.io.MutableByteArrayCursor
-import dev.kord.voice.io.mutableCursor
-import dev.kord.voice.io.view
-import dev.kord.voice.udp.RTPPacket
+import dev.jombi.kordsb.voice.io.ByteArrayView
+import dev.jombi.kordsb.voice.io.MutableByteArrayCursor
+import dev.jombi.kordsb.voice.io.mutableCursor
+import dev.jombi.kordsb.voice.io.view
+import dev.jombi.kordsb.voice.udp.RTPPacket
 import kotlinx.atomicfu.atomic
 
 public class LiteNonceStrategy : NonceStrategy {

@@ -1,9 +1,9 @@
-package dev.kord.rest.request
+package dev.jombi.kordsb.rest.request
 
-import dev.kord.common.KordConstants
-import dev.kord.rest.json.response.DiscordErrorResponse
-import dev.kord.rest.ratelimit.*
-import dev.kord.rest.route.optional
+import dev.jombi.kordsb.common.KordConstants
+import dev.jombi.kordsb.rest.json.response.DiscordErrorResponse
+import dev.jombi.kordsb.rest.ratelimit.*
+import dev.jombi.kordsb.rest.route.optional
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.request.*
@@ -76,7 +76,7 @@ public class KtorRequestHandler(
         headers.appendAll(request.headers)
 
         url {
-            url.takeFrom(dev.kord.rest.route.Route.baseUrl)
+            url.takeFrom(dev.jombi.kordsb.rest.route.Route.baseUrl)
             encodedPath += request.path
             parameters.appendAll(request.parameters)
         }

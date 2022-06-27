@@ -1,12 +1,12 @@
-package dev.kord.rest.builder.message
+package dev.jombi.kordsb.rest.builder.message
 
-import dev.kord.common.entity.AllowedMentionType
-import dev.kord.common.entity.AllowedMentions
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.OptionalBoolean
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.rest.builder.message.create.MessageCreateBuilder
-import dev.kord.rest.builder.message.create.UserMessageCreateBuilder
+import dev.jombi.kordsb.common.entity.AllowedMentionType
+import dev.jombi.kordsb.common.entity.AllowedMentions
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.rest.builder.message.create.MessageCreateBuilder
+import dev.jombi.kordsb.rest.builder.message.create.UserMessageCreateBuilder
 
 /**
  * The mentions that should trigger a ping. See the [Discord documentation](https://discord.com/developers/docs/resources/channel#allowed-mentions-object).

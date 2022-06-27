@@ -1,7 +1,7 @@
 package json
 
-import dev.kord.gateway.Event
-import dev.kord.gateway.Reconnect
+import dev.jombi.kordsb.gateway.Event
+import dev.jombi.kordsb.gateway.Reconnect
 import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.Test
 

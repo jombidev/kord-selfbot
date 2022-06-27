@@ -1,6 +1,6 @@
-package dev.kord.rest.builder
+package dev.jombi.kordsb.rest.builder
 
-import dev.kord.common.annotation.KordDsl
+import dev.jombi.kordsb.common.annotation.KordDsl
 
 @KordDsl
 public interface RequestBuilder<T> {

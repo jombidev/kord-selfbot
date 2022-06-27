@@ -1,8 +1,8 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.optional.Optional
-import dev.kord.core.behavior.RoleBehavior
-import dev.kord.core.cache.data.RoleData
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.core.behavior.RoleBehavior
+import dev.jombi.kordsb.core.cache.data.RoleData
 import equality.BehaviorEqualityTest
 import equality.GuildEntityEqualityTest
 import io.mockk.every

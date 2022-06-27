@@ -1,8 +1,8 @@
-import dev.kord.core.Kord
-import dev.kord.core.event.message.MessageCreateEvent
-import dev.kord.core.on
-import dev.kord.gateway.Intent
-import dev.kord.gateway.PrivilegedIntent
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.event.message.MessageCreateEvent
+import dev.jombi.kordsb.core.on
+import dev.jombi.kordsb.gateway.Intent
+import dev.jombi.kordsb.gateway.PrivilegedIntent
 
 suspend fun main(args: Array<String>) {
     val kord = Kord(args.firstOrNull() ?: error("token required"))

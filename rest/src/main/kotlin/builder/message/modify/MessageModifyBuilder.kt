@@ -1,12 +1,12 @@
-package dev.kord.rest.builder.message.modify
+package dev.jombi.kordsb.rest.builder.message.modify
 
-import dev.kord.common.annotation.KordPreview
-import dev.kord.common.entity.DiscordAttachment
-import dev.kord.rest.NamedFile
-import dev.kord.rest.builder.component.ActionRowBuilder
-import dev.kord.rest.builder.component.MessageComponentBuilder
-import dev.kord.rest.builder.message.AllowedMentionsBuilder
-import dev.kord.rest.builder.message.EmbedBuilder
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.common.entity.DiscordAttachment
+import dev.jombi.kordsb.rest.NamedFile
+import dev.jombi.kordsb.rest.builder.component.ActionRowBuilder
+import dev.jombi.kordsb.rest.builder.component.MessageComponentBuilder
+import dev.jombi.kordsb.rest.builder.message.AllowedMentionsBuilder
+import dev.jombi.kordsb.rest.builder.message.EmbedBuilder
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.InputStream

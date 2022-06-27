@@ -1,8 +1,8 @@
-package dev.kord.rest.builder.channel.thread
+package dev.jombi.kordsb.rest.builder.channel.thread
 
-import dev.kord.common.entity.ArchiveDuration
-import dev.kord.rest.builder.AuditRequestBuilder
-import dev.kord.rest.json.request.StartThreadRequest
+import dev.jombi.kordsb.common.entity.ArchiveDuration
+import dev.jombi.kordsb.rest.builder.AuditRequestBuilder
+import dev.jombi.kordsb.rest.json.request.StartThreadRequest
 
 public class StartThreadWithMessageBuilder(
     public var name: String,

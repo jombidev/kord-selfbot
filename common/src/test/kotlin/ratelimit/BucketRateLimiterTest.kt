@@ -2,7 +2,7 @@
 
 package ratelimit
 
-import dev.kord.common.ratelimit.BucketRateLimiter
+import dev.jombi.kordsb.common.ratelimit.BucketRateLimiter
 import fixed
 import kotlinx.coroutines.test.currentTime
 import kotlinx.coroutines.test.runTest

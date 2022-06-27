@@ -1,6 +1,6 @@
 package json
 
-import dev.kord.common.entity.*
+import dev.jombi.kordsb.common.entity.*
 import kotlinx.datetime.Instant
 import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.Test

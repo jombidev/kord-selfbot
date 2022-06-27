@@ -1,8 +1,8 @@
-package dev.kord.core.behavior.interaction.response
+package dev.jombi.kordsb.core.behavior.interaction.response
 
-import dev.kord.core.behavior.interaction.InteractionBehavior
-import dev.kord.core.entity.interaction.Interaction
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.behavior.interaction.InteractionBehavior
+import dev.jombi.kordsb.core.entity.interaction.Interaction
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /**
  * An [InteractionResponseBehavior] for a public response to an [Interaction].

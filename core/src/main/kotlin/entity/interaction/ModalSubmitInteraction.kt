@@ -1,18 +1,18 @@
-package dev.kord.core.entity.interaction
+package dev.jombi.kordsb.core.entity.interaction
 
-import dev.kord.common.entity.optional.OptionalSnowflake
-import dev.kord.common.entity.optional.orEmpty
-import dev.kord.common.entity.optional.unwrap
-import dev.kord.core.Kord
-import dev.kord.core.behavior.interaction.ComponentInteractionBehavior
-import dev.kord.core.cache.data.InteractionData
-import dev.kord.core.entity.Guild
-import dev.kord.core.entity.Message
-import dev.kord.core.entity.component.ActionRowComponent
-import dev.kord.core.entity.component.Component
-import dev.kord.core.entity.component.TextInputComponent
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.entity.optional.orEmpty
+import dev.jombi.kordsb.common.entity.optional.unwrap
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.interaction.ComponentInteractionBehavior
+import dev.jombi.kordsb.core.cache.data.InteractionData
+import dev.jombi.kordsb.core.entity.Guild
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.entity.component.ActionRowComponent
+import dev.jombi.kordsb.core.entity.component.Component
+import dev.jombi.kordsb.core.entity.component.TextInputComponent
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /**
  * An [ActionInteraction] created when a user submits a modal.

@@ -1,7 +1,7 @@
 package ratelimit
 
-import dev.kord.common.ratelimit.ClockIntervalRateLimiter
-import dev.kord.common.ratelimit.IntervalRateLimiter
+import dev.jombi.kordsb.common.ratelimit.ClockIntervalRateLimiter
+import dev.jombi.kordsb.common.ratelimit.IntervalRateLimiter
 import fixed
 import kotlinx.datetime.Clock
 import kotlin.time.Duration

@@ -1,13 +1,13 @@
-package dev.kord.rest.builder.message.modify
+package dev.jombi.kordsb.rest.builder.message.modify
 
-import dev.kord.common.annotation.KordPreview
-import dev.kord.common.entity.DiscordAttachment
-import dev.kord.common.entity.MessageFlags
-import dev.kord.common.entity.optional.Optional
-import dev.kord.rest.NamedFile
-import dev.kord.rest.builder.component.MessageComponentBuilder
-import dev.kord.rest.builder.message.AllowedMentionsBuilder
-import dev.kord.rest.builder.message.EmbedBuilder
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.common.entity.DiscordAttachment
+import dev.jombi.kordsb.common.entity.MessageFlags
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.rest.NamedFile
+import dev.jombi.kordsb.rest.builder.component.MessageComponentBuilder
+import dev.jombi.kordsb.rest.builder.message.AllowedMentionsBuilder
+import dev.jombi.kordsb.rest.builder.message.EmbedBuilder
 import java.io.InputStream
 
 /**

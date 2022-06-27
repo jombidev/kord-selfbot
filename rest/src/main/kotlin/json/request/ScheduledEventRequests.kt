@@ -1,11 +1,11 @@
-package dev.kord.rest.json.request
+package dev.jombi.kordsb.rest.json.request
 
-import dev.kord.common.entity.GuildScheduledEventEntityMetadata
-import dev.kord.common.entity.GuildScheduledEventPrivacyLevel
-import dev.kord.common.entity.GuildScheduledEventStatus
-import dev.kord.common.entity.ScheduledEntityType
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.entity.GuildScheduledEventEntityMetadata
+import dev.jombi.kordsb.common.entity.GuildScheduledEventPrivacyLevel
+import dev.jombi.kordsb.common.entity.GuildScheduledEventStatus
+import dev.jombi.kordsb.common.entity.ScheduledEntityType
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
 import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

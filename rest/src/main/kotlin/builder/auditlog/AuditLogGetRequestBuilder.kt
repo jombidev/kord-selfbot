@@ -1,10 +1,10 @@
-package dev.kord.rest.builder.auditlog
+package dev.jombi.kordsb.rest.builder.auditlog
 
-import dev.kord.common.entity.AuditLogEvent
-import dev.kord.common.entity.Snowflake
-import dev.kord.rest.builder.RequestBuilder
-import dev.kord.rest.json.request.AuditLogGetRequest
-import dev.kord.rest.service.AuditLogService
+import dev.jombi.kordsb.common.entity.AuditLogEvent
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.rest.builder.RequestBuilder
+import dev.jombi.kordsb.rest.json.request.AuditLogGetRequest
+import dev.jombi.kordsb.rest.service.AuditLogService
 
 public class AuditLogGetRequestBuilder : RequestBuilder<AuditLogGetRequest> {
 

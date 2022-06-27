@@ -1,6 +1,6 @@
-package dev.kord.core.builder.kord
+package dev.jombi.kordsb.core.builder.kord
 
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.Snowflake
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.plugins.contentnegotiation.*

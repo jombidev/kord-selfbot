@@ -1,9 +1,9 @@
-package dev.kord.rest.ratelimit
+package dev.jombi.kordsb.rest.ratelimit
 
-import dev.kord.common.ratelimit.IntervalRateLimiter
-import dev.kord.rest.request.Request
-import dev.kord.rest.request.RequestIdentifier
-import dev.kord.rest.request.identifier
+import dev.jombi.kordsb.common.ratelimit.IntervalRateLimiter
+import dev.jombi.kordsb.rest.request.Request
+import dev.jombi.kordsb.rest.request.RequestIdentifier
+import dev.jombi.kordsb.rest.request.identifier
 import kotlinx.atomicfu.atomic
 import kotlinx.atomicfu.update
 import kotlinx.coroutines.CompletableDeferred

@@ -1,8 +1,8 @@
-package dev.kord.core.exception
+package dev.jombi.kordsb.core.exception
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.entity.application.ApplicationCommand
-import dev.kord.core.entity.channel.Channel
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.entity.application.ApplicationCommand
+import dev.jombi.kordsb.core.entity.channel.Channel
 
 public class EntityNotFoundException : Exception {
 

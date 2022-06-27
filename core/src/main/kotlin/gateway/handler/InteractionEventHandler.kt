@@ -1,20 +1,20 @@
-package dev.kord.core.gateway.handler
+package dev.jombi.kordsb.core.gateway.handler
 
 import dev.kord.cache.api.DataCache
 import dev.kord.cache.api.put
 import dev.kord.cache.api.remove
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.ApplicationCommandData
-import dev.kord.core.cache.data.GuildApplicationCommandPermissionData
-import dev.kord.core.cache.data.GuildApplicationCommandPermissionsData
-import dev.kord.core.cache.data.InteractionData
-import dev.kord.core.cache.idEq
-import dev.kord.core.entity.application.*
-import dev.kord.core.entity.interaction.*
-import dev.kord.core.event.interaction.*
-import dev.kord.gateway.*
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.ApplicationCommandData
+import dev.jombi.kordsb.core.cache.data.GuildApplicationCommandPermissionData
+import dev.jombi.kordsb.core.cache.data.GuildApplicationCommandPermissionsData
+import dev.jombi.kordsb.core.cache.data.InteractionData
+import dev.jombi.kordsb.core.cache.idEq
+import dev.jombi.kordsb.core.entity.application.*
+import dev.jombi.kordsb.core.entity.interaction.*
+import dev.jombi.kordsb.core.event.interaction.*
+import dev.jombi.kordsb.gateway.*
 import kotlinx.coroutines.CoroutineScope
-import dev.kord.core.event.Event as CoreEvent
+import dev.jombi.kordsb.core.event.Event as CoreEvent
 
 
 public class InteractionEventHandler(

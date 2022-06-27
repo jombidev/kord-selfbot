@@ -1,15 +1,15 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.*
-import dev.kord.common.entity.optional.orEmpty
-import dev.kord.core.Kord
-import dev.kord.core.KordObject
-import dev.kord.core.cache.data.ChannelData
-import dev.kord.core.cache.data.IntegrationData
-import dev.kord.core.cache.data.UserData
-import dev.kord.core.cache.data.WebhookData
-import dev.kord.core.entity.channel.Channel
-import dev.kord.core.entity.channel.thread.ThreadChannel
+import dev.jombi.kordsb.common.entity.*
+import dev.jombi.kordsb.common.entity.optional.orEmpty
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.core.cache.data.ChannelData
+import dev.jombi.kordsb.core.cache.data.IntegrationData
+import dev.jombi.kordsb.core.cache.data.UserData
+import dev.jombi.kordsb.core.cache.data.WebhookData
+import dev.jombi.kordsb.core.entity.channel.Channel
+import dev.jombi.kordsb.core.entity.channel.thread.ThreadChannel
 
 public class AuditLog(
     public val data: DiscordAuditLog,

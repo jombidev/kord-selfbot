@@ -1,17 +1,17 @@
-package dev.kord.core.behavior
+package dev.jombi.kordsb.core.behavior
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.StageInstanceData
-import dev.kord.core.entity.KordEntity
-import dev.kord.core.entity.StageInstance
-import dev.kord.core.entity.Strategizable
-import dev.kord.core.entity.channel.StageChannel
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.builder.stage.StageInstanceModifyBuilder
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.StageInstanceData
+import dev.jombi.kordsb.core.entity.KordEntity
+import dev.jombi.kordsb.core.entity.StageInstance
+import dev.jombi.kordsb.core.entity.Strategizable
+import dev.jombi.kordsb.core.entity.channel.StageChannel
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.builder.stage.StageInstanceModifyBuilder
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 
@@ -25,7 +25,7 @@ public interface StageInstanceBehavior : KordEntity, Strategizable {
     @Suppress("DEPRECATION")
     @Deprecated("Replaced by 'edit'.", ReplaceWith("this.edit {\nthis@edit.topic = topic\n}"))
     public suspend fun update(topic: String): StageInstance {
-        val instance = kord.rest.stageInstance.updateStageInstance(channelId, dev.kord.rest.json.request.StageInstanceUpdateRequest(topic))
+        val instance = kord.rest.stageInstance.updateStageInstance(channelId, dev.jombi.kordsb.rest.json.request.StageInstanceUpdateRequest(topic))
         val data = StageInstanceData.from(instance)
 
         return StageInstance(data, kord, supplier)

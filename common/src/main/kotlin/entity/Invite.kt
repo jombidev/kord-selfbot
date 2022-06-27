@@ -1,4 +1,4 @@
-package dev.kord.common.entity
+package dev.jombi.kordsb.common.entity
 
 import kotlinx.serialization.*
 import kotlinx.serialization.descriptors.PrimitiveKind
@@ -10,7 +10,7 @@ import kotlinx.serialization.encoding.Encoder
 @Suppress("DEPRECATION")
 @Deprecated(
     "This is no longer documented. Use 'InviteTargetType' instead.",
-    ReplaceWith("InviteTargetType", "dev.kord.common.entity.InviteTargetType"),
+    ReplaceWith("InviteTargetType", "dev.jombi.kordsb.common.entity.InviteTargetType"),
 )
 @Serializable(with = TargetUserType.Serializer::class)
 public sealed class TargetUserType(public val value: Int) {

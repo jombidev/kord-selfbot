@@ -1,7 +1,7 @@
-package dev.kord.core.entity.channel
+package dev.jombi.kordsb.core.entity.channel
 
-import dev.kord.core.behavior.channel.TopGuildMessageChannelBehavior
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.behavior.channel.TopGuildMessageChannelBehavior
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /**
  * An instance of a Discord message channel associated to a [guild].

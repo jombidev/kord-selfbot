@@ -1,11 +1,11 @@
-package dev.kord.rest.builder.interaction
+package dev.jombi.kordsb.rest.builder.interaction
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.ApplicationCommandType
-import dev.kord.common.entity.Permissions
-import dev.kord.rest.builder.RequestBuilder
-import dev.kord.rest.json.request.ApplicationCommandCreateRequest
-import dev.kord.rest.json.request.ApplicationCommandModifyRequest
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.ApplicationCommandType
+import dev.jombi.kordsb.common.entity.Permissions
+import dev.jombi.kordsb.rest.builder.RequestBuilder
+import dev.jombi.kordsb.rest.json.request.ApplicationCommandCreateRequest
+import dev.jombi.kordsb.rest.json.request.ApplicationCommandModifyRequest
 
 @KordDsl
 public interface ApplicationCommandCreateBuilder : LocalizedNameCreateBuilder,

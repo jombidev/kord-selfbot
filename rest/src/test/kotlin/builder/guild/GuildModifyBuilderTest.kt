@@ -1,6 +1,6 @@
-package dev.kord.rest.builder.guild
+package dev.jombi.kordsb.rest.builder.guild
 
-import dev.kord.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.Optional
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import java.util.*

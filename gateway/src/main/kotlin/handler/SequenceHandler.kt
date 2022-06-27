@@ -1,9 +1,9 @@
-package dev.kord.gateway.handler
+package dev.jombi.kordsb.gateway.handler
 
-import dev.kord.gateway.Close
-import dev.kord.gateway.DispatchEvent
-import dev.kord.gateway.Event
-import dev.kord.gateway.Sequence
+import dev.jombi.kordsb.gateway.Close
+import dev.jombi.kordsb.gateway.DispatchEvent
+import dev.jombi.kordsb.gateway.Event
+import dev.jombi.kordsb.gateway.Sequence
 import kotlinx.coroutines.flow.Flow
 
 internal class SequenceHandler(

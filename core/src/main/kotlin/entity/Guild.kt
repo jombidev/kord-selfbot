@@ -1,27 +1,27 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.annotation.DeprecatedSinceKord
-import dev.kord.common.entity.*
-import dev.kord.common.entity.optional.*
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.behavior.GuildBehavior
-import dev.kord.core.behavior.MemberBehavior
-import dev.kord.core.behavior.RoleBehavior
-import dev.kord.core.behavior.channel.TextChannelBehavior
-import dev.kord.core.behavior.channel.TopGuildChannelBehavior
-import dev.kord.core.behavior.channel.TopGuildMessageChannelBehavior
-import dev.kord.core.behavior.channel.VoiceChannelBehavior
-import dev.kord.core.cache.data.GuildData
-import dev.kord.core.entity.channel.*
-import dev.kord.core.entity.channel.thread.ThreadChannel
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.core.supplier.getChannelOfOrNull
-import dev.kord.core.switchIfEmpty
-import dev.kord.rest.Image
-import dev.kord.rest.service.RestClient
+import dev.jombi.kordsb.common.annotation.DeprecatedSinceKord
+import dev.jombi.kordsb.common.entity.*
+import dev.jombi.kordsb.common.entity.optional.*
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.GuildBehavior
+import dev.jombi.kordsb.core.behavior.MemberBehavior
+import dev.jombi.kordsb.core.behavior.RoleBehavior
+import dev.jombi.kordsb.core.behavior.channel.TextChannelBehavior
+import dev.jombi.kordsb.core.behavior.channel.TopGuildChannelBehavior
+import dev.jombi.kordsb.core.behavior.channel.TopGuildMessageChannelBehavior
+import dev.jombi.kordsb.core.behavior.channel.VoiceChannelBehavior
+import dev.jombi.kordsb.core.cache.data.GuildData
+import dev.jombi.kordsb.core.entity.channel.*
+import dev.jombi.kordsb.core.entity.channel.thread.ThreadChannel
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
+import dev.jombi.kordsb.core.switchIfEmpty
+import dev.jombi.kordsb.rest.Image
+import dev.jombi.kordsb.rest.service.RestClient
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.datetime.Instant
@@ -71,13 +71,13 @@ public class Guild(
 
     /**
      * The approximate number of members in this guild. Present if this guild was requested through
-     * [rest][dev.kord.rest.service.RestClient] with the flag `with_counts`.
+     * [rest][dev.jombi.kordsb.rest.service.RestClient] with the flag `with_counts`.
      */
     public val approximateMemberCount: Int? get() = data.approximateMemberCount.value
 
     /**
      * The approximate number of online members in this guild. Present if this guild was requested through
-     * [rest][dev.kord.rest.service.RestClient] with the flag `with_counts`.
+     * [rest][dev.jombi.kordsb.rest.service.RestClient] with the flag `with_counts`.
      */
     public val approximatePresenceCount: Int? get() = data.approximatePresenceCount.value
 
@@ -205,7 +205,7 @@ public class Guild(
     /**
      * True if the guild is considered large, if present.
      *
-     * This field is only present on Guilds created through [dev.kord.core.event.guild.GuildCreateEvent].
+     * This field is only present on Guilds created through [dev.jombi.kordsb.core.event.guild.GuildCreateEvent].
      */
     public val isLarge: Boolean? get() = data.large.value
 

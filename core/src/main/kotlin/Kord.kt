@@ -1,32 +1,32 @@
-package dev.kord.core
+package dev.jombi.kordsb.core
 
 import dev.kord.cache.api.DataCache
-import dev.kord.common.annotation.DeprecatedSinceKord
-import dev.kord.common.annotation.KordExperimental
-import dev.kord.common.annotation.KordUnsafe
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.exception.RequestException
-import dev.kord.core.builder.kord.KordBuilder
-import dev.kord.core.builder.kord.KordRestOnlyBuilder
-import dev.kord.core.cache.data.GuildData
-import dev.kord.core.cache.data.UserData
-import dev.kord.core.entity.*
-import dev.kord.core.entity.channel.Channel
-import dev.kord.core.event.Event
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.exception.KordInitializationException
-import dev.kord.core.gateway.MasterGateway
-import dev.kord.core.gateway.handler.DefaultGatewayEventInterceptor
-import dev.kord.core.gateway.handler.GatewayEventInterceptor
-import dev.kord.core.gateway.start
-import dev.kord.core.supplier.*
-import dev.kord.gateway.Gateway
-import dev.kord.gateway.builder.LoginBuilder
-import dev.kord.gateway.builder.PresenceBuilder
-import dev.kord.rest.builder.guild.GuildCreateBuilder
-import dev.kord.rest.builder.user.CurrentUserModifyBuilder
-import dev.kord.rest.request.RestRequestException
-import dev.kord.rest.service.RestClient
+import dev.jombi.kordsb.common.annotation.DeprecatedSinceKord
+import dev.jombi.kordsb.common.annotation.KordExperimental
+import dev.jombi.kordsb.common.annotation.KordUnsafe
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.builder.kord.KordBuilder
+import dev.jombi.kordsb.core.builder.kord.KordRestOnlyBuilder
+import dev.jombi.kordsb.core.cache.data.GuildData
+import dev.jombi.kordsb.core.cache.data.UserData
+import dev.jombi.kordsb.core.entity.*
+import dev.jombi.kordsb.core.entity.channel.Channel
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.exception.KordInitializationException
+import dev.jombi.kordsb.core.gateway.MasterGateway
+import dev.jombi.kordsb.core.gateway.handler.DefaultGatewayEventInterceptor
+import dev.jombi.kordsb.core.gateway.handler.GatewayEventInterceptor
+import dev.jombi.kordsb.core.gateway.start
+import dev.jombi.kordsb.core.supplier.*
+import dev.jombi.kordsb.gateway.Gateway
+import dev.jombi.kordsb.gateway.builder.LoginBuilder
+import dev.jombi.kordsb.gateway.builder.PresenceBuilder
+import dev.jombi.kordsb.rest.builder.guild.GuildCreateBuilder
+import dev.jombi.kordsb.rest.builder.user.CurrentUserModifyBuilder
+import dev.jombi.kordsb.rest.request.RestRequestException
+import dev.jombi.kordsb.rest.service.RestClient
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 import mu.KLogger
@@ -121,7 +121,7 @@ public class Kord(
         gateway.start(resources.token) {
             //shard = DiscordShard(0, resources.shards.totalShards)
             presence = loginBuilder.presence
-            intents = dev.kord.gateway.Intents(dev.kord.gateway.Intent.values)
+            intents = dev.jombi.kordsb.gateway.Intents(dev.jombi.kordsb.gateway.Intent.values)
             name = loginBuilder.name
         }
     }

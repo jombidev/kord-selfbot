@@ -1,9 +1,9 @@
-package dev.kord.core.entity.component
+package dev.jombi.kordsb.core.entity.component
 
-import dev.kord.common.entity.ComponentType
-import dev.kord.common.entity.TextInputStyle
-import dev.kord.common.entity.optional.value
-import dev.kord.core.cache.data.TextInputComponentData
+import dev.jombi.kordsb.common.entity.ComponentType
+import dev.jombi.kordsb.common.entity.TextInputStyle
+import dev.jombi.kordsb.common.entity.optional.value
+import dev.jombi.kordsb.core.cache.data.TextInputComponentData
 
 /**
  * An interactive component rendered on a Modal.

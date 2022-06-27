@@ -1,6 +1,6 @@
 package serialization
 
-import dev.kord.common.serialization.*
+import dev.jombi.kordsb.common.serialization.*
 import kotlinx.serialization.SerializationException
 import kotlinx.serialization.json.Json
 import kotlin.test.Test

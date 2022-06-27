@@ -1,4 +1,4 @@
-package dev.kord.core.cache
+package dev.jombi.kordsb.core.cache
 
 import dev.kord.cache.api.DataCache
 import dev.kord.cache.api.DataEntryCache

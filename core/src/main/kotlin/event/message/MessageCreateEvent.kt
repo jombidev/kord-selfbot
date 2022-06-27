@@ -1,17 +1,17 @@
-package dev.kord.core.event.message
+package dev.jombi.kordsb.core.event.message
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.entity.Guild
-import dev.kord.core.entity.Member
-import dev.kord.core.entity.Message
-import dev.kord.core.entity.Strategizable
-import dev.kord.core.event.Event
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.core.entity.channel.DmChannel
-import dev.kord.core.event.kordCoroutineScope
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.entity.Guild
+import dev.jombi.kordsb.core.entity.Member
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.entity.Strategizable
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.entity.channel.DmChannel
+import dev.jombi.kordsb.core.event.kordCoroutineScope
 import kotlinx.coroutines.CoroutineScope
 import kotlin.coroutines.CoroutineContext
 

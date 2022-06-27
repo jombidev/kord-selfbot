@@ -1,7 +1,7 @@
 package equality
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.entity.KordEntity
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.entity.KordEntity
 
 interface GuildChannelEqualityTest<T: KordEntity> :
         ChannelEqualityTest<T>, GuildEntityEqualityTest<T> {

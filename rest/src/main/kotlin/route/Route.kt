@@ -1,10 +1,10 @@
-package dev.kord.rest.route
+package dev.jombi.kordsb.rest.route
 
-import dev.kord.common.annotation.DeprecatedSinceKord
-import dev.kord.common.annotation.KordExperimental
-import dev.kord.common.entity.*
-import dev.kord.rest.json.request.GuildScheduledEventUsersResponse
-import dev.kord.rest.json.response.*
+import dev.jombi.kordsb.common.annotation.DeprecatedSinceKord
+import dev.jombi.kordsb.common.annotation.KordExperimental
+import dev.jombi.kordsb.common.entity.*
+import dev.jombi.kordsb.rest.json.request.GuildScheduledEventUsersResponse
+import dev.jombi.kordsb.rest.json.response.*
 import io.ktor.http.*
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.ExperimentalSerializationApi
@@ -16,7 +16,7 @@ import kotlinx.serialization.descriptors.buildSerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.json.Json
 
-internal const val REST_VERSION_PROPERTY_NAME = "dev.kord.rest.version"
+internal const val REST_VERSION_PROPERTY_NAME = "dev.jombi.kordsb.rest.version"
 internal val restVersion get() = System.getenv(REST_VERSION_PROPERTY_NAME) ?: "v10"
 
 public sealed interface ResponseMapper<T> {

@@ -1,11 +1,11 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.DiscordAttachment
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.value
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.AttachmentData
-import dev.kord.rest.Image
+import dev.jombi.kordsb.common.entity.DiscordAttachment
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.value
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.AttachmentData
+import dev.jombi.kordsb.rest.Image
 import java.util.*
 
 /**

@@ -1,8 +1,8 @@
-package dev.kord.voice
+package dev.jombi.kordsb.voice
 
-import dev.kord.common.annotation.KordVoice
-import dev.kord.gateway.Gateway
-import dev.kord.voice.gateway.VoiceGateway
+import dev.jombi.kordsb.common.annotation.KordVoice
+import dev.jombi.kordsb.gateway.Gateway
+import dev.jombi.kordsb.voice.gateway.VoiceGateway
 import kotlinx.coroutines.flow.Flow
 
 @KordVoice

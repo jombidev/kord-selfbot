@@ -1,12 +1,12 @@
-package dev.kord.core.entity.interaction
+package dev.jombi.kordsb.core.entity.interaction
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.ResolvedObjectsData
-import dev.kord.core.entity.*
-import dev.kord.core.entity.channel.ResolvedChannel
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.common.entity.optional.mapValues
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.ResolvedObjectsData
+import dev.jombi.kordsb.core.entity.*
+import dev.jombi.kordsb.core.entity.channel.ResolvedChannel
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.optional.mapValues
 
 public class ResolvedObjects(
     public val data: ResolvedObjectsData,

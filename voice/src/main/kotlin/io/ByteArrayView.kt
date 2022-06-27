@@ -1,4 +1,4 @@
-package dev.kord.voice.io
+package dev.jombi.kordsb.voice.io
 
 /**
  * A lightweight read-only view of a ByteArray.

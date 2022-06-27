@@ -1,21 +1,21 @@
 /*
 package rest
 
-import dev.kord.common.Color
-import dev.kord.common.annotation.KordExperimental
-import dev.kord.common.entity.*
-import dev.kord.core.Kord
-import dev.kord.core.behavior.*
-import dev.kord.core.behavior.channel.*
-import dev.kord.core.behavior.channel.threads.edit
-import dev.kord.core.entity.Guild
-import dev.kord.core.entity.ReactionEmoji
-import dev.kord.core.entity.channel.TextChannel
-import dev.kord.core.entity.channel.TopGuildMessageChannel
-import dev.kord.rest.Image
-import dev.kord.rest.builder.interaction.group
-import dev.kord.rest.builder.interaction.int
-import dev.kord.rest.builder.interaction.subCommand
+import dev.jombi.kordsb.common.Color
+import dev.jombi.kordsb.common.annotation.KordExperimental
+import dev.jombi.kordsb.common.entity.*
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.*
+import dev.jombi.kordsb.core.behavior.channel.*
+import dev.jombi.kordsb.core.behavior.channel.threads.edit
+import dev.jombi.kordsb.core.entity.Guild
+import dev.jombi.kordsb.core.entity.ReactionEmoji
+import dev.jombi.kordsb.core.entity.channel.TextChannel
+import dev.jombi.kordsb.core.entity.channel.TopGuildMessageChannel
+import dev.jombi.kordsb.rest.Image
+import dev.jombi.kordsb.rest.builder.interaction.group
+import dev.jombi.kordsb.rest.builder.interaction.int
+import dev.jombi.kordsb.rest.builder.interaction.subCommand
 import kotlinx.coroutines.flow.filterIsInstance
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.toList

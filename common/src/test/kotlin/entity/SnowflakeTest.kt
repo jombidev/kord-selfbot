@@ -1,6 +1,6 @@
 package entity
 
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.Snowflake
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 import kotlin.test.*

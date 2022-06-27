@@ -1,14 +1,14 @@
-package dev.kord.core.entity.interaction
+package dev.jombi.kordsb.core.entity.interaction
 
-import dev.kord.common.Locale
-import dev.kord.common.entity.InteractionType
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.OptionalSnowflake
-import dev.kord.core.Kord
-import dev.kord.core.behavior.interaction.InteractionBehavior
-import dev.kord.core.cache.data.InteractionData
-import dev.kord.core.entity.User
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.Locale
+import dev.jombi.kordsb.common.entity.InteractionType
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.interaction.InteractionBehavior
+import dev.jombi.kordsb.core.cache.data.InteractionData
+import dev.jombi.kordsb.core.entity.User
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 /**
  * An instance of an

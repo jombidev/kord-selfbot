@@ -1,17 +1,17 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.Color
-import dev.kord.common.annotation.DeprecatedSinceKord
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.UserFlags
-import dev.kord.common.entity.UserPremium
-import dev.kord.core.Kord
-import dev.kord.core.KordObject
-import dev.kord.core.behavior.UserBehavior
-import dev.kord.core.cache.data.UserData
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.Image
+import dev.jombi.kordsb.common.Color
+import dev.jombi.kordsb.common.annotation.DeprecatedSinceKord
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.UserFlags
+import dev.jombi.kordsb.common.entity.UserPremium
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.core.behavior.UserBehavior
+import dev.jombi.kordsb.core.cache.data.UserData
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.Image
 
 /**
  * An instance of a [Discord User](https://discord.com/developers/docs/resources/user#user-object).

@@ -1,19 +1,19 @@
-package dev.kord.core.behavior
+package dev.jombi.kordsb.core.behavior
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.ChannelData
-import dev.kord.core.entity.*
-import dev.kord.core.entity.channel.Channel
-import dev.kord.core.entity.channel.DmChannel
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.json.JsonErrorCode
-import dev.kord.rest.json.request.DMCreateRequest
-import dev.kord.rest.request.RestRequestException
-import dev.kord.rest.service.RestClient
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.ChannelData
+import dev.jombi.kordsb.core.entity.*
+import dev.jombi.kordsb.core.entity.channel.Channel
+import dev.jombi.kordsb.core.entity.channel.DmChannel
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.json.JsonErrorCode
+import dev.jombi.kordsb.rest.json.request.DMCreateRequest
+import dev.jombi.kordsb.rest.request.RestRequestException
+import dev.jombi.kordsb.rest.service.RestClient
 import io.ktor.http.*
 import java.util.*
 

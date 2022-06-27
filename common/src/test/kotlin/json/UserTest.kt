@@ -1,7 +1,7 @@
 package json
 
-import dev.kord.common.entity.DiscordUser
-import dev.kord.common.entity.UserFlags
+import dev.jombi.kordsb.common.entity.DiscordUser
+import dev.jombi.kordsb.common.entity.UserFlags
 import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.Test
 

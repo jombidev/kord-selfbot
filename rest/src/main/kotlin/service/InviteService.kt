@@ -1,10 +1,10 @@
-package dev.kord.rest.service
+package dev.jombi.kordsb.rest.service
 
-import dev.kord.common.entity.DiscordInvite
-import dev.kord.common.entity.Snowflake
-import dev.kord.rest.request.RequestHandler
-import dev.kord.rest.request.auditLogReason
-import dev.kord.rest.route.Route
+import dev.jombi.kordsb.common.entity.DiscordInvite
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.rest.request.RequestHandler
+import dev.jombi.kordsb.rest.request.auditLogReason
+import dev.jombi.kordsb.rest.route.Route
 
 public class InviteService(requestHandler: RequestHandler) : RestService(requestHandler) {
 

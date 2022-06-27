@@ -1,7 +1,7 @@
-package dev.kord.common.entity.optional
+package dev.jombi.kordsb.common.entity.optional
 
-import dev.kord.common.entity.optional.OptionalInt.Missing
-import dev.kord.common.entity.optional.OptionalInt.Value
+import dev.jombi.kordsb.common.entity.optional.OptionalInt.Missing
+import dev.jombi.kordsb.common.entity.optional.OptionalInt.Value
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.SerializationException

@@ -1,9 +1,9 @@
-package dev.kord.core.entity.application
+package dev.jombi.kordsb.core.entity.application
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.behavior.*
-import dev.kord.core.cache.data.ApplicationCommandData
-import dev.kord.rest.service.InteractionService
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.behavior.*
+import dev.jombi.kordsb.core.cache.data.ApplicationCommandData
+import dev.jombi.kordsb.rest.service.InteractionService
 
 public sealed interface UserCommand : ApplicationCommand, UserCommandBehavior
 

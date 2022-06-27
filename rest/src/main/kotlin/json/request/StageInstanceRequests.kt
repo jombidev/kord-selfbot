@@ -1,9 +1,9 @@
-package dev.kord.rest.json.request
+package dev.jombi.kordsb.rest.json.request
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.StageInstancePrivacyLevel
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.StageInstancePrivacyLevel
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -20,7 +20,7 @@ public data class StageInstanceCreateRequest(
 
 @Deprecated(
     "Replaced by 'StageInstanceModifyRequest'.",
-    ReplaceWith("StageInstanceModifyRequest", "dev.kord.rest.json.request.StageInstanceModifyRequest"),
+    ReplaceWith("StageInstanceModifyRequest", "dev.jombi.kordsb.rest.json.request.StageInstanceModifyRequest"),
 )
 @Serializable
 public data class StageInstanceUpdateRequest(val topic: String)

@@ -1,8 +1,8 @@
-package dev.kord.rest.request
+package dev.jombi.kordsb.rest.request
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.rest.NamedFile
-import dev.kord.rest.route.Route
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.rest.NamedFile
+import dev.jombi.kordsb.rest.route.Route
 import io.ktor.http.*
 import kotlinx.serialization.SerializationStrategy
 

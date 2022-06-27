@@ -1,14 +1,14 @@
 @file:Suppress("PropertyName")
 
-package dev.kord.rest.builder.component
+package dev.jombi.kordsb.rest.builder.component
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.ButtonStyle
-import dev.kord.common.entity.ComponentType
-import dev.kord.common.entity.DiscordChatComponent
-import dev.kord.common.entity.DiscordPartialEmoji
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.ButtonStyle
+import dev.jombi.kordsb.common.entity.ComponentType
+import dev.jombi.kordsb.common.entity.DiscordChatComponent
+import dev.jombi.kordsb.common.entity.DiscordPartialEmoji
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
 
 @KordDsl
 public sealed class ButtonBuilder : ActionRowComponentBuilder() {

@@ -1,8 +1,8 @@
-package dev.kord.gateway
+package dev.jombi.kordsb.gateway
 
-import dev.kord.common.DiscordBitSet
-import dev.kord.common.EmptyBitSet
-import dev.kord.gateway.Intent.*
+import dev.jombi.kordsb.common.DiscordBitSet
+import dev.jombi.kordsb.common.EmptyBitSet
+import dev.jombi.kordsb.gateway.Intent.*
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.descriptors.PrimitiveKind

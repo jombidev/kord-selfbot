@@ -1,4 +1,4 @@
-package dev.kord.voice.exception
+package dev.jombi.kordsb.voice.exception
 
 public class VoiceConnectionInitializationException : Exception {
     public constructor(message: String) : super(message)

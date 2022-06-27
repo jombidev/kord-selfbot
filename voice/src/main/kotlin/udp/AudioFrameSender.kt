@@ -1,9 +1,9 @@
 @file:Suppress("ArrayInDataClass")
 
-package dev.kord.voice.udp
+package dev.jombi.kordsb.voice.udp
 
-import dev.kord.common.annotation.KordVoice
-import dev.kord.voice.FrameInterceptorConfiguration
+import dev.jombi.kordsb.common.annotation.KordVoice
+import dev.jombi.kordsb.voice.FrameInterceptorConfiguration
 import io.ktor.network.sockets.*
 import io.ktor.util.network.*
 

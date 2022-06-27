@@ -216,7 +216,7 @@
 * EphemeralBuilder builders have been unified with the persistent messages. (#397)
 * Core events now accept a coroutineScope in the constructor (#391)
 * Start thread methods have introduced a builder (#398)
-* Shards have been moved to `dev.kord.gateway.builder` (#409)
+* Shards have been moved to `dev.jombi.kordsb.gateway.builder` (#409)
 
 ## Changes
 
@@ -528,10 +528,10 @@ when editing a message. This makes it possible to remove fields from a message w
 ## Changes
 
 * `VoiceServerUpdateEvent#endpoint` is now nullable. #119
-* **Moved com.gitlab.kord.common to dev.kord.common.** #122 
-* **Moved com.gitlab.kord.rest to dev.kord.rest.** #122
-* **Moved com.gitlab.kord.gateway to dev.kord.gateway.** #122
-* **Moved com.gitlab.kord.core to dev.kord.core.** #122
+* **Moved com.gitlab.kord.common to dev.jombi.kordsb.common.** #122 
+* **Moved com.gitlab.kord.rest to dev.jombi.kordsb.rest.** #122
+* **Moved com.gitlab.kord.gateway to dev.jombi.kordsb.gateway.** #122
+* **Moved com.gitlab.kord.core to dev.jombi.kordsb.core.** #122
 
 ## Removals
 

@@ -1,7 +1,7 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.core.behavior.WebhookBehavior
-import dev.kord.core.cache.data.WebhookData
+import dev.jombi.kordsb.core.behavior.WebhookBehavior
+import dev.jombi.kordsb.core.cache.data.WebhookData
 import equality.BehaviorEqualityTest
 import equality.EntityEqualityTest
 import io.mockk.every

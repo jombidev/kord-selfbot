@@ -1,10 +1,10 @@
-package dev.kord.core.behavior
+package dev.jombi.kordsb.core.behavior
 
-import dev.kord.core.cache.data.ApplicationCommandData
-import dev.kord.core.entity.application.GlobalUserCommand
-import dev.kord.core.entity.application.GuildUserCommand
-import dev.kord.core.entity.application.UserCommand
-import dev.kord.rest.builder.interaction.UserCommandModifyBuilder
+import dev.jombi.kordsb.core.cache.data.ApplicationCommandData
+import dev.jombi.kordsb.core.entity.application.GlobalUserCommand
+import dev.jombi.kordsb.core.entity.application.GuildUserCommand
+import dev.jombi.kordsb.core.entity.application.UserCommand
+import dev.jombi.kordsb.rest.builder.interaction.UserCommandModifyBuilder
 
 
 public interface UserCommandBehavior : ApplicationCommandBehavior {

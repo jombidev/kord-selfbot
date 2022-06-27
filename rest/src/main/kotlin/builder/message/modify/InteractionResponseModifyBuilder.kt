@@ -1,16 +1,16 @@
-package dev.kord.rest.builder.message.modify
+package dev.jombi.kordsb.rest.builder.message.modify
 
-import dev.kord.common.entity.DiscordAttachment
-import dev.kord.common.entity.optional.delegate.delegate
-import dev.kord.common.entity.optional.map
-import dev.kord.common.entity.optional.mapList
-import dev.kord.rest.NamedFile
-import dev.kord.rest.builder.RequestBuilder
-import dev.kord.rest.builder.component.MessageComponentBuilder
-import dev.kord.rest.builder.message.AllowedMentionsBuilder
-import dev.kord.rest.builder.message.EmbedBuilder
-import dev.kord.rest.json.request.InteractionResponseModifyRequest
-import dev.kord.rest.json.request.MultipartInteractionResponseModifyRequest
+import dev.jombi.kordsb.common.entity.DiscordAttachment
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.common.entity.optional.map
+import dev.jombi.kordsb.common.entity.optional.mapList
+import dev.jombi.kordsb.rest.NamedFile
+import dev.jombi.kordsb.rest.builder.RequestBuilder
+import dev.jombi.kordsb.rest.builder.component.MessageComponentBuilder
+import dev.jombi.kordsb.rest.builder.message.AllowedMentionsBuilder
+import dev.jombi.kordsb.rest.builder.message.EmbedBuilder
+import dev.jombi.kordsb.rest.json.request.InteractionResponseModifyRequest
+import dev.jombi.kordsb.rest.json.request.MultipartInteractionResponseModifyRequest
 
 
 public class InteractionResponseModifyBuilder :

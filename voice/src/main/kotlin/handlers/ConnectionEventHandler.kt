@@ -1,4 +1,4 @@
-package dev.kord.voice.handlers
+package dev.jombi.kordsb.voice.handlers
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow

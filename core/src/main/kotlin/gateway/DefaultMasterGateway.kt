@@ -1,6 +1,6 @@
-package dev.kord.core.gateway
+package dev.jombi.kordsb.core.gateway
 
-import dev.kord.gateway.Gateway
+import dev.jombi.kordsb.gateway.Gateway
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.asFlow

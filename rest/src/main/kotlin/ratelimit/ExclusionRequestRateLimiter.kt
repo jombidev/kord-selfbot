@@ -1,8 +1,8 @@
-package dev.kord.rest.ratelimit
+package dev.jombi.kordsb.rest.ratelimit
 
-import dev.kord.rest.request.Request
-import dev.kord.rest.request.RequestIdentifier
-import dev.kord.rest.request.identifier
+import dev.jombi.kordsb.rest.request.Request
+import dev.jombi.kordsb.rest.request.RequestIdentifier
+import dev.jombi.kordsb.rest.request.identifier
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.datetime.Clock
 import mu.KLogger

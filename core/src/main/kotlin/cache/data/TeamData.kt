@@ -1,9 +1,9 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
-import dev.kord.common.entity.DiscordTeam
-import dev.kord.common.entity.DiscordTeamMember
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.TeamMembershipState
+import dev.jombi.kordsb.common.entity.DiscordTeam
+import dev.jombi.kordsb.common.entity.DiscordTeamMember
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.TeamMembershipState
 import kotlinx.serialization.Serializable
 
 /**

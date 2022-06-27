@@ -1,10 +1,10 @@
-package dev.kord.rest.service
+package dev.jombi.kordsb.rest.service
 
-import dev.kord.common.KordConstants
-import dev.kord.common.annotation.KordExperimental
-import dev.kord.rest.request.RequestBuilder
-import dev.kord.rest.request.RequestHandler
-import dev.kord.rest.route.Route
+import dev.jombi.kordsb.common.KordConstants
+import dev.jombi.kordsb.common.annotation.KordExperimental
+import dev.jombi.kordsb.rest.request.RequestBuilder
+import dev.jombi.kordsb.rest.request.RequestHandler
+import dev.jombi.kordsb.rest.route.Route
 import io.ktor.http.HttpHeaders.Authorization
 import io.ktor.http.HttpHeaders.UserAgent
 import kotlin.contracts.InvocationKind

@@ -1,18 +1,18 @@
-package dev.kord.core.behavior.interaction.response
+package dev.jombi.kordsb.core.behavior.interaction.response
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.KordObject
-import dev.kord.core.cache.data.toData
-import dev.kord.core.entity.Message
-import dev.kord.core.entity.Strategizable
-import dev.kord.core.entity.interaction.Interaction
-import dev.kord.core.entity.interaction.followup.EphemeralFollowupMessage
-import dev.kord.core.entity.interaction.followup.FollowupMessage
-import dev.kord.core.entity.interaction.followup.PublicFollowupMessage
-import dev.kord.core.exception.EntityNotFoundException
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.rest.builder.message.create.FollowupMessageCreateBuilder
-import dev.kord.rest.request.RestRequestException
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.core.cache.data.toData
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.entity.Strategizable
+import dev.jombi.kordsb.core.entity.interaction.Interaction
+import dev.jombi.kordsb.core.entity.interaction.followup.EphemeralFollowupMessage
+import dev.jombi.kordsb.core.entity.interaction.followup.FollowupMessage
+import dev.jombi.kordsb.core.entity.interaction.followup.PublicFollowupMessage
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.rest.builder.message.create.FollowupMessageCreateBuilder
+import dev.jombi.kordsb.rest.request.RestRequestException
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 
@@ -55,14 +55,14 @@ public sealed interface InteractionResponseBehavior : KordObject, Strategizable 
 }
 
 /**
- * Follows up an interaction response without the [Ephemeral flag][dev.kord.common.entity.MessageFlag.Ephemeral].
+ * Follows up an interaction response without the [Ephemeral flag][dev.jombi.kordsb.common.entity.MessageFlag.Ephemeral].
  */
 @Deprecated(
     "Followups are no longer supported for all 'InteractionResponseBehavior' types.",
     ReplaceWith(
         "if (this is FollowupPermittingInteractionResponseBehavior) this.createPublicFollowup { builder() }",
-        "dev.kord.core.behavior.interaction.response.FollowupPermittingInteractionResponseBehavior",
-        "dev.kord.core.behavior.interaction.response.createPublicFollowup",
+        "dev.jombi.kordsb.core.behavior.interaction.response.FollowupPermittingInteractionResponseBehavior",
+        "dev.jombi.kordsb.core.behavior.interaction.response.createPublicFollowup",
     ),
     DeprecationLevel.ERROR,
 )
@@ -73,14 +73,14 @@ public suspend inline fun InteractionResponseBehavior.followUp(builder: Followup
 }
 
 /**
- * Follows up an interaction response with the [Ephemeral flag][dev.kord.common.entity.MessageFlag.Ephemeral].
+ * Follows up an interaction response with the [Ephemeral flag][dev.jombi.kordsb.common.entity.MessageFlag.Ephemeral].
  */
 @Deprecated(
     "Followups are no longer supported for all 'InteractionResponseBehavior' types.",
     ReplaceWith(
         "if (this is FollowupPermittingInteractionResponseBehavior) this.createEphemeralFollowup { builder() }",
-        "dev.kord.core.behavior.interaction.response.FollowupPermittingInteractionResponseBehavior",
-        "dev.kord.core.behavior.interaction.response.createEphemeralFollowup",
+        "dev.jombi.kordsb.core.behavior.interaction.response.FollowupPermittingInteractionResponseBehavior",
+        "dev.jombi.kordsb.core.behavior.interaction.response.createEphemeralFollowup",
     ),
     DeprecationLevel.ERROR,
 )

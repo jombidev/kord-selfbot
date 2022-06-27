@@ -1,4 +1,4 @@
-package dev.kord.rest.request
+package dev.jombi.kordsb.rest.request
 
 
 /**
@@ -43,7 +43,7 @@ public class ContextException internal constructor() : RuntimeException() {
     internal fun sanitizeStackTrace() {
         // Remove artifacts of stack trace capturing
         // This is the stack trace element is the creation of the ContextException
-        // at dev.kord.rest.request.StackTraceRecoveringKtorRequestHandler.handle(StackTraceRecoveringKtorRequestHandler.kt:23)
+        // at dev.jombi.kordsb.rest.request.StackTraceRecoveringKtorRequestHandler.handle(StackTraceRecoveringKtorRequestHandler.kt:23)
         stackTrace = stackTrace.copyOfRange(1, stackTrace.size)
     }
 }

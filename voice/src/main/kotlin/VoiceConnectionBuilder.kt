@@ -1,21 +1,21 @@
-package dev.kord.voice
+package dev.jombi.kordsb.voice
 
-import dev.kord.common.annotation.KordVoice
-import dev.kord.common.entity.Snowflake
-import dev.kord.gateway.Gateway
-import dev.kord.gateway.UpdateVoiceStatus
-import dev.kord.gateway.VoiceServerUpdate
-import dev.kord.gateway.VoiceStateUpdate
-import dev.kord.voice.encryption.strategies.LiteNonceStrategy
-import dev.kord.voice.encryption.strategies.NonceStrategy
-import dev.kord.voice.exception.VoiceConnectionInitializationException
-import dev.kord.voice.gateway.DefaultVoiceGatewayBuilder
-import dev.kord.voice.gateway.VoiceGateway
-import dev.kord.voice.gateway.VoiceGatewayConfiguration
-import dev.kord.voice.streams.DefaultStreams
-import dev.kord.voice.streams.NOPStreams
-import dev.kord.voice.streams.Streams
-import dev.kord.voice.udp.*
+import dev.jombi.kordsb.common.annotation.KordVoice
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.gateway.Gateway
+import dev.jombi.kordsb.gateway.UpdateVoiceStatus
+import dev.jombi.kordsb.gateway.VoiceServerUpdate
+import dev.jombi.kordsb.gateway.VoiceStateUpdate
+import dev.jombi.kordsb.voice.encryption.strategies.LiteNonceStrategy
+import dev.jombi.kordsb.voice.encryption.strategies.NonceStrategy
+import dev.jombi.kordsb.voice.exception.VoiceConnectionInitializationException
+import dev.jombi.kordsb.voice.gateway.DefaultVoiceGatewayBuilder
+import dev.jombi.kordsb.voice.gateway.VoiceGateway
+import dev.jombi.kordsb.voice.gateway.VoiceGatewayConfiguration
+import dev.jombi.kordsb.voice.streams.DefaultStreams
+import dev.jombi.kordsb.voice.streams.NOPStreams
+import dev.jombi.kordsb.voice.streams.Streams
+import dev.jombi.kordsb.voice.udp.*
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.filter
@@ -55,14 +55,14 @@ public class VoiceConnectionBuilder(
     }
 
     /**
-     * The [dev.kord.voice.udp.AudioFrameSender] for this [VoiceConnection]. If null, [dev.kord.voice.udp.DefaultAudioFrameSender]
+     * The [dev.jombi.kordsb.voice.udp.AudioFrameSender] for this [VoiceConnection]. If null, [dev.jombi.kordsb.voice.udp.DefaultAudioFrameSender]
      * will be used.
      */
     public var audioSender: AudioFrameSender? = null
 
     /**
      * The nonce strategy to be used for the encryption of audio packets.
-     * If `null`, [dev.kord.voice.encryption.strategies.LiteNonceStrategy] will be used.
+     * If `null`, [dev.jombi.kordsb.voice.encryption.strategies.LiteNonceStrategy] will be used.
      */
     public var nonceStrategy: NonceStrategy? = null
 
@@ -79,7 +79,7 @@ public class VoiceConnectionBuilder(
     private var voiceGatewayBuilder: (DefaultVoiceGatewayBuilder.() -> Unit)? = null
 
     /**
-     * A [dev.kord.voice.udp.VoiceUdpSocket] implementation to be used. If null, a default will be used.
+     * A [dev.jombi.kordsb.voice.udp.VoiceUdpSocket] implementation to be used. If null, a default will be used.
      */
     public var udpSocket: VoiceUdpSocket? = null
 
@@ -147,7 +147,7 @@ public class VoiceConnectionBuilder(
     }
 
     /**
-     * @throws dev.kord.voice.exception.VoiceConnectionInitializationException when there was a problem retrieving voice information from Discord.
+     * @throws dev.jombi.kordsb.voice.exception.VoiceConnectionInitializationException when there was a problem retrieving voice information from Discord.
      */
     public suspend fun build(): VoiceConnection {
         val (voiceConnectionData, initialGatewayConfiguration) = gateway.updateVoiceState()

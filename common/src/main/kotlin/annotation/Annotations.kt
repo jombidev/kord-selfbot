@@ -1,4 +1,4 @@
-package dev.kord.common.annotation
+package dev.jombi.kordsb.common.annotation
 
 /**
  * Dsl marker for Kord dsls.

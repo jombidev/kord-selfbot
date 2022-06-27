@@ -1,14 +1,14 @@
-package dev.kord.core.live
+package dev.jombi.kordsb.core.live
 
-import dev.kord.common.annotation.KordPreview
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.entity.KordEntity
-import dev.kord.core.entity.Role
-import dev.kord.core.event.Event
-import dev.kord.core.event.guild.GuildDeleteEvent
-import dev.kord.core.event.role.RoleDeleteEvent
-import dev.kord.core.event.role.RoleUpdateEvent
-import dev.kord.core.live.exception.LiveCancellationException
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.entity.KordEntity
+import dev.jombi.kordsb.core.entity.Role
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.guild.GuildDeleteEvent
+import dev.jombi.kordsb.core.event.role.RoleDeleteEvent
+import dev.jombi.kordsb.core.event.role.RoleUpdateEvent
+import dev.jombi.kordsb.core.live.exception.LiveCancellationException
 import kotlinx.coroutines.*
 
 @KordPreview

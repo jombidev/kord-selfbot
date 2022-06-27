@@ -1,13 +1,13 @@
-package dev.kord.core.event.channel.thread
+package dev.jombi.kordsb.core.event.channel.thread
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.orEmpty
-import dev.kord.core.Kord
-import dev.kord.core.behavior.MemberBehavior
-import dev.kord.core.cache.data.ThreadMembersUpdateEventData
-import dev.kord.core.entity.channel.thread.ThreadMember
-import dev.kord.core.event.Event
-import dev.kord.core.event.kordCoroutineScope
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.orEmpty
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.MemberBehavior
+import dev.jombi.kordsb.core.cache.data.ThreadMembersUpdateEventData
+import dev.jombi.kordsb.core.entity.channel.thread.ThreadMember
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.kordCoroutineScope
 import kotlinx.coroutines.CoroutineScope
 import kotlin.coroutines.CoroutineContext
 

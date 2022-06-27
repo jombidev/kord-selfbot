@@ -1,8 +1,8 @@
-package dev.kord.voice.encryption.strategies
+package dev.jombi.kordsb.voice.encryption.strategies
 
-import dev.kord.voice.io.ByteArrayView
-import dev.kord.voice.io.MutableByteArrayCursor
-import dev.kord.voice.udp.RTPPacket
+import dev.jombi.kordsb.voice.io.ByteArrayView
+import dev.jombi.kordsb.voice.io.MutableByteArrayCursor
+import dev.jombi.kordsb.voice.udp.RTPPacket
 
 /**
  * An [encryption mode, regarding the nonce](https://discord.com/developers/docs/topics/voice-connections#establishing-a-voice-udp-connection-encryption-modes), supported by Discord.

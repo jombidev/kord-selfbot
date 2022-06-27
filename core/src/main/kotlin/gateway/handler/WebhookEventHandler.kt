@@ -1,12 +1,12 @@
-package dev.kord.core.gateway.handler
+package dev.jombi.kordsb.core.gateway.handler
 
 import dev.kord.cache.api.DataCache
-import dev.kord.core.Kord
-import dev.kord.core.event.guild.WebhookUpdateEvent
-import dev.kord.gateway.Event
-import dev.kord.gateway.WebhooksUpdate
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.event.guild.WebhookUpdateEvent
+import dev.jombi.kordsb.gateway.Event
+import dev.jombi.kordsb.gateway.WebhooksUpdate
 import kotlinx.coroutines.CoroutineScope
-import dev.kord.core.event.Event as CoreEvent
+import dev.jombi.kordsb.core.event.Event as CoreEvent
 
 internal class WebhookEventHandler(
     cache: DataCache

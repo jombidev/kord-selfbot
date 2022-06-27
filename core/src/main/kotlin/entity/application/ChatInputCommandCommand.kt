@@ -1,18 +1,18 @@
-package dev.kord.core.entity.application
+package dev.jombi.kordsb.core.entity.application
 
-import dev.kord.common.Locale
-import dev.kord.common.entity.ApplicationCommandOptionType
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.filterList
-import dev.kord.common.entity.optional.orEmpty
-import dev.kord.core.behavior.ChatInputCommandBehavior
-import dev.kord.core.behavior.GlobalChatInputCommandBehavior
-import dev.kord.core.behavior.GuildChatInputCommandBehavior
-import dev.kord.core.cache.data.ApplicationCommandData
-import dev.kord.core.cache.data.ApplicationCommandGroupData
-import dev.kord.core.cache.data.ApplicationCommandSubCommandData
-import dev.kord.core.cache.data.ApplicationCommandSubcommandData
-import dev.kord.rest.service.InteractionService
+import dev.jombi.kordsb.common.Locale
+import dev.jombi.kordsb.common.entity.ApplicationCommandOptionType
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.filterList
+import dev.jombi.kordsb.common.entity.optional.orEmpty
+import dev.jombi.kordsb.core.behavior.ChatInputCommandBehavior
+import dev.jombi.kordsb.core.behavior.GlobalChatInputCommandBehavior
+import dev.jombi.kordsb.core.behavior.GuildChatInputCommandBehavior
+import dev.jombi.kordsb.core.cache.data.ApplicationCommandData
+import dev.jombi.kordsb.core.cache.data.ApplicationCommandGroupData
+import dev.jombi.kordsb.core.cache.data.ApplicationCommandSubCommandData
+import dev.jombi.kordsb.core.cache.data.ApplicationCommandSubcommandData
+import dev.jombi.kordsb.rest.service.InteractionService
 
 public sealed interface ChatInputCommandCommand : ApplicationCommand, ChatInputCommandBehavior {
 

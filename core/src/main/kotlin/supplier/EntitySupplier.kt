@@ -1,19 +1,19 @@
-package dev.kord.core.supplier
+package dev.jombi.kordsb.core.supplier
 
-import dev.kord.common.entity.ChannelType.Unknown
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.exception.RequestException
-import dev.kord.core.entity.*
-import dev.kord.core.entity.application.ApplicationCommandPermissions
-import dev.kord.core.entity.application.GlobalApplicationCommand
-import dev.kord.core.entity.application.GuildApplicationCommand
-import dev.kord.core.entity.channel.Channel
-import dev.kord.core.entity.channel.MessageChannel
-import dev.kord.core.entity.channel.TopGuildChannel
-import dev.kord.core.entity.channel.thread.ThreadChannel
-import dev.kord.core.entity.channel.thread.ThreadMember
-import dev.kord.core.entity.interaction.followup.FollowupMessage
-import dev.kord.core.exception.EntityNotFoundException
+import dev.jombi.kordsb.common.entity.ChannelType.Unknown
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.entity.*
+import dev.jombi.kordsb.core.entity.application.ApplicationCommandPermissions
+import dev.jombi.kordsb.core.entity.application.GlobalApplicationCommand
+import dev.jombi.kordsb.core.entity.application.GuildApplicationCommand
+import dev.jombi.kordsb.core.entity.channel.Channel
+import dev.jombi.kordsb.core.entity.channel.MessageChannel
+import dev.jombi.kordsb.core.entity.channel.TopGuildChannel
+import dev.jombi.kordsb.core.entity.channel.thread.ThreadChannel
+import dev.jombi.kordsb.core.entity.channel.thread.ThreadMember
+import dev.jombi.kordsb.core.entity.interaction.followup.FollowupMessage
+import dev.jombi.kordsb.core.exception.EntityNotFoundException
 import kotlinx.coroutines.flow.Flow
 import kotlinx.datetime.Instant
 

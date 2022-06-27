@@ -1,6 +1,6 @@
-package dev.kord.voice.udp
+package dev.jombi.kordsb.voice.udp
 
-import dev.kord.common.annotation.KordVoice
+import dev.jombi.kordsb.common.annotation.KordVoice
 import io.ktor.network.sockets.*
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow

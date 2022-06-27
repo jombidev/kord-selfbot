@@ -1,9 +1,9 @@
-package dev.kord.gateway
+package dev.jombi.kordsb.gateway
 
-import dev.kord.common.ratelimit.IntervalRateLimiter
-import dev.kord.common.ratelimit.RateLimiter
-import dev.kord.gateway.retry.LinearRetry
-import dev.kord.gateway.retry.Retry
+import dev.jombi.kordsb.common.ratelimit.IntervalRateLimiter
+import dev.jombi.kordsb.common.ratelimit.RateLimiter
+import dev.jombi.kordsb.gateway.retry.LinearRetry
+import dev.jombi.kordsb.gateway.retry.Retry
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.plugins.contentnegotiation.*

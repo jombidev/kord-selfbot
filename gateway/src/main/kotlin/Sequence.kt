@@ -1,4 +1,4 @@
-package dev.kord.gateway
+package dev.jombi.kordsb.gateway
 
 import kotlinx.atomicfu.AtomicRef
 import kotlinx.atomicfu.atomic

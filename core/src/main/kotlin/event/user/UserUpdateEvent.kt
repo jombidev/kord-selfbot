@@ -1,9 +1,9 @@
-package dev.kord.core.event.user
+package dev.jombi.kordsb.core.event.user
 
-import dev.kord.core.Kord
-import dev.kord.core.entity.User
-import dev.kord.core.event.Event
-import dev.kord.core.event.kordCoroutineScope
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.entity.User
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.kordCoroutineScope
 import kotlinx.coroutines.CoroutineScope
 import kotlin.coroutines.CoroutineContext
 

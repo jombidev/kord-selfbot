@@ -1,12 +1,12 @@
-package dev.kord.core.entity.component
+package dev.jombi.kordsb.core.entity.component
 
-import dev.kord.common.entity.ComponentType
-import dev.kord.common.entity.DiscordPartialEmoji
-import dev.kord.common.entity.optional.orEmpty
-import dev.kord.core.cache.data.ComponentData
-import dev.kord.core.cache.data.SelectOptionData
-import dev.kord.core.entity.Message
-import dev.kord.core.entity.interaction.SelectMenuInteraction
+import dev.jombi.kordsb.common.entity.ComponentType
+import dev.jombi.kordsb.common.entity.DiscordPartialEmoji
+import dev.jombi.kordsb.common.entity.optional.orEmpty
+import dev.jombi.kordsb.core.cache.data.ComponentData
+import dev.jombi.kordsb.core.cache.data.SelectOptionData
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.entity.interaction.SelectMenuInteraction
 
 /**
  * An interactive dropdown menu rendered on a [Message] that consists of multiple [options].

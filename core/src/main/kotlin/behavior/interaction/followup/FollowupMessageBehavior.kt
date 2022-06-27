@@ -1,20 +1,20 @@
-package dev.kord.core.behavior.interaction.followup
+package dev.jombi.kordsb.core.behavior.interaction.followup
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.behavior.channel.MessageChannelBehavior
-import dev.kord.core.cache.data.toData
-import dev.kord.core.entity.KordEntity
-import dev.kord.core.entity.Message
-import dev.kord.core.entity.Strategizable
-import dev.kord.core.entity.channel.MessageChannel
-import dev.kord.core.entity.interaction.followup.EphemeralFollowupMessage
-import dev.kord.core.entity.interaction.followup.FollowupMessage
-import dev.kord.core.entity.interaction.followup.PublicFollowupMessage
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.core.supplier.getChannelOf
-import dev.kord.core.supplier.getChannelOfOrNull
-import dev.kord.rest.builder.message.modify.FollowupMessageModifyBuilder
-import dev.kord.rest.request.RestRequestException
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.behavior.channel.MessageChannelBehavior
+import dev.jombi.kordsb.core.cache.data.toData
+import dev.jombi.kordsb.core.entity.KordEntity
+import dev.jombi.kordsb.core.entity.Message
+import dev.jombi.kordsb.core.entity.Strategizable
+import dev.jombi.kordsb.core.entity.channel.MessageChannel
+import dev.jombi.kordsb.core.entity.interaction.followup.EphemeralFollowupMessage
+import dev.jombi.kordsb.core.entity.interaction.followup.FollowupMessage
+import dev.jombi.kordsb.core.entity.interaction.followup.PublicFollowupMessage
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.supplier.getChannelOf
+import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
+import dev.jombi.kordsb.rest.builder.message.modify.FollowupMessageModifyBuilder
+import dev.jombi.kordsb.rest.request.RestRequestException
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

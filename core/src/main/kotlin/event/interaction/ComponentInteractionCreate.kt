@@ -1,9 +1,9 @@
-package dev.kord.core.event.interaction
+package dev.jombi.kordsb.core.event.interaction
 
-import dev.kord.core.Kord
-import dev.kord.core.entity.interaction.*
-import dev.kord.core.event.Event
-import dev.kord.core.event.kordCoroutineScope
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.entity.interaction.*
+import dev.jombi.kordsb.core.event.Event
+import dev.jombi.kordsb.core.event.kordCoroutineScope
 import kotlinx.coroutines.CoroutineScope
 
 /** An [Event] that fires when a [ComponentInteraction] is created. */

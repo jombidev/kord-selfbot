@@ -1,14 +1,14 @@
-package dev.kord.rest.builder.message.create
+package dev.jombi.kordsb.rest.builder.message.create
 
-import dev.kord.common.annotation.KordPreview
-import dev.kord.common.entity.optional.*
-import dev.kord.rest.NamedFile
-import dev.kord.rest.builder.RequestBuilder
-import dev.kord.rest.builder.component.MessageComponentBuilder
-import dev.kord.rest.builder.message.AllowedMentionsBuilder
-import dev.kord.rest.builder.message.EmbedBuilder
-import dev.kord.rest.json.request.MultiPartWebhookExecuteRequest
-import dev.kord.rest.json.request.WebhookExecuteRequest
+import dev.jombi.kordsb.common.annotation.KordPreview
+import dev.jombi.kordsb.common.entity.optional.*
+import dev.jombi.kordsb.rest.NamedFile
+import dev.jombi.kordsb.rest.builder.RequestBuilder
+import dev.jombi.kordsb.rest.builder.component.MessageComponentBuilder
+import dev.jombi.kordsb.rest.builder.message.AllowedMentionsBuilder
+import dev.jombi.kordsb.rest.builder.message.EmbedBuilder
+import dev.jombi.kordsb.rest.json.request.MultiPartWebhookExecuteRequest
+import dev.jombi.kordsb.rest.json.request.WebhookExecuteRequest
 
 /**
  * Message builder for creating messages as a webhook user.

@@ -1,9 +1,9 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.annotation.DeprecatedSinceKord
-import dev.kord.common.entity.*
-import dev.kord.common.entity.optional.value
-import dev.kord.core.cache.data.ActivityData
+import dev.jombi.kordsb.common.annotation.DeprecatedSinceKord
+import dev.jombi.kordsb.common.entity.*
+import dev.jombi.kordsb.common.entity.optional.value
+import dev.jombi.kordsb.core.cache.data.ActivityData
 import kotlinx.datetime.Instant
 
 public class Activity(public val data: ActivityData) {

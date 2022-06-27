@@ -1,6 +1,6 @@
-package dev.kord.core.behavior
+package dev.jombi.kordsb.core.behavior
 
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.Snowflake
 import equality.GuildEntityEqualityTest
 import mockKord
 import org.junit.jupiter.api.Test

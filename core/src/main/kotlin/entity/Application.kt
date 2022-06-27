@@ -1,23 +1,23 @@
-package dev.kord.core.entity
+package dev.jombi.kordsb.core.entity
 
-import dev.kord.common.entity.ApplicationFlags
-import dev.kord.common.entity.InstallParams
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.orEmpty
-import dev.kord.core.Kord
-import dev.kord.core.behavior.GuildBehavior
-import dev.kord.core.behavior.UserBehavior
-import dev.kord.core.cache.data.ApplicationData
-import dev.kord.core.cache.data.BaseApplicationData
-import dev.kord.core.cache.data.PartialApplicationData
-import dev.kord.core.event.guild.InviteCreateEvent
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.ApplicationFlags
+import dev.jombi.kordsb.common.entity.InstallParams
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.orEmpty
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.behavior.GuildBehavior
+import dev.jombi.kordsb.core.behavior.UserBehavior
+import dev.jombi.kordsb.core.cache.data.ApplicationData
+import dev.jombi.kordsb.core.cache.data.BaseApplicationData
+import dev.jombi.kordsb.core.cache.data.PartialApplicationData
+import dev.jombi.kordsb.core.event.guild.InviteCreateEvent
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import java.util.*
 
 @Deprecated(
     "'ApplicationInfo' was renamed to 'Application'.",
-    ReplaceWith("Application", "dev.kord.core.entity.Application"),
+    ReplaceWith("Application", "dev.jombi.kordsb.core.entity.Application"),
     DeprecationLevel.ERROR,
 )
 public typealias ApplicationInfo = Application

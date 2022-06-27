@@ -1,10 +1,9 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
 import dev.kord.cache.api.data.DataDescription
 import dev.kord.cache.api.data.description
-import dev.kord.common.annotation.KordPreview
-import dev.kord.common.entity.DiscordGuildApplicationCommandPermissions
-import dev.kord.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.DiscordGuildApplicationCommandPermissions
+import dev.jombi.kordsb.common.entity.Snowflake
 
 public data class GuildApplicationCommandPermissionsData(
     val id: Snowflake,

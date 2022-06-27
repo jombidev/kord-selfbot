@@ -1,13 +1,13 @@
-package dev.kord.rest.builder.component
+package dev.jombi.kordsb.rest.builder.component
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.ComponentType
-import dev.kord.common.entity.DiscordTextInputComponent
-import dev.kord.common.entity.TextInputStyle
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.OptionalBoolean
-import dev.kord.common.entity.optional.OptionalInt
-import dev.kord.common.entity.optional.delegate.delegate
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.ComponentType
+import dev.jombi.kordsb.common.entity.DiscordTextInputComponent
+import dev.jombi.kordsb.common.entity.TextInputStyle
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.OptionalBoolean
+import dev.jombi.kordsb.common.entity.optional.OptionalInt
+import dev.jombi.kordsb.common.entity.optional.delegate.delegate
 
 /**
  * A builder for a [Discord Text Input](https://discord.com/developers/docs/interactions/message-components#text-inputs).

@@ -1,4 +1,4 @@
-package dev.kord.common.entity
+package dev.jombi.kordsb.common.entity
 
 import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName

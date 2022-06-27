@@ -1,4 +1,4 @@
-package dev.kord.voice.gateway
+package dev.jombi.kordsb.voice.gateway
 
 import kotlinx.coroutines.*
 

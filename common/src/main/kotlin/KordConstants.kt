@@ -1,9 +1,9 @@
 // No const vals, they are inlined, so recompiling would be required when values change.
 @file:Suppress("MayBeConstant")
 
-package dev.kord.common
+package dev.jombi.kordsb.common
 
-import dev.kord.common.annotation.KordExperimental
+import dev.jombi.kordsb.common.annotation.KordExperimental
 
 @KordExperimental
 public object KordConstants {

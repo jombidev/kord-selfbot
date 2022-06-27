@@ -1,6 +1,6 @@
-package dev.kord.gateway.handler
+package dev.jombi.kordsb.gateway.handler
 
-import dev.kord.gateway.*
+import dev.jombi.kordsb.gateway.*
 import kotlinx.atomicfu.atomic
 import kotlinx.atomicfu.update
 import kotlinx.coroutines.ObsoleteCoroutinesApi

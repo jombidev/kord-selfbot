@@ -1,14 +1,14 @@
-package dev.kord.rest.service
+package dev.jombi.kordsb.rest.service
 
-import dev.kord.common.entity.DiscordMessageSticker
-import dev.kord.common.entity.DiscordStickerPack
-import dev.kord.common.entity.Snowflake
-import dev.kord.rest.builder.guild.StickerModifyBuilder
-import dev.kord.rest.json.request.GuildStickerCreateRequest
-import dev.kord.rest.json.request.GuildStickerModifyRequest
-import dev.kord.rest.json.request.MultipartGuildStickerCreateRequest
-import dev.kord.rest.request.RequestHandler
-import dev.kord.rest.route.Route
+import dev.jombi.kordsb.common.entity.DiscordMessageSticker
+import dev.jombi.kordsb.common.entity.DiscordStickerPack
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.rest.builder.guild.StickerModifyBuilder
+import dev.jombi.kordsb.rest.json.request.GuildStickerCreateRequest
+import dev.jombi.kordsb.rest.json.request.GuildStickerModifyRequest
+import dev.jombi.kordsb.rest.json.request.MultipartGuildStickerCreateRequest
+import dev.jombi.kordsb.rest.request.RequestHandler
+import dev.jombi.kordsb.rest.route.Route
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

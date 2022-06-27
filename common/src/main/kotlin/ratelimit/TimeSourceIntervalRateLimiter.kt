@@ -1,4 +1,4 @@
-package dev.kord.common.ratelimit
+package dev.jombi.kordsb.common.ratelimit
 
 import kotlinx.coroutines.delay
 import kotlin.time.Duration

@@ -1,14 +1,14 @@
-package dev.kord.core.entity.interaction
+package dev.jombi.kordsb.core.entity.interaction
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.common.entity.optional.orEmpty
-import dev.kord.common.entity.optional.unwrap
-import dev.kord.core.Kord
-import dev.kord.core.KordObject
-import dev.kord.core.cache.data.ApplicationInteractionData
-import dev.kord.core.entity.*
-import dev.kord.core.entity.channel.ResolvedChannel
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.common.entity.optional.orEmpty
+import dev.jombi.kordsb.common.entity.optional.unwrap
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.core.cache.data.ApplicationInteractionData
+import dev.jombi.kordsb.core.entity.*
+import dev.jombi.kordsb.core.entity.channel.ResolvedChannel
 
 /**
  * The base interface of all commands that can be executed under a [ChatInputCommandInteraction].

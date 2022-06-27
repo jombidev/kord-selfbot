@@ -1,14 +1,14 @@
-package dev.kord.core.entity.channel.thread
+package dev.jombi.kordsb.core.entity.channel.thread
 
-import dev.kord.common.entity.ChannelType
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.ChannelData
-import dev.kord.core.entity.channel.TextChannel
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
-import dev.kord.core.supplier.getChannelOf
-import dev.kord.core.supplier.getChannelOfOrNull
+import dev.jombi.kordsb.common.entity.ChannelType
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.ChannelData
+import dev.jombi.kordsb.core.entity.channel.TextChannel
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.core.supplier.getChannelOf
+import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
 
 /**
  * A thread channel instance whose parent is a [TextChannel].

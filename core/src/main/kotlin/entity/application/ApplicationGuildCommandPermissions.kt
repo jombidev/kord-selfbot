@@ -1,9 +1,9 @@
-package dev.kord.core.entity.application
+package dev.jombi.kordsb.core.entity.application
 
-import dev.kord.common.entity.DiscordGuildApplicationCommandPermission
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.cache.data.GuildApplicationCommandPermissionData
-import dev.kord.core.cache.data.GuildApplicationCommandPermissionsData
+import dev.jombi.kordsb.common.entity.DiscordGuildApplicationCommandPermission
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.cache.data.GuildApplicationCommandPermissionData
+import dev.jombi.kordsb.core.cache.data.GuildApplicationCommandPermissionsData
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 

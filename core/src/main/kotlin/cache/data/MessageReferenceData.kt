@@ -1,7 +1,7 @@
-package dev.kord.core.cache.data
+package dev.jombi.kordsb.core.cache.data
 
-import dev.kord.common.entity.DiscordMessageReference
-import dev.kord.common.entity.optional.OptionalSnowflake
+import dev.jombi.kordsb.common.entity.DiscordMessageReference
+import dev.jombi.kordsb.common.entity.optional.OptionalSnowflake
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

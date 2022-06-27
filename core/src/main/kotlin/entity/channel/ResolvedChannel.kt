@@ -1,10 +1,10 @@
-package dev.kord.core.entity.channel
+package dev.jombi.kordsb.core.entity.channel
 
-import dev.kord.common.entity.Permissions
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.ChannelData
-import dev.kord.core.supplier.EntitySupplier
-import dev.kord.core.supplier.EntitySupplyStrategy
+import dev.jombi.kordsb.common.entity.Permissions
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.ChannelData
+import dev.jombi.kordsb.core.supplier.EntitySupplier
+import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 
 public class ResolvedChannel(
     override val data: ChannelData,

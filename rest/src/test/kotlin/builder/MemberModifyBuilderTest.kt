@@ -1,8 +1,8 @@
-package dev.kord.rest.builder
+package dev.jombi.kordsb.rest.builder
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.common.entity.optional.Optional
-import dev.kord.rest.builder.member.MemberModifyBuilder
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.rest.builder.member.MemberModifyBuilder
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 

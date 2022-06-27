@@ -1,13 +1,13 @@
-package dev.kord.core.behavior
+package dev.jombi.kordsb.core.behavior
 
-import dev.kord.common.entity.Snowflake
-import dev.kord.core.Kord
-import dev.kord.core.KordObject
-import dev.kord.core.cache.data.toData
-import dev.kord.core.entity.Guild
-import dev.kord.core.entity.Template
-import dev.kord.rest.builder.template.GuildFromTemplateCreateBuilder
-import dev.kord.rest.builder.template.GuildTemplateModifyBuilder
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.KordObject
+import dev.jombi.kordsb.core.cache.data.toData
+import dev.jombi.kordsb.core.entity.Guild
+import dev.jombi.kordsb.core.entity.Template
+import dev.jombi.kordsb.rest.builder.template.GuildFromTemplateCreateBuilder
+import dev.jombi.kordsb.rest.builder.template.GuildTemplateModifyBuilder
 import java.util.*
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract

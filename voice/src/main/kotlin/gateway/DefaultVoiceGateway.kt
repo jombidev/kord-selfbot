@@ -1,10 +1,10 @@
-package dev.kord.voice.gateway
+package dev.jombi.kordsb.voice.gateway
 
-import dev.kord.common.annotation.KordVoice
-import dev.kord.common.entity.Snowflake
-import dev.kord.gateway.retry.Retry
-import dev.kord.voice.gateway.handler.HandshakeHandler
-import dev.kord.voice.gateway.handler.HeartbeatHandler
+import dev.jombi.kordsb.common.annotation.KordVoice
+import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.gateway.retry.Retry
+import dev.jombi.kordsb.voice.gateway.handler.HandshakeHandler
+import dev.jombi.kordsb.voice.gateway.handler.HeartbeatHandler
 import io.ktor.client.*
 import io.ktor.client.plugins.*
 import io.ktor.client.plugins.websocket.*

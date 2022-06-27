@@ -1,4 +1,4 @@
-package dev.kord.gateway
+package dev.jombi.kordsb.gateway
 
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable

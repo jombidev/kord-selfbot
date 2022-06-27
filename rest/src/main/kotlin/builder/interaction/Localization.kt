@@ -1,7 +1,7 @@
-package dev.kord.rest.builder.interaction
+package dev.jombi.kordsb.rest.builder.interaction
 
-import dev.kord.common.Locale
-import dev.kord.common.annotation.KordDsl
+import dev.jombi.kordsb.common.Locale
+import dev.jombi.kordsb.common.annotation.KordDsl
 
 /**
  * Builder that has a localizable name.

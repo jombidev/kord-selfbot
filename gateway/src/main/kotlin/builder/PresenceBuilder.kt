@@ -1,12 +1,12 @@
-package dev.kord.gateway.builder
+package dev.jombi.kordsb.gateway.builder
 
-import dev.kord.common.annotation.KordDsl
-import dev.kord.common.entity.ActivityType
-import dev.kord.common.entity.DiscordBotActivity
-import dev.kord.common.entity.PresenceStatus
-import dev.kord.common.entity.optional.Optional
-import dev.kord.gateway.DiscordPresence
-import dev.kord.gateway.UpdateStatus
+import dev.jombi.kordsb.common.annotation.KordDsl
+import dev.jombi.kordsb.common.entity.ActivityType
+import dev.jombi.kordsb.common.entity.DiscordBotActivity
+import dev.jombi.kordsb.common.entity.PresenceStatus
+import dev.jombi.kordsb.common.entity.optional.Optional
+import dev.jombi.kordsb.gateway.DiscordPresence
+import dev.jombi.kordsb.gateway.UpdateStatus
 import kotlinx.datetime.Instant
 
 @KordDsl

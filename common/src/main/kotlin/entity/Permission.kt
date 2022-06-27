@@ -1,7 +1,7 @@
-package dev.kord.common.entity
+package dev.jombi.kordsb.common.entity
 
-import dev.kord.common.DiscordBitSet
-import dev.kord.common.EmptyBitSet
+import dev.jombi.kordsb.common.DiscordBitSet
+import dev.jombi.kordsb.common.EmptyBitSet
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.descriptors.PrimitiveKind
@@ -290,7 +290,7 @@ public sealed class Permission(public val code: DiscordBitSet) {
 
         @Deprecated(
             "Renamed to 'ManageEmojisAndStickers'.",
-            ReplaceWith("Permission.ManageEmojisAndStickers", "dev.kord.common.entity.Permission"),
+            ReplaceWith("Permission.ManageEmojisAndStickers", "dev.jombi.kordsb.common.entity.Permission"),
             DeprecationLevel.ERROR,
         )
         public val ManageEmojis: ManageEmojisAndStickers
@@ -298,7 +298,7 @@ public sealed class Permission(public val code: DiscordBitSet) {
 
         @Deprecated(
             "Renamed to 'UseApplicationCommands'.",
-            ReplaceWith("Permission.UseApplicationCommands", "dev.kord.common.entity.Permission"),
+            ReplaceWith("Permission.UseApplicationCommands", "dev.jombi.kordsb.common.entity.Permission"),
             DeprecationLevel.ERROR,
         )
         public val UseSlashCommands: UseApplicationCommands

@@ -1,8 +1,8 @@
-package dev.kord.core.cache
+package dev.jombi.kordsb.core.cache
 
 import dev.kord.cache.api.DataCache
-import dev.kord.gateway.Close
-import dev.kord.gateway.Gateway
+import dev.jombi.kordsb.gateway.Close
+import dev.jombi.kordsb.gateway.Gateway
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.filterIsInstance
 import kotlinx.coroutines.flow.launchIn

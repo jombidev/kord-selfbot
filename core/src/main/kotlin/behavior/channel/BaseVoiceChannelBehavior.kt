@@ -1,11 +1,11 @@
-package dev.kord.core.behavior.channel
+package dev.jombi.kordsb.core.behavior.channel
 
 import dev.kord.cache.api.query
-import dev.kord.common.exception.RequestException
-import dev.kord.core.Kord
-import dev.kord.core.cache.data.VoiceStateData
-import dev.kord.core.cache.idEq
-import dev.kord.core.entity.VoiceState
+import dev.jombi.kordsb.common.exception.RequestException
+import dev.jombi.kordsb.core.Kord
+import dev.jombi.kordsb.core.cache.data.VoiceStateData
+import dev.jombi.kordsb.core.cache.idEq
+import dev.jombi.kordsb.core.entity.VoiceState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 

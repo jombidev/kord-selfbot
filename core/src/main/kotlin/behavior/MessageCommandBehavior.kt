@@ -1,10 +1,10 @@
-package dev.kord.core.behavior
+package dev.jombi.kordsb.core.behavior
 
-import dev.kord.core.cache.data.ApplicationCommandData
-import dev.kord.core.entity.application.GlobalMessageCommand
-import dev.kord.core.entity.application.GuildMessageCommand
-import dev.kord.core.entity.application.MessageCommand
-import dev.kord.rest.builder.interaction.MessageCommandModifyBuilder
+import dev.jombi.kordsb.core.cache.data.ApplicationCommandData
+import dev.jombi.kordsb.core.entity.application.GlobalMessageCommand
+import dev.jombi.kordsb.core.entity.application.GuildMessageCommand
+import dev.jombi.kordsb.core.entity.application.MessageCommand
+import dev.jombi.kordsb.rest.builder.interaction.MessageCommandModifyBuilder
 
 
 public interface MessageCommandBehavior : ApplicationCommandBehavior {

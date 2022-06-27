@@ -1,4 +1,4 @@
-package dev.kord.core.exception
+package dev.jombi.kordsb.core.exception
 
 public class KordInitializationException : Exception {
     public constructor(message: String) : super(message)

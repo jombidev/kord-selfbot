@@ -1,10 +1,10 @@
-package dev.kord.core.entity.component
+package dev.jombi.kordsb.core.entity.component
 
-import dev.kord.common.entity.ComponentType
-import dev.kord.core.cache.data.ChatComponentData
-import dev.kord.core.cache.data.ComponentData
-import dev.kord.core.cache.data.TextInputComponentData
-import dev.kord.core.entity.Message
+import dev.jombi.kordsb.common.entity.ComponentType
+import dev.jombi.kordsb.core.cache.data.ChatComponentData
+import dev.jombi.kordsb.core.cache.data.ComponentData
+import dev.jombi.kordsb.core.cache.data.TextInputComponentData
+import dev.jombi.kordsb.core.entity.Message
 
 /**
  * An interactive element inside a [Message].
