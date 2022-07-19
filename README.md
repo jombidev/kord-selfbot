@@ -48,11 +48,13 @@ abstractions, we'd recommend using this.
 ```kotlin
 suspend fun main() {
     val kord = Kord("your account token")
+    val prefix = "."
 
     kord.on<MessageCreateEvent> {
         val content = message.content
         val channel = message.channel
         if (!prefixCommand.startsWith(prefix)) return@on
+        if (this.message.author?.id != kord.selfId) return@on
 
         val rawArguments = content.split(" ")
         val prefixCommand = rawArguments[0]
