@@ -6,7 +6,8 @@ import dev.jombi.kordsb.rest.route.Route
 import io.ktor.http.*
 import kotlinx.serialization.SerializationStrategy
 
-public class RequestBuilder<T>(private val route: Route<T>, keySize: Int = 2) {
+public class RequestBuilder<T>(public val route: Route<T>, keySize: Int = 2) {
+    public var baseUrl: String = Route.baseUrl
 
     public val keys: MutableMap<Route.Key, String> = HashMap(keySize, 1f)
 
@@ -62,7 +63,7 @@ public class RequestBuilder<T>(private val route: Route<T>, keySize: Int = 2) {
     }
 
     public fun build(): Request<*, T> = when {
-        files.isEmpty() -> JsonRequest(route, keys, parameters.build(), headers.build(), body)
-        else -> MultipartRequest(route, keys, parameters.build(), headers.build(), body, files)
+        files.isEmpty() -> JsonRequest(route, keys, parameters.build(), headers.build(), body, baseUrl)
+        else -> MultipartRequest(route, keys, parameters.build(), headers.build(), body, files, baseUrl)
     }
 }

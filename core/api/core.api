@@ -93,6 +93,8 @@ public final class dev/jombi/kordsb/core/Kord : kotlinx/coroutines/CoroutineScop
 	public final fun login (Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun login$default (Ldev/jombi/kordsb/core/Kord;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun logout (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun proxy (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;)Ldev/jombi/kordsb/core/Kord;
+	public static synthetic fun proxy$default (Ldev/jombi/kordsb/core/Kord;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ldev/jombi/kordsb/core/Kord;
 	public final fun shutdown (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun toString ()Ljava/lang/String;
 	public final fun with (Ldev/jombi/kordsb/core/supplier/EntitySupplyStrategy;)Ldev/jombi/kordsb/core/supplier/EntitySupplier;
@@ -239,6 +241,7 @@ public abstract interface class dev/jombi/kordsb/core/behavior/GuildBehavior : d
 	public abstract fun asGuildOrNull (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun createSticker (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/rest/NamedFile;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun delete (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun editMFALevel (Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun editSelfNickname (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun editWelcomeScreen (Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun fetchGuild (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -247,6 +250,7 @@ public abstract interface class dev/jombi/kordsb/core/behavior/GuildBehavior : d
 	public abstract fun getBan (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getBanOrNull (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getBans ()Lkotlinx/coroutines/flow/Flow;
+	public abstract fun getCachedThreads ()Lkotlinx/coroutines/flow/Flow;
 	public abstract fun getChannel (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getChannelOrNull (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getChannels ()Lkotlinx/coroutines/flow/Flow;
@@ -296,6 +300,7 @@ public final class dev/jombi/kordsb/core/behavior/GuildBehavior$DefaultImpls {
 	public static fun compareTo (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ldev/jombi/kordsb/core/entity/Entity;)I
 	public static fun createSticker (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/rest/NamedFile;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static fun delete (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun editMFALevel (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static fun editSelfNickname (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun editSelfNickname$default (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public static fun editWelcomeScreen (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -305,6 +310,7 @@ public final class dev/jombi/kordsb/core/behavior/GuildBehavior$DefaultImpls {
 	public static fun getBan (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static fun getBanOrNull (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static fun getBans (Ldev/jombi/kordsb/core/behavior/GuildBehavior;)Lkotlinx/coroutines/flow/Flow;
+	public static fun getCachedThreads (Ldev/jombi/kordsb/core/behavior/GuildBehavior;)Lkotlinx/coroutines/flow/Flow;
 	public static fun getChannel (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static fun getChannelOrNull (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static fun getChannels (Ldev/jombi/kordsb/core/behavior/GuildBehavior;)Lkotlinx/coroutines/flow/Flow;
@@ -1980,16 +1986,32 @@ public final class dev/jombi/kordsb/core/builder/kord/KordBuilderKt {
 	public static synthetic fun invoke$default (Ldev/jombi/kordsb/gateway/DefaultGateway$Companion;Ldev/jombi/kordsb/core/ClientResources;Ldev/jombi/kordsb/gateway/retry/Retry;ILjava/lang/Object;)Ldev/jombi/kordsb/gateway/DefaultGateway;
 }
 
-public final class dev/jombi/kordsb/core/builder/kord/KordRestOnlyBuilder {
+public final class dev/jombi/kordsb/core/builder/kord/KordProxyBuilder : dev/jombi/kordsb/core/builder/kord/RestOnlyBuilder {
+	public fun <init> (Ldev/jombi/kordsb/common/entity/Snowflake;)V
+	public fun getApplicationId ()Ldev/jombi/kordsb/common/entity/Snowflake;
+	public fun setApplicationId (Ldev/jombi/kordsb/common/entity/Snowflake;)V
+}
+
+public final class dev/jombi/kordsb/core/builder/kord/KordRestOnlyBuilder : dev/jombi/kordsb/core/builder/kord/RestOnlyBuilder {
 	public fun <init> (Ljava/lang/String;)V
+	public fun getApplicationId ()Ldev/jombi/kordsb/common/entity/Snowflake;
+	public fun getToken ()Ljava/lang/String;
+	public fun setApplicationId (Ldev/jombi/kordsb/common/entity/Snowflake;)V
+	public fun setToken (Ljava/lang/String;)V
+}
+
+public abstract class dev/jombi/kordsb/core/builder/kord/RestOnlyBuilder {
+	public fun <init> ()V
 	public final fun build ()Ldev/jombi/kordsb/core/Kord;
-	public final fun getApplicationId ()Ldev/jombi/kordsb/common/entity/Snowflake;
+	public abstract fun getApplicationId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun getDefaultDispatcher ()Lkotlinx/coroutines/CoroutineDispatcher;
+	protected final fun getHandlerBuilder ()Lkotlin/jvm/functions/Function1;
 	public final fun getHttpClient ()Lio/ktor/client/HttpClient;
-	public final fun getToken ()Ljava/lang/String;
+	protected abstract fun getToken ()Ljava/lang/String;
 	public final fun requestHandler (Lkotlin/jvm/functions/Function1;)V
-	public final fun setApplicationId (Ldev/jombi/kordsb/common/entity/Snowflake;)V
+	public abstract fun setApplicationId (Ldev/jombi/kordsb/common/entity/Snowflake;)V
 	public final fun setDefaultDispatcher (Lkotlinx/coroutines/CoroutineDispatcher;)V
+	protected final fun setHandlerBuilder (Lkotlin/jvm/functions/Function1;)V
 	public final fun setHttpClient (Lio/ktor/client/HttpClient;)V
 }
 
@@ -2127,11 +2149,11 @@ public final class dev/jombi/kordsb/core/cache/data/ActivityData$Companion {
 
 public final class dev/jombi/kordsb/core/cache/data/ApplicationCommandData {
 	public static final field Companion Ldev/jombi/kordsb/core/cache/data/ApplicationCommandData$Companion;
-	public synthetic fun <init> (ILdev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
-	public fun <init> (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/Snowflake;)V
-	public synthetic fun <init> (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/Snowflake;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (ILdev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/Permissions;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/Permissions;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/Snowflake;)V
+	public synthetic fun <init> (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/Permissions;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/Snowflake;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ldev/jombi/kordsb/common/entity/Snowflake;
-	public final fun component10 ()Ldev/jombi/kordsb/common/entity/optional/Optional;
+	public final fun component10 ()Ldev/jombi/kordsb/common/entity/Permissions;
 	public final fun component11 ()Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;
 	public final fun component12 ()Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;
 	public final fun component13 ()Ldev/jombi/kordsb/common/entity/Snowflake;
@@ -2143,11 +2165,11 @@ public final class dev/jombi/kordsb/core/cache/data/ApplicationCommandData {
 	public final fun component7 ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun component8 ()Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;
 	public final fun component9 ()Ldev/jombi/kordsb/common/entity/optional/Optional;
-	public final fun copy (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/Snowflake;)Ldev/jombi/kordsb/core/cache/data/ApplicationCommandData;
-	public static synthetic fun copy$default (Ldev/jombi/kordsb/core/cache/data/ApplicationCommandData;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/Snowflake;ILjava/lang/Object;)Ldev/jombi/kordsb/core/cache/data/ApplicationCommandData;
+	public final fun copy (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/Permissions;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/Snowflake;)Ldev/jombi/kordsb/core/cache/data/ApplicationCommandData;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/core/cache/data/ApplicationCommandData;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/Permissions;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/Snowflake;ILjava/lang/Object;)Ldev/jombi/kordsb/core/cache/data/ApplicationCommandData;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getApplicationId ()Ldev/jombi/kordsb/common/entity/Snowflake;
-	public final fun getDefaultMemberPermissions ()Ldev/jombi/kordsb/common/entity/optional/Optional;
+	public final fun getDefaultMemberPermissions ()Ldev/jombi/kordsb/common/entity/Permissions;
 	public final fun getDefaultPermission ()Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;
 	public final fun getDescription ()Ljava/lang/String;
 	public final fun getDescriptionLocalizations ()Ldev/jombi/kordsb/common/entity/optional/Optional;
@@ -2249,10 +2271,13 @@ public final class dev/jombi/kordsb/core/cache/data/ApplicationCommandOptionChoi
 
 public final class dev/jombi/kordsb/core/cache/data/ApplicationCommandOptionData {
 	public static final field Companion Ldev/jombi/kordsb/core/cache/data/ApplicationCommandOptionData$Companion;
-	public synthetic fun <init> (ILdev/jombi/kordsb/common/entity/ApplicationCommandOptionType;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
-	public fun <init> (Ldev/jombi/kordsb/common/entity/ApplicationCommandOptionType;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;)V
-	public synthetic fun <init> (Ldev/jombi/kordsb/common/entity/ApplicationCommandOptionType;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (ILdev/jombi/kordsb/common/entity/ApplicationCommandOptionType;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalInt;Ldev/jombi/kordsb/common/entity/optional/OptionalInt;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ldev/jombi/kordsb/common/entity/ApplicationCommandOptionType;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalInt;Ldev/jombi/kordsb/common/entity/optional/OptionalInt;)V
+	public synthetic fun <init> (Ldev/jombi/kordsb/common/entity/ApplicationCommandOptionType;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalInt;Ldev/jombi/kordsb/common/entity/optional/OptionalInt;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ldev/jombi/kordsb/common/entity/ApplicationCommandOptionType;
+	public final fun component10 ()Ldev/jombi/kordsb/common/entity/optional/Optional;
+	public final fun component11 ()Ldev/jombi/kordsb/common/entity/optional/OptionalInt;
+	public final fun component12 ()Ldev/jombi/kordsb/common/entity/optional/OptionalInt;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
 	public final fun component4 ()Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;
@@ -2260,13 +2285,18 @@ public final class dev/jombi/kordsb/core/cache/data/ApplicationCommandOptionData
 	public final fun component6 ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun component7 ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun component8 ()Ldev/jombi/kordsb/common/entity/optional/Optional;
-	public final fun copy (Ldev/jombi/kordsb/common/entity/ApplicationCommandOptionType;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;)Ldev/jombi/kordsb/core/cache/data/ApplicationCommandOptionData;
-	public static synthetic fun copy$default (Ldev/jombi/kordsb/core/cache/data/ApplicationCommandOptionData;Ldev/jombi/kordsb/common/entity/ApplicationCommandOptionType;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;ILjava/lang/Object;)Ldev/jombi/kordsb/core/cache/data/ApplicationCommandOptionData;
+	public final fun component9 ()Ldev/jombi/kordsb/common/entity/optional/Optional;
+	public final fun copy (Ldev/jombi/kordsb/common/entity/ApplicationCommandOptionType;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalInt;Ldev/jombi/kordsb/common/entity/optional/OptionalInt;)Ldev/jombi/kordsb/core/cache/data/ApplicationCommandOptionData;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/core/cache/data/ApplicationCommandOptionData;Ldev/jombi/kordsb/common/entity/ApplicationCommandOptionType;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/OptionalInt;Ldev/jombi/kordsb/common/entity/optional/OptionalInt;ILjava/lang/Object;)Ldev/jombi/kordsb/core/cache/data/ApplicationCommandOptionData;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getChannelTypes ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun getChoices ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun getDefault ()Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;
 	public final fun getDescription ()Ljava/lang/String;
+	public final fun getMaxLength ()Ldev/jombi/kordsb/common/entity/optional/OptionalInt;
+	public final fun getMaxValue ()Ldev/jombi/kordsb/common/entity/optional/Optional;
+	public final fun getMinLength ()Ldev/jombi/kordsb/common/entity/optional/OptionalInt;
+	public final fun getMinValue ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun getName ()Ljava/lang/String;
 	public final fun getOptions ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun getRequired ()Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;
@@ -3592,15 +3622,16 @@ public final class dev/jombi/kordsb/core/cache/data/IntegrationsAccountData$Comp
 
 public final class dev/jombi/kordsb/core/cache/data/InteractionData {
 	public static final field Companion Ldev/jombi/kordsb/core/cache/data/InteractionData$Companion;
-	public synthetic fun <init> (ILdev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/InteractionType;Ldev/jombi/kordsb/core/cache/data/ApplicationInteractionData;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;ILdev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
-	public fun <init> (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/InteractionType;Ldev/jombi/kordsb/core/cache/data/ApplicationInteractionData;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;ILdev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;)V
-	public synthetic fun <init> (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/InteractionType;Ldev/jombi/kordsb/core/cache/data/ApplicationInteractionData;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;ILdev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (ILdev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/InteractionType;Ldev/jombi/kordsb/core/cache/data/ApplicationInteractionData;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;ILdev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/InteractionType;Ldev/jombi/kordsb/core/cache/data/ApplicationInteractionData;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;ILdev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;)V
+	public synthetic fun <init> (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/InteractionType;Ldev/jombi/kordsb/core/cache/data/ApplicationInteractionData;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;ILdev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun component10 ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun component11 ()I
 	public final fun component12 ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun component13 ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun component14 ()Ldev/jombi/kordsb/common/entity/optional/Optional;
+	public final fun component15 ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun component2 ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun component3 ()Ldev/jombi/kordsb/common/entity/InteractionType;
 	public final fun component4 ()Ldev/jombi/kordsb/core/cache/data/ApplicationInteractionData;
@@ -3609,9 +3640,10 @@ public final class dev/jombi/kordsb/core/cache/data/InteractionData {
 	public final fun component7 ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun component8 ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun component9 ()Ljava/lang/String;
-	public final fun copy (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/InteractionType;Ldev/jombi/kordsb/core/cache/data/ApplicationInteractionData;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;ILdev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;)Ldev/jombi/kordsb/core/cache/data/InteractionData;
-	public static synthetic fun copy$default (Ldev/jombi/kordsb/core/cache/data/InteractionData;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/InteractionType;Ldev/jombi/kordsb/core/cache/data/ApplicationInteractionData;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;ILdev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;ILjava/lang/Object;)Ldev/jombi/kordsb/core/cache/data/InteractionData;
+	public final fun copy (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/InteractionType;Ldev/jombi/kordsb/core/cache/data/ApplicationInteractionData;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;ILdev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;)Ldev/jombi/kordsb/core/cache/data/InteractionData;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/core/cache/data/InteractionData;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/InteractionType;Ldev/jombi/kordsb/core/cache/data/ApplicationInteractionData;Ldev/jombi/kordsb/common/entity/optional/OptionalSnowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;ILdev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;Ldev/jombi/kordsb/common/entity/optional/Optional;ILjava/lang/Object;)Ldev/jombi/kordsb/core/cache/data/InteractionData;
 	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAppPermissions ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun getApplicationId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun getChannelId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun getData ()Ldev/jombi/kordsb/core/cache/data/ApplicationInteractionData;
@@ -5731,6 +5763,7 @@ public final class dev/jombi/kordsb/core/entity/Guild : dev/jombi/kordsb/core/be
 	public synthetic fun compareTo (Ljava/lang/Object;)I
 	public fun createSticker (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/rest/NamedFile;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun delete (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun editMFALevel (Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun editSelfNickname (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun editWelcomeScreen (Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun equals (Ljava/lang/Object;)Z
@@ -5750,6 +5783,7 @@ public final class dev/jombi/kordsb/core/entity/Guild : dev/jombi/kordsb/core/be
 	public final fun getBannerHash ()Ljava/lang/String;
 	public final fun getBannerUrl (Ldev/jombi/kordsb/rest/Image$Format;)Ljava/lang/String;
 	public fun getBans ()Lkotlinx/coroutines/flow/Flow;
+	public fun getCachedThreads ()Lkotlinx/coroutines/flow/Flow;
 	public fun getChannel (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getChannelBehaviors ()Ljava/util/Set;
 	public final fun getChannelIds ()Ljava/util/Set;
@@ -6290,6 +6324,7 @@ public final class dev/jombi/kordsb/core/entity/PartialGuild : dev/jombi/kordsb/
 	public synthetic fun compareTo (Ljava/lang/Object;)I
 	public fun createSticker (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/rest/NamedFile;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun delete (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun editMFALevel (Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun editSelfNickname (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun editWelcomeScreen (Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun equals (Ljava/lang/Object;)Z
@@ -6301,6 +6336,7 @@ public final class dev/jombi/kordsb/core/entity/PartialGuild : dev/jombi/kordsb/
 	public final fun getBanner (Ldev/jombi/kordsb/rest/Image$Format;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getBannerUrl (Ldev/jombi/kordsb/rest/Image$Format;)Ljava/lang/String;
 	public fun getBans ()Lkotlinx/coroutines/flow/Flow;
+	public fun getCachedThreads ()Lkotlinx/coroutines/flow/Flow;
 	public fun getChannel (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun getChannelOrNull (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun getChannels ()Lkotlinx/coroutines/flow/Flow;
@@ -9083,6 +9119,7 @@ public final class dev/jombi/kordsb/core/entity/interaction/GuildApplicationComm
 	public static fun deferPublicMessage (Ldev/jombi/kordsb/core/entity/interaction/GuildApplicationCommandInteraction;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static fun deferPublicResponse (Ldev/jombi/kordsb/core/entity/interaction/GuildApplicationCommandInteraction;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static fun deferPublicResponseUnsafe (Ldev/jombi/kordsb/core/entity/interaction/GuildApplicationCommandInteraction;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun getAppPermissions (Ldev/jombi/kordsb/core/entity/interaction/GuildApplicationCommandInteraction;)Ldev/jombi/kordsb/common/entity/Permissions;
 	public static fun getApplicationId (Ldev/jombi/kordsb/core/entity/interaction/GuildApplicationCommandInteraction;)Ldev/jombi/kordsb/common/entity/Snowflake;
 	public static fun getChannel (Ldev/jombi/kordsb/core/entity/interaction/GuildApplicationCommandInteraction;)Ldev/jombi/kordsb/core/behavior/channel/GuildMessageChannelBehavior;
 	public static fun getChannel (Ldev/jombi/kordsb/core/entity/interaction/GuildApplicationCommandInteraction;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -9117,6 +9154,7 @@ public final class dev/jombi/kordsb/core/entity/interaction/GuildAutoCompleteInt
 	public fun compareTo (Ldev/jombi/kordsb/core/entity/Entity;)I
 	public synthetic fun compareTo (Ljava/lang/Object;)I
 	public fun equals (Ljava/lang/Object;)Z
+	public fun getAppPermissions ()Ldev/jombi/kordsb/common/entity/Permissions;
 	public fun getApplicationId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public fun getChannel ()Ldev/jombi/kordsb/core/behavior/channel/GuildMessageChannelBehavior;
 	public synthetic fun getChannel ()Ldev/jombi/kordsb/core/behavior/channel/MessageChannelBehavior;
@@ -9173,6 +9211,7 @@ public final class dev/jombi/kordsb/core/entity/interaction/GuildButtonInteracti
 	public fun deferPublicResponse (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun deferPublicResponseUnsafe (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun equals (Ljava/lang/Object;)Z
+	public fun getAppPermissions ()Ldev/jombi/kordsb/common/entity/Permissions;
 	public fun getApplicationId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public fun getChannel ()Ldev/jombi/kordsb/core/behavior/channel/GuildMessageChannelBehavior;
 	public synthetic fun getChannel ()Ldev/jombi/kordsb/core/behavior/channel/MessageChannelBehavior;
@@ -9233,6 +9272,7 @@ public final class dev/jombi/kordsb/core/entity/interaction/GuildChatInputComman
 	public fun deferPublicResponse (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun deferPublicResponseUnsafe (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun equals (Ljava/lang/Object;)Z
+	public fun getAppPermissions ()Ldev/jombi/kordsb/common/entity/Permissions;
 	public fun getApplicationId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public fun getChannel ()Ldev/jombi/kordsb/core/behavior/channel/GuildMessageChannelBehavior;
 	public synthetic fun getChannel ()Ldev/jombi/kordsb/core/behavior/channel/MessageChannelBehavior;
@@ -9299,6 +9339,7 @@ public final class dev/jombi/kordsb/core/entity/interaction/GuildComponentIntera
 	public static fun deferPublicMessageUpdate (Ldev/jombi/kordsb/core/entity/interaction/GuildComponentInteraction;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static fun deferPublicResponse (Ldev/jombi/kordsb/core/entity/interaction/GuildComponentInteraction;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static fun deferPublicResponseUnsafe (Ldev/jombi/kordsb/core/entity/interaction/GuildComponentInteraction;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun getAppPermissions (Ldev/jombi/kordsb/core/entity/interaction/GuildComponentInteraction;)Ldev/jombi/kordsb/common/entity/Permissions;
 	public static fun getApplicationId (Ldev/jombi/kordsb/core/entity/interaction/GuildComponentInteraction;)Ldev/jombi/kordsb/common/entity/Snowflake;
 	public static fun getChannel (Ldev/jombi/kordsb/core/entity/interaction/GuildComponentInteraction;)Ldev/jombi/kordsb/core/behavior/channel/GuildMessageChannelBehavior;
 	public static fun getChannel (Ldev/jombi/kordsb/core/entity/interaction/GuildComponentInteraction;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -9325,6 +9366,7 @@ public final class dev/jombi/kordsb/core/entity/interaction/GuildComponentIntera
 }
 
 public abstract interface class dev/jombi/kordsb/core/entity/interaction/GuildInteraction : dev/jombi/kordsb/core/behavior/interaction/GuildInteractionBehavior, dev/jombi/kordsb/core/entity/interaction/Interaction {
+	public abstract fun getAppPermissions ()Ldev/jombi/kordsb/common/entity/Permissions;
 	public abstract fun getGuildId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public abstract fun getPermissions ()Ldev/jombi/kordsb/common/entity/Permissions;
 	public abstract fun getUser ()Ldev/jombi/kordsb/core/entity/Member;
@@ -9333,6 +9375,7 @@ public abstract interface class dev/jombi/kordsb/core/entity/interaction/GuildIn
 
 public final class dev/jombi/kordsb/core/entity/interaction/GuildInteraction$DefaultImpls {
 	public static fun compareTo (Ldev/jombi/kordsb/core/entity/interaction/GuildInteraction;Ldev/jombi/kordsb/core/entity/Entity;)I
+	public static fun getAppPermissions (Ldev/jombi/kordsb/core/entity/interaction/GuildInteraction;)Ldev/jombi/kordsb/common/entity/Permissions;
 	public static fun getApplicationId (Ldev/jombi/kordsb/core/entity/interaction/GuildInteraction;)Ldev/jombi/kordsb/common/entity/Snowflake;
 	public static fun getChannel (Ldev/jombi/kordsb/core/entity/interaction/GuildInteraction;)Ldev/jombi/kordsb/core/behavior/channel/GuildMessageChannelBehavior;
 	public static fun getChannel (Ldev/jombi/kordsb/core/entity/interaction/GuildInteraction;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -9366,6 +9409,7 @@ public final class dev/jombi/kordsb/core/entity/interaction/GuildMessageCommandI
 	public fun deferPublicResponse (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun deferPublicResponseUnsafe (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun equals (Ljava/lang/Object;)Z
+	public fun getAppPermissions ()Ldev/jombi/kordsb/common/entity/Permissions;
 	public fun getApplicationId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public fun getChannel ()Ldev/jombi/kordsb/core/behavior/channel/GuildMessageChannelBehavior;
 	public synthetic fun getChannel ()Ldev/jombi/kordsb/core/behavior/channel/MessageChannelBehavior;
@@ -9438,6 +9482,7 @@ public final class dev/jombi/kordsb/core/entity/interaction/GuildModalSubmitInte
 	public fun deferPublicResponseUnsafe (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun equals (Ljava/lang/Object;)Z
 	public fun getActionRows ()Ljava/util/List;
+	public fun getAppPermissions ()Ldev/jombi/kordsb/common/entity/Permissions;
 	public fun getApplicationId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public fun getChannel ()Ldev/jombi/kordsb/core/behavior/channel/GuildMessageChannelBehavior;
 	public synthetic fun getChannel ()Ldev/jombi/kordsb/core/behavior/channel/MessageChannelBehavior;
@@ -9497,6 +9542,7 @@ public final class dev/jombi/kordsb/core/entity/interaction/GuildSelectMenuInter
 	public fun deferPublicResponse (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun deferPublicResponseUnsafe (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun equals (Ljava/lang/Object;)Z
+	public fun getAppPermissions ()Ldev/jombi/kordsb/common/entity/Permissions;
 	public fun getApplicationId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public fun getChannel ()Ldev/jombi/kordsb/core/behavior/channel/GuildMessageChannelBehavior;
 	public synthetic fun getChannel ()Ldev/jombi/kordsb/core/behavior/channel/MessageChannelBehavior;
@@ -9558,6 +9604,7 @@ public final class dev/jombi/kordsb/core/entity/interaction/GuildUserCommandInte
 	public fun deferPublicResponse (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun deferPublicResponseUnsafe (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun equals (Ljava/lang/Object;)Z
+	public fun getAppPermissions ()Ldev/jombi/kordsb/common/entity/Permissions;
 	public fun getApplicationId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public fun getChannel ()Ldev/jombi/kordsb/core/behavior/channel/GuildMessageChannelBehavior;
 	public synthetic fun getChannel ()Ldev/jombi/kordsb/core/behavior/channel/MessageChannelBehavior;

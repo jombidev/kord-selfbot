@@ -3,10 +3,7 @@ package dev.jombi.kordsb.core.behavior
 import dev.kord.cache.api.query
 import dev.jombi.kordsb.common.annotation.DeprecatedSinceKord
 import dev.jombi.kordsb.common.annotation.KordExperimental
-import dev.jombi.kordsb.common.entity.DiscordUser
-import dev.jombi.kordsb.common.entity.GuildScheduledEventPrivacyLevel
-import dev.jombi.kordsb.common.entity.ScheduledEntityType
-import dev.jombi.kordsb.common.entity.Snowflake
+import dev.jombi.kordsb.common.entity.*
 import dev.jombi.kordsb.common.entity.optional.Optional
 import dev.jombi.kordsb.common.entity.optional.unwrap
 import dev.jombi.kordsb.common.exception.RequestException
@@ -15,28 +12,17 @@ import dev.jombi.kordsb.core.cache.data.*
 import dev.jombi.kordsb.core.cache.idEq
 import dev.jombi.kordsb.core.catchDiscordError
 import dev.jombi.kordsb.core.entity.*
-import dev.jombi.kordsb.core.entity.application.GuildApplicationCommand
-import dev.jombi.kordsb.core.entity.application.GuildChatInputCommand
-import dev.jombi.kordsb.core.entity.application.GuildMessageCommand
-import dev.jombi.kordsb.core.entity.application.GuildUserCommand
 import dev.jombi.kordsb.core.entity.channel.*
 import dev.jombi.kordsb.core.entity.channel.thread.ThreadChannel
-import dev.jombi.kordsb.core.event.guild.MembersChunkEvent
 import dev.jombi.kordsb.core.exception.EntityNotFoundException
 import dev.jombi.kordsb.core.supplier.*
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy.Companion.rest
-import dev.jombi.kordsb.gateway.Gateway
-import dev.jombi.kordsb.gateway.PrivilegedIntent
-import dev.jombi.kordsb.gateway.RequestGuildMembers
-import dev.jombi.kordsb.gateway.builder.RequestGuildMembersBuilder
-import dev.jombi.kordsb.gateway.start
 import dev.jombi.kordsb.rest.Image
 import dev.jombi.kordsb.rest.NamedFile
 import dev.jombi.kordsb.rest.builder.auditlog.AuditLogGetRequestBuilder
 import dev.jombi.kordsb.rest.builder.ban.BanCreateBuilder
 import dev.jombi.kordsb.rest.builder.channel.*
 import dev.jombi.kordsb.rest.builder.guild.*
-import dev.jombi.kordsb.rest.builder.interaction.*
 import dev.jombi.kordsb.rest.builder.role.RoleCreateBuilder
 import dev.jombi.kordsb.rest.builder.role.RolePositionsModifyBuilder
 import dev.jombi.kordsb.rest.json.JsonErrorCode
@@ -68,12 +54,26 @@ public interface GuildBehavior : KordEntity, Strategizable {
      * Returns all active public and private threads in this guild
      * Threads are ordered by their id, in descending order.
      *
-     *  The returned flow is lazily executed, any [RequestException] will be thrown on
+     * The returned flow is lazily executed, any [RequestException] will be thrown on
      * [terminal operators](https://kotlinlang.org/docs/reference/coroutines/flow.html#terminal-flow-operators) instead.
 
      */
     public val activeThreads: Flow<ThreadChannel>
         get() = supplier.getActiveThreads(id)
+
+    /**
+     * Requests to get all threads in this guild that are present in [cache][Kord.cache].
+     *
+     * This property is not resolvable through REST and will always use [Kord.cache] instead.
+     *
+     * The returned flow is lazily executed, any [RequestException] will be thrown on
+     * [terminal operators](https://kotlinlang.org/docs/reference/coroutines/flow.html#terminal-flow-operators) instead.
+     */
+    public val cachedThreads: Flow<ThreadChannel>
+        get() = kord.cache
+            .query<ChannelData> { idEq(ChannelData::guildId, this@GuildBehavior.id) }
+            .asFlow()
+            .mapNotNull { Channel.from(it, kord) as? ThreadChannel }
 
     /**
      * Requests to get all present webhooks for this guild.
@@ -233,6 +233,14 @@ public interface GuildBehavior : KordEntity, Strategizable {
      * @throws [RestRequestException] if something went wrong during the request.
      */
     public suspend fun delete(): Unit = kord.rest.guild.deleteGuild(id)
+
+    /**
+     * Requests to edit this guild's [MFA level][MFALevel] and returns the updated level.
+     * This requires guild ownership.
+     *
+     * @throws RestRequestException if something went wrong during the request.
+     */
+    public suspend fun editMFALevel(level: MFALevel): MFALevel = kord.rest.guild.modifyGuildMFALevel(id, level).level
 
     /**
      * Requests to leave this guild.

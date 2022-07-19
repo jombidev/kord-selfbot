@@ -5,7 +5,6 @@ import dev.jombi.kordsb.core.entity.application.*
 import dev.jombi.kordsb.core.event.Event
 import dev.jombi.kordsb.core.event.kordCoroutineScope
 import kotlinx.coroutines.CoroutineScope
-import kotlin.coroutines.CoroutineContext
 
 
 public sealed interface ApplicationCommandDeleteEvent : Event {

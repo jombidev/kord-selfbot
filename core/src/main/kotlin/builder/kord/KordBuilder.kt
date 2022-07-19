@@ -7,9 +7,7 @@ import dev.jombi.kordsb.common.entity.Snowflake
 import dev.jombi.kordsb.common.ratelimit.IntervalRateLimiter
 import dev.jombi.kordsb.core.ClientResources
 import dev.jombi.kordsb.core.Kord
-import dev.jombi.kordsb.core.cache.CachingGateway
 import dev.jombi.kordsb.core.cache.KordCacheBuilder
-import dev.jombi.kordsb.core.cache.createView
 import dev.jombi.kordsb.core.cache.registerKordData
 import dev.jombi.kordsb.core.event.Event
 import dev.jombi.kordsb.core.exception.KordInitializationException
@@ -46,7 +44,6 @@ public operator fun DefaultGateway.Companion.invoke(
     retry: Retry = LinearRetry(2.seconds, 60.seconds, 10)
 ): DefaultGateway {
     return DefaultGateway {
-        url = "wss://gateway.discord.gg/"
         client = resources.httpClient
         reconnectRetry = retry
         sendRateLimiter = IntervalRateLimiter(limit = 120, interval = 60.seconds)
@@ -144,9 +141,9 @@ public class KordBuilder(public val token: String) {
     /**
      * Requests the gateway info for the bot, or throws a [KordInitializationException] when something went wrong.
      */
+    @OptIn(KordExperimental::class)
     private suspend fun HttpClient.getGatewayInfo(): BotGatewayResponse {
         val response = get("${Route.baseUrl}${Route.GatewayBotGet.path}") {
-            @OptIn(KordExperimental::class)
             header(UserAgent, KordConstants.USER_AGENT)
             header(Authorization, token)
         }

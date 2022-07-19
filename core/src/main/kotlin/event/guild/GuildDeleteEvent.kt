@@ -6,7 +6,6 @@ import dev.jombi.kordsb.core.entity.Guild
 import dev.jombi.kordsb.core.event.Event
 import dev.jombi.kordsb.core.event.kordCoroutineScope
 import kotlinx.coroutines.CoroutineScope
-import kotlin.coroutines.CoroutineContext
 
 public class GuildDeleteEvent(
     public val guildId: Snowflake,

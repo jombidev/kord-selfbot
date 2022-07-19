@@ -143,14 +143,12 @@ public final class dev/jombi/kordsb/rest/builder/channel/ChannelPermissionModify
 	public synthetic fun toRequest ()Ljava/lang/Object;
 }
 
-public final class dev/jombi/kordsb/rest/builder/channel/GuildChannelPositionModifyBuilder : dev/jombi/kordsb/rest/builder/AuditRequestBuilder {
+public final class dev/jombi/kordsb/rest/builder/channel/GuildChannelPositionModifyBuilder : dev/jombi/kordsb/rest/builder/RequestBuilder {
 	public fun <init> ()V
-	public fun getReason ()Ljava/lang/String;
 	public final fun getSwaps ()Ljava/util/List;
 	public final fun move (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;)V
 	public final fun move (Lkotlin/Pair;)V
 	public final fun move ([Lkotlin/Pair;)V
-	public fun setReason (Ljava/lang/String;)V
 	public final fun setSwaps (Ljava/util/List;)V
 	public fun toRequest ()Ldev/jombi/kordsb/rest/json/request/GuildChannelPositionModifyRequest;
 	public synthetic fun toRequest ()Ljava/lang/Object;
@@ -376,6 +374,7 @@ public final class dev/jombi/kordsb/rest/builder/channel/VoiceChannelCreateBuild
 	public fun addOverwrite (Ldev/jombi/kordsb/common/entity/Overwrite;)V
 	public final fun getBitrate ()Ljava/lang/Integer;
 	public final fun getName ()Ljava/lang/String;
+	public final fun getNsfw ()Ljava/lang/Boolean;
 	public final fun getParentId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public fun getPermissionOverwrites ()Ljava/util/Set;
 	public final fun getPosition ()Ljava/lang/Integer;
@@ -383,6 +382,7 @@ public final class dev/jombi/kordsb/rest/builder/channel/VoiceChannelCreateBuild
 	public final fun getUserLimit ()Ljava/lang/Integer;
 	public final fun setBitrate (Ljava/lang/Integer;)V
 	public final fun setName (Ljava/lang/String;)V
+	public final fun setNsfw (Ljava/lang/Boolean;)V
 	public final fun setParentId (Ldev/jombi/kordsb/common/entity/Snowflake;)V
 	public fun setPermissionOverwrites (Ljava/util/Set;)V
 	public final fun setPosition (Ljava/lang/Integer;)V
@@ -397,6 +397,7 @@ public final class dev/jombi/kordsb/rest/builder/channel/VoiceChannelModifyBuild
 	public fun addOverwrite (Ldev/jombi/kordsb/common/entity/Overwrite;)V
 	public final fun getBitrate ()Ljava/lang/Integer;
 	public final fun getName ()Ljava/lang/String;
+	public final fun getNsfw ()Ljava/lang/Boolean;
 	public final fun getParentId ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public fun getPermissionOverwrites ()Ljava/util/Set;
 	public final fun getPosition ()Ljava/lang/Integer;
@@ -407,6 +408,7 @@ public final class dev/jombi/kordsb/rest/builder/channel/VoiceChannelModifyBuild
 	public final fun getVideoQualityMode ()Ldev/jombi/kordsb/common/entity/VideoQualityMode;
 	public final fun setBitrate (Ljava/lang/Integer;)V
 	public final fun setName (Ljava/lang/String;)V
+	public final fun setNsfw (Ljava/lang/Boolean;)V
 	public final fun setParentId (Ldev/jombi/kordsb/common/entity/Snowflake;)V
 	public fun setPermissionOverwrites (Ljava/util/Set;)V
 	public final fun setPosition (Ljava/lang/Integer;)V
@@ -921,9 +923,11 @@ public final class dev/jombi/kordsb/rest/builder/interaction/ChoiceLocalizations
 	public fun <init> (Ljava/lang/String;)V
 	public fun getName ()Ljava/lang/String;
 	public fun getNameLocalizations ()Ljava/util/Map;
+	public final fun get_nameLocalizations ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public fun name (Ldev/jombi/kordsb/common/Locale;Ljava/lang/String;)V
 	public fun setName (Ljava/lang/String;)V
 	public fun setNameLocalizations (Ljava/util/Map;)V
+	public final fun set_nameLocalizations (Ldev/jombi/kordsb/common/entity/optional/Optional;)V
 }
 
 public abstract interface class dev/jombi/kordsb/rest/builder/interaction/GlobalApplicationCommandCreateBuilder : dev/jombi/kordsb/rest/builder/interaction/ApplicationCommandCreateBuilder {
@@ -1237,6 +1241,12 @@ public final class dev/jombi/kordsb/rest/builder/interaction/StringChoiceBuilder
 	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
 	public synthetic fun choice (Ljava/lang/String;Ljava/lang/Object;Ldev/jombi/kordsb/common/entity/optional/Optional;)V
 	public fun choice (Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/optional/Optional;)V
+	public final fun getMaxLength ()Ljava/lang/Integer;
+	public final fun getMinLength ()Ljava/lang/Integer;
+	public final fun setMaxLength (Ljava/lang/Integer;)V
+	public final fun setMinLength (Ljava/lang/Integer;)V
+	public fun toRequest ()Ldev/jombi/kordsb/common/entity/ApplicationCommandOption;
+	public synthetic fun toRequest ()Ljava/lang/Object;
 }
 
 public final class dev/jombi/kordsb/rest/builder/interaction/SubCommandBuilder : dev/jombi/kordsb/rest/builder/interaction/BaseCommandOptionBuilder, dev/jombi/kordsb/rest/builder/interaction/BaseInputChatBuilder {
@@ -1880,6 +1890,7 @@ public final class dev/jombi/kordsb/rest/json/JsonErrorCode : java/lang/Enum {
 	public static final field AnnouncementRateLimit Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field ApplicationCommandNameExists Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field BeforeValueBeforeThreadCreate Ldev/jombi/kordsb/rest/json/JsonErrorCode;
+	public static final field BitrateTooHigh Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field BotsEndpoint Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field BulkDeleteOldMessage Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field CannotDeleteRequiredCommunityChannel Ldev/jombi/kordsb/rest/json/JsonErrorCode;
@@ -1909,6 +1920,7 @@ public final class dev/jombi/kordsb/rest/json/JsonErrorCode : java/lang/Enum {
 	public static final field GuildSubscriptionTooLow Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field GuildWidgetDisabled Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field InteractionAlreadyAcknowledged Ldev/jombi/kordsb/rest/json/JsonErrorCode;
+	public static final field InteractionFailedToSend Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field InvalidAPIVersion Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field InvalidAccountType Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field InvalidAuthToken Ldev/jombi/kordsb/rest/json/JsonErrorCode;
@@ -1917,6 +1929,7 @@ public final class dev/jombi/kordsb/rest/json/JsonErrorCode : java/lang/Enum {
 	public static final field InvalidGuild Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field InvalidJsonForLottieFile Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field InvalidJsonInRequestBody Ldev/jombi/kordsb/rest/json/JsonErrorCode;
+	public static final field InvalidMFALevel Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field InvalidMessageType Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field InvalidOAuth2AccessToken Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field InvalidOAuth2State Ldev/jombi/kordsb/rest/json/JsonErrorCode;
@@ -1982,12 +1995,14 @@ public final class dev/jombi/kordsb/rest/json/JsonErrorCode : java/lang/Enum {
 	public static final field ServerWriteRateLimit Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field SlowModeRateLimit Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field StageAlreadyOpen Ldev/jombi/kordsb/rest/json/JsonErrorCode;
+	public static final field StickerPermissionLack Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field TemporarilyDisabled Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field TheadLocked Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field TooFastDM Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field TooLongNote Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field Unauthorized Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field UnauthorizedForAction Ldev/jombi/kordsb/rest/json/JsonErrorCode;
+	public static final field UnderMinimumAge Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field Unknown Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field UnknownAccount Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field UnknownApplication Ldev/jombi/kordsb/rest/json/JsonErrorCode;
@@ -3245,6 +3260,36 @@ public final class dev/jombi/kordsb/rest/json/request/GuildIntegrationModifyRequ
 }
 
 public final class dev/jombi/kordsb/rest/json/request/GuildIntegrationModifyRequest$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/jombi/kordsb/rest/json/request/GuildMFALevelModifyRequest {
+	public static final field Companion Ldev/jombi/kordsb/rest/json/request/GuildMFALevelModifyRequest$Companion;
+	public synthetic fun <init> (ILdev/jombi/kordsb/common/entity/MFALevel;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ldev/jombi/kordsb/common/entity/MFALevel;)V
+	public final fun component1 ()Ldev/jombi/kordsb/common/entity/MFALevel;
+	public final fun copy (Ldev/jombi/kordsb/common/entity/MFALevel;)Ldev/jombi/kordsb/rest/json/request/GuildMFALevelModifyRequest;
+	public static synthetic fun copy$default (Ldev/jombi/kordsb/rest/json/request/GuildMFALevelModifyRequest;Ldev/jombi/kordsb/common/entity/MFALevel;ILjava/lang/Object;)Ldev/jombi/kordsb/rest/json/request/GuildMFALevelModifyRequest;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLevel ()Ldev/jombi/kordsb/common/entity/MFALevel;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public static final fun write$Self (Ldev/jombi/kordsb/rest/json/request/GuildMFALevelModifyRequest;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+}
+
+public final class dev/jombi/kordsb/rest/json/request/GuildMFALevelModifyRequest$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/jombi/kordsb/rest/json/request/GuildMFALevelModifyRequest$$serializer;
+	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/jombi/kordsb/rest/json/request/GuildMFALevelModifyRequest;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/jombi/kordsb/rest/json/request/GuildMFALevelModifyRequest;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/jombi/kordsb/rest/json/request/GuildMFALevelModifyRequest$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
@@ -5270,7 +5315,8 @@ public final class dev/jombi/kordsb/rest/request/HttpUtilsKt {
 }
 
 public final class dev/jombi/kordsb/rest/request/JsonRequest : dev/jombi/kordsb/rest/request/Request {
-	public fun <init> (Ldev/jombi/kordsb/rest/route/Route;Ljava/util/Map;Lio/ktor/util/StringValues;Lio/ktor/util/StringValues;Ldev/jombi/kordsb/rest/request/RequestBody;)V
+	public fun <init> (Ldev/jombi/kordsb/rest/route/Route;Ljava/util/Map;Lio/ktor/util/StringValues;Lio/ktor/util/StringValues;Ldev/jombi/kordsb/rest/request/RequestBody;Ljava/lang/String;)V
+	public synthetic fun <init> (Ldev/jombi/kordsb/rest/route/Route;Ljava/util/Map;Lio/ktor/util/StringValues;Lio/ktor/util/StringValues;Ldev/jombi/kordsb/rest/request/RequestBody;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public fun getBody ()Ldev/jombi/kordsb/rest/request/RequestBody;
 	public fun getFiles ()Ljava/util/List;
 	public fun getHeaders ()Lio/ktor/util/StringValues;
@@ -5289,6 +5335,7 @@ public final class dev/jombi/kordsb/rest/request/KtorRequestHandler : dev/jombi/
 	public synthetic fun <init> (Lio/ktor/client/HttpClient;Ldev/jombi/kordsb/rest/ratelimit/RequestRateLimiter;Lkotlinx/datetime/Clock;Lkotlinx/serialization/json/Json;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public fun getToken ()Ljava/lang/String;
 	public fun handle (Ldev/jombi/kordsb/rest/request/Request;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun intercept (Ldev/jombi/kordsb/rest/request/RequestBuilder;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
 public final class dev/jombi/kordsb/rest/request/KtorRequestHandlerKt {
@@ -5298,8 +5345,8 @@ public final class dev/jombi/kordsb/rest/request/KtorRequestHandlerKt {
 }
 
 public final class dev/jombi/kordsb/rest/request/MultipartRequest : dev/jombi/kordsb/rest/request/Request {
-	public fun <init> (Ldev/jombi/kordsb/rest/route/Route;Ljava/util/Map;Lio/ktor/util/StringValues;Lio/ktor/util/StringValues;Ldev/jombi/kordsb/rest/request/RequestBody;Ljava/util/List;)V
-	public synthetic fun <init> (Ldev/jombi/kordsb/rest/route/Route;Ljava/util/Map;Lio/ktor/util/StringValues;Lio/ktor/util/StringValues;Ldev/jombi/kordsb/rest/request/RequestBody;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (Ldev/jombi/kordsb/rest/route/Route;Ljava/util/Map;Lio/ktor/util/StringValues;Lio/ktor/util/StringValues;Ldev/jombi/kordsb/rest/request/RequestBody;Ljava/util/List;Ljava/lang/String;)V
+	public synthetic fun <init> (Ldev/jombi/kordsb/rest/route/Route;Ljava/util/Map;Lio/ktor/util/StringValues;Lio/ktor/util/StringValues;Ldev/jombi/kordsb/rest/request/RequestBody;Ljava/util/List;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public fun getBody ()Ldev/jombi/kordsb/rest/request/RequestBody;
 	public final fun getData ()Ljava/util/List;
 	public fun getFiles ()Ljava/util/List;
@@ -5310,6 +5357,9 @@ public final class dev/jombi/kordsb/rest/request/MultipartRequest : dev/jombi/ko
 }
 
 public abstract class dev/jombi/kordsb/rest/request/Request {
+	public synthetic fun <init> (Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getBaseUrl ()Ljava/lang/String;
 	public abstract fun getBody ()Ldev/jombi/kordsb/rest/request/RequestBody;
 	public abstract fun getFiles ()Ljava/util/List;
 	public abstract fun getHeaders ()Lio/ktor/util/StringValues;
@@ -5339,12 +5389,15 @@ public final class dev/jombi/kordsb/rest/request/RequestBuilder {
 	public final fun build ()Ldev/jombi/kordsb/rest/request/Request;
 	public final fun file (Ldev/jombi/kordsb/rest/NamedFile;)V
 	public final fun file (Ljava/lang/String;Ljava/io/InputStream;)V
+	public final fun getBaseUrl ()Ljava/lang/String;
 	public final fun getKeys ()Ljava/util/Map;
+	public final fun getRoute ()Ldev/jombi/kordsb/rest/route/Route;
 	public final fun header (Ljava/lang/String;Ljava/lang/String;)V
 	public final fun parameter (Ljava/lang/String;Ldev/jombi/kordsb/common/entity/Snowflake;)V
 	public final fun parameter (Ljava/lang/String;Ljava/lang/Object;)V
 	public final fun set (Ljava/util/Map;Ldev/jombi/kordsb/rest/route/Route$Key;Ldev/jombi/kordsb/common/entity/Snowflake;)V
 	public final fun set (Ljava/util/Map;Ldev/jombi/kordsb/rest/route/Route$Key;Ljava/lang/String;)V
+	public final fun setBaseUrl (Ljava/lang/String;)V
 	public final fun unencodedHeader (Ljava/lang/String;Ljava/lang/String;)V
 	public final fun urlEncodedHeader (Ljava/lang/String;Ljava/lang/String;)V
 }
@@ -5352,6 +5405,11 @@ public final class dev/jombi/kordsb/rest/request/RequestBuilder {
 public abstract interface class dev/jombi/kordsb/rest/request/RequestHandler {
 	public abstract fun getToken ()Ljava/lang/String;
 	public abstract fun handle (Ldev/jombi/kordsb/rest/request/Request;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun intercept (Ldev/jombi/kordsb/rest/request/RequestBuilder;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class dev/jombi/kordsb/rest/request/RequestHandler$DefaultImpls {
+	public static fun intercept (Ldev/jombi/kordsb/rest/request/RequestHandler;Ldev/jombi/kordsb/rest/request/RequestBuilder;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
 public abstract class dev/jombi/kordsb/rest/request/RequestIdentifier {
@@ -5399,6 +5457,7 @@ public final class dev/jombi/kordsb/rest/request/StackTraceRecoveringKtorRequest
 	public fun <init> (Ldev/jombi/kordsb/rest/request/KtorRequestHandler;)V
 	public fun getToken ()Ljava/lang/String;
 	public fun handle (Ldev/jombi/kordsb/rest/request/Request;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun intercept (Ldev/jombi/kordsb/rest/request/RequestBuilder;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
 public final class dev/jombi/kordsb/rest/request/StackTraceRecoveringKtorRequestHandlerKt {
@@ -5787,6 +5846,10 @@ public final class dev/jombi/kordsb/rest/route/Route$GuildInvitesGet : dev/jombi
 
 public final class dev/jombi/kordsb/rest/route/Route$GuildLeave : dev/jombi/kordsb/rest/route/Route {
 	public static final field INSTANCE Ldev/jombi/kordsb/rest/route/Route$GuildLeave;
+}
+
+public final class dev/jombi/kordsb/rest/route/Route$GuildMFALevelModify : dev/jombi/kordsb/rest/route/Route {
+	public static final field INSTANCE Ldev/jombi/kordsb/rest/route/Route$GuildMFALevelModify;
 }
 
 public final class dev/jombi/kordsb/rest/route/Route$GuildMemberDelete : dev/jombi/kordsb/rest/route/Route {
@@ -6384,6 +6447,7 @@ public final class dev/jombi/kordsb/rest/service/GuildService : dev/jombi/kordsb
 	public final fun modifyGuildChannelPosition (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun modifyGuildEmbed (Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun modifyGuildIntegration (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun modifyGuildMFALevel (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun modifyGuildMember (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun modifyGuildRole (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun modifyGuildRolePosition (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -6518,6 +6582,8 @@ public final class dev/jombi/kordsb/rest/service/RestClientKt {
 public abstract class dev/jombi/kordsb/rest/service/RestService {
 	public fun <init> (Ldev/jombi/kordsb/rest/request/RequestHandler;)V
 	public final fun call (Ldev/jombi/kordsb/rest/route/Route;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun call$default (Ldev/jombi/kordsb/rest/service/RestService;Ldev/jombi/kordsb/rest/route/Route;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public final fun getRequestHandler ()Ldev/jombi/kordsb/rest/request/RequestHandler;
 }
 
 public final class dev/jombi/kordsb/rest/service/StageInstanceService : dev/jombi/kordsb/rest/service/RestService {
@@ -6618,5 +6684,35 @@ public final class dev/jombi/kordsb/rest/service/WebhookServiceKt {
 	public static final fun webhookIdToken (Ldev/jombi/kordsb/rest/request/RequestBuilder;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;)V
 	public static final fun webhookIdTokenMessageIdThreadId (Ldev/jombi/kordsb/rest/request/RequestBuilder;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;)V
 	public static final fun webhookIdTokenWaitThreadId (Ldev/jombi/kordsb/rest/request/RequestBuilder;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/Boolean;Ldev/jombi/kordsb/common/entity/Snowflake;)V
+}
+
+public final class json/response/GuildMFALevelModifyResponse {
+	public static final field Companion Ljson/response/GuildMFALevelModifyResponse$Companion;
+	public synthetic fun <init> (ILdev/jombi/kordsb/common/entity/MFALevel;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ldev/jombi/kordsb/common/entity/MFALevel;)V
+	public final fun component1 ()Ldev/jombi/kordsb/common/entity/MFALevel;
+	public final fun copy (Ldev/jombi/kordsb/common/entity/MFALevel;)Ljson/response/GuildMFALevelModifyResponse;
+	public static synthetic fun copy$default (Ljson/response/GuildMFALevelModifyResponse;Ldev/jombi/kordsb/common/entity/MFALevel;ILjava/lang/Object;)Ljson/response/GuildMFALevelModifyResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLevel ()Ldev/jombi/kordsb/common/entity/MFALevel;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public static final fun write$Self (Ljson/response/GuildMFALevelModifyResponse;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+}
+
+public final class json/response/GuildMFALevelModifyResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ljson/response/GuildMFALevelModifyResponse$$serializer;
+	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljson/response/GuildMFALevelModifyResponse;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljson/response/GuildMFALevelModifyResponse;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class json/response/GuildMFALevelModifyResponse$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 

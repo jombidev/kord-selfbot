@@ -1,6 +1,5 @@
 package dev.jombi.kordsb.rest.builder.message.modify
 
-import dev.jombi.kordsb.common.annotation.KordPreview
 import dev.jombi.kordsb.common.entity.DiscordAttachment
 import dev.jombi.kordsb.common.entity.optional.delegate.delegate
 import dev.jombi.kordsb.common.entity.optional.map
@@ -32,7 +31,6 @@ public class WebhookMessageModifyBuilder :
 
     override var components: MutableList<MessageComponentBuilder>? by state::components.delegate()
 
-    @OptIn(KordPreview::class)
     override fun toRequest(): MultipartWebhookEditMessageRequest {
         return MultipartWebhookEditMessageRequest(
             WebhookEditMessageRequest(

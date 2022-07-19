@@ -1,11 +1,13 @@
 package dev.jombi.kordsb.rest.route
 
+import dev.jombi.kordsb.common.KordConfiguration
 import dev.jombi.kordsb.common.annotation.DeprecatedSinceKord
 import dev.jombi.kordsb.common.annotation.KordExperimental
 import dev.jombi.kordsb.common.entity.*
 import dev.jombi.kordsb.rest.json.request.GuildScheduledEventUsersResponse
 import dev.jombi.kordsb.rest.json.response.*
 import io.ktor.http.*
+import json.response.GuildMFALevelModifyResponse
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.InternalSerializationApi
@@ -15,9 +17,6 @@ import kotlinx.serialization.descriptors.StructureKind
 import kotlinx.serialization.descriptors.buildSerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.json.Json
-
-internal const val REST_VERSION_PROPERTY_NAME = "dev.jombi.kordsb.rest.version"
-internal val restVersion get() = System.getenv(REST_VERSION_PROPERTY_NAME) ?: "v10"
 
 public sealed interface ResponseMapper<T> {
     public fun deserialize(json: Json, body: String): T
@@ -56,7 +55,7 @@ public sealed class Route<T>(
 ) {
 
     public companion object {
-        public val baseUrl: String = "https://discord.com/api/$restVersion"
+        public val baseUrl: String get() = "https://discord.com/api/v${KordConfiguration.REST_VERSION}"
     }
 
 
@@ -460,6 +459,13 @@ public sealed class Route<T>(
 
     public object GuildRolePatch :
         Route<DiscordRole>(HttpMethod.Patch, "/guilds/$GuildId/roles/$RoleId", DiscordRole.serializer())
+
+    public object GuildMFALevelModify :
+        Route<GuildMFALevelModifyResponse>(
+            HttpMethod.Post,
+            "/guilds/$GuildId/mfa",
+            GuildMFALevelModifyResponse.serializer(),
+        )
 
     public object GuildRoleDelete :
         Route<Unit>(HttpMethod.Delete, "/guilds/$GuildId/roles/$RoleId", NoStrategy)

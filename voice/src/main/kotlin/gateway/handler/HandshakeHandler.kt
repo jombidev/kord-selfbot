@@ -1,11 +1,9 @@
 package dev.jombi.kordsb.voice.gateway.handler
 
-import dev.jombi.kordsb.common.annotation.KordVoice
 import dev.jombi.kordsb.voice.gateway.*
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.Flow
 
-@OptIn(KordVoice::class)
 internal class HandshakeHandler(
     flow: Flow<VoiceEvent>,
     private val data: DefaultVoiceGatewayData,

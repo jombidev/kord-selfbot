@@ -1,6 +1,5 @@
 package interaction
 
-import dev.jombi.kordsb.common.annotation.KordPreview
 import dev.jombi.kordsb.common.entity.ApplicationCommandOptionType
 import dev.jombi.kordsb.common.entity.InteractionCallbackData
 import dev.jombi.kordsb.core.cache.data.ApplicationInteractionData

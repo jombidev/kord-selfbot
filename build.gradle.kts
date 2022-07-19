@@ -4,7 +4,7 @@ import org.gradle.api.tasks.wrapper.Wrapper.DistributionType.ALL
 plugins {
     kotlin("jvm")
     kotlin("plugin.serialization")
-    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.9.0"
+    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.10.1"
     id("org.jetbrains.dokka")
 
     id("org.ajoberstar.git-publish") version "3.0.1"
@@ -42,6 +42,7 @@ tasks {
         dependsOn(dokkaHtmlMultimodule)
     }
 }
+/*
 
 configure<GitPublishExtension> {
     repoUri.set("https://github.com/kordlib/kord.git")
@@ -53,3 +54,4 @@ configure<GitPublishExtension> {
 
     commitMessage.set("Update Docs")
 }
+*/

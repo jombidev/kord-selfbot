@@ -12,7 +12,6 @@ import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.datetime.Instant
-import kotlin.coroutines.CoroutineContext
 
 private const val deprecationMessage = "The full member is now available in this Event."
 

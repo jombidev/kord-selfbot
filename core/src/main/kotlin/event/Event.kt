@@ -5,7 +5,6 @@ import dev.jombi.kordsb.gateway.Gateway
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.job
-import kotlin.coroutines.CoroutineContext
 
 public interface Event : CoroutineScope {
     /**

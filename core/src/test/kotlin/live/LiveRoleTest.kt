@@ -1,6 +1,5 @@
 package live
 
-import dev.jombi.kordsb.common.annotation.KordPreview
 import dev.jombi.kordsb.common.entity.*
 import dev.jombi.kordsb.common.entity.optional.Optional
 import dev.jombi.kordsb.core.cache.data.RoleData
@@ -25,7 +24,6 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-@OptIn(KordPreview::class)
 @Timeout(value = 5, unit = TimeUnit.SECONDS)
 @Disabled
 class LiveRoleTest : AbstractLiveEntityTest<LiveRole>() {

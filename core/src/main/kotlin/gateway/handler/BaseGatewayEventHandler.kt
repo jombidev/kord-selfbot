@@ -1,9 +1,8 @@
 package dev.jombi.kordsb.core.gateway.handler
 
-import dev.kord.cache.api.DataCache
 import dev.jombi.kordsb.core.Kord
+import dev.kord.cache.api.DataCache
 import kotlinx.coroutines.CoroutineScope
-import kotlin.coroutines.CoroutineContext
 import dev.jombi.kordsb.core.event.Event as CoreEvent
 import dev.jombi.kordsb.gateway.Event as GatewayEvent
 

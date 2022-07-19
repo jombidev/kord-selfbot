@@ -9,7 +9,6 @@ import dev.jombi.kordsb.core.entity.Strategizable
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import dev.jombi.kordsb.rest.builder.guild.StickerModifyBuilder
-import kotlin.contracts.ExperimentalContracts
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 
@@ -48,7 +47,6 @@ public fun StickerBehavior(guildId: Snowflake, id: Snowflake, kord: Kord, suppli
 
     }
 
-@OptIn(ExperimentalContracts::class)
 public suspend inline fun StickerBehavior.edit(builder: StickerModifyBuilder.() -> Unit): Sticker {
     contract { callsInPlace(builder, InvocationKind.EXACTLY_ONCE) }
     val response = kord.rest.sticker.modifyGuildSticker(guildId, id, builder)

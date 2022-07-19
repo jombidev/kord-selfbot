@@ -993,6 +993,10 @@ public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayConfiguration {
 	public fun toString ()Ljava/lang/String;
 }
 
+public final class dev/jombi/kordsb/voice/gateway/VoiceGatewayKt {
+	public static final fun getVoiceGatewayOnLogger ()Lmu/KLogger;
+}
+
 public final class dev/jombi/kordsb/voice/io/ByteArrayCursorsKt {
 	public static final fun mutableCursor (Ldev/jombi/kordsb/voice/io/ByteArrayView;)Ldev/jombi/kordsb/voice/io/MutableByteArrayCursor;
 	public static final fun mutableCursor ([B)Ldev/jombi/kordsb/voice/io/MutableByteArrayCursor;
@@ -1070,7 +1074,7 @@ public final class dev/jombi/kordsb/voice/streams/DefaultStreams : dev/jombi/kor
 	public synthetic fun getIncomingUserStreams ()Lkotlinx/coroutines/flow/Flow;
 	public fun getIncomingUserStreams ()Lkotlinx/coroutines/flow/SharedFlow;
 	public fun getSsrcToUser ()Ljava/util/Map;
-	public fun listen ([BLjava/net/SocketAddress;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun listen ([BLio/ktor/network/sockets/SocketAddress;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
 public final class dev/jombi/kordsb/voice/streams/NOPStreams : dev/jombi/kordsb/voice/streams/Streams {
@@ -1079,7 +1083,7 @@ public final class dev/jombi/kordsb/voice/streams/NOPStreams : dev/jombi/kordsb/
 	public fun getIncomingAudioPackets ()Lkotlinx/coroutines/flow/Flow;
 	public fun getIncomingUserStreams ()Lkotlinx/coroutines/flow/Flow;
 	public fun getSsrcToUser ()Ljava/util/Map;
-	public fun listen ([BLjava/net/SocketAddress;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun listen ([BLio/ktor/network/sockets/SocketAddress;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
 public abstract interface class dev/jombi/kordsb/voice/streams/Streams {
@@ -1087,7 +1091,7 @@ public abstract interface class dev/jombi/kordsb/voice/streams/Streams {
 	public abstract fun getIncomingAudioPackets ()Lkotlinx/coroutines/flow/Flow;
 	public abstract fun getIncomingUserStreams ()Lkotlinx/coroutines/flow/Flow;
 	public abstract fun getSsrcToUser ()Ljava/util/Map;
-	public abstract fun listen ([BLjava/net/SocketAddress;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun listen ([BLio/ktor/network/sockets/SocketAddress;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
 public abstract interface class dev/jombi/kordsb/voice/udp/AudioFrameSender {

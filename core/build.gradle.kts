@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
     java
     `kord-module`
@@ -49,12 +47,6 @@ val srcJar = task("srcJarBuilder", type = org.gradle.jvm.tasks.Jar::class) {
 }
 
 tasks {
-    withType<KotlinCompile> {
-        kotlinOptions {
-            freeCompilerArgs = freeCompilerArgs + CompilerArguments.stdLib
-        }
-    }
-
     "build" {
         dependsOn(fatJar)
     }

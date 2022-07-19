@@ -95,12 +95,8 @@ internal data class Identify(
 
 @Serializable
 public data class IdentifyProperties(
-    @Required
-    @SerialName("\$os")
     val os: String,
-    @SerialName("\$browser")
     val browser: String,
-    @SerialName("\$device")
     val device: String,
 )
 

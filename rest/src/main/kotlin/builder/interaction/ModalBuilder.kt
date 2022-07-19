@@ -4,7 +4,6 @@ import dev.jombi.kordsb.common.annotation.KordDsl
 import dev.jombi.kordsb.common.entity.DiscordModal
 import dev.jombi.kordsb.rest.builder.RequestBuilder
 import dev.jombi.kordsb.rest.builder.component.ActionRowBuilder
-import dev.jombi.kordsb.rest.builder.component.MessageComponentBuilder
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 

@@ -21,6 +21,9 @@ dependencies {
 
 kotlin {
     explicitApi()
+
+    // allow ExperimentalCoroutinesApi for `runTest {}`
+    sourceSets["test"].languageSettings.optIn("kotlinx.coroutines.ExperimentalCoroutinesApi")
 }
 
 tasks {
@@ -29,17 +32,23 @@ tasks {
     }
 
     withType<JavaCompile> {
-        sourceCompatibility = "1.8"
-        targetCompatibility = "1.8"
+        sourceCompatibility = Jvm.target
+        targetCompatibility = Jvm.target
     }
 
     withType<KotlinCompile> {
         kotlinOptions {
             jvmTarget = Jvm.target
+            //allWarningsAsErrors = true // disabled strict compile due fking optin
             freeCompilerArgs = listOf(
-                CompilerArguments.coroutines,
                 CompilerArguments.time,
                 CompilerArguments.contracts,
+
+                CompilerArguments.kordPreview,
+                CompilerArguments.kordExperimental,
+                CompilerArguments.kordVoice,
+
+                CompilerArguments.progressive,
             )
         }
     }
@@ -92,11 +101,5 @@ tasks {
             artifact(sourcesJar.get())
             artifact(dokkaJar.get())
         }
-    }
-
-    java {
-        // We don't use java, but this prevents a Gradle warning,
-        // telling you to target the same java version for java and kt
-        sourceCompatibility = JavaVersion.VERSION_1_8
     }
 }

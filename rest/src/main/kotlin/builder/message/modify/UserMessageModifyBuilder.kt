@@ -1,6 +1,5 @@
 package dev.jombi.kordsb.rest.builder.message.modify
 
-import dev.jombi.kordsb.common.annotation.KordPreview
 import dev.jombi.kordsb.common.entity.DiscordAttachment
 import dev.jombi.kordsb.common.entity.MessageFlags
 import dev.jombi.kordsb.common.entity.optional.delegate.delegate
@@ -35,7 +34,6 @@ public class UserMessageModifyBuilder
 
     override var components: MutableList<MessageComponentBuilder>? by state::components.delegate()
 
-    @OptIn(KordPreview::class)
     override fun toRequest(): MultipartMessagePatchRequest = MultipartMessagePatchRequest(
         MessageEditPatchRequest(
             content = state.content,

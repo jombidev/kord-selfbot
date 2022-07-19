@@ -7,6 +7,7 @@ import dev.jombi.kordsb.common.annotation.KordUnsafe
 import dev.jombi.kordsb.common.entity.Snowflake
 import dev.jombi.kordsb.common.exception.RequestException
 import dev.jombi.kordsb.core.builder.kord.KordBuilder
+import dev.jombi.kordsb.core.builder.kord.KordProxyBuilder
 import dev.jombi.kordsb.core.builder.kord.KordRestOnlyBuilder
 import dev.jombi.kordsb.core.cache.data.GuildData
 import dev.jombi.kordsb.core.cache.data.UserData
@@ -391,6 +392,23 @@ public class Kord(
             }
             return KordRestOnlyBuilder(token).apply(builder).build()
         }
+    }
+
+    /**
+     * Builds a [Kord] instance configured by the [builder].
+     *
+     * The instance only allows for configuration of REST related APIs,
+     * interacting with the [gateway][Kord.gateway] or its [events][Kord.events] will result in no-ops.
+     *
+     * Similarly, [cache][Kord.cache] related functionality has been disabled and
+     * replaced with a no-op implementation.
+     */
+    @KordExperimental
+    public inline fun proxy(applicationId: Snowflake, builder: KordProxyBuilder.() -> Unit = {}): Kord {
+        contract {
+            callsInPlace(builder, InvocationKind.EXACTLY_ONCE)
+        }
+        return KordProxyBuilder(applicationId).apply(builder).build()
     }
 }
 

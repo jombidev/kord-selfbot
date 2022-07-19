@@ -5,15 +5,14 @@ import dev.jombi.kordsb.common.annotation.KordExperimental
 import dev.jombi.kordsb.common.entity.Snowflake
 import dev.jombi.kordsb.common.entity.optional.OptionalInt
 import dev.jombi.kordsb.common.entity.optional.delegate.delegate
-import dev.jombi.kordsb.rest.builder.AuditRequestBuilder
+import dev.jombi.kordsb.rest.builder.RequestBuilder
 import dev.jombi.kordsb.rest.json.request.ChannelPositionSwapRequest
 import dev.jombi.kordsb.rest.json.request.GuildChannelPositionModifyRequest
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 
 @KordDsl
-public class GuildChannelPositionModifyBuilder : AuditRequestBuilder<GuildChannelPositionModifyRequest> {
-    override var reason: String? = null
+public class GuildChannelPositionModifyBuilder : RequestBuilder<GuildChannelPositionModifyRequest> {
     public var swaps: MutableList<GuildChannelSwapBuilder> = mutableListOf()
 
     public fun move(pair: Pair<Snowflake, Int>) {
@@ -65,7 +64,6 @@ public class GuildChannelSwapBuilder(public var channelId: Snowflake) {
     @KordExperimental
     public var lockPermissionsToParent: Boolean? = null
 
-    @OptIn(KordExperimental::class)
     public fun toRequest(): ChannelPositionSwapRequest = ChannelPositionSwapRequest(
         channelId, _position, lockPermissionsToParent, parentId
     )

@@ -19,6 +19,7 @@ import dev.jombi.kordsb.rest.request.RequestHandler
 import dev.jombi.kordsb.rest.request.auditLogReason
 import dev.jombi.kordsb.rest.route.Position
 import dev.jombi.kordsb.rest.route.Route
+import json.response.GuildMFALevelModifyResponse
 import kotlinx.datetime.Instant
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
@@ -93,7 +94,6 @@ public class GuildService(requestHandler: RequestHandler) : RestService(requestH
             keys[Route.GuildId] = guildId
             val modifyBuilder = GuildChannelPositionModifyBuilder().apply(builder)
             body(GuildChannelPositionModifyRequest.serializer(), modifyBuilder.toRequest())
-            auditLogReason(modifyBuilder.reason)
         }
     }
 
@@ -277,6 +277,13 @@ public class GuildService(requestHandler: RequestHandler) : RestService(requestH
             auditLogReason(modifyBuilder.reason)
         }
     }
+
+    public suspend fun modifyGuildMFALevel(guildId: Snowflake, level: MFALevel): GuildMFALevelModifyResponse =
+        call(Route.GuildMFALevelModify) {
+            keys[Route.GuildId] = guildId
+            val request = GuildMFALevelModifyRequest(level)
+            body(GuildMFALevelModifyRequest.serializer(), request)
+        }
 
     public suspend fun deleteGuildRole(guildId: Snowflake, roleId: Snowflake, reason: String? = null): Unit =
         call(Route.GuildRoleDelete) {

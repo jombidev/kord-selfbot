@@ -1,8 +1,5 @@
-@file:OptIn(KordVoice::class)
-
 package dev.jombi.kordsb.voice.gateway
 
-import dev.jombi.kordsb.common.annotation.KordVoice
 import dev.jombi.kordsb.common.entity.Snowflake
 import dev.jombi.kordsb.voice.EncryptionMode
 import dev.jombi.kordsb.voice.SpeakingFlags

@@ -1,5 +1,6 @@
 package dev.jombi.kordsb.voice.handlers
 
+import dev.jombi.kordsb.common.KordConfiguration
 import dev.jombi.kordsb.common.annotation.KordVoice
 import dev.jombi.kordsb.gateway.VoiceServerUpdate
 import dev.jombi.kordsb.gateway.VoiceStateUpdate
@@ -64,7 +65,7 @@ internal class VoiceUpdateEventHandler(
             // update the gateway configuration accordingly
             connection.voiceGatewayConfiguration = connection.voiceGatewayConfiguration.copy(
                 token = voiceServerUpdate.voiceServerUpdateData.token,
-                endpoint = "wss://${voiceServerUpdate.voiceServerUpdateData.endpoint}?v=4"
+                endpoint = "wss://${voiceServerUpdate.voiceServerUpdateData.endpoint}/?v=${KordConfiguration.VOICE_GATEWAY_VERSION}",
             )
 
             // reconnect...

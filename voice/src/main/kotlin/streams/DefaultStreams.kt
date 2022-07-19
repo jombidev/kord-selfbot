@@ -12,7 +12,7 @@ import dev.jombi.kordsb.voice.io.*
 import dev.jombi.kordsb.voice.udp.PayloadType
 import dev.jombi.kordsb.voice.udp.RTPPacket
 import dev.jombi.kordsb.voice.udp.VoiceUdpSocket
-import io.ktor.util.network.*
+import io.ktor.network.sockets.*
 import kotlinx.atomicfu.AtomicRef
 import kotlinx.atomicfu.atomic
 import kotlinx.atomicfu.update
@@ -30,7 +30,7 @@ public class DefaultStreams(
     private val udp: VoiceUdpSocket,
     private val nonceStrategy: NonceStrategy
 ) : Streams {
-    private fun CoroutineScope.listenForIncoming(key: ByteArray, server: NetworkAddress) {
+    private fun CoroutineScope.listenForIncoming(key: ByteArray, server: SocketAddress) {
         udp.incoming
             .filter { it.address == server }
             .mapNotNull { RTPPacket.fromPacket(it.packet) }
@@ -62,7 +62,7 @@ public class DefaultStreams(
             }.launchIn(this)
     }
 
-    override suspend fun listen(key: ByteArray, server: NetworkAddress): Unit = coroutineScope {
+    override suspend fun listen(key: ByteArray, server: SocketAddress): Unit = coroutineScope {
         listenForIncoming(key, server)
         listenForUserFrames()
     }

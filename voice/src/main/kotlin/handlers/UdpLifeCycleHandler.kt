@@ -1,8 +1,5 @@
-@file:OptIn(KordVoice::class)
-
 package dev.jombi.kordsb.voice.handlers
 
-import dev.jombi.kordsb.common.annotation.KordVoice
 import dev.jombi.kordsb.voice.EncryptionMode
 import dev.jombi.kordsb.voice.FrameInterceptorConfiguration
 import dev.jombi.kordsb.voice.VoiceConnection
@@ -21,7 +18,6 @@ import mu.KotlinLogging
 
 private val udpLifeCycleLogger = KotlinLogging.logger { }
 
-@OptIn(KordVoice::class)
 internal class UdpLifeCycleHandler(
     flow: Flow<VoiceEvent>,
     private val connection: VoiceConnection

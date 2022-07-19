@@ -1,5 +1,6 @@
 package dev.jombi.kordsb.voice
 
+import dev.jombi.kordsb.common.KordConfiguration
 import dev.jombi.kordsb.common.annotation.KordVoice
 import dev.jombi.kordsb.common.entity.Snowflake
 import dev.jombi.kordsb.gateway.Gateway
@@ -142,7 +143,7 @@ public class VoiceConnectionBuilder(
             voiceState.sessionId
         ) to VoiceGatewayConfiguration(
             voiceServer.token,
-            "wss://${voiceServer.endpoint}?v=4"
+            "wss://${voiceServer.endpoint}/?v=${KordConfiguration.VOICE_GATEWAY_VERSION}",
         )
     }
 

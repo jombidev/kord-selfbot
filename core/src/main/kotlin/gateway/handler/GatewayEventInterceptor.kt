@@ -2,9 +2,6 @@ package dev.jombi.kordsb.core.gateway.handler
 
 import dev.jombi.kordsb.core.Kord
 import dev.jombi.kordsb.core.gateway.ShardEvent
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.channels.Channel
-import kotlinx.coroutines.flow.*
 import dev.jombi.kordsb.core.event.Event as CoreEvent
 
 public interface GatewayEventInterceptor {

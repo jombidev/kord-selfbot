@@ -4,7 +4,7 @@ import dev.jombi.kordsb.common.annotation.KordVoice
 import dev.jombi.kordsb.common.entity.Snowflake
 import dev.jombi.kordsb.voice.AudioFrame
 import dev.jombi.kordsb.voice.udp.RTPPacket
-import io.ktor.util.network.*
+import io.ktor.network.sockets.*
 import kotlinx.coroutines.flow.Flow
 
 /**
@@ -15,7 +15,7 @@ public interface Streams {
     /**
      * Starts propagating packets from [server] with the following [key] to decrypt the incoming frames.
      */
-    public suspend fun listen(key: ByteArray, server: NetworkAddress)
+    public suspend fun listen(key: ByteArray, server: SocketAddress)
 
     /**
      * A flow of all incoming [dev.jombi.kordsb.voice.udp.RTPPacket]s through the UDP connection.

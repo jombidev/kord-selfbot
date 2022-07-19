@@ -1,6 +1,5 @@
 package dev.jombi.kordsb.rest.request
 
-import dev.jombi.kordsb.common.KordConstants
 import dev.jombi.kordsb.rest.json.response.DiscordErrorResponse
 import dev.jombi.kordsb.rest.ratelimit.*
 import dev.jombi.kordsb.rest.route.optional
@@ -76,7 +75,7 @@ public class KtorRequestHandler(
         headers.appendAll(request.headers)
 
         url {
-            url.takeFrom(dev.jombi.kordsb.rest.route.Route.baseUrl)
+            url.takeFrom(request.baseUrl)
             encodedPath += request.path
             parameters.appendAll(request.parameters)
         }

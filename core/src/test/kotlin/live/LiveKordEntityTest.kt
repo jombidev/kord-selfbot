@@ -1,6 +1,5 @@
 package live
 
-import dev.jombi.kordsb.common.annotation.KordPreview
 import dev.jombi.kordsb.common.entity.*
 import dev.jombi.kordsb.core.Kord
 import dev.jombi.kordsb.core.entity.ReactionEmoji
@@ -23,7 +22,6 @@ import java.util.concurrent.TimeUnit
 import kotlin.test.*
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-@OptIn(KordPreview::class)
 @Timeout(value = 5, unit = TimeUnit.SECONDS)
 @Disabled
 class LiveKordEntityTest : AbstractLiveEntityTest<LiveKordEntityTest.LiveEntityMock>() {

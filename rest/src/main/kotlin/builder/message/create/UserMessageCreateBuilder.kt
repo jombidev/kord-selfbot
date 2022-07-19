@@ -1,6 +1,5 @@
 package dev.jombi.kordsb.rest.builder.message.create
 
-import dev.jombi.kordsb.common.annotation.KordPreview
 import dev.jombi.kordsb.common.entity.DiscordMessageReference
 import dev.jombi.kordsb.common.entity.Snowflake
 import dev.jombi.kordsb.common.entity.optional.*
@@ -52,7 +51,6 @@ public class UserMessageCreateBuilder
 
     override val files: MutableList<NamedFile> = mutableListOf()
 
-    @OptIn(KordPreview::class)
     override fun toRequest(): MultipartMessageCreateRequest {
         return MultipartMessageCreateRequest(
             MessageCreateRequest(
