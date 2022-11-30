@@ -8,20 +8,18 @@ import dev.jombi.kordsb.core.entity.Strategizable
 import dev.jombi.kordsb.core.entity.channel.MessageChannel
 import dev.jombi.kordsb.core.event.Event
 import dev.jombi.kordsb.core.event.channel.data.ChannelPinsUpdateEventData
-import dev.jombi.kordsb.core.event.kordCoroutineScope
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import dev.jombi.kordsb.core.supplier.getChannelOf
 import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.datetime.Instant
 
 public class ChannelPinsUpdateEvent(
     public val data: ChannelPinsUpdateEventData,
     override val kord: Kord,
-    override val supplier: EntitySupplier = kord.defaultSupplier,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : Event, CoroutineScope by coroutineScope,Strategizable {
+    override val customContext: Any?,
+    override val supplier: EntitySupplier = kord.defaultSupplier
+) : Event, Strategizable {
 
     public val channelId: Snowflake get() = data.channelId
 
@@ -38,7 +36,7 @@ public class ChannelPinsUpdateEvent(
     public suspend fun getChannelOrNull(): MessageChannel? = supplier.getChannelOfOrNull(channelId)
 
     override fun withStrategy(strategy: EntitySupplyStrategy<*>): ChannelPinsUpdateEvent =
-        ChannelPinsUpdateEvent(data, kord, strategy.supply(kord))
+        ChannelPinsUpdateEvent(data, kord, customContext, strategy.supply(kord))
 
     override fun toString(): String {
         return "ChannelPinsUpdateEvent(channelId=$channelId, lastPinTimestamp=$lastPinTimestamp, kord=$kord, supplier=$supplier)"

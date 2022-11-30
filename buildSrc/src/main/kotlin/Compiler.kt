@@ -10,5 +10,6 @@ object CompilerArguments {
 }
 
 object Jvm {
-    const val target = "1.8"
+    const val targetString = "1.8"
+    const val tergetInt = 8
 }

@@ -16,7 +16,7 @@ import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import dev.jombi.kordsb.rest.builder.ban.BanCreateBuilder
 import dev.jombi.kordsb.rest.builder.member.MemberModifyBuilder
 import dev.jombi.kordsb.rest.request.RestRequestException
-import java.util.*
+import java.util.Objects
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 
@@ -24,6 +24,27 @@ import kotlin.contracts.contract
  * The behavior of a [Discord Member](https://discord.com/developers/docs/resources/guild#guild-member-object).
  */
 public interface MemberBehavior : KordEntity, UserBehavior {
+
+    /**
+     * The raw mention for this member's nickname.
+     *
+     * @suppress
+     */
+    @Deprecated(
+        "Nickname mentions are deprecated and should be handled the same way as regular user mentions, " +
+                "see https://discord.com/developers/docs/reference#message-formatting-formats",
+        ReplaceWith("this.mention"),
+        DeprecationLevel.ERROR
+    )
+    public val nicknameMention: String get() = "<@!$id>"
+
+    /**
+     * Requests to get the [Guild] this member is part of.
+     *
+     * @throws [RequestException] if anything went wrong during the request.
+     * @throws [EntityNotFoundException] if the [Guild] wasn't present.
+     */
+    public suspend fun getGuild(): Guild = supplier.getGuild(guildId)
 
     /**
      * The id of the guild this channel is associated to.
@@ -34,16 +55,6 @@ public interface MemberBehavior : KordEntity, UserBehavior {
      * The guild this channel is associated to.
      */
     public val guild: GuildBehavior get() = GuildBehavior(guildId, kord)
-
-    /**
-     * The raw mention for this member's nickname.
-     */
-    @Deprecated(
-        "Nickname mentions are deprecated and should be handled the same way as regular user mentions, " +
-                "see https://discord.com/developers/docs/reference#message-formatting-formats",
-        ReplaceWith("this.mention"),
-    )
-    public val nicknameMention: String get() = "<@!$id>"
 
     /**
      * Requests to get the this behavior as a [Member].
@@ -61,6 +72,7 @@ public interface MemberBehavior : KordEntity, UserBehavior {
      */
     public suspend fun asMemberOrNull(): Member? = supplier.getMemberOrNull(guildId, id)
 
+
     /**
      * Retrieve the [Member] associated with this behaviour from the provided [EntitySupplier]
      *
@@ -68,7 +80,6 @@ public interface MemberBehavior : KordEntity, UserBehavior {
      * @throws [EntityNotFoundException] if the user wasn't present.
      */
     public suspend fun fetchMember(): Member = supplier.getMember(guildId, id)
-
 
     /**
      * Retrieve the [Member] associated with this behaviour from the provided [EntitySupplier]
@@ -97,14 +108,6 @@ public interface MemberBehavior : KordEntity, UserBehavior {
     }
 
     /**
-     * Requests to get the [Guild] this member is part of.
-     *
-     * @throws [RequestException] if anything went wrong during the request.
-     * @throws [EntityNotFoundException] if the [Guild] wasn't present.
-     */
-    public suspend fun getGuild(): Guild = supplier.getGuild(guildId)
-
-    /**
      * Requests to get the [Guild] this member is part of,
      * returns null if the [Guild] isn't present.
      *
@@ -125,7 +128,7 @@ public interface MemberBehavior : KordEntity, UserBehavior {
     /**
      * Requests to get the [Presence] of this member in the [guild].
      *
-     * This property is not resolvable through REST and will always use the [KordCache] instead.
+     * This property is not resolvable through REST and will always use the [Kord.cache] instead.
      *
      * @throws [RequestException] if anything went wrong during the request.
      * @throws [EntityNotFoundException] if the [Presence] wasn't present.
@@ -140,7 +143,7 @@ public interface MemberBehavior : KordEntity, UserBehavior {
      * Requests to get the [Presence] of this member in the [guild],
      * returns null if the [Presence] isn't present.
      *
-     * This property is not resolvable through REST and will always use the [KordCache] instead.
+     * This property is not resolvable through REST and will always use the [Kord.cache] instead.
      *
      * @throws [RequestException] if anything went wrong during the request.
      */
@@ -156,7 +159,7 @@ public interface MemberBehavior : KordEntity, UserBehavior {
     /**
      * Requests to get the [VoiceState] of this member in the [guild].
      *
-     * This property is not resolvable through REST and will always use the [KordCache] instead.
+     * This property is not resolvable through REST and will always use the [Kord.cache] instead.
      *
      * @throws [RequestException] if anything went wrong during the request.
      * @throws [EntityNotFoundException] if the [VoiceState] wasn't present.
@@ -171,7 +174,7 @@ public interface MemberBehavior : KordEntity, UserBehavior {
      * Requests to get the [VoiceState] of this member in the [guild],
      * returns null if the [VoiceState] isn't present.
      *
-     * This property is not resolvable through REST and will always use the [KordCache] instead.
+     * This property is not resolvable through REST and will always use the [Kord.cache] instead.
      *
      * @throws [RequestException] if anything went wrong during the request.
      */

@@ -18,7 +18,7 @@ import java.util.*
 @Deprecated(
     "'ApplicationInfo' was renamed to 'Application'.",
     ReplaceWith("Application", "dev.jombi.kordsb.core.entity.Application"),
-    DeprecationLevel.ERROR,
+    DeprecationLevel.HIDDEN,
 )
 public typealias ApplicationInfo = Application
 
@@ -109,7 +109,7 @@ public class Application(
     @Deprecated(
         "'ownerId' might not be present, use 'getOwnerOrNull' instead.",
         ReplaceWith("this.getOwnerOrNull()"),
-        DeprecationLevel.ERROR,
+        DeprecationLevel.HIDDEN,
     )
     public suspend fun getOwner(): User = supplier.getUser(ownerId!!)
 

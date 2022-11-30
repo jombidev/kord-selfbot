@@ -8,7 +8,6 @@ import dev.jombi.kordsb.common.serialization.InstantInEpochMillisecondsSerialize
 import kotlinx.atomicfu.atomic
 import kotlinx.datetime.Instant
 import kotlinx.serialization.ExperimentalSerializationApi
-import kotlinx.serialization.Required
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.builtins.serializer

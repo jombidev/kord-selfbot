@@ -7,17 +7,14 @@ import dev.jombi.kordsb.core.entity.Guild
 import dev.jombi.kordsb.core.entity.Member
 import dev.jombi.kordsb.core.entity.Strategizable
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
-import kotlinx.coroutines.CoroutineScope
-import kotlin.coroutines.CoroutineContext
 
 public class MemberJoinEvent(
     public val member: Member,
+    override val customContext: Any?,
     override val supplier: EntitySupplier = member.kord.defaultSupplier,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(member.kord)
-) : Event, CoroutineScope by coroutineScope, Strategizable {
+) : Event, Strategizable {
 
     override val kord: Kord get() = member.kord
 
@@ -30,7 +27,7 @@ public class MemberJoinEvent(
     public suspend fun getGuildOrNull(): Guild? = supplier.getGuildOrNull(guildId)
 
     override fun withStrategy(strategy: EntitySupplyStrategy<*>): MemberJoinEvent =
-        MemberJoinEvent(member, strategy.supply(kord))
+        MemberJoinEvent(member, customContext, strategy.supply(kord))
 
     override fun toString(): String {
         return "MemberJoinEvent(member=$member, supplier=$supplier)"

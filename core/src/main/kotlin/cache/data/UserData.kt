@@ -37,8 +37,9 @@ public data class UserData(
             UserData(id, username, discriminator, avatar, bot, publicFlags, banner, accentColor)
         }
 
-        @Suppress("DeprecatedCallableAddReplaceWith", "DEPRECATION")
-        @Deprecated("'DiscordInviteUser' is deprecated. Use 'DiscordUser' instead.")
+        /** @suppress */
+        @Suppress("DeprecatedCallableAddReplaceWith", "DEPRECATION_ERROR")
+        @Deprecated("'DiscordInviteUser' is deprecated. Use 'DiscordUser' instead.", level = DeprecationLevel.ERROR)
         public fun from(entity: dev.jombi.kordsb.gateway.DiscordInviteUser): UserData = with(entity) {
             UserData(id, username, discriminator, avatar, bot, publicFlags)
         }

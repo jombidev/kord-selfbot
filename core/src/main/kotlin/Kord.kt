@@ -1,6 +1,5 @@
 package dev.jombi.kordsb.core
 
-import dev.kord.cache.api.DataCache
 import dev.jombi.kordsb.common.annotation.DeprecatedSinceKord
 import dev.jombi.kordsb.common.annotation.KordExperimental
 import dev.jombi.kordsb.common.annotation.KordUnsafe
@@ -17,7 +16,6 @@ import dev.jombi.kordsb.core.event.Event
 import dev.jombi.kordsb.core.exception.EntityNotFoundException
 import dev.jombi.kordsb.core.exception.KordInitializationException
 import dev.jombi.kordsb.core.gateway.MasterGateway
-import dev.jombi.kordsb.core.gateway.handler.DefaultGatewayEventInterceptor
 import dev.jombi.kordsb.core.gateway.handler.GatewayEventInterceptor
 import dev.jombi.kordsb.core.gateway.start
 import dev.jombi.kordsb.core.supplier.*
@@ -28,6 +26,7 @@ import dev.jombi.kordsb.rest.builder.guild.GuildCreateBuilder
 import dev.jombi.kordsb.rest.builder.user.CurrentUserModifyBuilder
 import dev.jombi.kordsb.rest.request.RestRequestException
 import dev.jombi.kordsb.rest.service.RestClient
+import dev.kord.cache.api.DataCache
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 import mu.KLogger
@@ -51,12 +50,8 @@ public class Kord(
     public val selfId: Snowflake,
     private val eventFlow: MutableSharedFlow<Event>,
     dispatcher: CoroutineDispatcher,
-    interceptorBuilder: () -> GatewayEventInterceptor = {
-        DefaultGatewayEventInterceptor(cache)
-    }
+    private val interceptor: GatewayEventInterceptor
 ) : CoroutineScope {
-
-    private val interceptor = interceptorBuilder.invoke()
 
     public val nitroStickerPacks: Flow<StickerPack>
         get() = defaultSupplier.getNitroStickerPacks()
@@ -152,12 +147,14 @@ public class Kord(
      *
      * @throws [RequestException] if anything went wrong during the request.
      * @return The newly created Guild.
+     *
+     * @suppress
      */
     @DeprecatedSinceKord("0.7.0")
     @Deprecated(
         "guild name is a mandatory field",
         ReplaceWith("createGuild(\"name\", builder)"),
-        DeprecationLevel.WARNING
+        DeprecationLevel.ERROR
     )
     public suspend inline fun createGuild(builder: GuildCreateBuilder.() -> Unit): Guild {
         contract {
@@ -348,7 +345,6 @@ public class Kord(
     public suspend fun getSticker(id: Snowflake): Sticker = defaultSupplier.getSticker(id)
 
 
-
     /**
      * Requests to edit the presence of the bot user configured by the [builder].
      * The new presence will be shown on all shards. Use [MasterGateway.gateway] or [Event.gateway] to
@@ -442,6 +438,12 @@ public inline fun <reified T : Event> Kord.on(
 ): Job =
     events.buffer(CoroutineChannel.UNLIMITED).filterIsInstance<T>()
         .onEach { event ->
-            scope.launch(event.coroutineContext) { runCatching { consumer(event) }.onFailure { kordLogger.catching(it) } }
+            scope.launch {
+                runCatching {
+                    consumer(event)
+                }.onFailure {
+                    kordLogger.catching(it)
+                }
+            }
         }
         .launchIn(scope)

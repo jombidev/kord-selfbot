@@ -1,6 +1,5 @@
 package dev.jombi.kordsb.core.entity
 
-import cache.data.MessageInteractionData
 import dev.jombi.kordsb.common.entity.InteractionType
 import dev.jombi.kordsb.common.entity.MessageFlags
 import dev.jombi.kordsb.common.entity.MessageType
@@ -15,6 +14,7 @@ import dev.jombi.kordsb.core.behavior.UserBehavior
 import dev.jombi.kordsb.core.behavior.channel.ChannelBehavior
 import dev.jombi.kordsb.core.behavior.interaction.response.InteractionResponseBehavior
 import dev.jombi.kordsb.core.cache.data.MessageData
+import dev.jombi.kordsb.core.cache.data.MessageInteractionData
 import dev.jombi.kordsb.core.entity.application.ApplicationCommand
 import dev.jombi.kordsb.core.entity.channel.Channel
 import dev.jombi.kordsb.core.entity.channel.GuildChannel
@@ -289,7 +289,8 @@ public class Message(
      */
     public val webhookId: Snowflake? get() = data.webhookId.value
 
-    @Deprecated("Replaced with 'actionRows'.", ReplaceWith("this.actionRows"))
+    /** @suppress */
+    @Deprecated("Replaced with 'actionRows'.", ReplaceWith("this.actionRows"), DeprecationLevel.ERROR)
     public val components: List<Component>
         get() = data.components.orEmpty().map { Component(it) }
 

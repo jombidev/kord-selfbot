@@ -10,8 +10,6 @@ import dev.jombi.kordsb.core.behavior.channel.VoiceChannelBehavior
 import dev.jombi.kordsb.core.cache.data.ChannelData
 import dev.jombi.kordsb.core.entity.Region
 import dev.jombi.kordsb.core.exception.EntityNotFoundException
-import dev.jombi.kordsb.core.supplier.getChannelOf
-import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import kotlinx.coroutines.flow.first

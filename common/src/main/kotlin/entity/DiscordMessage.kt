@@ -171,7 +171,8 @@ public sealed class MessageStickerType(public val value: Int) {
     public object LOTTIE : MessageStickerType(3)
 
     public companion object {
-        public val values: Set<MessageStickerType> = setOf(PNG, APNG, LOTTIE)
+        public val values: Set<MessageStickerType>
+            get() = setOf(PNG, APNG, LOTTIE)
     }
 
     internal object Serializer : KSerializer<MessageStickerType> {
@@ -787,18 +788,23 @@ public sealed class MessageType(public val code: Int) {
     public object ChannelNameChange : MessageType(4)
     public object ChannelIconChange : MessageType(5)
     public object ChannelPinnedMessage : MessageType(6)
+    /** @suppress */
     @Deprecated("Renamed to 'UserJoin'.", ReplaceWith("UserJoin"))
     public object GuildMemberJoin : MessageType(7)
     public object UserJoin : MessageType(7)
+    /** @suppress */
     @Deprecated("Renamed to 'GuildBoost'.", ReplaceWith("GuildBoost"))
     public object UserPremiumGuildSubscription : MessageType(8)
     public object GuildBoost : MessageType(8)
+    /** @suppress */
     @Deprecated("Renamed to 'GuildBoostTier1'.", ReplaceWith("GuildBoostTier1"))
     public object UserPremiumGuildSubscriptionTierOne : MessageType(9)
     public object GuildBoostTier1 : MessageType(9)
+    /** @suppress */
     @Deprecated("Renamed to 'GuildBoostTier2'.", ReplaceWith("GuildBoostTier2"))
     public object UserPremiumGuildSubscriptionTwo : MessageType(10)
     public object GuildBoostTier2 : MessageType(10)
+    /** @suppress */
     @Deprecated("Renamed to 'GuildBoostTier3'.", ReplaceWith("GuildBoostTier3"))
     public object UserPremiumGuildSubscriptionThree : MessageType(11)
     public object GuildBoostTier3 : MessageType(11)

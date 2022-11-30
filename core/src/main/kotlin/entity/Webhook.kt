@@ -49,7 +49,7 @@ public data class Webhook(
      * @throws [EntityNotFoundException] if the [Guild] wasn't present.
      */
     @DeprecatedSinceKord("0.7.0")
-    @Deprecated("Use getGuildOrNull instead.", ReplaceWith("getGuildOrNull()"), level = DeprecationLevel.ERROR)
+    @Deprecated("Use getGuildOrNull instead.", ReplaceWith("getGuildOrNull()"), level = DeprecationLevel.HIDDEN)
     public suspend fun getGuild(): Guild? = guildId?.let { supplier.getGuild(it) }
 
     /**

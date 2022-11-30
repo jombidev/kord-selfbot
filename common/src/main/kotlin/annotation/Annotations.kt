@@ -1,11 +1,14 @@
 package dev.jombi.kordsb.common.annotation
 
+import kotlin.RequiresOptIn.Level.WARNING
+import kotlin.annotation.AnnotationRetention.RUNTIME
 import kotlin.annotation.AnnotationTarget.*
 
 /**
  * Dsl marker for Kord dsls.
  */
 @DslMarker
+@Retention(RUNTIME)
 @Target(CLASS)
 public annotation class KordDsl
 
@@ -18,9 +21,9 @@ public annotation class KordDsl
  * Features marked with this annotation will have its api evaluated and changed over time.
  */
 @MustBeDocumented
-@Retention(value = AnnotationRetention.BINARY)
-@RequiresOptIn(level = RequiresOptIn.Level.WARNING)
-@Target(CLASS, PROPERTY, FUNCTION, TYPEALIAS)
+@RequiresOptIn(level = WARNING)
+@Retention(RUNTIME)
+@Target(CLASS, PROPERTY, CONSTRUCTOR, FUNCTION, TYPEALIAS)
 public annotation class KordPreview
 
 /**
@@ -29,12 +32,12 @@ public annotation class KordPreview
  * Kord experimental has **no** backward compatibility guarantees, including both binary and source compatibility.
  * Its API and semantics can and will be changed in next releases.
  *
- * Features marked with this annotation will have its use evaluated and changed over time
- * and might not make it into the stable api.
+ * Features marked with this annotation will have its use evaluated and changed over time, and might not make it
+ * into the stable api.
  */
 @MustBeDocumented
-@Retention(value = AnnotationRetention.BINARY)
-@RequiresOptIn(level = RequiresOptIn.Level.WARNING)
+@RequiresOptIn(level = WARNING)
+@Retention(RUNTIME)
 @Target(CLASS, PROPERTY, FUNCTION, TYPEALIAS)
 public annotation class KordExperimental
 
@@ -55,22 +58,25 @@ public annotation class KordVoice
 /**
  * Marks a Kord-related API as potentially unsafe.
  *
- * Kord marks targets as unsafe if it exposes functionality in a way that is more error prone than alternatives
+ * Kord marks targets as unsafe if it exposes functionality in a way that is more error-prone than alternatives
  * and can lead to *inconsistent state* and *fail silent* or *fail slow* code.
  *
- * The trade off is usually increased performance by reducing cache hits and requests to the discord api.
+ * The trade-off is usually increased performance by reducing cache hits and requests to the discord api.
  *
- * Functionality that is annotated with KordUnsafe should suggest a safer alternative approach in its documentation.
+ * Functionality that is annotated with [KordUnsafe] should suggest a safer alternative approach in its documentation.
  */
 @MustBeDocumented
-@Retention(value = AnnotationRetention.BINARY)
-@RequiresOptIn(level = RequiresOptIn.Level.WARNING)
+@RequiresOptIn("This API is potentially unsafe.", level = WARNING)
+@Retention(RUNTIME)
 @Target(CLASS, PROPERTY, FUNCTION, PROPERTY_SETTER, TYPEALIAS)
 public annotation class KordUnsafe
 
 /**
  * Marks the annotated declaration as deprecated since [version].
+ *
+ * These declarations must also be annotated with [Deprecated].
  */
 @MustBeDocumented
+@Retention(RUNTIME)
 @Target(CLASS, ANNOTATION_CLASS, PROPERTY, CONSTRUCTOR, FUNCTION, PROPERTY_GETTER, PROPERTY_SETTER, TYPEALIAS)
 public annotation class DeprecatedSinceKord(val version: String)

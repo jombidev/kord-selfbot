@@ -6730,8 +6730,8 @@ public final class dev/jombi/kordsb/common/entity/Permission$ChangeNickname : de
 }
 
 public final class dev/jombi/kordsb/common/entity/Permission$Companion {
-	public final fun getManageEmojis ()Ldev/jombi/kordsb/common/entity/Permission$ManageEmojisAndStickers;
-	public final fun getUseSlashCommands ()Ldev/jombi/kordsb/common/entity/Permission$UseApplicationCommands;
+	public final synthetic fun getManageEmojis ()Ldev/jombi/kordsb/common/entity/Permission$ManageEmojisAndStickers;
+	public final synthetic fun getUseSlashCommands ()Ldev/jombi/kordsb/common/entity/Permission$UseApplicationCommands;
 	public final fun getValues ()Ljava/util/Set;
 }
 
@@ -7124,7 +7124,7 @@ public final class dev/jombi/kordsb/common/entity/Snowflake : java/lang/Comparab
 	public final fun getIncrement-Mh2AYeg ()S
 	public final fun getProcessId-w2LRezQ ()B
 	public final fun getTimeMark ()Lkotlin/time/TimeMark;
-	public final fun getTimeStamp ()Lkotlinx/datetime/Instant;
+	public final synthetic fun getTimeStamp ()Lkotlinx/datetime/Instant;
 	public final fun getTimestamp ()Lkotlinx/datetime/Instant;
 	public final fun getValue-s-VKNKU ()J
 	public final fun getWorkerId-w2LRezQ ()B
@@ -7134,7 +7134,7 @@ public final class dev/jombi/kordsb/common/entity/Snowflake : java/lang/Comparab
 
 public final class dev/jombi/kordsb/common/entity/Snowflake$Companion {
 	public final fun getDiscordEpoch ()Lkotlinx/datetime/Instant;
-	public final fun getDiscordEpochStart ()Lkotlinx/datetime/Instant;
+	public final synthetic fun getDiscordEpochStart ()Lkotlinx/datetime/Instant;
 	public final fun getEndOfTime ()Lkotlinx/datetime/Instant;
 	public final fun getMax ()Ldev/jombi/kordsb/common/entity/Snowflake;
 	public final fun getMin ()Ldev/jombi/kordsb/common/entity/Snowflake;

@@ -30,7 +30,7 @@ public class StoreEntitySupplier(
     @Deprecated(
         "Parameter 'kord' is unused, use other constructor instead.",
         ReplaceWith("StoreEntitySupplier(supplier, cache)"),
-        DeprecationLevel.ERROR,
+        DeprecationLevel.HIDDEN,
     )
     @Suppress("UNUSED_PARAMETER")
     public constructor(supplier: EntitySupplier, cache: DataCache, kord: Kord) : this(supplier, cache)

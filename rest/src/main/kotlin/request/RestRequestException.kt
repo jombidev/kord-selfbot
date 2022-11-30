@@ -26,12 +26,9 @@ public abstract class RestRequestException(
     public val error: DiscordErrorResponse? = null,
 ) : RequestException(formatRestRequestExceptionMessage(status, error)) {
 
+    /** @suppress */
     @DeprecatedSinceKord("0.7.0")
-    @Deprecated(
-        level = DeprecationLevel.WARNING,
-        message = "Use status.code instead",
-        replaceWith = ReplaceWith("status.code")
-    )
+    @Deprecated("Use status.code instead", ReplaceWith("status.code"), DeprecationLevel.ERROR)
     public val code: Int by this.status::code
 
 }

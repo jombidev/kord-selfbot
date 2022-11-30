@@ -64,7 +64,7 @@ public sealed interface InteractionResponseBehavior : KordObject, Strategizable 
         "dev.jombi.kordsb.core.behavior.interaction.response.FollowupPermittingInteractionResponseBehavior",
         "dev.jombi.kordsb.core.behavior.interaction.response.createPublicFollowup",
     ),
-    DeprecationLevel.ERROR,
+    DeprecationLevel.HIDDEN,
 )
 public suspend inline fun InteractionResponseBehavior.followUp(builder: FollowupMessageCreateBuilder.() -> Unit): PublicFollowupMessage {
     contract { callsInPlace(builder, InvocationKind.EXACTLY_ONCE) }
@@ -82,7 +82,7 @@ public suspend inline fun InteractionResponseBehavior.followUp(builder: Followup
         "dev.jombi.kordsb.core.behavior.interaction.response.FollowupPermittingInteractionResponseBehavior",
         "dev.jombi.kordsb.core.behavior.interaction.response.createEphemeralFollowup",
     ),
-    DeprecationLevel.ERROR,
+    DeprecationLevel.HIDDEN,
 )
 public suspend inline fun InteractionResponseBehavior.followUpEphemeral(builder: FollowupMessageCreateBuilder.() -> Unit): EphemeralFollowupMessage {
     contract { callsInPlace(builder, InvocationKind.EXACTLY_ONCE) }

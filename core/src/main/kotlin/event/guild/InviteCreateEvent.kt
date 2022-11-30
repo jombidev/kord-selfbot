@@ -14,11 +14,9 @@ import dev.jombi.kordsb.core.cache.data.InviteData
 import dev.jombi.kordsb.core.entity.*
 import dev.jombi.kordsb.core.entity.channel.Channel
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
 import dev.jombi.kordsb.core.exception.EntityNotFoundException
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.datetime.Instant
 import kotlin.time.Duration
 
@@ -28,9 +26,9 @@ import kotlin.time.Duration
 public class InviteCreateEvent(
     public val data: InviteCreateData,
     override val kord: Kord,
+    override val customContext: Any?,
     override val supplier: EntitySupplier = kord.defaultSupplier,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : Event, CoroutineScope by coroutineScope, Strategizable {
+) : Event, Strategizable {
 
     /**
      * The id of the [Channel] the invite is for.
@@ -152,7 +150,7 @@ public class InviteCreateEvent(
      * @throws [EntityNotFoundException] if the  wasn't present.
      */
     @DeprecatedSinceKord("0.7.0")
-    @Deprecated("Use getGuildOrNull instead.", ReplaceWith("getGuildOrNull()"), level = DeprecationLevel.ERROR)
+    @Deprecated("Use getGuildOrNull instead.", ReplaceWith("getGuildOrNull()"), level = DeprecationLevel.HIDDEN)
     public suspend fun getGuild(): Guild? = guildId?.let { supplier.getGuild(it) }
 
     /**
@@ -170,7 +168,7 @@ public class InviteCreateEvent(
      * @throws [EntityNotFoundException] if the  wasn't present.
      */
     @DeprecatedSinceKord("0.7.0")
-    @Deprecated("Use getInviterOrNull instead.", ReplaceWith("getInviterOrNull()"), level = DeprecationLevel.ERROR)
+    @Deprecated("Use getInviterOrNull instead.", ReplaceWith("getInviterOrNull()"), level = DeprecationLevel.HIDDEN)
     public suspend fun getInviter(): User? = inviterId?.let { supplier.getUser(it) }
 
     /**
@@ -191,7 +189,7 @@ public class InviteCreateEvent(
     @Deprecated(
         "Use getInviterAsMemberOrNull instead.",
         ReplaceWith("getInviterAsMemberOrNull()"),
-        level = DeprecationLevel.ERROR
+        level = DeprecationLevel.HIDDEN
     )
     public suspend fun getInviterAsMember(): Member? {
         return supplier.getMember(guildId = guildId ?: return null, userId = inviterId ?: return null)
@@ -237,7 +235,7 @@ public class InviteCreateEvent(
     }
 
     override fun withStrategy(strategy: EntitySupplyStrategy<*>): InviteCreateEvent =
-        InviteCreateEvent(data, kord, supplier)
+        InviteCreateEvent(data, kord, customContext, strategy.supply(kord))
 
     override fun toString(): String {
         return "InviteCreateEvent(data=$data, kord=$kord, supplier=$supplier)"

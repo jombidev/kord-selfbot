@@ -510,12 +510,12 @@ public sealed class Route<T>(
         Route<Unit>(HttpMethod.Post, "/guilds/$GuildId/integrations/$IntegrationId/sync", NoStrategy)
 
     @DeprecatedSinceKord("0.7.0")
-    @Deprecated("Guild embeds were renamed to widgets.", ReplaceWith("GuildWidgetGet"), DeprecationLevel.ERROR)
+    @Deprecated("Guild embeds were renamed to widgets.", ReplaceWith("GuildWidgetGet"), DeprecationLevel.HIDDEN)
     public object GuildEmbedGet :
         Route<Nothing>(HttpMethod.Get, "/guilds/$GuildId/embed", NothingSerializer)
 
     @DeprecatedSinceKord("0.7.0")
-    @Deprecated("Guild embeds were renamed to widgets.", ReplaceWith("GuildWidgetPatch"), DeprecationLevel.ERROR)
+    @Deprecated("Guild embeds were renamed to widgets.", ReplaceWith("GuildWidgetPatch"), DeprecationLevel.HIDDEN)
     public object GuildEmbedPatch :
         Route<Nothing>(HttpMethod.Patch, "/guilds/$GuildId/embed", NothingSerializer)
 

@@ -1,15 +1,19 @@
 package live
 
-import dev.kord.cache.api.DataCache
 import dev.jombi.kordsb.common.entity.Snowflake
 import dev.jombi.kordsb.core.ClientResources
 import dev.jombi.kordsb.core.Kord
 import dev.jombi.kordsb.core.gateway.DefaultMasterGateway
+import dev.jombi.kordsb.core.gateway.handler.DefaultGatewayEventInterceptor
 import dev.jombi.kordsb.core.live.AbstractLiveKordEntity
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
-import dev.jombi.kordsb.gateway.*
+import dev.jombi.kordsb.gateway.Command
+import dev.jombi.kordsb.gateway.Event
+import dev.jombi.kordsb.gateway.Gateway
+import dev.jombi.kordsb.gateway.GatewayConfiguration
 import dev.jombi.kordsb.rest.request.KtorRequestHandler
 import dev.jombi.kordsb.rest.service.RestClient
+import dev.kord.cache.api.DataCache
 import equality.randomId
 import io.ktor.client.*
 import kotlinx.coroutines.*
@@ -105,7 +109,8 @@ abstract class AbstractLiveEntityTest<LIVE : AbstractLiveKordEntity> {
             RestClient(KtorRequestHandler(token = "token")),
             randomId(),
             MutableSharedFlow(extraBufferCapacity = Int.MAX_VALUE),
-            Dispatchers.Default
+            Dispatchers.Default,
+            DefaultGatewayEventInterceptor(),
         )
     }
 

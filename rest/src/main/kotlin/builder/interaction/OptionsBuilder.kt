@@ -140,7 +140,7 @@ public sealed class NumericOptionBuilder<T : Number>(
 }
 
 
-@Deprecated("Replaced by IntegerOptionBuilder", ReplaceWith("IntegerOptionBuilder"), DeprecationLevel.ERROR)
+@Deprecated("Replaced by IntegerOptionBuilder", ReplaceWith("IntegerOptionBuilder"), DeprecationLevel.HIDDEN)
 public typealias IntChoiceBuilder = IntegerOptionBuilder
 
 @KordDsl
@@ -153,7 +153,7 @@ public class IntegerOptionBuilder(name: String, description: String) :
     }
 }
 
-@Deprecated("Replaced by NumberOptionBuilder", ReplaceWith("NumberOptionBuilder"), DeprecationLevel.ERROR)
+@Deprecated("Replaced by NumberOptionBuilder", ReplaceWith("NumberOptionBuilder"), DeprecationLevel.HIDDEN)
 public typealias NumberChoiceBuilder = NumberOptionBuilder
 
 @KordDsl

@@ -3,8 +3,6 @@ package dev.jombi.kordsb.core.event.interaction
 import dev.jombi.kordsb.core.Kord
 import dev.jombi.kordsb.core.entity.interaction.*
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
-import kotlinx.coroutines.CoroutineScope
 
 /** An [Event] that fires when a [ComponentInteraction] is created. */
 public sealed interface ComponentInteractionCreateEvent : ActionInteractionCreateEvent {
@@ -35,26 +33,26 @@ public sealed interface SelectMenuInteractionCreateEvent : ComponentInteractionC
 public class GuildButtonInteractionCreateEvent(
     override val interaction: GuildButtonInteraction,
     override val kord: Kord,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : ButtonInteractionCreateEvent, GuildComponentInteractionCreateEvent, CoroutineScope by coroutineScope
+    override val customContext: Any?,
+) : ButtonInteractionCreateEvent, GuildComponentInteractionCreateEvent
 
 /** An [Event] that fires when a [GlobalButtonInteraction] is created. */
 public class GlobalButtonInteractionCreateEvent(
     override val interaction: GlobalButtonInteraction,
     override val kord: Kord,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : ButtonInteractionCreateEvent, GlobalComponentInteractionCreateEvent, CoroutineScope by coroutineScope
+    override val customContext: Any?,
+) : ButtonInteractionCreateEvent, GlobalComponentInteractionCreateEvent
 
 /** An [Event] that fires when a [GuildSelectMenuInteraction] is created. */
 public class GuildSelectMenuInteractionCreateEvent(
     override val interaction: GuildSelectMenuInteraction,
     override val kord: Kord,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : SelectMenuInteractionCreateEvent, GuildComponentInteractionCreateEvent, CoroutineScope by coroutineScope
+    override val customContext: Any?,
+) : SelectMenuInteractionCreateEvent, GuildComponentInteractionCreateEvent
 
 /** An [Event] that fires when a [GlobalSelectMenuInteraction] is created. */
 public class GlobalSelectMenuInteractionCreateEvent(
     override val interaction: GlobalSelectMenuInteraction,
     override val kord: Kord,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : SelectMenuInteractionCreateEvent, GlobalComponentInteractionCreateEvent, CoroutineScope by coroutineScope
+    override val customContext: Any?,
+) : SelectMenuInteractionCreateEvent, GlobalComponentInteractionCreateEvent

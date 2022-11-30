@@ -9,19 +9,16 @@ import dev.jombi.kordsb.core.entity.Guild
 import dev.jombi.kordsb.core.entity.Strategizable
 import dev.jombi.kordsb.core.entity.User
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
 import dev.jombi.kordsb.core.exception.EntityNotFoundException
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
-import kotlinx.coroutines.CoroutineScope
-import kotlin.coroutines.CoroutineContext
 
 public class BanAddEvent(
     public val user: User,
     public val guildId: Snowflake,
+    override val customContext: Any?,
     override val supplier: EntitySupplier = user.kord.defaultSupplier,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(user.kord)
-) : Event, CoroutineScope by coroutineScope, Strategizable {
+) : Event, Strategizable {
 
     override val kord: Kord get() = user.kord
 
@@ -60,7 +57,7 @@ public class BanAddEvent(
     public suspend fun getBanOrNull(): Ban? = supplier.getGuildBanOrNull(guildId, user.id)
 
     override fun withStrategy(strategy: EntitySupplyStrategy<*>): BanAddEvent =
-        BanAddEvent(user, guildId, strategy.supply(kord))
+        BanAddEvent(user, guildId, customContext, strategy.supply(kord))
 
     override fun toString(): String {
         return "BanAddEvent(user=$user, guildId=$guildId, supplier=$supplier)"

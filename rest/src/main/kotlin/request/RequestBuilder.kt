@@ -40,7 +40,7 @@ public class RequestBuilder<T>(public val route: Route<T>, keySize: Int = 2) {
     @Deprecated(
         "'header' was renamed to 'urlEncodedHeader'",
         ReplaceWith("urlEncodedHeader(key, value)"),
-        DeprecationLevel.ERROR,
+        DeprecationLevel.HIDDEN,
     )
     public fun header(key: String, value: String): Unit = urlEncodedHeader(key, value)
 

@@ -5,6 +5,7 @@ import dev.jombi.kordsb.common.entity.Snowflake
 import dev.jombi.kordsb.core.ClientResources
 import dev.jombi.kordsb.core.Kord
 import dev.jombi.kordsb.core.gateway.DefaultMasterGateway
+import dev.jombi.kordsb.core.gateway.handler.GatewayEventInterceptor
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import dev.jombi.kordsb.gateway.Gateway
 import dev.jombi.kordsb.rest.ratelimit.ExclusionRequestRateLimiter
@@ -62,14 +63,14 @@ public abstract class RestOnlyBuilder {
         val rest = RestClient(handlerBuilder(resources))
 
         return Kord(
-            resources,
-            @OptIn(ExperimentalCoroutinesApi::class)
-            DataCache.none(),
-            DefaultMasterGateway(Gateway.none()),
-            rest,
-            selfId,
-            MutableSharedFlow(),
-            defaultDispatcher,
+            resources = resources,
+            cache = @OptIn(ExperimentalCoroutinesApi::class) DataCache.none(),
+            gateway = DefaultMasterGateway(Gateway.none()),
+            rest = rest,
+            selfId = selfId,
+            eventFlow = MutableSharedFlow(),
+            dispatcher = defaultDispatcher,
+            interceptor = GatewayEventInterceptor.none(),
         )
     }
 }

@@ -73,7 +73,7 @@ public class ActivityFlags(public val value: Int) {
 @Deprecated(
     "DiscordActivityTimeStamps was renamed to DiscordActivityTimestamps.",
     ReplaceWith("DiscordActivityTimestamps"),
-    DeprecationLevel.ERROR,
+    DeprecationLevel.HIDDEN,
 )
 public typealias DiscordActivityTimeStamps = DiscordActivityTimestamps
 

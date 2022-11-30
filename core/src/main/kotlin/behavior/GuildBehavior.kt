@@ -33,7 +33,7 @@ import dev.jombi.kordsb.rest.request.RestRequestException
 import dev.jombi.kordsb.rest.service.*
 import kotlinx.coroutines.flow.*
 import kotlinx.datetime.Instant
-import java.util.*
+import java.util.Objects
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 
@@ -341,7 +341,7 @@ public interface GuildBehavior : KordEntity, Strategizable {
      * @throws [RestRequestException] if something went wrong during the request.
      */
     @DeprecatedSinceKord("0.7.0")
-    @Deprecated("Use editSelfNickname.", ReplaceWith("editSelfNickname(newNickname)"), DeprecationLevel.ERROR)
+    @Deprecated("Use editSelfNickname.", ReplaceWith("editSelfNickname(newNickname)"), DeprecationLevel.HIDDEN)
     public suspend fun modifySelfNickname(newNickname: String? = null): String = editSelfNickname(newNickname)
 
     /**
@@ -577,9 +577,11 @@ public suspend inline fun GuildBehavior.edit(builder: GuildModifyBuilder.() -> U
     return Guild(data, kord)
 }
 
+/** @suppress */
 @Deprecated(
     "emoji name and image are mandatory fields.",
-    ReplaceWith("createEmoji(\"name\", Image.fromUrl(\"url\"), builder)")
+    ReplaceWith("createEmoji(\"name\", Image.fromUrl(\"url\"), builder)"),
+    level = DeprecationLevel.ERROR
 )
 @DeprecatedSinceKord("0.7.0")
 public suspend inline fun GuildBehavior.createEmoji(builder: EmojiCreateBuilder.() -> Unit): GuildEmoji {
@@ -607,11 +609,13 @@ public suspend inline fun GuildBehavior.createEmoji(
  * @return The created [TextChannel].
  *
  * @throws [RestRequestException] if something went wrong during the request.
+ *
+ * @suppress
  */
 @Deprecated(
     "channel name is a mandatory field",
     ReplaceWith("createTextChannel(\"name\", builder)"),
-    DeprecationLevel.WARNING
+    DeprecationLevel.ERROR
 )
 @DeprecatedSinceKord("0.7.0")
 public suspend inline fun GuildBehavior.createTextChannel(builder: TextChannelCreateBuilder.() -> Unit): TextChannel {
@@ -648,11 +652,13 @@ public suspend inline fun GuildBehavior.createTextChannel(
  * @return The created [VoiceChannel].
  *
  * @throws [RestRequestException] if something went wrong during the request.
+ *
+ * @suppress
  */
 @Deprecated(
     "channel name is a mandatory field.",
     ReplaceWith("createVoiceChannel(\"name\", builder)"),
-    DeprecationLevel.WARNING
+    DeprecationLevel.ERROR
 )
 @DeprecatedSinceKord("0.7.0")
 public suspend inline fun GuildBehavior.createVoiceChannel(builder: VoiceChannelCreateBuilder.() -> Unit): VoiceChannel {
@@ -688,11 +694,13 @@ public suspend inline fun GuildBehavior.createVoiceChannel(
  * @return The created [NewsChannel].
  *
  * @throws [RestRequestException] if something went wrong during the request.
+ *
+ * @suppress
  */
 @Deprecated(
     "channel name is a mandatory field.",
     ReplaceWith("createNewsChannel(\"name\", builder)"),
-    DeprecationLevel.WARNING
+    DeprecationLevel.ERROR
 )
 @DeprecatedSinceKord("0.7.0")
 public suspend inline fun GuildBehavior.createNewsChannel(builder: NewsChannelCreateBuilder.() -> Unit): NewsChannel {
@@ -729,11 +737,13 @@ public suspend inline fun GuildBehavior.createNewsChannel(
  * @return The created [Category].
  *
  * @throws [RestRequestException] if something went wrong during the request.
+ *
+ * @suppress
  */
 @Deprecated(
     "channel name is a mandatory field.",
     ReplaceWith("createCategoryChannel(\"name\", builder)"),
-    DeprecationLevel.WARNING
+    DeprecationLevel.ERROR
 )
 @DeprecatedSinceKord("0.7.0")
 public suspend inline fun GuildBehavior.createCategory(builder: CategoryCreateBuilder.() -> Unit): Category {
@@ -802,7 +812,7 @@ public suspend inline fun GuildBehavior.swapRolePositions(builder: RolePositions
  * @throws [RestRequestException] if something went wrong during the request.
  */
 @DeprecatedSinceKord("0.7.0")
-@Deprecated("Use createRole instead.", ReplaceWith("createRole(builder)"), DeprecationLevel.ERROR)
+@Deprecated("Use createRole instead.", ReplaceWith("createRole(builder)"), DeprecationLevel.HIDDEN)
 public suspend inline fun GuildBehavior.addRole(builder: RoleCreateBuilder.() -> Unit = {}): Role = createRole(builder)
 
 /**

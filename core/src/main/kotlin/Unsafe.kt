@@ -3,29 +3,15 @@ package dev.jombi.kordsb.core
 import dev.jombi.kordsb.common.annotation.KordExperimental
 import dev.jombi.kordsb.common.annotation.KordUnsafe
 import dev.jombi.kordsb.common.entity.Snowflake
-import dev.jombi.kordsb.core.behavior.GlobalApplicationCommandBehavior
-import dev.jombi.kordsb.core.behavior.GuildApplicationCommandBehavior
-import dev.jombi.kordsb.core.behavior.GuildBehavior
-import dev.jombi.kordsb.core.behavior.GuildEmojiBehavior
-import dev.jombi.kordsb.core.behavior.GuildScheduledEventBehavior
-import dev.jombi.kordsb.core.behavior.MemberBehavior
-import dev.jombi.kordsb.core.behavior.MessageBehavior
-import dev.jombi.kordsb.core.behavior.RoleBehavior
-import dev.jombi.kordsb.core.behavior.StageInstanceBehavior
-import dev.jombi.kordsb.core.behavior.ThreadMemberBehavior
-import dev.jombi.kordsb.core.behavior.UserBehavior
-import dev.jombi.kordsb.core.behavior.WebhookBehavior
+import dev.jombi.kordsb.core.behavior.*
 import dev.jombi.kordsb.core.behavior.channel.*
-import dev.jombi.kordsb.core.behavior.channel.GuildMessageChannelBehavior
-import dev.jombi.kordsb.core.behavior.channel.TopGuildChannelBehavior
-import dev.jombi.kordsb.core.behavior.channel.TopGuildMessageChannelBehavior
 import dev.jombi.kordsb.core.behavior.channel.threads.PrivateThreadParentChannelBehavior
 import dev.jombi.kordsb.core.behavior.channel.threads.ThreadChannelBehavior
 import dev.jombi.kordsb.core.behavior.channel.threads.ThreadParentChannelBehavior
 import dev.jombi.kordsb.core.behavior.interaction.ApplicationCommandInteractionBehavior
 import dev.jombi.kordsb.core.behavior.interaction.ComponentInteractionBehavior
 import dev.jombi.kordsb.rest.service.InteractionService
-import kotlin.DeprecationLevel.WARNING
+import kotlin.DeprecationLevel.ERROR
 
 /**
  * A class that exposes the creation of `{Entity}Behavior` classes.
@@ -74,7 +60,8 @@ public class Unsafe(private val kord: Kord) {
     public fun voiceChannel(guildId: Snowflake, id: Snowflake): VoiceChannelBehavior =
         VoiceChannelBehavior(guildId = guildId, id = id, kord = kord)
 
-    @Suppress("DEPRECATION")
+    /** @suppress */
+    @Suppress("DEPRECATION_ERROR")
     @Deprecated(
         """
         Discord no longer offers the ability to purchase a license to sell PC games on Discord and store channels were
@@ -82,7 +69,7 @@ public class Unsafe(private val kord: Kord) {
         
         See https://support-dev.discord.com/hc/en-us/articles/4414590563479 for more information.
         """,
-        level = WARNING,
+        level = ERROR,
     )
     public fun storeChannel(guildId: Snowflake, id: Snowflake): StoreChannelBehavior =
         StoreChannelBehavior(guildId = guildId, id = id, kord = kord)

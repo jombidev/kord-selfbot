@@ -2,7 +2,6 @@ package dev.jombi.kordsb.core.entity.interaction
 
 import dev.jombi.kordsb.common.entity.CommandArgument
 import dev.jombi.kordsb.common.entity.Snowflake
-import dev.jombi.kordsb.core.behavior.interaction.GlobalInteractionBehavior
 import dev.jombi.kordsb.core.entity.*
 import dev.jombi.kordsb.core.entity.channel.ResolvedChannel
 

@@ -12,7 +12,7 @@ import kotlinx.serialization.Serializable
         "DiscordGuildWidget(enabled, channelId)",
         "dev.jombi.kordsb.common.entity.DiscordGuildWidget"
     ),
-    DeprecationLevel.ERROR
+    DeprecationLevel.HIDDEN
 )
 public data class EmbedResponse(
     val enabled: Boolean,

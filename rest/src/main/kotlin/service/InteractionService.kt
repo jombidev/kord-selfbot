@@ -550,7 +550,7 @@ public class InteractionService(requestHandler: RequestHandler) : RestService(re
     @Deprecated(
         "'createPublicInteractionResponse' was renamed to 'createInteractionResponse'",
         ReplaceWith("this.createInteractionResponse(interactionId, interactionToken, ephemeral, builder)"),
-        DeprecationLevel.ERROR,
+        DeprecationLevel.HIDDEN,
     )
     public suspend inline fun createPublicInteractionResponse(
         interactionId: Snowflake,
@@ -618,6 +618,7 @@ public class InteractionService(requestHandler: RequestHandler) : RestService(re
         )
     }
 
+    /** @suppress */
     @Deprecated(
         "Renamed to 'deferMessage'.",
         ReplaceWith("this.deferMessage(interactionId, interactionToken, ephemeral)"),

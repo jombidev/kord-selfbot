@@ -10,11 +10,9 @@ import dev.jombi.kordsb.core.entity.Guild
 import dev.jombi.kordsb.core.entity.Strategizable
 import dev.jombi.kordsb.core.entity.channel.Channel
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
 import dev.jombi.kordsb.core.exception.EntityNotFoundException
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
-import kotlinx.coroutines.CoroutineScope
 
 /**
  * Sent when an invite is deleted.
@@ -22,9 +20,9 @@ import kotlinx.coroutines.CoroutineScope
 public class InviteDeleteEvent(
     public val data: InviteDeleteData,
     override val kord: Kord,
+    override val customContext: Any?,
     override val supplier: EntitySupplier = kord.defaultSupplier,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : Event, CoroutineScope by coroutineScope, Strategizable {
+) : Event, Strategizable {
 
     /**
      * The id of the [Channel] the invite is for.
@@ -73,7 +71,7 @@ public class InviteDeleteEvent(
     @Deprecated(
         "'guildId' might not be present, use 'getGuildOrNull' instead.",
         ReplaceWith("this.getGuildOrNull()"),
-        DeprecationLevel.ERROR,
+        DeprecationLevel.HIDDEN,
     )
     public suspend fun getGuild(): Guild = supplier.getGuild(guildId!!)
 
@@ -86,7 +84,7 @@ public class InviteDeleteEvent(
     public suspend fun getGuildOrNull(): Guild? = guildId?.let { supplier.getGuildOrNull(it) }
 
     override fun withStrategy(strategy: EntitySupplyStrategy<*>): InviteDeleteEvent =
-        InviteDeleteEvent(data, kord, strategy.supply(kord))
+        InviteDeleteEvent(data, kord, customContext, strategy.supply(kord))
 
     override fun toString(): String {
         return "InviteDeleteEvent(data=$data, kord=$kord, supplier=$supplier)"

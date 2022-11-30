@@ -10,6 +10,8 @@ import kotlin.time.Duration
  *
  * @param capacity The maximum amount of permits that are given for each permit.
  * @param refillInterval The duration between permit refills.
+ *
+ * @suppress
  */
 @Deprecated(
     "Replaced by 'IntervalRateLimiter' that uses 'TimeSource' instead of 'Clock' by default.",
@@ -17,6 +19,7 @@ import kotlin.time.Duration
         "IntervalRateLimiter(limit = capacity, interval = refillInterval)",
         "dev.jombi.kordsb.common.ratelimit.IntervalRateLimiter",
     ),
+    level = DeprecationLevel.ERROR
 )
 public class BucketRateLimiter(
     capacity: Int,

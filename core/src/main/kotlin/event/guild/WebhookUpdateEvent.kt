@@ -8,21 +8,18 @@ import dev.jombi.kordsb.core.entity.Guild
 import dev.jombi.kordsb.core.entity.Strategizable
 import dev.jombi.kordsb.core.entity.channel.TopGuildMessageChannel
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import dev.jombi.kordsb.core.supplier.getChannelOf
 import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
-import kotlinx.coroutines.CoroutineScope
-import kotlin.coroutines.CoroutineContext
 
 public class WebhookUpdateEvent(
     public val guildId: Snowflake,
     public val channelId: Snowflake,
     override val kord: Kord,
+    override val customContext: Any?,
     override val supplier: EntitySupplier = kord.defaultSupplier,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : Event, CoroutineScope by coroutineScope, Strategizable {
+) : Event, Strategizable {
 
     public val channel: TopGuildMessageChannelBehavior get() = TopGuildMessageChannelBehavior(guildId, channelId, kord)
 
@@ -37,7 +34,7 @@ public class WebhookUpdateEvent(
     public suspend fun getGuildOrNull(): Guild? = guild.asGuildOrNull()
 
     override fun withStrategy(strategy: EntitySupplyStrategy<*>): WebhookUpdateEvent =
-        WebhookUpdateEvent(guildId, channelId, kord, strategy.supply(kord))
+        WebhookUpdateEvent(guildId, channelId, kord, customContext, strategy.supply(kord))
 
     override fun toString(): String {
         return "WebhookUpdateEvent(guildId=$guildId, channelId=$channelId, kord=$kord, supplier=$supplier)"

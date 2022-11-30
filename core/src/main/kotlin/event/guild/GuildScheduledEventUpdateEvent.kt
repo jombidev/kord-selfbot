@@ -5,10 +5,8 @@ import dev.jombi.kordsb.common.exception.RequestException
 import dev.jombi.kordsb.core.Kord
 import dev.jombi.kordsb.core.entity.GuildScheduledEvent
 import dev.jombi.kordsb.core.entity.channel.TopGuildChannel
-import dev.jombi.kordsb.core.event.kordCoroutineScope
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
-import kotlinx.coroutines.CoroutineScope
 
 /**
  * Event fired if a [GuildScheduledEvent] gets updated.
@@ -23,9 +21,9 @@ public data class GuildScheduledEventUpdateEvent(
     override val scheduledEvent: GuildScheduledEvent,
     public val oldEvent: GuildScheduledEvent?,
     override val kord: Kord,
+    override val customContext: Any?,
     override val supplier: EntitySupplier = kord.defaultSupplier,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : GuildScheduledEventEvent, CoroutineScope by coroutineScope {
+) : GuildScheduledEventEvent {
 
     /**
      * The channel id of the channel the event is in.

@@ -7,16 +7,13 @@ import dev.jombi.kordsb.core.entity.Guild
 import dev.jombi.kordsb.core.entity.Member
 import dev.jombi.kordsb.core.entity.User
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
-import kotlinx.coroutines.CoroutineScope
-import kotlin.coroutines.CoroutineContext
 
 public class MemberLeaveEvent(
     public val user: User,
     public val old: Member?,
     public val guildId: Snowflake,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(user.kord)
-) : Event, CoroutineScope by coroutineScope {
+    override val customContext: Any?,
+) : Event {
 
     override val kord: Kord get() = user.kord
 

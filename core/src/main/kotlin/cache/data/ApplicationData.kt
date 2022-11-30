@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
 @Deprecated(
     "'ApplicationInfoData' was renamed to 'ApplicationData'.",
     ReplaceWith("ApplicationData", "dev.jombi.kordsb.core.cache.data.ApplicationData"),
-    DeprecationLevel.ERROR,
+    DeprecationLevel.HIDDEN,
 )
 public typealias ApplicationInfoData = ApplicationData
 

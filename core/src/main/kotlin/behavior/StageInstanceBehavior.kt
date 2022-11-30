@@ -22,8 +22,9 @@ public interface StageInstanceBehavior : KordEntity, Strategizable {
 
     public suspend fun delete(reason: String? = null): Unit = kord.rest.stageInstance.deleteStageInstance(channelId, reason)
 
-    @Suppress("DEPRECATION")
-    @Deprecated("Replaced by 'edit'.", ReplaceWith("this.edit {\nthis@edit.topic = topic\n}"))
+    /** @suppress */
+    @Suppress("DEPRECATION_ERROR")
+    @Deprecated("Replaced by 'edit'.", ReplaceWith("this.edit {\nthis@edit.topic = topic\n}"), DeprecationLevel.ERROR)
     public suspend fun update(topic: String): StageInstance {
         val instance = kord.rest.stageInstance.updateStageInstance(channelId, dev.jombi.kordsb.rest.json.request.StageInstanceUpdateRequest(topic))
         val data = StageInstanceData.from(instance)

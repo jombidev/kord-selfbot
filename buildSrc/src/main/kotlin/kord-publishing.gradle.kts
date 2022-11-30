@@ -16,22 +16,22 @@ tasks {
                 pom {
                     name.set(Library.name)
                     description.set(Library.description)
-                    url.set(Library.description)
+                    url.set(Library.projectUrl)
 
                     organization {
-                        name.set("Kord")
-                        url.set("https://github.com/kordlib")
+                        name.set("Jombi")
+                        url.set("https://github.com/j0mbi")
                     }
 
                     developers {
                         developer {
-                            name.set("The Kord Team")
+                            name.set("The Kord Team, Jombi")
                         }
                     }
 
                     issueManagement {
                         system.set("GitHub")
-                        url.set("https://github.com/kordlib/kord/issues")
+                        url.set("https://github.com/j0mbi/kord-selfbot/issues")
                     }
 
                     licenses {

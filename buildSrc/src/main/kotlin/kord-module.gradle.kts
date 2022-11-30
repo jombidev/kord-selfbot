@@ -1,4 +1,6 @@
+import org.jetbrains.dokka.gradle.AbstractDokkaLeafTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import java.net.URL
 
 plugins {
     java
@@ -27,18 +29,14 @@ kotlin {
 }
 
 tasks {
-    tasks.getByName("apiCheck") {
-        onlyIf { Library.isRelease }
-    }
-
     withType<JavaCompile> {
-        sourceCompatibility = Jvm.target
-        targetCompatibility = Jvm.target
+        sourceCompatibility = Jvm.targetString
+        targetCompatibility = Jvm.targetString
     }
 
     withType<KotlinCompile> {
         kotlinOptions {
-            jvmTarget = Jvm.target
+            jvmTarget = Jvm.targetString
             //allWarningsAsErrors = true // disabled strict compile due fking optin
             freeCompilerArgs = listOf(
                 CompilerArguments.time,
@@ -57,21 +55,24 @@ tasks {
         useJUnitPlatform()
     }
 
-    dokkaHtml.configure {
-        this.outputDirectory.set(project.projectDir.resolve("dokka").resolve("kord"))
+    withType<AbstractDokkaLeafTask> {
 
-        dokkaSourceSets {
-            configureEach {
-                platform.set(org.jetbrains.dokka.Platform.jvm)
+        failOnWarning.set(true)
+        dokkaSourceSets.configureEach {
+            jdkVersion.set(Jvm.tergetInt)
+            sourceLink {
+                localDirectory.set(file("src/main/kotlin"))
+                remoteUrl.set(URL("https://github.com/kordlib/kord/blob/${Library.commitHashOrDefault("0.8.x")}/${project.name}/src/main/kotlin/"))
+                remoteLineSuffix.set("#L")
+            }
 
-                sourceLink {
-                    localDirectory.set(file("src/main/kotlin"))
-                    remoteUrl.set(uri("https://github.com/kordlib/kord/tree/master/${project.name}/src/main/kotlin/").toURL())
+            externalDocumentationLink("https://kotlinlang.org/api/kotlinx.coroutines/")
+            externalDocumentationLink("https://kotlinlang.org/api/kotlinx.serialization/")
+            externalDocumentationLink("https://api.ktor.io/")
 
-                    remoteLineSuffix.set("#L")
-                }
-
-                jdkVersion.set(8)
+            perPackageOption {
+                matchingRegex.set("""com\.iwebpp\.crypto""")
+                suppress.set(true)
             }
         }
     }

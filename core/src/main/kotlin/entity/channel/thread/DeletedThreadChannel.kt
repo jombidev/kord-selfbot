@@ -5,12 +5,10 @@ import dev.jombi.kordsb.common.entity.Snowflake
 import dev.jombi.kordsb.common.exception.RequestException
 import dev.jombi.kordsb.core.Kord
 import dev.jombi.kordsb.core.behavior.GuildBehavior
-import dev.jombi.kordsb.core.behavior.channel.GuildChannelBehavior
 import dev.jombi.kordsb.core.behavior.channel.threads.ThreadParentChannelBehavior
 import dev.jombi.kordsb.core.cache.data.ChannelData
 import dev.jombi.kordsb.core.entity.Guild
 import dev.jombi.kordsb.core.entity.Strategizable
-import dev.jombi.kordsb.core.entity.channel.GuildChannel
 import dev.jombi.kordsb.core.entity.channel.ThreadParentChannel
 import dev.jombi.kordsb.core.exception.EntityNotFoundException
 import dev.jombi.kordsb.core.supplier.EntitySupplier

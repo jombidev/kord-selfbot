@@ -1889,6 +1889,7 @@ public final class dev/jombi/kordsb/rest/json/JsonErrorCode : java/lang/Enum {
 	public static final field AlreadyCrossposted Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field AnnouncementRateLimit Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field ApplicationCommandNameExists Ldev/jombi/kordsb/rest/json/JsonErrorCode;
+	public static final field ApplicationNotAvailable Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field BeforeValueBeforeThreadCreate Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field BitrateTooHigh Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field BotsEndpoint Ldev/jombi/kordsb/rest/json/JsonErrorCode;
@@ -1911,8 +1912,10 @@ public final class dev/jombi/kordsb/rest/json/JsonErrorCode : java/lang/Enum {
 	public static final field ChannelWriteRateLimit Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field CommunityServerChannelMustBeTextChannel Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field Companion Ldev/jombi/kordsb/rest/json/JsonErrorCode$Companion;
+	public static final field ConnectionRevoked Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field DisallowedName Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field FailedToCreateStage Ldev/jombi/kordsb/rest/json/JsonErrorCode;
+	public static final field FailedToResizeAssetBelowMaximumSize Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field FileTooLarge Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field General Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field GiftRequiresPaymentSource Ldev/jombi/kordsb/rest/json/JsonErrorCode;
@@ -1946,8 +1949,10 @@ public final class dev/jombi/kordsb/rest/json/JsonErrorCode : java/lang/Enum {
 	public static final field MaxActiveAnnouncementThreads Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field MaxActiveThreads Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field MaxAnimatedEmojis Ldev/jombi/kordsb/rest/json/JsonErrorCode;
+	public static final field MaxApplicationCommands Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field MaxAttachments Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field MaxBanFetches Ldev/jombi/kordsb/rest/json/JsonErrorCode;
+	public static final field MaxDailyApplicationCommandCreates Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field MaxEmojis Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field MaxFriends Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field MaxGuildChannels Ldev/jombi/kordsb/rest/json/JsonErrorCode;
@@ -1972,6 +1977,7 @@ public final class dev/jombi/kordsb/rest/json/JsonErrorCode : java/lang/Enum {
 	public static final field MaxUncompletedGuildScheduledEvents Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field MaxWebhooks Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field MessageAlreadyHasThread Ldev/jombi/kordsb/rest/json/JsonErrorCode;
+	public static final field MessageBlockedByAutomaticModeration Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field MissingAccess Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field MissingOAuthScope Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field NoUsersWithDiscordTag Ldev/jombi/kordsb/rest/json/JsonErrorCode;
@@ -1982,6 +1988,7 @@ public final class dev/jombi/kordsb/rest/json/JsonErrorCode : java/lang/Enum {
 	public static final field OnlyOwner Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field OperationOnAchievedThread Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field OperationOnArchivedThread Ldev/jombi/kordsb/rest/json/JsonErrorCode;
+	public static final field OwnershipCannotBeTransferredToBot Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field PermissionLack Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field ProvidedMessageCountInsufficient Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field RasterizedImagesInLotties Ldev/jombi/kordsb/rest/json/JsonErrorCode;
@@ -1998,6 +2005,7 @@ public final class dev/jombi/kordsb/rest/json/JsonErrorCode : java/lang/Enum {
 	public static final field StickerPermissionLack Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field TemporarilyDisabled Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field TheadLocked Ldev/jombi/kordsb/rest/json/JsonErrorCode;
+	public static final field TitleBlockedByAutomaticModeration Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field TooFastDM Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field TooLongNote Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field Unauthorized Ldev/jombi/kordsb/rest/json/JsonErrorCode;
@@ -2041,6 +2049,7 @@ public final class dev/jombi/kordsb/rest/json/JsonErrorCode : java/lang/Enum {
 	public static final field UnknownStoreListing Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field UnknownStream Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field UnknownToken Ldev/jombi/kordsb/rest/json/JsonErrorCode;
+	public static final field UnknownUpload Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field UnknownUser Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field UnknownVoiceState Ldev/jombi/kordsb/rest/json/JsonErrorCode;
 	public static final field UnknownWebhook Ldev/jombi/kordsb/rest/json/JsonErrorCode;
@@ -2520,7 +2529,7 @@ public final class dev/jombi/kordsb/rest/json/request/CurrentVoiceStateModifyReq
 	public static synthetic fun copy$default (Ldev/jombi/kordsb/rest/json/request/CurrentVoiceStateModifyRequest;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;Ldev/jombi/kordsb/common/entity/optional/Optional;ILjava/lang/Object;)Ldev/jombi/kordsb/rest/json/request/CurrentVoiceStateModifyRequest;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getChannelId ()Ldev/jombi/kordsb/common/entity/Snowflake;
-	public final fun getRequestToSpeakTimeStamp ()Ldev/jombi/kordsb/common/entity/optional/Optional;
+	public final synthetic fun getRequestToSpeakTimeStamp ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun getRequestToSpeakTimestamp ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun getSuppress ()Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;
 	public fun hashCode ()I
@@ -3460,7 +3469,7 @@ public final class dev/jombi/kordsb/rest/json/request/GuildRoleCreateRequest {
 	public final fun getMentionable ()Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;
 	public final fun getName ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun getPermissions ()Ldev/jombi/kordsb/common/entity/optional/Optional;
-	public final fun getSeparate ()Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;
+	public final synthetic fun getSeparate ()Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;
 	public final fun getUnicodeEmoji ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
@@ -3505,7 +3514,7 @@ public final class dev/jombi/kordsb/rest/json/request/GuildRoleModifyRequest {
 	public final fun getMentionable ()Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;
 	public final fun getName ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public final fun getPermissions ()Ldev/jombi/kordsb/common/entity/optional/Optional;
-	public final fun getSeparate ()Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;
+	public final synthetic fun getSeparate ()Ldev/jombi/kordsb/common/entity/optional/OptionalBoolean;
 	public final fun getUnicodeEmoji ()Ldev/jombi/kordsb/common/entity/optional/Optional;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
@@ -5392,7 +5401,7 @@ public final class dev/jombi/kordsb/rest/request/RequestBuilder {
 	public final fun getBaseUrl ()Ljava/lang/String;
 	public final fun getKeys ()Ljava/util/Map;
 	public final fun getRoute ()Ldev/jombi/kordsb/rest/route/Route;
-	public final fun header (Ljava/lang/String;Ljava/lang/String;)V
+	public final synthetic fun header (Ljava/lang/String;Ljava/lang/String;)V
 	public final fun parameter (Ljava/lang/String;Ldev/jombi/kordsb/common/entity/Snowflake;)V
 	public final fun parameter (Ljava/lang/String;Ljava/lang/Object;)V
 	public final fun set (Ljava/util/Map;Ldev/jombi/kordsb/rest/route/Route$Key;Ldev/jombi/kordsb/common/entity/Snowflake;)V
@@ -6414,7 +6423,7 @@ public final class dev/jombi/kordsb/rest/service/GuildService : dev/jombi/kordsb
 	public final fun getGuildBans (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/rest/route/Position$BeforeOrAfter;Ljava/lang/Integer;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun getGuildBans$default (Ldev/jombi/kordsb/rest/service/GuildService;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/rest/route/Position$BeforeOrAfter;Ljava/lang/Integer;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun getGuildChannels (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getGuildEmbed (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final synthetic fun getGuildEmbed (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getGuildIntegrations (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getGuildInvites (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getGuildMember (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -6445,7 +6454,7 @@ public final class dev/jombi/kordsb/rest/service/GuildService : dev/jombi/kordsb
 	public final fun modifyCurrentVoiceState (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/rest/json/request/CurrentVoiceStateModifyRequest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun modifyGuild (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun modifyGuildChannelPosition (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun modifyGuildEmbed (Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final synthetic fun modifyGuildEmbed (Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun modifyGuildIntegration (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun modifyGuildMFALevel (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun modifyGuildMember (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -6508,7 +6517,7 @@ public final class dev/jombi/kordsb/rest/service/InteractionService : dev/jombi/
 	public final fun createModalInteractionResponse (Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ldev/jombi/kordsb/common/entity/DiscordModal;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun createModalInteractionResponse (Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun createNumberAutoCompleteInteractionResponse (Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun createPublicInteractionResponse (Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;ZLkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final synthetic fun createPublicInteractionResponse (Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;ZLkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun createPublicInteractionResponse$default (Ldev/jombi/kordsb/rest/service/InteractionService;Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;ZLkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun createStringAutoCompleteInteractionResponse (Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun deferMessage (Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;

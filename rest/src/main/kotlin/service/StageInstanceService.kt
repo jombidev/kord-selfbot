@@ -58,10 +58,12 @@ public class StageInstanceService(requestHandler: RequestHandler) : RestService(
         return modifyStageInstance(channelId, appliedBuilder.toRequest(), appliedBuilder.reason)
     }
 
-    @Suppress("DEPRECATION")
+    /** @suppress */
+    @Suppress("DEPRECATION_ERROR")
     @Deprecated(
         "Replaced by 'modifyStageInstance'.",
         ReplaceWith("this.modifyStageInstance(channelId, request, reason)"),
+        DeprecationLevel.ERROR
     )
     public suspend fun updateStageInstance(
         channelId: Snowflake,
@@ -81,9 +83,11 @@ public class StageInstanceService(requestHandler: RequestHandler) : RestService(
         }
 }
 
+/** @suppress */
 @Deprecated(
     "Replaced by builder overload.",
     ReplaceWith("this.createStageInstance(channelId, topic) {\nthis@createStageInstance.reason = reason\n}"),
+    DeprecationLevel.ERROR
 )
 public suspend fun StageInstanceService.createStageInstance(
     channelId: Snowflake,
@@ -93,12 +97,14 @@ public suspend fun StageInstanceService.createStageInstance(
     StageInstanceCreateRequest(channelId, topic), reason
 )
 
-@Suppress("DEPRECATION")
+/** @suppress */
+@Suppress("DEPRECATION_ERROR")
 @Deprecated(
     "Replaced by 'modifyStageInstance'.",
     ReplaceWith(
         "this.modifyStageInstance(channelId) {\nthis@modifyStageInstance.topic = topic\nthis@modifyStageInstance.reason = reason\n}"
     ),
+    DeprecationLevel.ERROR
 )
 public suspend fun StageInstanceService.updateStageInstance(
     channelId: Snowflake,

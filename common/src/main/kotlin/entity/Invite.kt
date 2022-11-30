@@ -7,10 +7,12 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
-@Suppress("DEPRECATION")
+/** @suppress */
+@Suppress("DEPRECATION_ERROR")
 @Deprecated(
     "This is no longer documented. Use 'InviteTargetType' instead.",
     ReplaceWith("InviteTargetType", "dev.jombi.kordsb.common.entity.InviteTargetType"),
+    level = DeprecationLevel.ERROR
 )
 @Serializable(with = TargetUserType.Serializer::class)
 public sealed class TargetUserType(public val value: Int) {

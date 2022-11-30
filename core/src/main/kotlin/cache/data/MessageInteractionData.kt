@@ -1,4 +1,4 @@
-package cache.data;
+package dev.jombi.kordsb.core.cache.data
 
 import dev.jombi.kordsb.common.entity.DiscordMessageInteraction
 import dev.jombi.kordsb.common.entity.InteractionType

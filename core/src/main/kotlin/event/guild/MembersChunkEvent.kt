@@ -11,22 +11,20 @@ import dev.jombi.kordsb.core.entity.Member
 import dev.jombi.kordsb.core.entity.Presence
 import dev.jombi.kordsb.core.entity.Strategizable
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
-import kotlinx.coroutines.CoroutineScope
 
 
 @DeprecatedSinceKord("0.7.0")
-@Deprecated("Renamed to MembersChunkEvent", ReplaceWith("MembersChunkEvent"), DeprecationLevel.ERROR)
+@Deprecated("Renamed to MembersChunkEvent", ReplaceWith("MembersChunkEvent"), DeprecationLevel.HIDDEN)
 public typealias MemberChunksEvent = MembersChunkEvent
 
 public class MembersChunkEvent(
     public val data: MembersChunkData,
     override val kord: Kord,
+    override val customContext: Any?,
     override val supplier: EntitySupplier = kord.defaultSupplier,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : Event, CoroutineScope by coroutineScope, Strategizable {
+) : Event, Strategizable {
 
     public val guildId: Snowflake get() = data.guildId
 
@@ -52,7 +50,7 @@ public class MembersChunkEvent(
     public suspend fun getGuildOrNull(): Guild? = supplier.getGuildOrNull(guildId)
 
     override fun withStrategy(strategy: EntitySupplyStrategy<*>): MembersChunkEvent =
-        MembersChunkEvent(data, kord, strategy.supply(kord))
+        MembersChunkEvent(data, kord, customContext, strategy.supply(kord))
 
     override fun toString(): String {
         return "MemberChunksEvent(guildId=$guildId, members=$members, kord=$kord, supplier=$supplier)"

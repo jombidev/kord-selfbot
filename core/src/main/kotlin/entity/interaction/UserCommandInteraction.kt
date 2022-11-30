@@ -16,7 +16,7 @@ public sealed interface UserCommandInteraction : ApplicationCommandInteraction {
     /** The id of the user targeted by the [UserCommand]. */
     public val targetId: Snowflake get() = data.data.targetId.value!!
 
-    @Deprecated("Renamed to 'target'.", ReplaceWith("this.target"), DeprecationLevel.ERROR)
+    @Deprecated("Renamed to 'target'.", ReplaceWith("this.target"), DeprecationLevel.HIDDEN)
     public val targetBehavior: UserBehavior
         get() = target
 

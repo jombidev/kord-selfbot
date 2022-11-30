@@ -3,8 +3,6 @@ package dev.jombi.kordsb.core.event.interaction
 import dev.jombi.kordsb.core.Kord
 import dev.jombi.kordsb.core.entity.interaction.*
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
-import kotlinx.coroutines.CoroutineScope
 
 /** An [Event] that fires when an [ApplicationCommandInteraction] is created. */
 public sealed interface ApplicationCommandInteractionCreateEvent : ActionInteractionCreateEvent {
@@ -34,15 +32,15 @@ public sealed interface UserCommandInteractionCreateEvent : ApplicationCommandIn
 public class GuildUserCommandInteractionCreateEvent(
     override val interaction: GuildUserCommandInteraction,
     override val kord: Kord,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : GuildApplicationCommandInteractionCreateEvent, UserCommandInteractionCreateEvent, CoroutineScope by coroutineScope
+    override val customContext: Any?,
+) : GuildApplicationCommandInteractionCreateEvent, UserCommandInteractionCreateEvent
 
 /** An [Event] that fires when a [GlobalUserCommandInteraction] is created. */
 public class GlobalUserCommandInteractionCreateEvent(
     override val interaction: GlobalUserCommandInteraction,
     override val kord: Kord,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : GlobalApplicationCommandInteractionCreateEvent, UserCommandInteractionCreateEvent, CoroutineScope by coroutineScope
+    override val customContext: Any?,
+) : GlobalApplicationCommandInteractionCreateEvent, UserCommandInteractionCreateEvent
 
 
 /** An [Event] that fires when a [MessageCommandInteraction] is created. */
@@ -54,19 +52,17 @@ public sealed interface MessageCommandInteractionCreateEvent : ApplicationComman
 public class GuildMessageCommandInteractionCreateEvent(
     override val interaction: GuildMessageCommandInteraction,
     override val kord: Kord,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
+    override val customContext: Any?,
 ) : GuildApplicationCommandInteractionCreateEvent,
-    MessageCommandInteractionCreateEvent,
-    CoroutineScope by coroutineScope
+    MessageCommandInteractionCreateEvent
 
 /** An [Event] that fires when a [GlobalMessageCommandInteraction] is created. */
 public class GlobalMessageCommandInteractionCreateEvent(
     override val interaction: GlobalMessageCommandInteraction,
     override val kord: Kord,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
+    override val customContext: Any?,
 ) : GlobalApplicationCommandInteractionCreateEvent,
-    MessageCommandInteractionCreateEvent,
-    CoroutineScope by coroutineScope
+    MessageCommandInteractionCreateEvent
 
 
 /** An [Event] that fires when a [ChatInputCommandInteraction] is created. */
@@ -78,16 +74,14 @@ public sealed interface ChatInputCommandInteractionCreateEvent : ApplicationComm
 public class GuildChatInputCommandInteractionCreateEvent(
     override val interaction: GuildChatInputCommandInteraction,
     override val kord: Kord,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
+    override val customContext: Any?,
 ) : GuildApplicationCommandInteractionCreateEvent,
-    ChatInputCommandInteractionCreateEvent,
-    CoroutineScope by coroutineScope
+    ChatInputCommandInteractionCreateEvent
 
 /** An [Event] that fires when a [GlobalChatInputCommandInteraction] is created. */
 public class GlobalChatInputCommandInteractionCreateEvent(
     override val interaction: GlobalChatInputCommandInteraction,
     override val kord: Kord,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
+    override val customContext: Any?,
 ) : GlobalApplicationCommandInteractionCreateEvent,
-    ChatInputCommandInteractionCreateEvent,
-    CoroutineScope by coroutineScope
+    ChatInputCommandInteractionCreateEvent

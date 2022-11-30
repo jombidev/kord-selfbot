@@ -39,12 +39,14 @@ public fun FollowupPermittingInteractionResponseBehavior(
     override val supplier: EntitySupplier = supplier
 }
 
+/** @suppress */
 @Deprecated(
     "Renamed to 'createPublicFollowup'.",
     ReplaceWith(
         "this.createPublicFollowup { builder() }",
         "dev.jombi.kordsb.core.behavior.interaction.response.createPublicFollowup",
     ),
+    level = DeprecationLevel.ERROR
 )
 public suspend inline fun FollowupPermittingInteractionResponseBehavior.followUp(
     builder: FollowupMessageCreateBuilder.() -> Unit,
@@ -73,12 +75,14 @@ public suspend inline fun FollowupPermittingInteractionResponseBehavior.createPu
     return PublicFollowupMessage(message, applicationId, token, kord)
 }
 
+/** @suppress */
 @Deprecated(
     "Renamed to 'createEphemeralFollowup'.",
     ReplaceWith(
         "this.createEphemeralFollowup { builder() }",
         "dev.jombi.kordsb.core.behavior.interaction.response.createEphemeralFollowup",
     ),
+    level = DeprecationLevel.ERROR
 )
 public suspend inline fun FollowupPermittingInteractionResponseBehavior.followUpEphemeral(
     builder: FollowupMessageCreateBuilder.() -> Unit,

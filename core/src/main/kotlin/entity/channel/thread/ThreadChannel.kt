@@ -59,7 +59,7 @@ public interface ThreadChannel : GuildMessageChannel, ThreadChannelBehavior {
     @Deprecated(
         "archiveTimeStamp was renamed to archiveTimestamp.",
         ReplaceWith("archiveTimestamp"),
-        DeprecationLevel.ERROR,
+        DeprecationLevel.HIDDEN,
     )
     public val archiveTimeStamp: Instant
         get() = archiveTimestamp

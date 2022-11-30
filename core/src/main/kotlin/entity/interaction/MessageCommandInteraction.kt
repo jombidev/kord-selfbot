@@ -16,7 +16,7 @@ public sealed interface MessageCommandInteraction : ApplicationCommandInteractio
     /** The id of the message targeted by the [MessageCommand]. */
     public val targetId: Snowflake get() = data.data.targetId.value!!
 
-    @Deprecated("Renamed to 'target'.", ReplaceWith("this.target"), DeprecationLevel.ERROR)
+    @Deprecated("Renamed to 'target'.", ReplaceWith("this.target"), DeprecationLevel.HIDDEN)
     public val targetBehavior: MessageBehavior
         get() = target
 

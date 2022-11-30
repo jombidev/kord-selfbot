@@ -7,15 +7,12 @@ import dev.jombi.kordsb.core.behavior.MemberBehavior
 import dev.jombi.kordsb.core.cache.data.ThreadMembersUpdateEventData
 import dev.jombi.kordsb.core.entity.channel.thread.ThreadMember
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
-import kotlinx.coroutines.CoroutineScope
-import kotlin.coroutines.CoroutineContext
 
 public class ThreadMembersUpdateEvent(
     public val data: ThreadMembersUpdateEventData,
     override val kord: Kord,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : Event, CoroutineScope by coroutineScope {
+    override val customContext: Any?,
+) : Event {
 
     public val id: Snowflake get() = data.id
 

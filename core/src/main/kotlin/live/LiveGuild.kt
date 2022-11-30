@@ -166,7 +166,7 @@ public fun LiveGuild.onGuildUpdate(scope: CoroutineScope = this, block: suspend 
 @Deprecated(
     "The block is not called when the entity is deleted because the live entity is shut down",
     ReplaceWith("coroutineContext.job.invokeOnCompletion(block)", "kotlinx.coroutines.job"),
-    DeprecationLevel.ERROR
+    DeprecationLevel.HIDDEN
 )
 @KordPreview
 public fun LiveGuild.onGuildDelete(scope: CoroutineScope = this, block: suspend (GuildDeleteEvent) -> Unit): Job =

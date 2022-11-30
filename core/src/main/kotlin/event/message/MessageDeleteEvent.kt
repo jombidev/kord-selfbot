@@ -9,13 +9,10 @@ import dev.jombi.kordsb.core.entity.Message
 import dev.jombi.kordsb.core.entity.Strategizable
 import dev.jombi.kordsb.core.entity.channel.MessageChannel
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import dev.jombi.kordsb.core.supplier.getChannelOf
 import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
-import kotlinx.coroutines.CoroutineScope
-import kotlin.coroutines.CoroutineContext
 
 public class MessageDeleteEvent(
     public val messageId: Snowflake,
@@ -23,9 +20,9 @@ public class MessageDeleteEvent(
     public val guildId: Snowflake?,
     public val message: Message?,
     override val kord: Kord,
+    override val customContext: Any?,
     override val supplier: EntitySupplier = kord.defaultSupplier,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : Event, CoroutineScope by coroutineScope, Strategizable {
+) : Event, Strategizable {
 
     public val channel: MessageChannelBehavior get() = MessageChannelBehavior(channelId, kord)
 
@@ -38,7 +35,7 @@ public class MessageDeleteEvent(
     public suspend fun getGuild(): Guild? = guildId?.let { supplier.getGuildOrNull(it) }
 
     override fun withStrategy(strategy: EntitySupplyStrategy<*>): MessageDeleteEvent =
-        MessageDeleteEvent(messageId, channelId, guildId, message, kord, strategy.supply(kord))
+        MessageDeleteEvent(messageId, channelId, guildId, message, kord, customContext, strategy.supply(kord))
 
     override fun toString(): String {
         return "MessageDeleteEvent(messageId=$messageId, channelId=$channelId, guildId=$guildId, message=$message, kord=$kord, supplier=$supplier)"

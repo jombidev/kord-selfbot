@@ -6,7 +6,6 @@ import dev.jombi.kordsb.core.behavior.GuildBehavior
 import dev.jombi.kordsb.core.behavior.channel.GuildMessageChannelBehavior
 import dev.jombi.kordsb.core.entity.Guild
 import dev.jombi.kordsb.core.entity.channel.GuildMessageChannel
-import dev.jombi.kordsb.core.entity.channel.MessageChannel
 import dev.jombi.kordsb.core.entity.interaction.GuildInteraction
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
@@ -25,7 +24,7 @@ public interface GuildInteractionBehavior : InteractionBehavior {
     /**
      * The [GuildBehavior] for the guild the command was executed in.
      */
-    @Deprecated("Renamed to 'guild'.", ReplaceWith("this.guild"), DeprecationLevel.ERROR)
+    @Deprecated("Renamed to 'guild'.", ReplaceWith("this.guild"), DeprecationLevel.HIDDEN)
     public val guildBehavior: GuildBehavior get() = guild
 
     override val channel: GuildMessageChannelBehavior

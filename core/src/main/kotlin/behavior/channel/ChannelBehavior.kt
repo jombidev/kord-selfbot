@@ -81,8 +81,10 @@ public interface ChannelBehavior : KordEntity, Strategizable {
  *
  * @throws [RequestException] if anything went wrong during the request.
  * @throws [ClassCastException] if the channel is not of type [T]
+ *
+ * @suppress
  */
-@Deprecated("Deprecated in favor of asChannelOfOrNull",ReplaceWith("asChannelOfOrNull(id)"))
+@Deprecated("Deprecated in favor of asChannelOfOrNull", ReplaceWith("this.asChannelOfOrNull<T>()"), level = DeprecationLevel.ERROR)
 public suspend inline fun <reified T: Channel> ChannelBehavior.ofOrNull(): T? = supplier.getChannelOfOrNull(id)
 
 
@@ -92,8 +94,10 @@ public suspend inline fun <reified T: Channel> ChannelBehavior.ofOrNull(): T? = 
  * @throws [RequestException] if anything went wrong during the request.
  * @throws [EntityNotFoundException] if the [Channel] wasn't present.
  * @throws [ClassCastException] if the channel is not of type  [T].
+ *
+ * @suppress
  */
-@Deprecated("Deprecated in favor of asChannelOfOrNull",ReplaceWith("asChannelOfOrNull(id)"))
+@Deprecated("Deprecated in favor of asChannelOf", ReplaceWith("this.asChannelOf<T>()"), level = DeprecationLevel.ERROR)
 public suspend inline fun <reified T: Channel> ChannelBehavior.of(): T = supplier.getChannelOf(id)
 
 

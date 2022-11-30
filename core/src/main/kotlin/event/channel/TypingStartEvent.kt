@@ -12,21 +12,19 @@ import dev.jombi.kordsb.core.entity.User
 import dev.jombi.kordsb.core.entity.channel.MessageChannel
 import dev.jombi.kordsb.core.event.Event
 import dev.jombi.kordsb.core.event.channel.data.TypingStartEventData
-import dev.jombi.kordsb.core.event.kordCoroutineScope
 import dev.jombi.kordsb.core.exception.EntityNotFoundException
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import dev.jombi.kordsb.core.supplier.getChannelOf
 import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.datetime.Instant
 
 public class TypingStartEvent(
     public val data: TypingStartEventData,
     override val kord: Kord,
+    override val customContext: Any?,
     override val supplier: EntitySupplier = kord.defaultSupplier,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : Event, CoroutineScope by coroutineScope, Strategizable {
+) : Event, Strategizable {
 
     public val channelId: Snowflake get() = data.channelId
 
@@ -83,11 +81,7 @@ public class TypingStartEvent(
     public suspend fun getGuild(): Guild? = guildId?.let { supplier.getGuildOrNull(it) }
 
     override fun withStrategy(strategy: EntitySupplyStrategy<*>): Strategizable =
-        TypingStartEvent(
-            data,
-            kord,
-            supplier
-        )
+        TypingStartEvent(data, kord, customContext, supplier)
 
     override fun toString(): String {
         return "TypingStartEvent(channelId=$channelId, userId=$userId, guildId=$guildId, started=$started, kord=$kord, supplier=$supplier)"

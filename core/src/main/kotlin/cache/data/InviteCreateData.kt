@@ -23,8 +23,9 @@ public data class InviteCreateData(
     val targetType: Optional<InviteTargetType> = Optional.Missing(),
     val targetUserId: OptionalSnowflake = OptionalSnowflake.Missing,
     val targetApplication: Optional<PartialApplicationData> = Optional.Missing(),
-    @Deprecated("No longer documented. Use 'targetType' instead.", ReplaceWith("this.targetType"))
-    val targetUserType: Optional<@Suppress("DEPRECATION") dev.jombi.kordsb.common.entity.TargetUserType> = Optional.Missing(),
+    /** @suppress */
+    @Deprecated("No longer documented. Use 'targetType' instead.", ReplaceWith("this.targetType"), DeprecationLevel.ERROR)
+    val targetUserType: Optional<@Suppress("DEPRECATION_ERROR") dev.jombi.kordsb.common.entity.TargetUserType> = Optional.Missing(),
     val temporary: Boolean,
     val uses: Int,
 ) {
@@ -42,7 +43,7 @@ public data class InviteCreateData(
                 targetType,
                 targetUser.mapSnowflake { it.id },
                 targetApplication.map { PartialApplicationData.from(it) },
-                @Suppress("DEPRECATION")
+                @Suppress("DEPRECATION_ERROR")
                 targetUserType,
                 temporary,
                 uses,

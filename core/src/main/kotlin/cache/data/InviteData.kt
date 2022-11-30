@@ -29,8 +29,9 @@ public data class InviteData(
     override val targetType: Optional<InviteTargetType> = Optional.Missing(),
     override val targetUserId: OptionalSnowflake = OptionalSnowflake.Missing,
     override val targetApplication: Optional<PartialApplicationData> = Optional.Missing(),
-    @Deprecated("This is no longer documented. Use 'targetType' instead.", ReplaceWith("this.targetType"))
-    val targetUserType: Optional<@Suppress("DEPRECATION") TargetUserType> = Optional.Missing(),
+    /** @suppress */
+    @Deprecated("This is no longer documented. Use 'targetType' instead.", ReplaceWith("this.targetType"), DeprecationLevel.ERROR)
+    val targetUserType: Optional<@Suppress("DEPRECATION_ERROR") TargetUserType> = Optional.Missing(),
     override val approximatePresenceCount: OptionalInt = OptionalInt.Missing,
     override val approximateMemberCount: OptionalInt = OptionalInt.Missing,
     override val expiresAt: Optional<Instant?> = Optional.Missing(),
@@ -48,7 +49,7 @@ public data class InviteData(
                 targetType,
                 targetUserId = targetUser.mapSnowflake { it.id },
                 targetApplication = targetApplication.map { PartialApplicationData.from(it) },
-                @Suppress("DEPRECATION")
+                @Suppress("DEPRECATION_ERROR")
                 targetUserType,
                 approximatePresenceCount,
                 approximateMemberCount,

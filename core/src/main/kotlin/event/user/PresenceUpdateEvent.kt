@@ -8,12 +8,9 @@ import dev.jombi.kordsb.core.behavior.GuildBehavior
 import dev.jombi.kordsb.core.behavior.MemberBehavior
 import dev.jombi.kordsb.core.entity.*
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
 import dev.jombi.kordsb.core.exception.EntityNotFoundException
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
-import kotlinx.coroutines.CoroutineScope
-import kotlin.coroutines.CoroutineContext
 
 public class PresenceUpdateEvent(
     public val oldUser: User?,
@@ -21,9 +18,9 @@ public class PresenceUpdateEvent(
     public val guildId: Snowflake,
     public val old: Presence?,
     public val presence: Presence,
+    override val customContext: Any?,
     override val supplier: EntitySupplier = presence.kord.defaultSupplier,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(presence.kord)
-) : Event, CoroutineScope by coroutineScope, Strategizable {
+) : Event, Strategizable {
     override val kord: Kord get() = presence.kord
 
     /**
@@ -82,7 +79,7 @@ public class PresenceUpdateEvent(
     public suspend fun getGuildOrNull(): Guild? = supplier.getGuildOrNull(guildId)
 
     override fun withStrategy(strategy: EntitySupplyStrategy<*>): PresenceUpdateEvent =
-        PresenceUpdateEvent(oldUser, user, guildId, old, presence, strategy.supply(kord))
+        PresenceUpdateEvent(oldUser, user, guildId, old, presence, customContext, strategy.supply(kord))
 
     override fun toString(): String {
         return "PresenceUpdateEvent(oldUser=$oldUser, user=$user, guildId=$guildId, old=$old, presence=$presence, supplier=$supplier)"

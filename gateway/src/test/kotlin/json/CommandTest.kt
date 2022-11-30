@@ -1,7 +1,6 @@
 package json
 
 import dev.jombi.kordsb.common.entity.DiscordBotActivity
-import dev.jombi.kordsb.common.entity.DiscordShard
 import dev.jombi.kordsb.common.entity.PresenceStatus
 import dev.jombi.kordsb.common.entity.Snowflake
 import dev.jombi.kordsb.common.entity.optional.OptionalInt

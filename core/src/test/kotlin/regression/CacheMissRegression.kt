@@ -1,7 +1,5 @@
 package regression
 
-import dev.kord.cache.api.put
-import dev.kord.cache.map.MapDataCache
 import dev.jombi.kordsb.common.entity.ChannelType
 import dev.jombi.kordsb.common.entity.Snowflake
 import dev.jombi.kordsb.core.ClientResources
@@ -11,6 +9,7 @@ import dev.jombi.kordsb.core.builder.kord.getBotIdFromToken
 import dev.jombi.kordsb.core.cache.data.ChannelData
 import dev.jombi.kordsb.core.cache.registerKordData
 import dev.jombi.kordsb.core.gateway.DefaultMasterGateway
+import dev.jombi.kordsb.core.gateway.handler.DefaultGatewayEventInterceptor
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import dev.jombi.kordsb.gateway.Command
 import dev.jombi.kordsb.gateway.Event
@@ -22,6 +21,8 @@ import dev.jombi.kordsb.rest.request.Request
 import dev.jombi.kordsb.rest.request.RequestHandler
 import dev.jombi.kordsb.rest.route.Route
 import dev.jombi.kordsb.rest.service.RestClient
+import dev.kord.cache.api.put
+import dev.kord.cache.map.MapDataCache
 import io.ktor.client.*
 import io.ktor.client.request.*
 import io.ktor.client.request.forms.*
@@ -133,7 +134,8 @@ class CacheMissingRegressions {
             RestClient(CrashingHandler(resources.httpClient, resources.token)),
             getBotIdFromToken(token),
             MutableSharedFlow(extraBufferCapacity = Int.MAX_VALUE),
-            Dispatchers.Default
+            Dispatchers.Default,
+            DefaultGatewayEventInterceptor(),
         )
     }
 

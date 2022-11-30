@@ -142,7 +142,7 @@ public class Guild(
     @Deprecated(
         "Embed was renamed to widget.",
         ReplaceWith("widgetChannelId"),
-        DeprecationLevel.ERROR
+        DeprecationLevel.HIDDEN
     )
     public val embedChannelId: Snowflake? by ::widgetChannelId
 
@@ -157,8 +157,8 @@ public class Guild(
     @DeprecatedSinceKord("0.7.0")
     @Deprecated(
         "Embed was renamed to widget.",
-        ReplaceWith("widgetChannelId"),
-        DeprecationLevel.ERROR
+        ReplaceWith("widgetChannel"),
+        DeprecationLevel.HIDDEN
     )
     public val embedChannel: TopGuildChannelBehavior? by ::widgetChannel
 

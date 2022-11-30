@@ -4,13 +4,7 @@ import dev.jombi.kordsb.common.entity.Snowflake
 import dev.jombi.kordsb.common.entity.optional.value
 import dev.jombi.kordsb.core.behavior.channel.CategorizableChannelBehavior
 import dev.jombi.kordsb.core.behavior.channel.CategoryBehavior
-import dev.jombi.kordsb.core.behavior.channel.createInvite
-import dev.jombi.kordsb.core.entity.Invite
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
-import dev.jombi.kordsb.rest.builder.channel.InviteCreateBuilder
-import dev.jombi.kordsb.rest.request.RestRequestException
-import kotlin.contracts.InvocationKind
-import kotlin.contracts.contract
 
 /**
  * An instance of a Discord channel associated to a [category].
@@ -33,20 +27,4 @@ public interface CategorizableChannel : TopGuildChannel, CategorizableChannelBeh
         }
 
     override fun withStrategy(strategy: EntitySupplyStrategy<*>): CategorizableChannel
-}
-
-/**
- * Request to create an invite for this channel.
- *
- * @return the created [Invite].
- * @throws RestRequestException if something went wrong during the request.
- */
-@Deprecated(
-    "Use 'CategorizableChannelBehavior.createInvite' instead.",
-    ReplaceWith("this.createInvite(builder)", "dev.jombi.kordsb.core.behavior.channel.createInvite"),
-    DeprecationLevel.HIDDEN,
-)
-public suspend inline fun CategorizableChannel.createInvite(builder: InviteCreateBuilder.() -> Unit = {}): Invite {
-    contract { callsInPlace(builder, InvocationKind.EXACTLY_ONCE) }
-    return (this as CategorizableChannelBehavior).createInvite(builder)
 }

@@ -263,7 +263,7 @@ public suspend inline fun MessageBehavior.edit(builder: UserMessageModifyBuilder
 @Deprecated(
     "'editWebhookMessage' was renamed to 'edit'",
     ReplaceWith("this.edit(webhookId, token, threadId = null) { builder() }", "dev.jombi.kordsb.core.behavior.edit"),
-    DeprecationLevel.ERROR,
+    DeprecationLevel.HIDDEN,
 )
 public suspend inline fun MessageBehavior.editWebhookMessage(
     webhookId: Snowflake,

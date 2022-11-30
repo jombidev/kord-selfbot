@@ -289,7 +289,7 @@ public final class dev/jombi/kordsb/voice/SpeakingFlags$Companion {
 }
 
 public final class dev/jombi/kordsb/voice/VoiceConnection {
-	public fun <init> (Ldev/jombi/kordsb/voice/VoiceConnectionData;Ldev/jombi/kordsb/gateway/Gateway;Ldev/jombi/kordsb/voice/gateway/VoiceGateway;Ldev/jombi/kordsb/voice/udp/VoiceUdpSocket;Ldev/jombi/kordsb/voice/gateway/VoiceGatewayConfiguration;Ldev/jombi/kordsb/voice/streams/Streams;Ldev/jombi/kordsb/voice/AudioProvider;Ldev/jombi/kordsb/voice/FrameInterceptor;Ldev/jombi/kordsb/voice/udp/AudioFrameSender;Ldev/jombi/kordsb/voice/encryption/strategies/NonceStrategy;)V
+	public synthetic fun <init> (Ldev/jombi/kordsb/voice/VoiceConnectionData;Ldev/jombi/kordsb/gateway/Gateway;Ldev/jombi/kordsb/voice/gateway/VoiceGateway;Ldev/jombi/kordsb/voice/udp/VoiceUdpSocket;Ldev/jombi/kordsb/voice/gateway/VoiceGatewayConfiguration;Ldev/jombi/kordsb/voice/streams/Streams;Ldev/jombi/kordsb/voice/AudioProvider;Ldev/jombi/kordsb/voice/FrameInterceptor;Ldev/jombi/kordsb/voice/udp/AudioFrameSender;Ldev/jombi/kordsb/voice/encryption/strategies/NonceStrategy;JLkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun connect (Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun connect$default (Ldev/jombi/kordsb/voice/VoiceConnection;Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun disconnect (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -305,6 +305,8 @@ public final class dev/jombi/kordsb/voice/VoiceConnection {
 	public final fun getVoiceGateway ()Ldev/jombi/kordsb/voice/gateway/VoiceGateway;
 	public final fun getVoiceGatewayConfiguration ()Ldev/jombi/kordsb/voice/gateway/VoiceGatewayConfiguration;
 	public final fun leave (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun move (Ldev/jombi/kordsb/common/entity/Snowflake;ZZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun move$default (Ldev/jombi/kordsb/voice/VoiceConnection;Ldev/jombi/kordsb/common/entity/Snowflake;ZZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun setVoiceGatewayConfiguration (Ldev/jombi/kordsb/voice/gateway/VoiceGatewayConfiguration;)V
 	public final fun shutdown (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
@@ -317,6 +319,7 @@ public final class dev/jombi/kordsb/voice/VoiceConnectionBuilder {
 	public final fun getAudioProvider ()Ldev/jombi/kordsb/voice/AudioProvider;
 	public final fun getAudioSender ()Ldev/jombi/kordsb/voice/udp/AudioFrameSender;
 	public final fun getChannelId ()Ldev/jombi/kordsb/common/entity/Snowflake;
+	public final fun getConnectionDetachDuration-UwyO8pc ()J
 	public final fun getFrameInterceptor ()Ldev/jombi/kordsb/voice/FrameInterceptor;
 	public final fun getGateway ()Ldev/jombi/kordsb/gateway/Gateway;
 	public final fun getGuildId ()Ldev/jombi/kordsb/common/entity/Snowflake;
@@ -331,6 +334,7 @@ public final class dev/jombi/kordsb/voice/VoiceConnectionBuilder {
 	public final fun setAudioProvider (Ldev/jombi/kordsb/voice/AudioProvider;)V
 	public final fun setAudioSender (Ldev/jombi/kordsb/voice/udp/AudioFrameSender;)V
 	public final fun setChannelId (Ldev/jombi/kordsb/common/entity/Snowflake;)V
+	public final fun setConnectionDetachDuration-LRDsOJo (J)V
 	public final fun setFrameInterceptor (Ldev/jombi/kordsb/voice/FrameInterceptor;)V
 	public final fun setGateway (Ldev/jombi/kordsb/gateway/Gateway;)V
 	public final fun setGuildId (Ldev/jombi/kordsb/common/entity/Snowflake;)V

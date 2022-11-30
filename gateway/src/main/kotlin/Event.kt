@@ -117,6 +117,7 @@ public sealed class Event {
                 "PRESENCES_REPLACE" -> {
                     decoder.decodeNullableSerializableElement(descriptor, index, JsonElement.serializer().nullable)
                     null //https://github.com/kordlib/kord/issues/42
+                    // TODO: Self-bot can be get friends
                 }
                 "RESUMED" -> {
                     decoder.decodeNullableSerializableElement(descriptor, index, JsonElement.serializer().nullable)
@@ -649,13 +650,15 @@ public data class DiscordCreatedInvite(
     val targetUser: Optional<DiscordUser> = Optional.Missing(),
     @SerialName("target_application")
     val targetApplication: Optional<DiscordPartialApplication> = Optional.Missing(),
-    @Deprecated("No longer documented. Use 'targetType' instead.", ReplaceWith("this.targetType"))
+    /** @suppress */
+    @Deprecated("No longer documented. Use 'targetType' instead.", ReplaceWith("this.targetType"), DeprecationLevel.ERROR)
     @SerialName("target_user_type")
-    val targetUserType: Optional<@Suppress("DEPRECATION") TargetUserType> = Optional.Missing(),
+    val targetUserType: Optional<@Suppress("DEPRECATION_ERROR") TargetUserType> = Optional.Missing(),
     val temporary: Boolean,
     val uses: Int,
 )
 
+/** @suppress */
 @Deprecated(
     "Use 'DiscordUser' instead, All missing fields have defaults.",
     ReplaceWith("DiscordUser", "dev.jombi.kordsb.common.entity.DiscordUser"),

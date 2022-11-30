@@ -3,9 +3,7 @@ package dev.jombi.kordsb.core.event.channel
 import dev.jombi.kordsb.core.Kord
 import dev.jombi.kordsb.core.entity.channel.*
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
-import kotlinx.coroutines.CoroutineScope
-import kotlin.DeprecationLevel.WARNING
+import kotlin.DeprecationLevel.ERROR
 
 public interface ChannelCreateEvent : Event {
     public val channel: Channel
@@ -15,8 +13,8 @@ public interface ChannelCreateEvent : Event {
 
 public class CategoryCreateEvent(
     override val channel: Category,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(channel.kord)
-) : ChannelCreateEvent, CoroutineScope by coroutineScope {
+    override val customContext: Any?,
+) : ChannelCreateEvent {
     override fun toString(): String {
         return "CategoryCreateEvent(channel=$channel)"
     }
@@ -24,8 +22,8 @@ public class CategoryCreateEvent(
 
 public class DMChannelCreateEvent(
     override val channel: DmChannel,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(channel.kord)
-) : ChannelCreateEvent, CoroutineScope by coroutineScope {
+    override val customContext: Any?,
+) : ChannelCreateEvent {
     override fun toString(): String {
         return "DMChannelCreateEvent(channel=$channel)"
     }
@@ -33,14 +31,15 @@ public class DMChannelCreateEvent(
 
 public class NewsChannelCreateEvent(
     override val channel: NewsChannel,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(channel.kord)
-) : ChannelCreateEvent, CoroutineScope by coroutineScope {
+    override val customContext: Any?,
+) : ChannelCreateEvent {
     override fun toString(): String {
         return "NewsChannelCreateEvent(channel=$channel)"
     }
 }
 
-@Suppress("DEPRECATION")
+/** @suppress */
+@Suppress("DEPRECATION_ERROR")
 @Deprecated(
     """
     Discord no longer offers the ability to purchase a license to sell PC games on Discord and store channels were
@@ -48,12 +47,12 @@ public class NewsChannelCreateEvent(
     
     See https://support-dev.discord.com/hc/en-us/articles/4414590563479 for more information.
     """,
-    level = WARNING,
+    level = ERROR,
 )
 public class StoreChannelCreateEvent(
     override val channel: StoreChannel,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(channel.kord)
-) : ChannelCreateEvent, CoroutineScope by coroutineScope {
+    override val customContext: Any?,
+) : ChannelCreateEvent {
     override fun toString(): String {
         return "StoreChannelCreateEvent(channel=$channel)"
     }
@@ -61,8 +60,8 @@ public class StoreChannelCreateEvent(
 
 public class TextChannelCreateEvent(
     override val channel: TextChannel,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(channel.kord)
-) : ChannelCreateEvent, CoroutineScope by coroutineScope {
+    override val customContext: Any?,
+) : ChannelCreateEvent {
     override fun toString(): String {
         return "TextChannelCreateEvent(channel=$channel)"
     }
@@ -70,8 +69,8 @@ public class TextChannelCreateEvent(
 
 public class VoiceChannelCreateEvent(
     override val channel: VoiceChannel,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(channel.kord)
-) : ChannelCreateEvent, CoroutineScope by coroutineScope {
+    override val customContext: Any?,
+) : ChannelCreateEvent {
     override fun toString(): String {
         return "VoiceChannelCreateEvent(channel=$channel)"
     }
@@ -80,8 +79,8 @@ public class VoiceChannelCreateEvent(
 
 public class StageChannelCreateEvent(
     override val channel: StageChannel,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(channel.kord)
-) : ChannelCreateEvent, CoroutineScope by coroutineScope {
+    override val customContext: Any?,
+) : ChannelCreateEvent {
     override fun toString(): String {
         return "StageChannelCreateEvent(channel=$channel)"
     }
@@ -89,8 +88,8 @@ public class StageChannelCreateEvent(
 
 public class UnknownChannelCreateEvent(
     override val channel: Channel,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(channel.kord)
-) : ChannelCreateEvent, CoroutineScope by coroutineScope {
+    override val customContext: Any?,
+) : ChannelCreateEvent {
     override fun toString(): String {
         return "UnknownChannelCreateEvent(channel=$channel)"
     }

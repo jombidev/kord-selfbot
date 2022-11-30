@@ -1,6 +1,5 @@
 package dev.jombi.kordsb.core.builder.kord
 
-import dev.kord.cache.api.DataCache
 import dev.jombi.kordsb.common.KordConstants
 import dev.jombi.kordsb.common.annotation.KordExperimental
 import dev.jombi.kordsb.common.entity.Snowflake
@@ -12,6 +11,8 @@ import dev.jombi.kordsb.core.cache.registerKordData
 import dev.jombi.kordsb.core.event.Event
 import dev.jombi.kordsb.core.exception.KordInitializationException
 import dev.jombi.kordsb.core.gateway.DefaultMasterGateway
+import dev.jombi.kordsb.core.gateway.handler.DefaultGatewayEventInterceptor
+import dev.jombi.kordsb.core.gateway.handler.GatewayEventInterceptor
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import dev.jombi.kordsb.gateway.DefaultGateway
 import dev.jombi.kordsb.gateway.Gateway
@@ -22,6 +23,7 @@ import dev.jombi.kordsb.rest.ratelimit.ExclusionRequestRateLimiter
 import dev.jombi.kordsb.rest.request.*
 import dev.jombi.kordsb.rest.route.Route
 import dev.jombi.kordsb.rest.service.RestClient
+import dev.kord.cache.api.DataCache
 import io.ktor.client.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
@@ -101,6 +103,14 @@ public class KordBuilder(public val token: String) {
     public var httpClient: HttpClient? = null
 
     public var applicationId: Snowflake? = null
+
+    /**
+     * The [GatewayEventInterceptor] used for converting [gateway events][dev.jombi.kordsb.gateway.Event] to
+     * [core events][dev.jombi.kordsb.core.event.Event].
+     *
+     * [DefaultGatewayEventInterceptor] will be used when not set.
+     */
+    public var gatewayEventInterceptor: GatewayEventInterceptor? = null
 
     /**
      * Configures the [RequestHandler] for the [RestClient].
@@ -223,13 +233,14 @@ public class KordBuilder(public val token: String) {
         }
 
         return Kord(
-            resources,
-            cache,
-            gateway,
-            rest,
-            self,
-            eventFlow,
-            defaultDispatcher
+            resources = resources,
+            cache = cache,
+            gateway = gateway,
+            rest = rest,
+            selfId = self,
+            eventFlow = eventFlow,
+            dispatcher = defaultDispatcher,
+            interceptor = gatewayEventInterceptor ?: DefaultGatewayEventInterceptor(),
         )
     }
 

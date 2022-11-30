@@ -5,7 +5,6 @@ import dev.jombi.kordsb.common.entity.optional.orEmpty
 import dev.jombi.kordsb.core.Kord
 import dev.jombi.kordsb.core.KordObject
 import dev.jombi.kordsb.core.cache.data.ChannelData
-import dev.jombi.kordsb.core.cache.data.IntegrationData
 import dev.jombi.kordsb.core.cache.data.UserData
 import dev.jombi.kordsb.core.cache.data.WebhookData
 import dev.jombi.kordsb.core.entity.channel.Channel

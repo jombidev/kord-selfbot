@@ -30,7 +30,7 @@ public interface MessageChannel : Channel, MessageChannelBehavior {
     @Deprecated(
         "lastPinTimeStamp was renamed to lastPinTimestamp.",
         ReplaceWith("lastPinTimestamp"),
-        DeprecationLevel.ERROR,
+        DeprecationLevel.HIDDEN,
     )
     public val lastPinTimeStamp: Instant?
         get() = lastPinTimestamp

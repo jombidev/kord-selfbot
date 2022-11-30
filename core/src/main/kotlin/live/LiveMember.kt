@@ -27,7 +27,7 @@ public inline fun Member.live(
 @Deprecated(
     "The block is not called when the entity is deleted because the live entity is shut down",
     ReplaceWith("coroutineContext.job.invokeOnCompletion(block)", "kotlinx.coroutines.job"),
-    DeprecationLevel.ERROR
+    DeprecationLevel.HIDDEN
 )
 @KordPreview
 public fun LiveMember.onLeave(scope: CoroutineScope = this, block: suspend (MemberLeaveEvent) -> Unit): Job =
@@ -40,7 +40,7 @@ public fun LiveMember.onUpdate(scope: CoroutineScope = this, block: suspend (Mem
 @Deprecated(
     "The block is not called when the entity is deleted because the live entity is shut down",
     ReplaceWith("coroutineContext.job.invokeOnCompletion(block)", "kotlinx.coroutines.job"),
-    DeprecationLevel.ERROR
+    DeprecationLevel.HIDDEN
 )
 @KordPreview
 public fun LiveMember.onBanAdd(scope: CoroutineScope = this, block: suspend (BanAddEvent) -> Unit): Job =
@@ -49,7 +49,7 @@ public fun LiveMember.onBanAdd(scope: CoroutineScope = this, block: suspend (Ban
 @Deprecated(
     "The block is not called when the live entity is shut down",
     ReplaceWith("coroutineContext.job.invokeOnCompletion(block)", "kotlinx.coroutines.job"),
-    DeprecationLevel.ERROR
+    DeprecationLevel.HIDDEN
 )
 @KordPreview
 public inline fun LiveGuildChannel.onShutdown(
@@ -65,7 +65,7 @@ public inline fun LiveGuildChannel.onShutdown(
 @Deprecated(
     "The block is not called when the entity is deleted because the live entity is shut down",
     ReplaceWith("coroutineContext.job.invokeOnCompletion(block)", "kotlinx.coroutines.job"),
-    DeprecationLevel.ERROR
+    DeprecationLevel.HIDDEN
 )
 @KordPreview
 public fun LiveGuildChannel.onGuildDelete(

@@ -27,7 +27,7 @@ public inline fun Category.live(
 @Suppress("DeprecatedCallableAddReplaceWith")
 @Deprecated(
     "The block is never called because the channel is already created, use LiveGuild.onChannelCreate(block)",
-    level = DeprecationLevel.ERROR
+    level = DeprecationLevel.HIDDEN
 )
 @KordPreview
 public fun LiveCategory.onCreate(scope: CoroutineScope = this, block: suspend (CategoryCreateEvent) -> Unit): Job =
@@ -40,7 +40,7 @@ public fun LiveCategory.onUpdate(scope: CoroutineScope = this, block: suspend (C
 @Deprecated(
     "The block is not called when the live entity is shut down",
     ReplaceWith("coroutineContext.job.invokeOnCompletion(block)", "kotlinx.coroutines.job"),
-    DeprecationLevel.ERROR
+    DeprecationLevel.HIDDEN
 )
 @KordPreview
 public inline fun LiveCategory.onShutDown(scope: CoroutineScope = this, crossinline block: suspend (Event) -> Unit): Job =
@@ -53,7 +53,7 @@ public inline fun LiveCategory.onShutDown(scope: CoroutineScope = this, crossinl
 @Deprecated(
     "The block is not called when the entity is deleted because the live entity is shut down",
     ReplaceWith("coroutineContext.job.invokeOnCompletion(block)", "kotlinx.coroutines.job"),
-    DeprecationLevel.ERROR
+    DeprecationLevel.HIDDEN
 )
 @KordPreview
 public fun LiveCategory.onDelete(scope: CoroutineScope = this, block: suspend (CategoryDeleteEvent) -> Unit): Job =
@@ -62,7 +62,7 @@ public fun LiveCategory.onDelete(scope: CoroutineScope = this, block: suspend (C
 @Deprecated(
     "The block is not called when the entity is deleted because the live entity is shut down",
     ReplaceWith("coroutineContext.job.invokeOnCompletion(block)", "kotlinx.coroutines.job"),
-    DeprecationLevel.ERROR
+    DeprecationLevel.HIDDEN
 )
 @KordPreview
 public fun LiveCategory.onGuildDelete(scope: CoroutineScope = this, block: suspend (GuildDeleteEvent) -> Unit): Job =

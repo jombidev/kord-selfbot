@@ -11,7 +11,7 @@ import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 @Deprecated(
     "'InteractionFollowup' was renamed to 'FollowupMessage'.",
     ReplaceWith("FollowupMessage", "dev.jombi.kordsb.core.entity.interaction.FollowupMessage"),
-    DeprecationLevel.ERROR,
+    DeprecationLevel.HIDDEN,
 )
 public typealias InteractionFollowup = FollowupMessage
 

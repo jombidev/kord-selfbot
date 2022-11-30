@@ -15,18 +15,21 @@ import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 
 /**
- * Some intents are defined as "Privileged" due to the sensitive nature of the data and cannot be used by Kord without enabling them.
+ * Some intents are defined as "Privileged" due to the sensitive nature of the data and cannot be used by Kord without
+ * enabling them.
  *
- * See [the official documentation](https://discord.com/developers/docs/topics/gateway#privileged-intents) for more info on
- * how to enable these.
+ * See [the official documentation](https://discord.com/developers/docs/topics/gateway#privileged-intents) for more info
+ * on how to enable these.
  */
+@MustBeDocumented
 @RequiresOptIn(
-    """
-    Some intents are defined as "Privileged" due to the sensitive nature of the data and cannot be used by Kord without enabling them.
-    
-    See https://discord.com/developers/docs/topics/gateway#privileged-intents for more info on how to enable these.
-""", Level.ERROR
+    "Some intents are defined as \"Privileged\" due to the sensitive nature of the data and cannot be used by Kord " +
+            "without enabling them. See https://discord.com/developers/docs/topics/gateway#privileged-intents for " +
+            "more info on how to enable these.",
+    level = Level.ERROR
 )
+@Retention(AnnotationRetention.RUNTIME)
+@Target(AnnotationTarget.CLASS, AnnotationTarget.PROPERTY, AnnotationTarget.FUNCTION)
 public annotation class PrivilegedIntent
 
 /**

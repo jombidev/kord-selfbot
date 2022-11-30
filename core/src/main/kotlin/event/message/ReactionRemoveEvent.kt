@@ -10,13 +10,10 @@ import dev.jombi.kordsb.core.behavior.channel.MessageChannelBehavior
 import dev.jombi.kordsb.core.entity.*
 import dev.jombi.kordsb.core.entity.channel.MessageChannel
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
 import dev.jombi.kordsb.core.supplier.getChannelOf
 import dev.jombi.kordsb.core.supplier.getChannelOfOrNull
-import kotlinx.coroutines.CoroutineScope
-import kotlin.coroutines.CoroutineContext
 
 public class ReactionRemoveEvent(
     public val userId: Snowflake,
@@ -25,9 +22,9 @@ public class ReactionRemoveEvent(
     public val guildId: Snowflake?,
     public val emoji: ReactionEmoji,
     override val kord: Kord,
+    override val customContext: Any?,
     override val supplier: EntitySupplier = kord.defaultSupplier,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord)
-) : Event, CoroutineScope by coroutineScope, Strategizable {
+) : Event, Strategizable {
 
     public val channel: MessageChannelBehavior get() = MessageChannelBehavior(channelId, kord)
 
@@ -57,7 +54,7 @@ public class ReactionRemoveEvent(
         guildId?.let { supplier.getMemberOrNull(guildId = guildId, userId = userId) }
 
     override fun withStrategy(strategy: EntitySupplyStrategy<*>): ReactionRemoveEvent =
-        ReactionRemoveEvent(userId, channelId, messageId, guildId, emoji, kord, strategy.supply(kord))
+        ReactionRemoveEvent(userId, channelId, messageId, guildId, emoji, kord, customContext, strategy.supply(kord))
 
     override fun toString(): String {
         return "ReactionRemoveEvent(userId=$userId, channelId=$channelId, messageId=$messageId, guildId=$guildId, emoji=$emoji, kord=$kord, supplier=$supplier)"

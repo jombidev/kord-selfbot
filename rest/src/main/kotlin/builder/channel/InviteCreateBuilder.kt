@@ -20,8 +20,10 @@ public class InviteCreateBuilder : AuditRequestBuilder<InviteCreateRequest> {
 
     /**
      * The duration of invite in seconds before expiry, or 0 for never. 86400 (24 hours) by default.
+     *
+     * @suppress
      */
-    @Deprecated("'age' was renamed to 'maxAge'", ReplaceWith("this.maxAge"))
+    @Deprecated("'age' was renamed to 'maxAge'", ReplaceWith("this.maxAge"), DeprecationLevel.ERROR)
     public var age: Int?
         get() = _maxAge.value?.inWholeSeconds?.toInt()
         set(value) {
@@ -37,8 +39,10 @@ public class InviteCreateBuilder : AuditRequestBuilder<InviteCreateRequest> {
 
     /**
      * The maximum number of uses, or 0 for unlimited. 0 by default.
+     *
+     * @suppress
      */
-    @Deprecated("'uses' was renamed to 'maxUses'", ReplaceWith("this.maxUses"))
+    @Deprecated("'uses' was renamed to 'maxUses'", ReplaceWith("this.maxUses"), DeprecationLevel.ERROR)
     public var uses: Int? by ::_maxUses.delegate()
 
     /** The maximum number of uses, or 0 for unlimited. Between 0 and 100. 0 by default. */
@@ -62,8 +66,10 @@ public class InviteCreateBuilder : AuditRequestBuilder<InviteCreateRequest> {
 
     /**
      * The target user id for this invite.
+     *
+     * @suppress
      */
-    @Deprecated("This is no longer documented. Use 'targetUserId' instead.", ReplaceWith("this.targetUserId"))
+    @Deprecated("This is no longer documented. Use 'targetUserId' instead.", ReplaceWith("this.targetUserId"), DeprecationLevel.ERROR)
     public var targetUser: Snowflake? by ::_targetUser.delegate()
 
     private var _targetType: Optional<InviteTargetType> = Optional.Missing()
@@ -111,7 +117,7 @@ public class InviteCreateBuilder : AuditRequestBuilder<InviteCreateRequest> {
             temporary = _temporary,
             unique = _unique,
             targetUser = _targetUser,
-            targetUserType = _targetUser.map { @Suppress("DEPRECATION") dev.jombi.kordsb.common.entity.TargetUserType.Stream },
+            targetUserType = _targetUser.map { @Suppress("DEPRECATION_ERROR") dev.jombi.kordsb.common.entity.TargetUserType.Stream },
             targetType = target,
             targetUserId = _targetUserId,
             targetApplicationId = _targetApplicationId,

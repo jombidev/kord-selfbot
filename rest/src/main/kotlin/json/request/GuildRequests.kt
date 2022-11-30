@@ -137,7 +137,7 @@ public data class GuildRoleCreateRequest(
     /** Only use this when creating a guild with roles. */
     val id: OptionalSnowflake = OptionalSnowflake.Missing,
 ) {
-    @Deprecated("Renamed to 'hoist'.", ReplaceWith("this.hoist"), DeprecationLevel.ERROR)
+    @Deprecated("Renamed to 'hoist'.", ReplaceWith("this.hoist"), DeprecationLevel.HIDDEN)
     public val separate: OptionalBoolean
         get() = hoist
 }
@@ -179,7 +179,7 @@ public data class GuildRoleModifyRequest(
     val unicodeEmoji: Optional<String?> = Optional.Missing(),
     val mentionable: OptionalBoolean? = OptionalBoolean.Missing,
 ) {
-    @Deprecated("Renamed to 'hoist'.", ReplaceWith("this.hoist"), DeprecationLevel.ERROR)
+    @Deprecated("Renamed to 'hoist'.", ReplaceWith("this.hoist"), DeprecationLevel.HIDDEN)
     public val separate: OptionalBoolean?
         get() = hoist
 }
@@ -202,7 +202,7 @@ public data class GuildIntegrationModifyRequest(
 
 @Serializable
 @DeprecatedSinceKord("0.7.0")
-@Deprecated("Guild embeds were renamed to widgets.", ReplaceWith("GuildWidgetModifyRequest"), DeprecationLevel.ERROR)
+@Deprecated("Guild embeds were renamed to widgets.", ReplaceWith("GuildWidgetModifyRequest"), DeprecationLevel.HIDDEN)
 public data class GuildEmbedModifyRequest(
     val enabled: Boolean,
     @SerialName("channel_id")

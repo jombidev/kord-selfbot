@@ -7,18 +7,15 @@ import dev.jombi.kordsb.core.entity.Guild
 import dev.jombi.kordsb.core.entity.Role
 import dev.jombi.kordsb.core.entity.Strategizable
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
-import kotlinx.coroutines.CoroutineScope
-import kotlin.coroutines.CoroutineContext
 
 public class RoleUpdateEvent(
     public val role: Role,
     public val old: Role?,
+    override val customContext: Any?,
     override val supplier: EntitySupplier = role.kord.defaultSupplier,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(role.kord)
-) : Event, CoroutineScope by coroutineScope, Strategizable {
+) : Event, Strategizable {
 
     override val kord: Kord get() = role.kord
 
@@ -31,7 +28,7 @@ public class RoleUpdateEvent(
     public suspend fun getGuildOrNull(): Guild? = supplier.getGuildOrNull(guildId)
 
     override fun withStrategy(strategy: EntitySupplyStrategy<*>): RoleUpdateEvent =
-        RoleUpdateEvent(role, old, strategy.supply(kord))
+        RoleUpdateEvent(role, old, customContext, strategy.supply(kord))
 
     override fun toString(): String {
         return "RoleUpdateEvent(role=$role, old=$old, supplier=$supplier)"

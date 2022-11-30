@@ -4,16 +4,14 @@ import dev.jombi.kordsb.common.entity.Snowflake
 import dev.jombi.kordsb.core.Kord
 import dev.jombi.kordsb.core.entity.*
 import dev.jombi.kordsb.core.event.Event
-import dev.jombi.kordsb.core.event.kordCoroutineScope
 import dev.jombi.kordsb.core.supplier.EntitySupplier
 import dev.jombi.kordsb.core.supplier.EntitySupplyStrategy
-import kotlinx.coroutines.CoroutineScope
 
 /**
  * Sent when a user has [subscribed to][GuildScheduledEventUserAddEvent] or
  * [unsubscribed from][GuildScheduledEventUserRemoveEvent] a [GuildScheduledEvent].
  */
-public sealed interface GuildScheduledEventUserEvent : Event, CoroutineScope, Strategizable {
+public sealed interface GuildScheduledEventUserEvent : Event, Strategizable {
     public val scheduledEventId: Snowflake
     public val userId: Snowflake
     public val guildId: Snowflake
@@ -40,11 +38,11 @@ public data class GuildScheduledEventUserAddEvent(
     override val userId: Snowflake,
     override val guildId: Snowflake,
     override val kord: Kord,
+    override val customContext: Any?,
     override val supplier: EntitySupplier = kord.defaultSupplier,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord),
-) : GuildScheduledEventUserEvent, CoroutineScope by coroutineScope {
+) : GuildScheduledEventUserEvent {
     override fun withStrategy(strategy: EntitySupplyStrategy<*>): GuildScheduledEventUserAddEvent =
-        GuildScheduledEventUserAddEvent(scheduledEventId, userId, guildId, kord, strategy.supply(kord))
+        GuildScheduledEventUserAddEvent(scheduledEventId, userId, guildId, kord, customContext, strategy.supply(kord))
 }
 
 /** Sent when a user has unsubscribed from a [GuildScheduledEvent]. */
@@ -53,9 +51,9 @@ public data class GuildScheduledEventUserRemoveEvent(
     override val userId: Snowflake,
     override val guildId: Snowflake,
     override val kord: Kord,
+    override val customContext: Any?,
     override val supplier: EntitySupplier = kord.defaultSupplier,
-    public val coroutineScope: CoroutineScope = kordCoroutineScope(kord),
-) : GuildScheduledEventUserEvent, CoroutineScope by coroutineScope {
+) : GuildScheduledEventUserEvent {
     override fun withStrategy(strategy: EntitySupplyStrategy<*>): GuildScheduledEventUserRemoveEvent =
-        GuildScheduledEventUserRemoveEvent(scheduledEventId, userId, guildId, kord, strategy.supply(kord))
+        GuildScheduledEventUserRemoveEvent(scheduledEventId, userId, guildId, kord, customContext, strategy.supply(kord))
 }

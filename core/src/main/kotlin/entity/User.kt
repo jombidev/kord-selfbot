@@ -45,7 +45,7 @@ public open class User(
     /**
      * The flags on a user's account, if present.
      */
-    @Deprecated("Use publicFlags instead.", ReplaceWith("publicFlags"), DeprecationLevel.ERROR)
+    @Deprecated("Use publicFlags instead.", ReplaceWith("publicFlags"), DeprecationLevel.HIDDEN)
     @DeprecatedSinceKord("0.7.0")
     public val flags: UserFlags? by ::publicFlags
 
@@ -65,8 +65,8 @@ public open class User(
     /**
      * The type of Nitro subscription on a user's account, if present.
      */
-    @Suppress("DeprecatedCallableAddReplaceWith")
-    @Deprecated("premiumType is never present.", level = DeprecationLevel.ERROR)
+    @Suppress("DeprecatedCallableAddReplaceWith", "RedundantNullableReturnType")
+    @Deprecated("premiumType is never present.", level = DeprecationLevel.HIDDEN)
     @DeprecatedSinceKord("0.7.0")
     public val premiumType: UserPremium?
         get() = throw NotImplementedError("premiumType is no longer supported.")
