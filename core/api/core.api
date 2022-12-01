@@ -203,7 +203,8 @@ public abstract interface class dev/jombi/kordsb/core/behavior/GuildBehavior : d
 	public abstract fun asGuildOrNull (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun createSticker (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/rest/NamedFile;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun delete (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun editMFALevel (Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun editMFALevel (Ldev/jombi/kordsb/common/entity/MFALevel;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract synthetic fun editMFALevel (Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun editSelfNickname (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun editWelcomeScreen (Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun fetchGuild (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -262,7 +263,9 @@ public final class dev/jombi/kordsb/core/behavior/GuildBehavior$DefaultImpls {
 	public static fun compareTo (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ldev/jombi/kordsb/core/entity/Entity;)I
 	public static fun createSticker (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/rest/NamedFile;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static fun delete (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static fun editMFALevel (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun editMFALevel (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ldev/jombi/kordsb/common/entity/MFALevel;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun editMFALevel (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun editMFALevel$default (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ldev/jombi/kordsb/common/entity/MFALevel;Ljava/lang/String;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public static fun editSelfNickname (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun editSelfNickname$default (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public static fun editWelcomeScreen (Ldev/jombi/kordsb/core/behavior/GuildBehavior;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -5764,7 +5767,8 @@ public final class dev/jombi/kordsb/core/entity/Guild : dev/jombi/kordsb/core/be
 	public synthetic fun compareTo (Ljava/lang/Object;)I
 	public fun createSticker (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/rest/NamedFile;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun delete (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public fun editMFALevel (Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun editMFALevel (Ldev/jombi/kordsb/common/entity/MFALevel;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun editMFALevel (Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun editSelfNickname (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun editWelcomeScreen (Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun equals (Ljava/lang/Object;)Z
@@ -6325,7 +6329,8 @@ public final class dev/jombi/kordsb/core/entity/PartialGuild : dev/jombi/kordsb/
 	public synthetic fun compareTo (Ljava/lang/Object;)I
 	public fun createSticker (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/jombi/kordsb/rest/NamedFile;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun delete (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public fun editMFALevel (Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun editMFALevel (Ldev/jombi/kordsb/common/entity/MFALevel;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun editMFALevel (Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun editSelfNickname (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun editWelcomeScreen (Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun equals (Ljava/lang/Object;)Z

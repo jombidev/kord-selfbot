@@ -6456,7 +6456,9 @@ public final class dev/jombi/kordsb/rest/service/GuildService : dev/jombi/kordsb
 	public final fun modifyGuildChannelPosition (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final synthetic fun modifyGuildEmbed (Ldev/jombi/kordsb/common/entity/Snowflake;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun modifyGuildIntegration (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun modifyGuildMFALevel (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun modifyGuildMFALevel (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/MFALevel;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final synthetic fun modifyGuildMFALevel (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/MFALevel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun modifyGuildMFALevel$default (Ldev/jombi/kordsb/rest/service/GuildService;Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/MFALevel;Ljava/lang/String;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun modifyGuildMember (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun modifyGuildRole (Ldev/jombi/kordsb/common/entity/Snowflake;Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun modifyGuildRolePosition (Ldev/jombi/kordsb/common/entity/Snowflake;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
